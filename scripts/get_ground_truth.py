@@ -107,7 +107,7 @@ if __name__ == '__main__':
     saving_binary_mask()
 
 
-SIZES = image_sizes()
+# SIZES = image_sizes()
 
 
 
