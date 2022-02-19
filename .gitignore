@@ -3,5 +3,5 @@
 
 # Ada Library Information
 *.ali
-*.data
+*/data
 *.tif
