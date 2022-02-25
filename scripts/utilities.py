@@ -37,7 +37,7 @@ def get_patches(years:list,
                 for j in range(img_patches.shape[1]):
                     single_patch_img = Image.fromarray(img_patches[i,j,:,:])
                     single_patch_img.save(f"{path_name}\{year}_{i}_{j}.tif")
-    return img_patches
+    return np.concatenate(img_patches)
 
 def get_random_pos(img: torch.Tensor, window_shape: tuple) -> tuple:
     """ Extract of 2D random patch of shape window_shape in the image """
