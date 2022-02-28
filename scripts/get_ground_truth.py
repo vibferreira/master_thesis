@@ -8,6 +8,7 @@ import numpy as np
 from pandas import DataFrame
 
 import geopandas as gpd
+import cv2
 import fiona
 import rioxarray as rxr
 import xarray as xr
@@ -44,6 +45,7 @@ print(f'Number of images in the folder: {len(paths)}')
 def get_xarrays():
     ''' Returns list of xarrays named by year '''
     imgs_by_year = []
+    print('Getting xarrays')
     for imgs in paths:
         # get the year name from the file path 
         year = re.findall(r"[\w+']+", imgs)[-2]
@@ -59,11 +61,13 @@ def get_xarrays():
 
     return imgs_by_year
 
-def image_sizes():
-    ''' store image sizes 
-    (may be used in a later stage to resample the rasters)'''
-    imgs = get_xarrays()
-    return [img.shape for img in imgs]
+# def image_sizes():
+#     ''' store image sizes 
+#     (may be used in a later stage to resample the rasters)'''
+#     imgs = get_xarrays()
+#     list_xarrays =[img.shape for img in imgs]
+#     list_xarrays.sort()
+#     return list_xarrays[0]
 
 def clip_raster_to_mask_extent():
     imgs_by_year = get_xarrays()
@@ -74,6 +78,14 @@ def clip_raster_to_mask_extent():
             print('clipping image from', xarray.name)
             # clip by grid extent 
             xr_imgs_clipped = xarray.rio.clip(grid.geometry.apply(mapping), grid.crs)
+
+            # # resize to smallest image size 
+            # resized_x = xr.apply_ufunc(
+            #             cv2.resize,
+            #             xr_imgs_clipped,
+            #             (14445, 10917),
+            #             cv2.INTER_CUBIC
+            #         )
 
             # save geotif
             xr_imgs_clipped.rio.to_raster(f'data/clipped_images/{xarray.name}.tif')
@@ -107,7 +119,7 @@ if __name__ == '__main__':
     saving_binary_mask()
 
 
-# SIZES = image_sizes()
+# # SIZES = image_sizes()
 
 
 
