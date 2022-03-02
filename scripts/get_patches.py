@@ -59,10 +59,10 @@ class GetPatches:
         pathExists = os.path.exists(f'{self.patch_path}\{file_name}')
         if not pathExists:
             os.makedirs(path)
-            print(f'Creating folder {file_name}')
+            print(f'Creating folder {path}')
             return path
         else:
-            print(f'Folder already exists')
+            print(f'Folder already exists {path}')
             return path
 
     def get_patches(self, img:np.array) -> np.array:
@@ -74,11 +74,12 @@ class GetPatches:
         np.array: patched image with shape [row_original_image, col_original_image, row_patch, col_patch] '''
         return patchify(img, self.patch_size, step=self.patch_size[0])
 
-    def get_top_left_bounds_of_patches(self, patches: np.array) -> np.array:
+    def get_top_left_bounds_of_patches(self, patches: np.array, src:rio) -> np.array:
         ''' Get top left bounds coords for each patch and stores in a np.array
         Args:
         img: np.array, image that will be patched
         Returns:
+        src: rasterio image object 
         n_patches = zero like numpy array with shape  [number_of_patches, 2] (to stores new x and y)
         '''
         # Total number of patches
@@ -111,16 +112,27 @@ class GetPatches:
                             patches: np.array, 
                             n_patches:np.array, 
                             path:str, 
+                            ras_meta:dict,
+                            ras_data:np.array, 
                             number_bands:int=1) -> None:
+
+        '''Save patches in given folder
+        Args:
+        patches: np.array, patches from image 
+        n_patches: np.array, contains the new X and Y coords
+        path: str, path where to save the images
+        ras_meta: dictionary, metadata of rasterio image
+        ras_data: np.array, image
+        number_bands: number of bands of original image
+        Returns:
+        None'''
 
         crs = CRS.from_epsg('2154')
         patches = np.concatenate(patches)
-
+        print('Saving Images')
         for i in range(n_patches.shape[0]):
             # transform 
             transform = from_origin(n_patches[i][0], n_patches[i][1], 0.75, 0.75) # output size
-            print(transform)
-
             with rio.open(f"{path}\{ras_meta['year']}_{i}.tif", 'w',
                     driver='GTiff',
                     height=self.patch_size[0],
@@ -136,7 +148,7 @@ class GetPatches:
         file_name = self.get_file_name()
 
         # read the image 
-        with rio.open(img_paths[0]) as src:
+        with rio.open(self.img_path) as src:
             ras_data = src.read().astype('uint8')
             ras_meta = src.profile # get the original image profile
 
@@ -150,32 +162,26 @@ class GetPatches:
         patches = self.get_patches(ras_data[0])
 
         # New array storinf X and Y for each patch 
-        n_patches = self.get_top_left_bounds_of_patches(patches)
+        n_patches = self.get_top_left_bounds_of_patches(patches, src)
 
         # save patches
-        self.save_patches_with_crs(patches, n_patches, path_patches, number_bands=1)
+        self.save_patches_with_crs(patches, n_patches, path_patches, ras_meta ,ras_data, number_bands=1)
 
 
-# All this data paths may be given in a main python file later? 
-MASKS_PATH = r'data\mask'
-IMAGES_PATH = r'data\clipped_images'
-PATCHES_PATH =r'data\patches'
+if __name__ == '__main__':
+    # All this data paths may be given in a main python file later? 
+    MASKS_PATH = r'data\mask'
+    IMAGES_PATH = r'data\clipped_images'
+    PATCHES_IMAGES_PATH = r'data\patches\images'
+    PATCHES_MASK_PATH = r'data\patches\masks'
 
-img_paths = glob.glob(IMAGES_PATH +'\*.tif')
-mask_paths = glob.glob(MASKS_PATH +'\*.tif')
-patches_paths = glob.glob(PATCHES_PATH + r'\1942')
+    img_paths = glob.glob(IMAGES_PATH +'\*.tif')
+    mask_paths = glob.glob(MASKS_PATH +'\*.tif')
+    
+    # Example saving image from 1942
+    images = GetPatches(img_paths[0], PATCHES_IMAGES_PATH, (512, 512))
+    masks = GetPatches(mask_paths[0], PATCHES_MASK_PATH, (512, 512))
 
-new_instance = GetPatches(img_paths[0], PATCHES_PATH, (512, 512))
+    images.get_items()
+    masks.get_items()
 
-# print(new_instance.img_path)
-
-with rio.open(img_paths[0]) as src:
-    ras_data = src.read().astype('uint8')
-    ras_meta = src.profile
-
-# make any necessary changes to raster properties, e.g.:
-ras_meta['year'] = '1942'
-# print(patchify(ras_data[0],(512,512)), step=512))
-print(ras_meta['crs'])
-
-print(new_instance.get_items())
