@@ -1,5 +1,9 @@
-''' Clip the Historical Aerial Images into the ground truth extent and 
-rasterize ground truth into a binary mask. '''
+''' 
+This script permforms 
+1) Clipping masks by grid extent (based on the extent of ground truth from 2020);
+2) Clipping the Historical Aerial Images into the grid extent;
+4) Rasterizing ground truth into a binary mask. 
+'''
 
 import re
 import glob
@@ -21,7 +25,7 @@ GRID_PATH = 'data\grid.gpkg'
 IMAGES_PATH = 'data\images'
 
 grid = gpd.read_file(GRID_PATH)
-years = fiona.listlayers(MASKS_PATH)[1:] # list layers/years
+years = fiona.listlayers(MASKS_PATH)[1:] # list layers/years exclude last year, 2020
 
 # read the masks 
 mask_per_year = {key: gpd.read_file(MASKS_PATH, layer=key) for key in years}
@@ -49,25 +53,17 @@ def get_xarrays():
     for imgs in paths:
         # get the year name from the file path 
         year = re.findall(r"[\w+']+", imgs)[-2]
-
-        # read rasters as xarray
+        print('Done for', year)
+        # read rasters as xarrays
         xr_imgs = rxr.open_rasterio(imgs).squeeze().astype(np.uint8)
 
         # naming the xarrays by year
         xr_imgs.name = year
 
-        # store the xarrays
+        # store list of xarrays
         imgs_by_year.append(xr_imgs)
 
     return imgs_by_year
-
-# def image_sizes():
-#     ''' store image sizes 
-#     (may be used in a later stage to resample the rasters)'''
-#     imgs = get_xarrays()
-#     list_xarrays =[img.shape for img in imgs]
-#     list_xarrays.sort()
-#     return list_xarrays[0]
 
 def clip_raster_to_mask_extent():
     imgs_by_year = get_xarrays()
@@ -78,14 +74,6 @@ def clip_raster_to_mask_extent():
             print('clipping image from', xarray.name)
             # clip by grid extent 
             xr_imgs_clipped = xarray.rio.clip(grid.geometry.apply(mapping), grid.crs)
-
-            # # resize to smallest image size 
-            # resized_x = xr.apply_ufunc(
-            #             cv2.resize,
-            #             xr_imgs_clipped,
-            #             (14445, 10917),
-            #             cv2.INTER_CUBIC
-            #         )
 
             # save geotif
             xr_imgs_clipped.rio.to_raster(f'data/clipped_images/{xarray.name}.tif')
