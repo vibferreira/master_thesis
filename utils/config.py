@@ -16,8 +16,6 @@ MASK_PATH = r'data\patches\masks\1942'
 image_paths = glob.glob(IMAGES_PATH +'\*.tif')
 mask_paths = glob.glob(MASK_PATH +'\*.tif')
 
-print('Number of image patches:', len(image_paths),'\nNumber of mask patches:', len(mask_paths))
-
 # =========================================================== #
 # SET WHICH DEVICE TO USE
 # =========================================================== #
@@ -27,13 +25,14 @@ DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 # DATASET AND DATALOADER
 # =========================================================== #
 PATCH_SIZE = 256
+# SPLIT = 
 
 # =========================================================== #
 # MODEL
 # =========================================================== #
-BACKBONE = "resnet34"
+BACKBONE = "mobilenet_v2"
 N_CHANNELS = 1
-NUM_CLASSES = 2
+N_CLASSES = 1
 
 # =========================================================== #
 # TRAINING AND VALIDATION LOOPS
@@ -41,8 +40,4 @@ NUM_CLASSES = 2
 LR = 1 # learning rate
 NUM_EPOCHS = 1
 BATCH_SIZE = 12
-
-
-
-
 
