@@ -1,5 +1,5 @@
 ''' 
-This script permforms 
+This script performs 
 1) Clipping masks by grid extent (based on the extent of ground truth from 2020);
 2) Clipping the Historical Aerial Images into the grid extent;
 4) Rasterizing ground truth into a binary mask. 
@@ -105,9 +105,6 @@ def saving_binary_mask():
 if __name__ == '__main__':
     clip_raster_to_mask_extent()
     saving_binary_mask()
-
-
-# # SIZES = image_sizes()
 
 
 

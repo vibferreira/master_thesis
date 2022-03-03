@@ -48,6 +48,3 @@ def get_random_pos(img: torch.Tensor, window_shape: tuple) -> tuple:
     y1 = random.randint(0, H - h - 1)
     y2 = y1 + h
     return x1, x2, y1, y2
-
-def vitoria():
-    pass

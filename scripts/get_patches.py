@@ -4,6 +4,7 @@ The GetPaches class
 3) Save the patches (preserving the spatial information)
 '''
 # MAY REQUIRE RESIZING THE IMAGE TO GET EXACT NUMBER OF PATCHES --> CONFIRM IF REALLY NEEDED
+# SOLUTION FOR THAT MIGHT BE TO PAD THE IMAGE TO DESIRED SIZE SO IT IS DIVISIBLE BY THE PATCH_SIZE (albumentations --> patch if needed)
 
 from importlib.resources import path
 from pathlib import Path
@@ -100,7 +101,7 @@ class GetPatches:
                 # assign the spatial coords to an empty array
                 n_patches[p] = new_x, new_y 
             
-                i+=(self.patch_size[0]-1)  # number of pixels to add
+                i+=(self.patch_size[0]-1)  # number of pixels to add (go left + 255 pixels)
                 p+=1  # adding up to total number of patches
 
             z += (self.patch_size[0]-1) # to update X (go down -255 pixels after each row)
@@ -142,7 +143,6 @@ class GetPatches:
                     crs = crs, 
                     transform=transform) as dst:
                     dst.write(patches[i,np.newaxis,:,:]) # add a new axis, required by rasterio 
-            
 
     def get_items(self):
         file_name = self.get_file_name()
@@ -167,7 +167,7 @@ class GetPatches:
         # save patches
         self.save_patches_with_crs(patches, n_patches, path_patches, ras_meta ,ras_data, number_bands=1)
 
-
+# Testing if it works 
 if __name__ == '__main__':
     # All this data paths may be given in a main python file later? 
     MASKS_PATH = r'data\mask'
