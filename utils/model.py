@@ -3,6 +3,15 @@
 import torch
 from torch import nn
 import torch.nn.functional as F
+import segmentation_models_pytorch as smp
+
+
+unet = smp.Unet(
+    encoder_name="resnet34",        # choose encoder, e.g. mobilenet_v2 or efficientnet-b7
+    encoder_weights="imagenet",     # use `imagenet` pre-trained weights for encoder initialization
+    in_channels=1,                  # model input channels (1 for gray-scale images, 3 for RGB, etc.)
+    classes=2,                      # model output channels (number of classes in your dataset)
+)
 
 class DoubleConv(nn.Module):
     def __init__(self, in_ch, out_ch): # Remember to change here for inputing a single channel
@@ -39,7 +48,7 @@ class down_layer(nn.Module):
     def __init__(self, in_ch, out_ch):
         super(down_layer, self).__init__()
         self.pool = nn.MaxPool2d(2, stride=2, padding=0)
-        self.conv = double_conv(in_ch, out_ch)
+        self.conv = DoubleConv(in_ch, out_ch)
 
     def forward(self, x):
         x = self.conv(self.pool(x))
@@ -49,7 +58,7 @@ class up_layer(nn.Module):
     def __init__(self, in_ch, out_ch):
         super(up_layer, self).__init__()
         self.up = up(in_ch, out_ch)
-        self.conv = double_conv(in_ch, out_ch)
+        self.conv = DoubleConv(in_ch, out_ch)
 
     def forward(self, x1, x2):
         a = self.up(x1, x2)
@@ -59,7 +68,7 @@ class up_layer(nn.Module):
 class UNet(nn.Module):
     def __init__(self, dimensions=2):
         super(UNet, self).__init__()
-        self.conv1 = double_conv(1, 64)
+        self.conv1 = DoubleConv(1, 64)
         self.down1 = down_layer(64, 128)
         self.down2 = down_layer(128, 256)
         self.down3 = down_layer(256, 512)

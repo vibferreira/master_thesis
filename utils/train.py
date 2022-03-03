@@ -1,22 +1,19 @@
-from dataset import HistoricalImagesDataset
-from model import DoubleConv
-# from criterion import X
-
+from pyexpat import model
+from tqdm import tqdm
 import glob
+
+import torch
 from torch.utils.data import DataLoader, random_split
+import torch.optim as optim
 
-IMAGES_PATH = r'data\patches\images\1942'
-MASK_PATH = r'data\patches\masks\1942'
+from dataset import HistoricalImagesDataset
+import config
+from criterion import cross_entropy_loss
+import segmentation_models_pytorch as smp
 
-image_paths = glob.glob(IMAGES_PATH +'\*.tif')
-mask_paths = glob.glob(MASK_PATH +'\*.tif')
-
-print('Number of image patches:', len(image_paths),'\nNumber of mask patches:', len(mask_paths))
-
-dataset = HistoricalImagesDataset(image_paths, mask_paths)
-
+# Dataset Object 
+dataset = HistoricalImagesDataset(config.image_paths, config.mask_paths)
 data = next(iter(dataset))
-
 print('shape image', data[0].shape, 'shape mask', data[1].shape)       
 
 # Train, Test, Split 
@@ -28,13 +25,20 @@ train_size = int(0.5 * len(train_dataset))
 val_size = len(train_dataset) - train_size
 train_dataset, val_dataset = random_split(train_dataset, [train_size, val_size])
 
-print(len(train_dataset), len(val_dataset), len(test_dataset))
+# DataLoader
+print("Training set size: ", len(train_dataset))
+train_dataset_loader = DataLoader(dataset=train_dataset, batch_size=config.BATCH_SIZE)
+print("Validation set size: ", len(val_dataset))
+val_dataset_loader = DataLoader(dataset=val_dataset, batch_size=config.BATCH_SIZE)
+print("Test set size: ", len(test_dataset))
+test_dataset_loader = DataLoader(dataset=test_dataset, batch_size=config.BATCH_SIZE)
 
-# Call the model
+model = smp.Unet(
+    encoder_name= config.BACKBONE,  # choose encoder, e.g. mobilenet_v2 or efficientnet-b7
+    encoder_weights="imagenet",     # use `imagenet` pre-trained weights for encoder initialization
+    in_channels=config.N_CHANNELS,  # model input channels (1 for gray-scale images, 3 for RGB, etc.)
+    classes= config.NUM_CLASSES,    # model output channels (number of classes in your dataset)
+)
 
-DoubleConv(1,2)
-# Training Loop 
-
-
-# Validation Loop 
+# print(model)
 
