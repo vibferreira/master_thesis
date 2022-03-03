@@ -1,18 +1,19 @@
+''' Implementation from https://github.com/clemkoa/u-net'''
+
 import torch
 from torch import nn
 import torch.nn.functional as F
 
-class double_conv(nn.Module):
-    def __init__(self, in_ch, out_ch):
-        super(double_conv, self).__init__()
+class DoubleConv(nn.Module):
+    def __init__(self, in_ch, out_ch): # Remember to change here for inputing a single channel
+        super(DoubleConv, self).__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(in_ch, out_ch, 3, padding=1),
             nn.BatchNorm2d(out_ch),
             nn.ReLU(inplace=True),
             nn.Conv2d(out_ch, out_ch, 3, padding=1),
             nn.BatchNorm2d(out_ch),
-            nn.ReLU(inplace=True)
-        )
+            nn.ReLU(inplace=True))
 
     def forward(self, x):
         x = self.conv(x)
@@ -34,7 +35,6 @@ class up(nn.Module):
         x = torch.cat([x2, x1], dim=1)
         return x
 
-
 class down_layer(nn.Module):
     def __init__(self, in_ch, out_ch):
         super(down_layer, self).__init__()
@@ -44,7 +44,6 @@ class down_layer(nn.Module):
     def forward(self, x):
         x = self.conv(self.pool(x))
         return x
-
 
 class up_layer(nn.Module):
     def __init__(self, in_ch, out_ch):
@@ -56,7 +55,6 @@ class up_layer(nn.Module):
         a = self.up(x1, x2)
         x = self.conv(a)
         return x
-
 
 class UNet(nn.Module):
     def __init__(self, dimensions=2):
