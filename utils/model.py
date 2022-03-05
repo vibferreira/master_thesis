@@ -1,9 +1,5 @@
 ''' Implementation from https://github.com/clemkoa/u-net'''
-
-import torch
 import config
-from torch import nn
-import torch.nn.functional as F
 import segmentation_models_pytorch as smp
 
 unet_model = smp.Unet(

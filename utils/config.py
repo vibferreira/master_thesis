@@ -39,5 +39,5 @@ N_CLASSES = 1
 # =========================================================== #
 LR = 1 # learning rate
 NUM_EPOCHS = 1
-BATCH_SIZE = 12
+BATCH_SIZE = 4
 
