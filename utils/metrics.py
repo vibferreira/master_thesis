@@ -6,8 +6,8 @@ from sklearn.metrics import f1_score
 
 def pixel_acc(pred:torch, 
               y:torch, 
-              train_correct:int, 
-              total_n_pixels:int) -> float:
+              correct_pixels:int, 
+              total_pixels:int) -> float:
 
     ''' Calculates overall accuracy
     Args:
@@ -23,10 +23,10 @@ def pixel_acc(pred:torch,
 
     # Calculate accuracy
     y_hat_class = torch.argmax(pred.detach(), axis=0) # assign a label based on the network's prediction. Axis zero is taking image by image
-    train_correct += torch.sum(y_hat_class==y) # number of correctly classified pixels (defined in the loop)
-    total_n_pixels += y.nelement() # seems to be correct (defined in the loop)
+    correct_pixels += torch.sum(y_hat_class==y).float() # number of correctly classified pixels (defined in the loop)
+    total_pixels += y.nelement() # seems to be correct (defined in the loop)
 
-    return 100*train_correct/total_n_pixels
+    return 100*correct_pixels/total_pixels
 
 # IOU
 def jaccard_idx(pred:torch, 
@@ -48,9 +48,11 @@ def jaccard_idx(pred:torch,
 
 # F1 Score
 def metrics(pred, y):
+
     pred = pred.detach()
-    pred = pred.view(-1, )
-    y = y.view(-1, ).float()
+    # # pred = pred.view(-1, )
+    # y = y.view(-1, ).float()
+
     tp = torch.sum(pred * y)  # TP
     fp = torch.sum(pred * (1 - y))  # FP
     fn = torch.sum((1 - pred) * y)  # FN
@@ -63,4 +65,7 @@ def metrics(pred, y):
     recall = (tp + eps) / (tp + fn + eps)
     specificity = (tn + eps) / (tn + fp + eps)
     f1score = 2 * precision * recall / (precision + recall)
+
     return f1score, dice,  pixel_acc
+
+# Confusion metrics 
