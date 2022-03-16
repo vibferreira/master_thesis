@@ -1,0 +1,21 @@
+{
+    "os": "Linux-5.10.0-11-amd64-x86_64-with-glibc2.17",
+    "python": "3.8.12",
+    "heartbeatAt": "2022-03-15T13:58:16.479669",
+    "startedAt": "2022-03-15T13:58:09.473866",
+    "docker": null,
+    "gpu": "NVIDIA GeForce GTX TITAN X",
+    "gpu_count": 1,
+    "cpu_count": 40,
+    "cuda": null,
+    "args": [
+        "-f",
+        "/share/castor/etud/e2008984/.local/share/jupyter/runtime/kernel-28c1a4d2-dce8-4cc7-a7f8-fb53910d2d64.json"
+    ],
+    "state": "running",
+    "program": "utils/training.ipynb",
+    "root": "/share/mastoc/projects/erasmus/dl_historical_images",
+    "host": "dmis",
+    "username": "e2008984",
+    "executable": "/share/etud/e2008984/miniconda3/envs/env_thesis/bin/python"
+}

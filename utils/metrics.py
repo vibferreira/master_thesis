@@ -3,34 +3,30 @@
 
 import torch
 from sklearn.metrics import f1_score
+import torch.nn.functional as F
+import numpy as np
 
-def pixel_acc(pred:torch, 
-              y:torch, 
-              correct_pixels:int, 
-              total_pixels:int) -> float:
 
-    ''' Calculates overall accuracy
+def pixel_accuracy(pred:torch, 
+                   y:torch) -> int:
+    # implementation from https://www.kaggle.com/ligtfeather/semantic-segmentation-is-easy-with-pytorch#Training
+        
+    ''' Calculates pixel Accuracy
     Args:
-    pred (torch): model predictions,
-    y (torch): ground truth,
-    train_correct (int): number of correctly classified pixels
-    total_n_pixels (int): total number of pixels
-    Returns:
-    float: percentage of correctly classified pixels'''
+    pred (torch): output from the model
+    y (torch) : mask 
+    Results:
+    int: accuracy
+    '''  
+    with torch.no_grad(): # no need of gradients 
+        pred = torch.argmax(F.softmax(pred, dim=0), dim=0) # get the prediction 
+        correct = torch.eq(pred, y).int() # checks if output == mask
+        accuracy = float(correct.sum()) / float(correct.numel()) # total number of pixels in the input tensor
+    return accuracy
 
-    # assert the dimensions first
-    assert (pred.shape == y.shape, f'Shape of pred is {pred.shape} and shape of y is {y.shape}')
-
-    # Calculate accuracy
-    y_hat_class = torch.argmax(pred.detach(), axis=0) # assign a label based on the network's prediction. Axis zero is taking image by image
-    correct_pixels += torch.sum(y_hat_class==y).float() # number of correctly classified pixels (defined in the loop)
-    total_pixels += y.nelement() # seems to be correct (defined in the loop)
-
-    return 100*correct_pixels/total_pixels
-
-# IOU
+# IOU / Jaccard
 def jaccard_idx(pred:torch, 
-                y:torch) -> torch:
+                y:torch) -> np.array:
     ''' Calculates Jaccard Index
     Args:
     pred (torch): output from the model
@@ -38,13 +34,11 @@ def jaccard_idx(pred:torch,
     Results:
     torch: 
     '''
-    # assert the dimensions first
-    assert (pred.shape == y.shape, f'Shape of pred is {pred.shape} and shape of y is {y.shape}')
-
     # Calculate IoU
+    pred = torch.argmax(F.softmax(pred, dim=0), dim=0) # get the preds
     intersection = torch.logical_and(pred, y)
     union = torch.logical_or(pred,y)
-    return torch.sum(intersection) / torch.sum(union) # return the intersection over union
+    return (torch.sum(intersection) / torch.sum(union)).numpy() # return the intersection over union
 
 # F1 Score
 def metrics(pred, y):
@@ -66,6 +60,9 @@ def metrics(pred, y):
     specificity = (tn + eps) / (tn + fp + eps)
     f1score = 2 * precision * recall / (precision + recall)
 
-    return f1score, dice,  pixel_acc
+    return pixel_acc, dice, f1score
 
 # Confusion metrics 
+
+# # assert the dimensions first
+# assert pred.shape == y.shape, f'Shape of pred is {pred.shape} and shape of y is {y.shape}'

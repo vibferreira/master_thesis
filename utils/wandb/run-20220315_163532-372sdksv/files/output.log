@@ -1,0 +1,21 @@
+
+Training the network for 2 epochs, with a batch size of 5 and 2 iterations per epoch 🤗
+  0%|          | 0/2 [00:00<?, ?it/s]
+
+
+ 50%|█████     | 1/2 [00:24<00:24, 24.38s/it]
+  0%|          | 0/2 [00:00<?, ?it/s]
+
+
+
+100%|██████████| 2/2 [00:48<00:00, 24.44s/it]
+hey (5, 512, 512)
+[34m[1mwandb[39m[22m: Currently logged in as: [33mvibferreira[39m (use `wandb login --relogin` to force relogin)
+Number of image patches: 50
+Number of mask patches: 50
+shape image torch.Size([1, 512, 512]) shape mask torch.Size([1, 512, 512])
+Splitting data into TRAIN, VAL and TEST
+Training set size:  25
+Validation set size:  13
+Testing set size:  12
+cpu is available

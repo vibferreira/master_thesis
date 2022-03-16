@@ -1,0 +1,4 @@
+name: env_thesis
+channels:
+  - defaults
+prefix: /share/etud/e2008984/.conda/envs/env_thesis

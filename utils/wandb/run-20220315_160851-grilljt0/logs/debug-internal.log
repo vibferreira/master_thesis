@@ -1,0 +1,233 @@
+2022-03-15 16:08:57,328 INFO    MainThread:125561 [internal.py:wandb_internal():92] W&B internal server running at pid: 125561, started at: 2022-03-15 16:08:57.328140
+2022-03-15 16:08:57,331 INFO    WriterThread:125561 [datastore.py:open_for_write():77] open: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/run-grilljt0.wandb
+2022-03-15 16:08:57,333 DEBUG   SenderThread:125561 [sender.py:send():235] send: header
+2022-03-15 16:08:57,333 DEBUG   SenderThread:125561 [sender.py:send():235] send: run
+2022-03-15 16:08:57,525 INFO    SenderThread:125561 [dir_watcher.py:__init__():169] watching files in: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files
+2022-03-15 16:08:57,525 INFO    SenderThread:125561 [sender.py:_start_run_threads():812] run started: grilljt0 with start time 1647356936
+2022-03-15 16:08:57,525 DEBUG   SenderThread:125561 [sender.py:send():235] send: summary
+2022-03-15 16:08:57,526 INFO    SenderThread:125561 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-15 16:08:57,530 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: check_version
+2022-03-15 16:08:57,530 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: check_version
+2022-03-15 16:08:57,602 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: run_start
+2022-03-15 16:08:57,610 DEBUG   HandlerThread:125561 [meta.py:__init__():37] meta init
+2022-03-15 16:08:57,610 DEBUG   HandlerThread:125561 [meta.py:__init__():51] meta init done
+2022-03-15 16:08:57,610 DEBUG   HandlerThread:125561 [meta.py:probe():211] probe
+2022-03-15 16:08:57,616 DEBUG   HandlerThread:125561 [git.py:repo():33] git repository is invalid
+2022-03-15 16:08:57,617 DEBUG   HandlerThread:125561 [meta.py:_save_pip():55] save pip
+2022-03-15 16:08:57,618 DEBUG   HandlerThread:125561 [meta.py:_save_pip():69] save pip done
+2022-03-15 16:08:57,618 DEBUG   HandlerThread:125561 [meta.py:_save_conda():76] save conda
+2022-03-15 16:08:58,396 DEBUG   HandlerThread:125561 [meta.py:_save_conda():86] save conda done
+2022-03-15 16:08:58,396 DEBUG   HandlerThread:125561 [meta.py:probe():249] probe done
+2022-03-15 16:08:58,401 DEBUG   SenderThread:125561 [sender.py:send():235] send: files
+2022-03-15 16:08:58,402 INFO    SenderThread:125561 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-03-15 16:08:58,415 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:08:58,415 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:08:58,529 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/conda-environment.yaml
+2022-03-15 16:08:58,529 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/requirements.txt
+2022-03-15 16:08:58,529 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/output.log
+2022-03-15 16:08:58,530 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/wandb-summary.json
+2022-03-15 16:08:58,530 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/wandb-metadata.json
+2022-03-15 16:08:58,577 DEBUG   SenderThread:125561 [sender.py:send():235] send: telemetry
+2022-03-15 16:08:58,578 DEBUG   SenderThread:125561 [sender.py:send():235] send: telemetry
+2022-03-15 16:08:59,094 INFO    Thread-11 :125561 [upload_job.py:push():137] Uploaded file /tmp/tmp71_skt1lwandb/ybj0hdxc-wandb-metadata.json
+2022-03-15 16:09:00,528 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/output.log
+2022-03-15 16:09:10,537 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/output.log
+2022-03-15 16:09:13,580 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:09:13,580 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:09:18,698 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-15 16:09:18,700 DEBUG   SenderThread:125561 [sender.py:send():235] send: history
+2022-03-15 16:09:18,700 DEBUG   SenderThread:125561 [sender.py:send():235] send: summary
+2022-03-15 16:09:18,703 INFO    SenderThread:125561 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-15 16:09:19,545 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/wandb-summary.json
+2022-03-15 16:09:20,546 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/output.log
+2022-03-15 16:09:20,882 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-15 16:09:20,882 DEBUG   SenderThread:125561 [sender.py:send():235] send: history
+2022-03-15 16:09:20,883 DEBUG   SenderThread:125561 [sender.py:send():235] send: summary
+2022-03-15 16:09:20,885 INFO    SenderThread:125561 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-15 16:09:21,547 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/wandb-summary.json
+2022-03-15 16:09:22,548 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/output.log
+2022-03-15 16:09:26,320 DEBUG   SenderThread:125561 [sender.py:send():235] send: stats
+2022-03-15 16:09:28,553 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/config.yaml
+2022-03-15 16:09:28,747 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:09:28,748 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:09:33,558 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/output.log
+2022-03-15 16:09:42,339 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-15 16:09:42,340 DEBUG   SenderThread:125561 [sender.py:send():235] send: history
+2022-03-15 16:09:42,341 DEBUG   SenderThread:125561 [sender.py:send():235] send: summary
+2022-03-15 16:09:42,344 INFO    SenderThread:125561 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-15 16:09:42,565 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/wandb-summary.json
+2022-03-15 16:09:43,927 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:09:43,927 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:09:44,761 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-15 16:09:44,762 DEBUG   SenderThread:125561 [sender.py:send():235] send: history
+2022-03-15 16:09:44,762 DEBUG   SenderThread:125561 [sender.py:send():235] send: summary
+2022-03-15 16:09:44,763 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: pause
+2022-03-15 16:09:44,763 INFO    SenderThread:125561 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-15 16:09:44,763 INFO    HandlerThread:125561 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-15 16:09:44,863 DEBUG   SenderThread:125561 [sender.py:send():235] send: stats
+2022-03-15 16:09:45,568 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/wandb-summary.json
+2022-03-15 16:09:45,568 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/output.log
+2022-03-15 16:09:47,570 INFO    Thread-7  :125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/output.log
+2022-03-15 16:09:59,100 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:09:59,101 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:10:14,278 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:10:14,278 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:10:29,481 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:10:29,482 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:10:44,671 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:10:44,671 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:10:59,842 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:10:59,843 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:11:15,056 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:11:15,056 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:11:30,258 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:11:30,258 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:11:45,672 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:11:45,672 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:12:00,858 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:12:00,859 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:12:16,051 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:12:16,051 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:12:31,239 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:12:31,239 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:12:46,414 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:12:46,414 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:13:01,587 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:13:01,587 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:13:16,762 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:13:16,763 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:13:31,940 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:13:31,940 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:13:46,675 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: resume
+2022-03-15 16:13:46,675 INFO    HandlerThread:125561 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-15 16:13:46,676 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: pause
+2022-03-15 16:13:46,676 INFO    HandlerThread:125561 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-15 16:13:46,713 DEBUG   SenderThread:125561 [sender.py:send():235] send: stats
+2022-03-15 16:13:47,114 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-15 16:13:47,115 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: stop_status
+2022-03-15 16:13:49,395 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: resume
+2022-03-15 16:13:49,396 INFO    HandlerThread:125561 [handler.py:handle_request_resume():650] starting system metrics thread
+2022-03-15 16:13:49,410 DEBUG   SenderThread:125561 [sender.py:send():235] send: telemetry
+2022-03-15 16:13:49,413 DEBUG   SenderThread:125561 [sender.py:send():235] send: telemetry
+2022-03-15 16:13:49,413 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-15 16:13:50,316 DEBUG   SenderThread:125561 [sender.py:send():235] send: exit
+2022-03-15 16:13:50,316 INFO    SenderThread:125561 [sender.py:send_exit():371] handling exit code: 0
+2022-03-15 16:13:50,316 INFO    SenderThread:125561 [sender.py:send_exit():373] handling runtime: 48
+2022-03-15 16:13:50,318 INFO    SenderThread:125561 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-15 16:13:50,318 INFO    SenderThread:125561 [sender.py:send_exit():379] send defer
+2022-03-15 16:13:50,319 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: defer
+2022-03-15 16:13:50,319 INFO    HandlerThread:125561 [handler.py:handle_request_defer():164] handle defer: 0
+2022-03-15 16:13:50,319 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: defer
+2022-03-15 16:13:50,319 INFO    SenderThread:125561 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-03-15 16:13:50,319 INFO    SenderThread:125561 [sender.py:transition_state():392] send defer: 1
+2022-03-15 16:13:50,319 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:50,320 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:50,320 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: defer
+2022-03-15 16:13:50,321 INFO    HandlerThread:125561 [handler.py:handle_request_defer():164] handle defer: 1
+2022-03-15 16:13:50,360 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: defer
+2022-03-15 16:13:50,360 INFO    SenderThread:125561 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-03-15 16:13:50,361 INFO    SenderThread:125561 [sender.py:transition_state():392] send defer: 2
+2022-03-15 16:13:50,361 DEBUG   SenderThread:125561 [sender.py:send():235] send: stats
+2022-03-15 16:13:50,361 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: defer
+2022-03-15 16:13:50,362 INFO    HandlerThread:125561 [handler.py:handle_request_defer():164] handle defer: 2
+2022-03-15 16:13:50,362 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: defer
+2022-03-15 16:13:50,362 INFO    SenderThread:125561 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-03-15 16:13:50,362 INFO    SenderThread:125561 [sender.py:transition_state():392] send defer: 3
+2022-03-15 16:13:50,362 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: defer
+2022-03-15 16:13:50,362 INFO    HandlerThread:125561 [handler.py:handle_request_defer():164] handle defer: 3
+2022-03-15 16:13:50,363 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: defer
+2022-03-15 16:13:50,363 INFO    SenderThread:125561 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-03-15 16:13:50,363 INFO    SenderThread:125561 [sender.py:transition_state():392] send defer: 4
+2022-03-15 16:13:50,363 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: defer
+2022-03-15 16:13:50,363 INFO    HandlerThread:125561 [handler.py:handle_request_defer():164] handle defer: 4
+2022-03-15 16:13:50,364 DEBUG   SenderThread:125561 [sender.py:send():235] send: summary
+2022-03-15 16:13:50,365 INFO    SenderThread:125561 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-15 16:13:50,365 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: defer
+2022-03-15 16:13:50,366 INFO    SenderThread:125561 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-03-15 16:13:50,366 INFO    SenderThread:125561 [sender.py:transition_state():392] send defer: 5
+2022-03-15 16:13:50,366 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: defer
+2022-03-15 16:13:50,366 INFO    HandlerThread:125561 [handler.py:handle_request_defer():164] handle defer: 5
+2022-03-15 16:13:50,366 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: defer
+2022-03-15 16:13:50,366 INFO    SenderThread:125561 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-03-15 16:13:50,423 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:50,555 INFO    SenderThread:125561 [sender.py:transition_state():392] send defer: 6
+2022-03-15 16:13:50,555 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:50,556 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: defer
+2022-03-15 16:13:50,556 INFO    HandlerThread:125561 [handler.py:handle_request_defer():164] handle defer: 6
+2022-03-15 16:13:50,556 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: defer
+2022-03-15 16:13:50,557 INFO    SenderThread:125561 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-03-15 16:13:50,557 INFO    SenderThread:125561 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-03-15 16:13:50,606 INFO    SenderThread:125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/wandb-summary.json
+2022-03-15 16:13:50,606 INFO    SenderThread:125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/output.log
+2022-03-15 16:13:50,607 INFO    SenderThread:125561 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/config.yaml
+2022-03-15 16:13:50,607 INFO    SenderThread:125561 [dir_watcher.py:finish():313] scan: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files
+2022-03-15 16:13:50,607 INFO    SenderThread:125561 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/wandb-metadata.json wandb-metadata.json
+2022-03-15 16:13:50,608 INFO    SenderThread:125561 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/wandb-summary.json wandb-summary.json
+2022-03-15 16:13:50,608 INFO    SenderThread:125561 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/conda-environment.yaml conda-environment.yaml
+2022-03-15 16:13:50,608 INFO    SenderThread:125561 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/requirements.txt requirements.txt
+2022-03-15 16:13:50,616 INFO    SenderThread:125561 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/config.yaml config.yaml
+2022-03-15 16:13:50,617 INFO    SenderThread:125561 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/output.log output.log
+2022-03-15 16:13:50,624 INFO    SenderThread:125561 [sender.py:transition_state():392] send defer: 7
+2022-03-15 16:13:50,625 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: defer
+2022-03-15 16:13:50,625 INFO    HandlerThread:125561 [handler.py:handle_request_defer():164] handle defer: 7
+2022-03-15 16:13:50,629 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: defer
+2022-03-15 16:13:50,629 INFO    SenderThread:125561 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-03-15 16:13:50,629 INFO    SenderThread:125561 [file_pusher.py:finish():145] shutting down file pusher
+2022-03-15 16:13:50,658 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:50,658 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:50,759 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:50,760 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:50,861 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:50,861 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:50,964 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:50,964 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:51,067 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:51,068 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:51,170 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:51,170 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:51,175 INFO    Thread-17 :125561 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/config.yaml
+2022-03-15 16:13:51,251 INFO    Thread-15 :125561 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/conda-environment.yaml
+2022-03-15 16:13:51,272 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:51,273 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:51,274 INFO    Thread-16 :125561 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/requirements.txt
+2022-03-15 16:13:51,277 INFO    Thread-14 :125561 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/wandb-summary.json
+2022-03-15 16:13:51,375 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:51,376 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:51,477 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:51,477 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:51,504 INFO    Thread-18 :125561 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/files/output.log
+2022-03-15 16:13:51,579 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:51,579 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:51,681 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:51,681 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:51,704 INFO    Thread-6  :125561 [sender.py:transition_state():392] send defer: 8
+2022-03-15 16:13:51,705 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: defer
+2022-03-15 16:13:51,705 INFO    HandlerThread:125561 [handler.py:handle_request_defer():164] handle defer: 8
+2022-03-15 16:13:51,705 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: defer
+2022-03-15 16:13:51,705 INFO    SenderThread:125561 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-03-15 16:13:51,783 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:52,169 INFO    SenderThread:125561 [sender.py:transition_state():392] send defer: 9
+2022-03-15 16:13:52,169 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:52,170 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: defer
+2022-03-15 16:13:52,170 INFO    HandlerThread:125561 [handler.py:handle_request_defer():164] handle defer: 9
+2022-03-15 16:13:52,170 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: defer
+2022-03-15 16:13:52,170 INFO    SenderThread:125561 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-03-15 16:13:52,171 INFO    SenderThread:125561 [sender.py:transition_state():392] send defer: 10
+2022-03-15 16:13:52,171 DEBUG   SenderThread:125561 [sender.py:send():235] send: final
+2022-03-15 16:13:52,171 DEBUG   SenderThread:125561 [sender.py:send():235] send: footer
+2022-03-15 16:13:52,172 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: defer
+2022-03-15 16:13:52,172 INFO    HandlerThread:125561 [handler.py:handle_request_defer():164] handle defer: 10
+2022-03-15 16:13:52,172 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: defer
+2022-03-15 16:13:52,172 INFO    SenderThread:125561 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-03-15 16:13:52,271 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: poll_exit
+2022-03-15 16:13:52,272 DEBUG   SenderThread:125561 [sender.py:send_request():249] send_request: poll_exit
+2022-03-15 16:13:52,272 INFO    SenderThread:125561 [file_pusher.py:join():150] waiting for file pusher
+2022-03-15 16:13:52,711 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: sampled_history
+2022-03-15 16:13:52,712 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: get_summary
+2022-03-15 16:13:52,713 DEBUG   HandlerThread:125561 [handler.py:handle_request():141] handle_request: shutdown
+2022-03-15 16:13:52,714 INFO    HandlerThread:125561 [handler.py:finish():778] shutting down handler
+2022-03-15 16:13:53,172 INFO    WriterThread:125561 [datastore.py:close():281] close: /share/mastoc/projects/erasmus/dl_historical_images/utils/wandb/run-20220315_160851-grilljt0/run-grilljt0.wandb
+2022-03-15 16:13:53,609 INFO    SenderThread:125561 [sender.py:finish():1078] shutting down sender
+2022-03-15 16:13:53,609 INFO    SenderThread:125561 [file_pusher.py:finish():145] shutting down file pusher
+2022-03-15 16:13:53,609 INFO    SenderThread:125561 [file_pusher.py:join():150] waiting for file pusher
+2022-03-15 16:13:53,667 INFO    MainThread:125561 [internal.py:handle_exit():82] Internal process exited
