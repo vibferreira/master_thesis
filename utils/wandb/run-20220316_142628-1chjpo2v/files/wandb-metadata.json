@@ -1,0 +1,26 @@
+{
+    "os": "Linux-5.10.0-11-amd64-x86_64-with-glibc2.17",
+    "python": "3.8.12",
+    "heartbeatAt": "2022-03-16T13:26:29.611574",
+    "startedAt": "2022-03-16T13:26:28.441038",
+    "docker": null,
+    "gpu": "NVIDIA GeForce GTX TITAN X",
+    "gpu_count": 1,
+    "cpu_count": 40,
+    "cuda": null,
+    "args": [
+        "-f",
+        "/share/castor/etud/e2008984/.local/share/jupyter/runtime/kernel-fc4e2774-c327-462c-bc14-ab7000bc408e.json"
+    ],
+    "state": "running",
+    "program": "utils/training.ipynb",
+    "root": "/share/mastoc/projects/erasmus/dl_historical_images/master_thesis",
+    "git": {
+        "remote": "git@github.com:vibferreira/master_thesis.git",
+        "commit": "c70c9ff3fa3f4bbd558ad40003c80330b123e25e"
+    },
+    "email": "ferreiravitoriabarbosa@gmail.com",
+    "host": "dmis",
+    "username": "e2008984",
+    "executable": "/share/etud/e2008984/miniconda3/envs/env_thesis/bin/python"
+}
