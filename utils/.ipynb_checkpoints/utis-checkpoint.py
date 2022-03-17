@@ -2,8 +2,21 @@
 
 import glob
 import os
+import numpy as np
+import matplotlib.pyplot as plt
 
 import torch
+
+def plot_comparison(pred, y):
+    gt = np.squeeze(y.data.cpu().numpy()[0])
+    pred = np.squeeze(pred.sigmoid().numpy())
+    print(pred.shape)
+    _, ax = plt.subplots(1, 2)
+    ax[0].imshow(gt)
+    ax[0].set_title('Ground Truth')
+    ax[1].imshow(pred[0])
+    ax[1].set_title('Prediction')
+    plt.show()
 
 def save_best_model(model, 
                     dest_path: str, 

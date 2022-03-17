@@ -1,0 +1,33 @@
+Training the network for 4 epochs, with a batch size of 2
+[INFO] Training Loop
+  0%|          | 0/4 [00:00<?, ?it/s]
+[INFO] Validation Loop
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+
+ 25%|██▌       | 1/4 [01:17<03:52, 77.52s/it, acc_val=0.000995, iou_val=0.000995, loss_val=0.9980132]
+[INFO] Validation Loop
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+
+ 50%|█████     | 2/4 [02:22<02:19, 69.93s/it, acc_val=0.974, iou_val=0.00151, loss_val=0.99689806]
+(2, 512, 512)
+[INFO] Training Loop
+[INFO] Validation Loop
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+
+ 75%|███████▌  | 3/4 [03:28<01:08, 68.52s/it, acc_val=0.898, iou_val=0.00277, loss_val=0.9945777]
+(2, 512, 512)
+[INFO] Training Loop
+[INFO] Validation Loop
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+
+100%|██████████| 4/4 [04:37<00:00, 69.45s/it, acc_val=0.718, iou_val=0.00279, loss_val=0.9944832]

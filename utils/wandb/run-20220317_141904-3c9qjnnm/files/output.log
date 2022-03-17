@@ -1,0 +1,25 @@
+
+Training the network for 4 epochs, with a batch size of 2 and 0 iterations per epoch 🤗
+  0%|          | 0/4 [00:00<?, ?it/s]
+  0%|          | 0/10 [00:00<?, ?it/s]
+
+ 10%|█         | 1/10 [00:06<00:58,  6.53s/it, acc=tensor(0.2980), iou=tensor(0.0019), loss=0.996]
+
+
+ 30%|███       | 3/10 [00:21<00:49,  7.09s/it, acc=tensor(0.3964), iou=tensor(0.0002), loss=1]
+[INFO] Training Loop
+
+ 40%|████      | 4/10 [00:27<00:39,  6.66s/it, acc=tensor(0.4521), iou=tensor(0.0018), loss=0.996]
+
+
+ 60%|██████    | 6/10 [00:40<00:26,  6.63s/it, acc=tensor(0.4598), iou=tensor(0.0009), loss=0.999]
+
+ 70%|███████   | 7/10 [00:46<00:19,  6.66s/it, acc=tensor(0.4562), iou=tensor(0.0004), loss=0.999]
+[INFO] Training Loop
+
+ 80%|████████  | 8/10 [00:53<00:13,  6.68s/it, acc=tensor(0.4509), iou=tensor(0.0002), loss=1]
+
+ 90%|█████████ | 9/10 [00:59<00:06,  6.45s/it, acc=tensor(0.5605), iou=tensor(0.0025), loss=0.996]
+
+
+  0%|          | 0/4 [01:08<?, ?it/s]

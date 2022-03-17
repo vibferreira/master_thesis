@@ -1,0 +1,100 @@
+
+Training the network for 2 epochs, with a batch size of 2 and 1 iterations per epoch 🤗
+  0%|          | 0/2 [00:00<?, ?it/s]
+
+ 10%|█         | 1/10 [00:05<00:47,  5.33s/it, acc=40.3, iou=0.381, loss=0.997]
+loss tensor(0.9966, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.5381), 'dice_coeff': tensor(0.0039), 'f1score': tensor(0.0039)}
+
+ 20%|██        | 2/10 [00:10<00:41,  5.15s/it, acc=90.4, iou=0.51, loss=0.999]
+loss tensor(0.9989, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.5447), 'dice_coeff': tensor(0.0011), 'f1score': tensor(0.0011)}
+
+ 30%|███       | 3/10 [00:15<00:34,  4.96s/it, acc=137, iou=0.562, loss=1]
+loss tensor(0.9996, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.4721), 'dice_coeff': tensor(0.0004), 'f1score': tensor(0.0004)}
+
+ 40%|████      | 4/10 [00:19<00:28,  4.76s/it, acc=142, iou=1.14, loss=0.992]
+loss tensor(0.9923, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.4432), 'dice_coeff': tensor(0.0077), 'f1score': tensor(0.0077)}
+
+ 50%|█████     | 5/10 [00:24<00:23,  4.78s/it, acc=188, iou=1.22, loss=0.999]
+loss tensor(0.9994, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.4712), 'dice_coeff': tensor(0.0006), 'f1score': tensor(0.0006)}
+
+ 60%|██████    | 6/10 [00:28<00:18,  4.67s/it, acc=248, iou=1.48, loss=0.998]
+loss tensor(0.9979, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.6164), 'dice_coeff': tensor(0.0022), 'f1score': tensor(0.0022)}
+[INFO] Training Loop
+loss tensor(0.9965, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.7362), 'dice_coeff': tensor(0.0040), 'f1score': tensor(0.0040)}
+
+
+ 80%|████████  | 8/10 [00:38<00:09,  4.71s/it, acc=395, iou=2.28, loss=0.997]
+loss tensor(0.9970, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.8158), 'dice_coeff': tensor(0.0035), 'f1score': tensor(0.0035)}
+
+ 90%|█████████ | 9/10 [00:42<00:04,  4.65s/it, acc=476, iou=2.57, loss=0.997]
+loss tensor(0.9974, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.8585), 'dice_coeff': tensor(0.0031), 'f1score': tensor(0.0031)}
+[INFO] Training Loop
+loss tensor(0.9927, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.8424), 'dice_coeff': tensor(0.0076), 'f1score': tensor(0.0076)}
+[INFO] Training Loop
+avg tensor(0.9927, grad_fn=<MeanBackward0>)
+
+avg 52.021331787109375
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+ 50%|█████     | 1/2 [00:56<00:56, 56.61s/it]
+
+ 10%|█         | 1/10 [00:04<00:37,  4.14s/it, acc=62.1, iou=0.4, loss=0.993]
+loss tensor(0.9932, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.8310), 'dice_coeff': tensor(0.0070), 'f1score': tensor(0.0070)}
+
+ 20%|██        | 2/10 [00:07<00:31,  3.91s/it, acc=144, iou=0.861, loss=0.996]
+loss tensor(0.9960, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.8429), 'dice_coeff': tensor(0.0042), 'f1score': tensor(0.0042)}
+
+ 30%|███       | 3/10 [00:11<00:27,  3.94s/it, acc=229, iou=1.03, loss=0.999]
+loss tensor(0.9986, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.8669), 'dice_coeff': tensor(0.0015), 'f1score': tensor(0.0015)}
+
+ 40%|████      | 4/10 [00:15<00:23,  3.93s/it, acc=236, iou=1.17, loss=0.992]
+loss tensor(0.9924, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.8673), 'dice_coeff': tensor(0.0076), 'f1score': tensor(0.0076)}
+
+ 50%|█████     | 5/10 [00:19<00:19,  3.93s/it, acc=323, iou=1.42, loss=0.998]
+loss tensor(0.9977, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.8959), 'dice_coeff': tensor(0.0024), 'f1score': tensor(0.0024)}
+[INFO] Training Loop
+loss tensor(0.9949, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.9019), 'dice_coeff': tensor(0.0055), 'f1score': tensor(0.0055)}
+
+
+ 70%|███████   | 7/10 [00:27<00:11,  4.00s/it, acc=491, iou=2.07, loss=0.994]
+loss tensor(0.9940, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.9579), 'dice_coeff': tensor(0.0065), 'f1score': tensor(0.0065)}
+
+ 80%|████████  | 8/10 [00:31<00:08,  4.05s/it, acc=577, iou=2.11, loss=0.994]
+loss tensor(0.9942, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.9932), 'dice_coeff': tensor(0.0059), 'f1score': tensor(0.0059)}
+
+ 90%|█████████ | 9/10 [00:36<00:04,  4.11s/it, acc=666, iou=2.34, loss=0.994]
+loss tensor(0.9943, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.9695), 'dice_coeff': tensor(0.0064), 'f1score': tensor(0.0064)}
+
+[INFO] Training Loop
+loss tensor(0.9926, grad_fn=<MeanBackward0>)
+{'acc': tensor(0.9624), 'dice_coeff': tensor(0.0074), 'f1score': tensor(0.0074)}
+[INFO] Training Loop
+avg tensor(0.9926, grad_fn=<MeanBackward0>)
+avg 71.10143661499023
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+
+100%|██████████| 2/2 [01:46<00:00, 53.27s/it]

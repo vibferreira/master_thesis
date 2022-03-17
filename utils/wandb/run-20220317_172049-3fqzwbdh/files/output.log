@@ -1,0 +1,81 @@
+
+Training the network for 4 epochs, with a batch size of 2
+
+
+
+
+
+
+
+
+
+
+Training Epoch [0/4]:  90%|█████████ | 9/10 [00:42<00:04,  4.67s/it, acc=0.7289848, iou=0.00038574293, loss=0.999]
+2
+Validation Epoch [0/4]:  20%|██        | 1/5 [00:01<00:06,  1.62s/it, acc_val=0.00020832737, iou_val=0.00020832737, loss_val=1]
+
+Validation Epoch [0/4]:  40%|████      | 2/5 [00:03<00:04,  1.58s/it, acc_val=0.0020456729, iou_val=0.0020456729, loss_val=0.996]
+
+Validation Epoch [0/4]:  60%|██████    | 3/5 [00:04<00:03,  1.61s/it, acc_val=0.00038325746, iou_val=0.00038325746, loss_val=0.999]
+
+Validation Epoch [0/4]:  80%|████████  | 4/5 [00:06<00:01,  1.64s/it, acc_val=0.00071377476, iou_val=0.00071377476, loss_val=0.999]
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch [1/4]:  90%|█████████ | 9/10 [00:36<00:04,  4.19s/it, acc=0.69283676, iou=0.0007312432, loss=0.999]
+2
+Validation Epoch [1/4]:  20%|██        | 1/5 [00:01<00:06,  1.54s/it, acc_val=0.00025410377, iou_val=0.0002083369, loss_val=1]
+
+Validation Epoch [1/4]:  40%|████      | 2/5 [00:03<00:04,  1.55s/it, acc_val=0.002051395, iou_val=0.0020456845, loss_val=0.996]
+
+Validation Epoch [1/4]:  60%|██████    | 3/5 [00:04<00:03,  1.57s/it, acc_val=0.00039470155, iou_val=0.00038326185, loss_val=0.999]
+0
+
+1
+
+
+
+
+
+
+
+
+
+Training Epoch [2/4]:  90%|█████████ | 9/10 [00:35<00:04,  4.05s/it, acc=0.8703136, iou=0.00087947794, loss=0.998]
+
+Validation Epoch [2/4]:  20%|██        | 1/5 [00:01<00:06,  1.60s/it, acc_val=0.0010608673, iou_val=0.00020848267, loss_val=1]
+
+Validation Epoch [2/4]:  40%|████      | 2/5 [00:03<00:04,  1.58s/it, acc_val=0.0022669253, iou_val=0.0020461255, loss_val=0.996]
+
+Validation Epoch [2/4]:  60%|██████    | 3/5 [00:04<00:03,  1.58s/it, acc_val=0.0011781282, iou_val=0.00038331538, loss_val=0.999]
+
+Validation Epoch [2/4]:  80%|████████  | 4/5 [00:06<00:01,  1.57s/it, acc_val=0.001409957, iou_val=0.000714272, loss_val=0.999]
+
+
+
+
+
+
+
+
+
+
+
+  0%|          | 0/5 [00:00<?, ?it/s]
+
+Validation Epoch [3/4]:  20%|██        | 1/5 [00:01<00:06,  1.61s/it, acc_val=0.13333249, iou_val=0.00022205737, loss_val=1]
+3
+
+Validation Epoch [3/4]:  60%|██████    | 3/5 [00:05<00:03,  1.73s/it, acc_val=0.13000402, iou_val=0.00043442394, loss_val=0.999]
+
+Validation Epoch [3/4]:  80%|████████  | 4/5 [00:06<00:01,  1.69s/it, acc_val=0.09688225, iou_val=0.0007770443, loss_val=0.998]
+
+1

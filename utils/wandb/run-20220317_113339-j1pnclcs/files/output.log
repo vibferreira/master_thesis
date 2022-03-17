@@ -1,0 +1,6 @@
+
+Training the network for 2 epochs, with a batch size of 2 and 1 iterations per epoch 🤗
+  0%|          | 0/2 [00:00<?, ?it/s]
+  0%|          | 0/10 [00:00<?, ?it/s]
+
+loss tensor(0.9985, grad_fn=<MeanBackward0>)

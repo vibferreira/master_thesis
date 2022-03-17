@@ -1,0 +1,79 @@
+  0%|          | 0/2 [00:00<?, ?it/s]
+  0%|          | 0/10 [00:00<?, ?it/s]
+Training the network for 2 epochs, with a batch size of 2 and 1 iterations per epoch 🤗
+loss tensor(0.9973, grad_fn=<MeanBackward0>)
+
+ 10%|█         | 1/10 [00:04<00:44,  4.99s/it, acc=tensor(0.1505), iou=tensor(0.0014), loss=0.997]
+loss tensor(0.9991, grad_fn=<MeanBackward0>)
+
+ 20%|██        | 2/10 [00:10<00:42,  5.25s/it, acc=tensor(0.3493), iou=tensor(0.0004), loss=0.999]
+loss tensor(0.9993, grad_fn=<MeanBackward0>)
+
+ 30%|███       | 3/10 [00:16<00:39,  5.65s/it, acc=tensor(0.5515), iou=tensor(0.0004), loss=0.999]
+loss tensor(0.9961, grad_fn=<MeanBackward0>)
+
+ 40%|████      | 4/10 [00:21<00:32,  5.39s/it, acc=tensor(0.4536), iou=tensor(0.0019), loss=0.996]
+loss tensor(0.9964, grad_fn=<MeanBackward0>)
+
+ 50%|█████     | 5/10 [00:26<00:26,  5.24s/it, acc=tensor(0.4163), iou=tensor(0.0020), loss=0.996]
+loss tensor(0.9970, grad_fn=<MeanBackward0>)
+
+
+ 70%|███████   | 7/10 [00:35<00:14,  4.92s/it, acc=tensor(0.6616), iou=tensor(0.0026), loss=0.996]
+loss tensor(0.9963, grad_fn=<MeanBackward0>)
+
+ 80%|████████  | 8/10 [00:40<00:09,  4.88s/it, acc=tensor(0.5755), iou=tensor(0.0039), loss=0.993]
+loss tensor(0.9933, grad_fn=<MeanBackward0>)
+[INFO] Training Loop
+loss tensor(0.9924, grad_fn=<MeanBackward0>)
+
+ 90%|█████████ | 9/10 [00:45<00:04,  4.75s/it, acc=tensor(0.4268), iou=tensor(0.0039), loss=0.992]
+loss tensor(0.9999, grad_fn=<MeanBackward0>)
+[INFO] Training Loop
+avg tensor(0.9999, grad_fn=<MeanBackward0>)
+
+avg 37.81728744506836
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+ 50%|█████     | 1/2 [00:58<00:58, 58.67s/it]
+  0%|          | 0/10 [00:00<?, ?it/s]
+loss tensor(0.9960, grad_fn=<MeanBackward0>)
+
+ 10%|█         | 1/10 [00:04<00:42,  4.69s/it, acc=tensor(0.4032), iou=tensor(0.0020), loss=0.996]
+loss tensor(0.9984, grad_fn=<MeanBackward0>)
+
+ 20%|██        | 2/10 [00:08<00:34,  4.36s/it, acc=tensor(0.4490), iou=tensor(0.0008), loss=0.998]
+loss tensor(0.9990, grad_fn=<MeanBackward0>)
+
+ 30%|███       | 3/10 [00:12<00:29,  4.17s/it, acc=tensor(0.5271), iou=tensor(0.0005), loss=0.999]
+loss tensor(0.9927, grad_fn=<MeanBackward0>)
+
+ 40%|████      | 4/10 [00:16<00:24,  4.12s/it, acc=tensor(0.5506), iou=tensor(0.0038), loss=0.993]
+loss tensor(0.9939, grad_fn=<MeanBackward0>)
+
+ 50%|█████     | 5/10 [00:20<00:20,  4.07s/it, acc=tensor(0.6578), iou=tensor(0.0033), loss=0.994]
+loss tensor(0.9948, grad_fn=<MeanBackward0>)
+
+ 60%|██████    | 6/10 [00:24<00:16,  4.07s/it, acc=tensor(0.7219), iou=tensor(0.0030), loss=0.995]
+loss tensor(0.9938, grad_fn=<MeanBackward0>)
+
+
+ 80%|████████  | 8/10 [00:33<00:08,  4.20s/it, acc=tensor(0.7902), iou=tensor(0.0039), loss=0.993]
+loss tensor(0.9929, grad_fn=<MeanBackward0>)
+[INFO] Training Loop
+loss tensor(0.9925, grad_fn=<MeanBackward0>)
+
+ 90%|█████████ | 9/10 [00:37<00:04,  4.25s/it, acc=tensor(0.7858), iou=tensor(0.0039), loss=0.993]
+loss tensor(0.9999, grad_fn=<MeanBackward0>)
+[INFO] Training Loop
+avg tensor(0.9999, grad_fn=<MeanBackward0>)
+
+avg 52.984962463378906
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+(2, 512, 512)
+
+100%|██████████| 2/2 [01:50<00:00, 55.18s/it]

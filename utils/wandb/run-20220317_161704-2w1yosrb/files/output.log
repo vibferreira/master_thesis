@@ -1,0 +1,17 @@
+
+Training the network for 4 epochs, with a batch size of 2
+
+
+
+
+
+
+
+
+
+
+Epoch [0.0]:  90%|█████████ | 9/10 [00:46<00:05,  5.40s/it, acc=0.6384171, iou=0.0027250235, loss=0.995]
+
+
+
+

@@ -1,0 +1,26 @@
+
+Training the network for 2 epochs, with a batch size of 2 and 1 iterations per epoch 🤗
+  0%|          | 0/2 [00:00<?, ?it/s]
+
+ 20%|██        | 1/5 [00:05<00:23,  5.76s/it, acc=0, iou=0.249, loss=0.997]
+
+ 40%|████      | 2/5 [00:11<00:17,  5.86s/it, acc=0, iou=0.378, loss=0.998]
+[INFO] Training Loop
+
+ 60%|██████    | 3/5 [00:16<00:10,  5.32s/it, acc=0, iou=0.414, loss=0.999]
+
+
+ 80%|████████  | 4/5 [00:21<00:05,  5.22s/it, acc=0, iou=0.759, loss=0.996]
+
+  0%|          | 0/2 [00:30<?, ?it/s]
+hey (2, 512, 512)
+hey (2, 512, 512)
+hey (512, 512)
+[34m[1mwandb[39m[22m: Currently logged in as: [33mvibferreira[39m (use `wandb login --relogin` to force relogin)
+Number of image patches: 40
+Number of mask patches: 40
+shape image torch.Size([1, 512, 512]) shape mask torch.Size([1, 512, 512])
+Splitting data into TRAIN, VAL and TEST
+Training set size:  20
+Validation set size:  10
+Testing set size:  10
