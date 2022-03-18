@@ -1,5 +1,4 @@
-''' 
-This script performs 
+''' This script performs 
 1) Clipping masks by grid extent (based on the extent of ground truth from 2020);
 2) Rasterizing ground truth into a binary mask. 
 '''
@@ -22,21 +21,19 @@ class Get_Ground_Truth:
         self.MASKS_PATH = MASKS_PATH
         self.DEST_PATH = DEST_PATH
     
-    def clip_grid_extent(self, grid, mask_per_year) -> gpd.GeoDataFrame:
+    def clip_grid_extent(self, grid:gpd.GeoDataFrame, mask_per_year:gpd.GeoDataFrame) -> gpd.GeoDataFrame:
         # clip by grid extent 
         return {key: values.clip(grid) for key, values in mask_per_year.items()}
         
     # Get rasterized binary mask
-    def rasterize_vect(self, df) -> xr:
-        """ 
-        Returns a binary raster mask (xarray) from a vetor layer (Geodataframe)
-        """
+    def rasterize_vect(self, df:gpd.GeoDataFrame) -> xr:
+        """ Returns a binary raster mask (xarray) from a vetor layer (Geodataframe)"""
         return make_geocube(vector_data=df,
         measurements=["value"],
         resolution=(0.75, -0.75),
         fill=0).astype(np.uint8)
 
-    def saving_binary_mask(self, years, mask_per_year) -> None: 
+    def saving_binary_mask(self, years:list, mask_per_year:gpd.GeoDataFrame) -> None: 
         '''Saves the binary masks into .tif files'''
         for year in years:
             if not path.exists(f'{self.DEST_PATH}/{year}.tif'): # this should be passed to the class as well 

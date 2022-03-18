@@ -179,8 +179,8 @@ if __name__ == '__main__':
     mask_paths = glob.glob(MASKS_PATH +'\*.tif')
     
     # Example saving image from 1942
-    images = GetPatches(img_paths[0], PATCHES_IMAGES_PATH, (512, 512))
-    masks = GetPatches(mask_paths[0], PATCHES_MASK_PATH, (512, 512))
+    images = GetPatches(img_paths[0], PATCHES_IMAGES_PATH, (256, 256))
+    masks = GetPatches(mask_paths[0], PATCHES_MASK_PATH, (256, 256))
 
     images.get_items()
     masks.get_items()
