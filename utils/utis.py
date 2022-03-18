@@ -7,14 +7,19 @@ import matplotlib.pyplot as plt
 
 import torch
 
-def plot_comparison(pred, y):
+def plot_comparison(x, pred, y):
     gt = np.squeeze(y.data.cpu().numpy()[0])
     pred = np.squeeze(pred.sigmoid().numpy())
-    _, ax = plt.subplots(1, 2)
-    ax[0].imshow(gt)
-    ax[0].set_title('Ground Truth')
-    ax[1].imshow(pred[0])
-    ax[1].set_title('Prediction')
+    img = np.squeeze(x.data.cpu().numpy()[0])
+    _, ax = plt.subplots(1, 3)
+    
+    plt.gray()
+    ax[0].imshow(img)
+    ax[0].set_title('Image')
+    ax[1].imshow(gt)
+    ax[1].set_title('Ground Truth')
+    ax[2].imshow(pred[0])
+    ax[2].set_title('Prediction')
     plt.show()
 
 def save_best_model(model, 

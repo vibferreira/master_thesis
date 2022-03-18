@@ -7,15 +7,18 @@ import matplotlib.pyplot as plt
 
 import torch
 
-def plot_comparison(pred, y):
+def plot_comparison(x, pred, y):
     gt = np.squeeze(y.data.cpu().numpy()[0])
     pred = np.squeeze(pred.sigmoid().numpy())
-    print(pred.shape)
-    _, ax = plt.subplots(1, 2)
-    ax[0].imshow(gt)
-    ax[0].set_title('Ground Truth')
-    ax[1].imshow(pred[0])
-    ax[1].set_title('Prediction')
+    img = np.squeeze(x.data.cpu().numpy()[0])
+    _, ax = plt.subplots(1, 3)
+    
+    ax[0].imshow(img)
+    ax[0].set_title('Image')
+    ax[1].imshow(gt)
+    ax[1].set_title('Ground Truth')
+    ax[2].imshow(pred[0])
+    ax[2].set_title('Prediction')
     plt.show()
 
 def save_best_model(model, 
@@ -31,5 +34,5 @@ def save_best_model(model,
     
     iou = float(val_dic['IoU_val'][-1])
     acc = float(val_dic['val_accuracy'][-1])
-    # [os.remove(f) for f in glob.glob(dest_path + '/*')] # remove previous saved files 
+    [os.remove(f) for f in glob.glob(dest_path + '/*')] # remove previous saved files 
     return torch.save(model.state_dict(), dest_path + f'/best_model_epoch_{e + 1}_acc_{round(acc,3)}_iou_{round(iou, 3)}.pth')
