@@ -24,18 +24,18 @@ class GetPatches:
 
     def __init__(self, 
                 img_path:str, 
-                patch_path: str, 
+                DEST_PATH: str, 
                 patch_size:tuple) -> None:
         '''
         Args: 
         img_path: .tif file path
-        patch_path: destination folder of the patches
+        DEST_PATH: destination folder of the patches
         patch_size: tuple, define patch size e.g (512 X 512)
         Returns:
         None
         '''
         self.img_path = img_path # class variable unique to each instance (local variable)
-        self.patch_path = patch_path
+        self.DEST_PATH = DEST_PATH
         self.patch_size = patch_size
 
     def get_file_name(self) -> str:
@@ -44,27 +44,35 @@ class GetPatches:
         self.img_path: image path name
         Returns:
         str: file name'''
-        return self.img_path.split('\\')[-1].split('.')[0]
+        return self.img_path.split('/')[-1].split('.')[0]
 
     def check_if_path_exists(self) -> str:
         ''' Check wheter the specified path exist or not, if not, created new path named with the file name
         Args:
         self.get_file_name(): func to get the file_name
-        self.patch_path: folder where to save the patches
+        self.DEST_PATH: folder where to save the patches
         
         Returns:
         path: str, path where to save the patches 
         '''
         file_name = self.get_file_name()
-        path = f'{self.patch_path}\{file_name}'
-        pathExists = os.path.exists(f'{self.patch_path}\{file_name}')
-        if not pathExists:
-            os.makedirs(path)
-            print(f'Creating folder {path}')
-            return path
-        else:
-            print(f'Folder already exists {path}')
-            return path
+        print('\nfile name:', file_name)
+
+        path_ = f'{self.DEST_PATH}/{file_name}'
+        pathExists = os.path.exists(path_)
+        
+        print(f'{path_} exists? {pathExists}')
+        
+        if pathExists:
+            print(f'Folder already exists {path_}')
+            print('Deleting previously saved patches')
+            [os.remove(f) for f in glob.glob(f'{path_}/*', recursive=True)] # remove previous saved files
+            print('PATHS TO DELETE', glob.glob(f'{path_}/*'))
+            return path_
+        else: 
+            os.makedirs(path_)
+            print(f'Creating folder {path_}')
+            return path_
 
     def get_patches(self, img:np.array) -> np.array:
         ''' Return image patches
@@ -134,7 +142,7 @@ class GetPatches:
         for i in range(n_patches.shape[0]):
             # transform 
             transform = from_origin(n_patches[i][0], n_patches[i][1], 0.75, 0.75) # output size
-            with rio.open(f"{path}\{ras_meta['year']}_{i}.tif", 'w',
+            with rio.open(f"{path}/{ras_meta['year']}_{i}.tif", 'w',
                     driver='GTiff',
                     height=self.patch_size[0],
                     width=self.patch_size[1],
@@ -169,19 +177,25 @@ class GetPatches:
 
 # Testing if it works 
 if __name__ == '__main__':
+    
     # All this data paths may be given in a main python file later? 
-    MASKS_PATH = r'data\mask'
-    IMAGES_PATH = r'data\clipped_images'
-    PATCHES_IMAGES_PATH = r'data\patches\images'
-    PATCHES_MASK_PATH = r'data\patches\masks'
+    MASKS_PATH = 'data/masks'
+    IMAGES_PATH = 'data/images'
+    PATCHES_IMAGES_PATH = 'data/patches/images'
+    PATCHES_MASK_PATH = 'data/patches/masks'
 
-    img_paths = glob.glob(IMAGES_PATH +'\*.tif')
-    mask_paths = glob.glob(MASKS_PATH +'\*.tif')
+    img_paths = glob.glob(IMAGES_PATH +'/*.tif')
+    mask_paths = glob.glob(MASKS_PATH +'/*.tif')
+    
+    # print(glob.glob('data/patches/images/1942' + '/*.tif'))
+    print('Paths', img_paths[0])
+    
+    # [os.remove(f) for f in glob.glob('data/patches/images/1942' + '/*.tif')] 
     
     # Example saving image from 1942
-    images = GetPatches(img_paths[0], PATCHES_IMAGES_PATH, (256, 256))
+    images = GetPatches(img_paths[0], PATCHES_IMAGES_PATH, (512, 512))
     masks = GetPatches(mask_paths[0], PATCHES_MASK_PATH, (256, 256))
 
     images.get_items()
-    masks.get_items()
-
+    # masks.get_items()
+    
