@@ -49,6 +49,7 @@ class Get_Ground_Truth:
                 dataset = self.rasterize_vect(mask_per_year[year])
                 out_grid_2 = dataset.to_array()
                 out_grid_2.rio.to_raster(f'{self.DEST_PATH}/{year}.tif')
+                print(f' Image is rasterized in the folder {self.DEST_PATH}')
             else:
                 print(f'{year} is already rasterized!')
                 
@@ -79,7 +80,7 @@ if __name__ == '__main__':
     # Define the paths of the images, mask layers and grid
     MASKS_PATH = 'data/geopackages/mask_per_year.gpkg'
     GRID_PATH = 'data/geopackages/grid.gpkg'
-    DEST_PATH = 'data/mask'
+    DEST_PATH = 'data/masks'
 
     gt = Get_Ground_Truth(GRID_PATH, MASKS_PATH, DEST_PATH)
     print(gt.get_items())
