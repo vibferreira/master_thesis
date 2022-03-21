@@ -17,6 +17,14 @@ class Get_Ground_Truth:
                 MASKS_PATH: str, 
                 DEST_PATH: str) -> None:
         
+        ''' Preprocess ground truth before patchying.
+        The input mask, in geopackage format, is clipped by the extent of the common grid to all images. 
+        In the sequence, the geopackage is rasterize into a binary raster
+        Args: 
+        GRID_PATH (str): grid path
+        MASKS_PATH (str): masks path
+        DEST_PATH (str): destination folder of the BINARY RASTER''' 
+        
         self.GRID_PATH = GRID_PATH
         self.MASKS_PATH = MASKS_PATH
         self.DEST_PATH = DEST_PATH
@@ -69,9 +77,9 @@ class Get_Ground_Truth:
 # Testing if it works 
 if __name__ == '__main__':
     # Define the paths of the images, mask layers and grid
-    MASKS_PATH = 'data\geopackages\mask_per_year.gpkg'
-    GRID_PATH = 'data\geopackages\grid.gpkg'
-    DEST_PATH = 'data\mask'
+    MASKS_PATH = 'data/geopackages/mask_per_year.gpkg'
+    GRID_PATH = 'data/geopackages/grid.gpkg'
+    DEST_PATH = 'data/mask'
 
     gt = Get_Ground_Truth(GRID_PATH, MASKS_PATH, DEST_PATH)
     print(gt.get_items())
