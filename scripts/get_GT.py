@@ -2,14 +2,17 @@
 1) Clipping masks by grid extent (based on the extent of ground truth from 2020);
 2) Rasterizing ground truth into a binary mask. 
 '''
+import os
 from os import path
 import numpy as np
-
+import glob
 import geopandas as gpd
 import fiona
+import rasterio as rio
 import xarray as xr
 from shapely.geometry import mapping
 from geocube.api.core import make_geocube
+from rasterio.warp import calculate_default_transform, reproject, Resampling
 
 class Get_Ground_Truth:
     def __init__(self, 
@@ -48,7 +51,8 @@ class Get_Ground_Truth:
                 print(f'Rasterizing year {year}')
                 dataset = self.rasterize_vect(mask_per_year[year])
                 out_grid_2 = dataset.to_array()
-                out_grid_2.rio.to_raster(f'{self.DEST_PATH}/{year}.tif')
+                print('Bounds', out_grid_2.rio.bounds())
+                out_grid_2.rio.to_raster(f'{self.DEST_PATH}/{year}_temp.tif') # create a temp file (FIND A WAY TO SAVE THE TRANSFORM DIRECTLY WITH XARRAY)
                 print(f' Image is rasterized in the folder {self.DEST_PATH}')
             else:
                 print(f'{year} is already rasterized!')
@@ -74,6 +78,33 @@ class Get_Ground_Truth:
         
         # saving 
         self.saving_binary_mask(years, mask_per_year)
+          
+        # THIS IS A WORK AROUND, FOUND OUT HOW TO REPROJECT DIRECTLY USING THE XARRAY
+        for year in years:
+            with rio.open(f'{self.DEST_PATH}/{year}_temp.tif') as src:
+                transform, width, height = calculate_default_transform(
+                    src.crs, src.crs, src.width, src.height, *src.bounds)
+                
+                print('Transform', transform)
+                kwargs = src.meta.copy()
+                kwargs.update({
+                    'crs': src.crs,
+                    'transform': transform,
+                    'width': width,
+                    'height': height
+                })
+                with rio.open(f'{self.DEST_PATH}/{1942}.tif', 'w', **kwargs) as dst:
+
+                    for i in range(1, src.count + 1):
+                        reproject(
+                            source=rio.band(src, i),
+                            destination=rio.band(dst, i),
+                            src_transform=src.transform,
+                            src_crs=src.crs,
+                            dst_transform=transform,
+                            dst_crs=src.crs,
+                            resampling=Resampling.nearest)
+            dst.close()
 
 # Testing if it works 
 if __name__ == '__main__':
@@ -84,3 +115,7 @@ if __name__ == '__main__':
 
     gt = Get_Ground_Truth(GRID_PATH, MASKS_PATH, DEST_PATH)
     print(gt.get_items())
+    
+    # Delete the temp files 
+    [os.remove(f) for f in glob.glob(DEST_PATH + '/*.tif') if f.endswith('_temp.tif') ] 
+

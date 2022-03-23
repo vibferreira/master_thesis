@@ -14,10 +14,12 @@ import cv2
 from patchify import patchify
 from rasterio.crs import CRS
 from rasterio.transform import from_origin
+from rasterio.warp import calculate_default_transform, reproject, Resampling
 
 import os
 import numpy as np
 import glob
+
 
 class GetPatches:
     current_path = Path.cwd() # class variable shared by all instances (global variable), here just for learning purposes
@@ -65,9 +67,9 @@ class GetPatches:
         
         if pathExists:
             print(f'Folder already exists {path_}')
-            print('Deleting previously saved patches')
-            [os.remove(f) for f in glob.glob(f'{path_}/*', recursive=True)] # remove previous saved files
-            print('PATHS TO DELETE', glob.glob(f'{path_}/*'))
+            # print('Deleting previously saved patches')
+            # [os.remove(f) for f in glob.glob(f'{path_}/*', recursive=True)] # remove previous saved files
+            # print('PATHS TO DELETE', glob.glob(f'{path_}/*'))
             return path_
         else: 
             os.makedirs(path_)
@@ -187,15 +189,20 @@ if __name__ == '__main__':
     img_paths = glob.glob(IMAGES_PATH +'/*.tif')
     mask_paths = glob.glob(MASKS_PATH +'/*.tif')
     
-    # print(glob.glob('data/patches/images/1942' + '/*.tif'))
-    print('Paths', img_paths[0])
-    
     # [os.remove(f) for f in glob.glob('data/patches/images/1942' + '/*.tif')] 
     
     # Example saving image from 1942
-    images = GetPatches(img_paths[0], PATCHES_IMAGES_PATH, (512, 512))
+    images = GetPatches(img_paths[0], PATCHES_IMAGES_PATH, (256, 256))
     masks = GetPatches(mask_paths[0], PATCHES_MASK_PATH, (256, 256))
 
     images.get_items()
-    # masks.get_items()
+    masks.get_items()
     
+    # check size
+    for i in glob.glob('data/patches/images/1942' + '/*.tif'):
+        i = cv2.imread(i)
+        assert i[:,:,0].shape == (256, 256), ' CAREFUL, Not all images have the same shape'
+        
+    for i in glob.glob('data/patches/masks/1942' + '/*.tif'):
+        i = cv2.imread(i)
+        assert i[:,:,0].shape == (256, 256), ' CAREFUL, Not all images have the same shape'

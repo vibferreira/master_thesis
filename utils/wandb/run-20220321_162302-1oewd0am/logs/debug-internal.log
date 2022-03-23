@@ -1402,3 +1402,32 @@
 2022-03-21 18:51:53,963 DEBUG   SenderThread:18769 [sender.py:send_request():249] send_request: stop_status
 2022-03-21 18:52:09,135 DEBUG   HandlerThread:18769 [handler.py:handle_request():141] handle_request: stop_status
 2022-03-21 18:52:09,135 DEBUG   SenderThread:18769 [sender.py:send_request():249] send_request: stop_status
+2022-03-21 18:52:24,369 DEBUG   HandlerThread:18769 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-21 18:52:24,369 DEBUG   SenderThread:18769 [sender.py:send_request():249] send_request: stop_status
+2022-03-21 18:52:39,541 DEBUG   HandlerThread:18769 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-21 18:52:39,541 DEBUG   SenderThread:18769 [sender.py:send_request():249] send_request: stop_status
+2022-03-21 18:52:54,709 DEBUG   HandlerThread:18769 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-21 18:52:54,710 DEBUG   SenderThread:18769 [sender.py:send_request():249] send_request: stop_status
+2022-03-21 18:53:09,986 DEBUG   HandlerThread:18769 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-21 18:53:09,986 DEBUG   SenderThread:18769 [sender.py:send_request():249] send_request: stop_status
+2022-03-21 18:53:24,176 WARNING MainThread:18769 [internal.py:is_dead():387] Internal process exiting, parent pid 18629 disappeared
+2022-03-21 18:53:24,176 ERROR   MainThread:18769 [internal.py:wandb_internal():151] Internal process shutdown.
+2022-03-21 18:53:24,208 INFO    HandlerThread:18769 [handler.py:finish():778] shutting down handler
+2022-03-21 18:53:24,969 INFO    WriterThread:18769 [datastore.py:close():281] close: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/run-1oewd0am.wandb
+2022-03-21 18:53:25,165 INFO    SenderThread:18769 [sender.py:finish():1078] shutting down sender
+2022-03-21 18:53:25,166 INFO    SenderThread:18769 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-03-21 18:53:25,989 INFO    SenderThread:18769 [dir_watcher.py:finish():313] scan: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files
+2022-03-21 18:53:25,989 INFO    SenderThread:18769 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files/wandb-metadata.json wandb-metadata.json
+2022-03-21 18:53:25,989 INFO    SenderThread:18769 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files/wandb-summary.json wandb-summary.json
+2022-03-21 18:53:25,990 INFO    SenderThread:18769 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files/conda-environment.yaml conda-environment.yaml
+2022-03-21 18:53:25,992 INFO    SenderThread:18769 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files/requirements.txt requirements.txt
+2022-03-21 18:53:25,996 INFO    SenderThread:18769 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files/config.yaml config.yaml
+2022-03-21 18:53:26,001 INFO    SenderThread:18769 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files/output.log output.log
+2022-03-21 18:53:26,001 INFO    SenderThread:18769 [file_pusher.py:finish():145] shutting down file pusher
+2022-03-21 18:53:26,001 INFO    SenderThread:18769 [file_pusher.py:join():150] waiting for file pusher
+2022-03-21 18:53:26,558 INFO    Thread-15 :18769 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files/wandb-summary.json
+2022-03-21 18:53:26,561 INFO    Thread-18 :18769 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files/config.yaml
+2022-03-21 18:53:26,571 INFO    Thread-17 :18769 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files/requirements.txt
+2022-03-21 18:53:26,598 INFO    Thread-19 :18769 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files/output.log
+2022-03-21 18:53:26,681 INFO    Thread-16 :18769 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220321_162302-1oewd0am/files/conda-environment.yaml
+2022-03-21 18:53:27,185 INFO    MainThread:18769 [internal.py:handle_exit():82] Internal process exited

@@ -1,0 +1,4 @@
+name: jupyter_pratixa
+channels:
+  - defaults
+prefix: /share/etud/e2008984/.conda/envs/jupyter_pratixa
