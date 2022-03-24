@@ -69,7 +69,7 @@ def metrics(pred, y):
     specificity = (tn + eps) / (tn + fp + eps)
     f1score = 2 * precision * recall / (precision + recall)
 
-    return {'acc': pixel_acc, 'iou':iou, 'dice_coeff': dice, 'f1score': f1score}
+    return {'acc': pixel_acc.cpu().numpy(), 'iou':iou.cpu().numpy(), 'dice_coeff': dice.cpu().numpy(), 'f1score': f1score}
 
 # Confusion metrics 
 

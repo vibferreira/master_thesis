@@ -49,11 +49,8 @@ def jaccard_idx(pred:torch,
 # F1 Score
 def metrics(pred, y):
 
-    pred = pred.detach()
-    pred = pred.sigmoid()
+    pred = pred.detach().sigmoid()
     pred = (pred > 0.5).float()
-    # # pred = pred.view(-1, )
-    # y = y.view(-1, ).float()
 
     tp = torch.sum(pred * y)  # TP
     fp = torch.sum(pred * (1 - y))  # FP
@@ -69,7 +66,7 @@ def metrics(pred, y):
     specificity = (tn + eps) / (tn + fp + eps)
     f1score = 2 * precision * recall / (precision + recall)
 
-    return {'acc': pixel_acc.numpy(), 'iou':iou.numpy(), 'dice_coeff': dice, 'f1score': f1score}
+    return {'acc': pixel_acc.cpu().numpy(), 'iou':iou.cpu().numpy(), 'dice_coeff': dice.cpu().numpy(), 'f1score': f1score}
 
 # Confusion metrics 
 

@@ -13,10 +13,10 @@ import torch
 def plot_comparison(x:torch.Tensor, 
                     pred:torch.Tensor, 
                     y:torch.Tensor) -> None:
-    gt = np.squeeze(y.data.cpu().numpy()[0])
-    pred = np.squeeze(pred.sigmoid().numpy())
-    img = np.squeeze(x.data.cpu().numpy()[0])
-    _, ax = plt.subplots(1, 3)
+    gt = np.squeeze(y.data.cpu().cpu().numpy()[0])
+    pred = np.squeeze(pred.sigmoid().cpu().numpy())
+    img = np.squeeze(x.data.cpu().cpu().numpy()[0])
+    _, ax = plt.subplots(1, 3, sharey='row')
     
     plt.gray()
     ax[0].imshow(img)
@@ -56,7 +56,7 @@ def plot_grids(grids, titles = ["Input", 'Target']):
         sub.xaxis.set_visible(False)
         # Remove y axis ticks and set yaxis label
         sub.set_yticks([])
-        sub.set_ylabel(titles[i-1], rotation=0, fontsize=5, labelpad=2)
+        sub.set_ylabel(titles[i-1], rotation=0, fontsize=5, labelpad=15)
         sub.imshow(grids[i-1])
     plt.show()
 
