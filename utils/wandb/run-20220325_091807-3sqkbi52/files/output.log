@@ -1,0 +1,36 @@
+
+Training the network for 40 epochs, with a batch size of 16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch [1/40]:  88%|▉| 96/109 [00:09<00:01, 10.17it/s, acc=0.942203, dice=0.007763046, iou=0.0002

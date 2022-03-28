@@ -1,0 +1,8 @@
+
+  0%|                                                                              | 0/7 [00:00<?, ?it/s]
+
+Training Epoch [0/1]:  71%|▋| 5/7 [00:02<00:00,  3.34it/s, acc=0.67857975, dice=0.0035735378, iou=0.00178
+torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
+torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
+torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
+

@@ -1,0 +1,691 @@
+2022-03-25 10:13:55,853 INFO    MainThread:81687 [internal.py:wandb_internal():92] W&B internal server running at pid: 81687, started at: 2022-03-25 10:13:55.852962
+2022-03-25 10:13:55,855 INFO    WriterThread:81687 [datastore.py:open_for_write():77] open: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/run-2c6kaxuf.wandb
+2022-03-25 10:13:55,858 DEBUG   SenderThread:81687 [sender.py:send():235] send: header
+2022-03-25 10:13:55,858 DEBUG   SenderThread:81687 [sender.py:send():235] send: run
+2022-03-25 10:13:56,061 INFO    SenderThread:81687 [dir_watcher.py:__init__():169] watching files in: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files
+2022-03-25 10:13:56,061 INFO    SenderThread:81687 [sender.py:_start_run_threads():812] run started: 2c6kaxuf with start time 1648199634
+2022-03-25 10:13:56,061 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:13:56,061 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: check_version
+2022-03-25 10:13:56,062 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:13:56,062 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: check_version
+2022-03-25 10:13:56,147 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: run_start
+2022-03-25 10:13:56,155 DEBUG   HandlerThread:81687 [meta.py:__init__():37] meta init
+2022-03-25 10:13:56,155 DEBUG   HandlerThread:81687 [meta.py:__init__():51] meta init done
+2022-03-25 10:13:56,155 DEBUG   HandlerThread:81687 [meta.py:probe():211] probe
+2022-03-25 10:13:56,162 DEBUG   HandlerThread:81687 [meta.py:_setup_git():201] setup git
+2022-03-25 10:13:56,180 DEBUG   HandlerThread:81687 [meta.py:_setup_git():208] setup git done
+2022-03-25 10:13:56,180 DEBUG   HandlerThread:81687 [meta.py:_save_pip():55] save pip
+2022-03-25 10:13:56,181 DEBUG   HandlerThread:81687 [meta.py:_save_pip():69] save pip done
+2022-03-25 10:13:56,181 DEBUG   HandlerThread:81687 [meta.py:_save_conda():76] save conda
+2022-03-25 10:13:57,066 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/requirements.txt
+2022-03-25 10:13:57,067 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/conda-environment.yaml
+2022-03-25 10:13:57,068 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:13:57,624 DEBUG   HandlerThread:81687 [meta.py:_save_conda():86] save conda done
+2022-03-25 10:13:57,624 DEBUG   HandlerThread:81687 [meta.py:probe():249] probe done
+2022-03-25 10:13:57,808 DEBUG   SenderThread:81687 [sender.py:send():235] send: files
+2022-03-25 10:13:57,808 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-03-25 10:13:57,823 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:13:57,823 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:13:57,986 DEBUG   SenderThread:81687 [sender.py:send():235] send: telemetry
+2022-03-25 10:13:58,065 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/conda-environment.yaml
+2022-03-25 10:13:58,065 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:13:58,065 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-metadata.json
+2022-03-25 10:13:58,352 INFO    Thread-11 :81687 [upload_job.py:push():137] Uploaded file /tmp/tmpupuak5cpwandb/2178jz2j-wandb-metadata.json
+2022-03-25 10:13:59,610 DEBUG   SenderThread:81687 [sender.py:send():235] send: telemetry
+2022-03-25 10:14:00,067 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:02,069 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:04,071 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:06,072 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:08,074 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:10,076 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:12,078 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:12,987 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:14:12,988 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:14:14,079 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:16,081 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:18,083 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:18,133 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:14:18,135 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:14:18,136 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:14:18,144 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:14:19,087 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:14:20,088 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:21,263 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:14:21,264 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:14:21,264 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:14:21,266 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:14:22,089 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:22,090 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:14:24,091 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:24,855 DEBUG   SenderThread:81687 [sender.py:send():235] send: stats
+2022-03-25 10:14:26,093 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:27,094 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/config.yaml
+2022-03-25 10:14:28,095 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:28,151 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:14:28,152 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:14:30,097 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:32,098 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:33,415 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:14:33,416 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:14:33,416 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:14:33,417 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:14:34,100 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:34,101 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:14:36,102 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:36,508 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:14:36,509 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:14:36,509 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:14:36,510 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:14:37,103 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:14:38,104 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:40,105 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:42,107 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:43,315 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:14:43,316 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:14:44,112 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:46,114 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:48,116 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:48,451 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:14:48,452 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:14:48,452 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:14:48,453 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:14:49,117 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:14:50,118 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:51,608 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:14:51,609 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:14:51,609 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:14:51,610 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:14:52,119 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:52,119 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:14:54,132 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:55,647 DEBUG   SenderThread:81687 [sender.py:send():235] send: stats
+2022-03-25 10:14:56,145 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:58,161 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:14:58,496 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:14:58,496 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:15:00,171 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:02,174 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:04,177 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:05,520 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:05,523 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:15:05,523 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:15:05,531 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:15:06,178 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:06,179 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:15:08,180 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:10,181 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:11,206 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:11,208 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:15:11,208 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:15:11,210 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:15:12,183 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:12,183 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:15:13,662 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:15:13,662 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:15:14,195 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:16,197 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:18,204 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:20,206 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:22,227 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:24,232 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:26,234 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:26,589 DEBUG   SenderThread:81687 [sender.py:send():235] send: stats
+2022-03-25 10:15:28,236 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:29,027 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:29,029 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:15:29,029 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:15:29,031 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:15:29,236 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:15:29,435 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:15:29,436 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:15:30,237 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:33,239 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:34,564 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:34,565 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:15:34,565 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:15:34,566 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:15:35,244 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:35,244 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:15:37,245 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:39,247 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:41,248 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:43,250 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:44,602 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:15:44,603 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:15:45,251 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:47,253 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:49,259 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:51,276 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:51,979 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:51,980 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:15:51,980 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:15:51,983 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:15:52,277 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:15:53,278 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:55,287 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:56,024 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:56,025 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:15:56,025 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:15:56,027 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:15:56,292 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:15:57,292 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:57,625 DEBUG   SenderThread:81687 [sender.py:send():235] send: stats
+2022-03-25 10:15:58,927 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,932 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,932 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,933 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,933 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,933 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,933 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,933 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,971 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,972 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,972 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,972 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,972 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,972 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,972 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,972 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,973 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,973 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,973 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,973 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,973 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,973 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,973 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,974 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,974 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,974 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,974 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,974 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,974 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,974 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,975 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,975 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,975 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,975 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,975 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,976 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,976 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,976 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,976 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,976 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,976 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,976 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,977 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,977 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,977 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,977 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,977 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,977 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,977 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,978 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,978 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,978 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,978 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,978 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,978 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,978 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,979 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,979 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,979 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,983 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,983 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,983 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,984 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,984 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,984 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,984 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,984 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,984 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,984 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,985 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,985 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,985 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,985 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,985 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,985 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,985 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,986 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,986 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,986 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,986 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,986 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,986 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,986 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,987 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,987 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,987 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,991 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,991 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,991 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,991 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,992 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,992 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,992 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,992 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,992 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,992 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,992 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,993 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,993 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,993 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,993 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,993 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,993 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,993 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:58,994 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,004 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,004 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,004 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,004 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,004 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,005 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,005 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,005 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,005 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,037 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,037 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,038 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,047 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,047 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,047 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,048 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,048 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,048 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,061 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,061 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,062 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,071 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,072 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,072 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,072 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,072 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,072 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,086 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,086 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,086 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,095 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,096 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,096 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,096 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,096 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,096 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,106 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,106 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,107 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,111 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,111 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,112 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,112 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,112 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,112 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,119 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,120 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,120 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,131 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,132 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,132 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,157 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,157 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,158 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,162 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,164 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,164 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,169 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,169 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,169 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,172 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,172 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,173 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,176 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,177 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,177 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,184 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,184 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,184 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,184 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,184 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,184 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,185 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,185 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,185 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,185 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,185 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,185 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,185 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,186 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,186 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,195 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,196 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:15:59,296 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:15:59,768 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:15:59,768 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:16:01,298 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:03,299 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:05,320 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:07,321 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:09,323 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:11,324 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:13,340 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:14,944 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:16:14,944 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:16:14,981 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:16:15,108 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:16:15,149 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:16:15,222 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:16:15,356 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:15,356 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:16:17,367 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:19,362 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:20,123 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:16:20,135 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:16:20,144 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:16:20,185 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:16:20,363 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:16:21,364 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:23,366 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:25,367 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:27,369 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:28,666 DEBUG   SenderThread:81687 [sender.py:send():235] send: stats
+2022-03-25 10:16:29,371 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:30,119 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:16:30,119 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:16:31,372 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:33,373 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:35,375 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:37,376 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:39,252 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:16:39,262 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:16:39,273 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:16:39,309 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:16:39,378 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:39,378 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:16:41,379 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:43,381 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:44,470 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:16:44,485 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:16:44,486 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:16:44,528 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:16:45,291 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:16:45,292 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:16:45,384 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:45,384 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:16:47,386 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:49,388 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:51,396 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:53,397 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:55,399 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:57,408 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:59,410 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:16:59,706 DEBUG   SenderThread:81687 [sender.py:send():235] send: stats
+2022-03-25 10:17:00,467 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:17:00,468 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:17:01,412 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:03,414 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:05,415 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:06,939 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:06,951 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:17:06,971 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:17:07,019 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:17:07,416 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:07,417 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:17:09,421 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:11,056 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:11,071 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:17:11,079 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:17:11,130 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:17:11,422 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:11,422 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:17:13,423 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:14,311 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,312 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,319 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,327 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,328 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,328 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,328 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,328 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,328 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,328 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,335 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,336 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,336 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,336 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,336 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,336 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,336 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,343 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,344 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,344 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,345 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,345 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,346 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,346 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,346 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,346 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,351 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,351 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,352 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,352 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,352 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,363 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,371 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,372 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,372 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,372 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,380 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,380 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,380 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,381 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,381 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,382 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,383 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,383 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,383 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,387 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,388 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,388 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,391 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,392 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,399 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,403 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,415 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,415 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,416 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,423 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,424 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,424 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,424 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,427 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,427 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,428 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,428 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,429 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,429 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,429 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,429 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,429 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,429 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,429 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,430 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,430 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,430 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,430 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,430 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,430 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,430 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,431 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,431 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,431 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,431 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,431 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,431 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,431 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,432 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,432 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,432 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,432 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,432 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,432 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,439 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,439 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,440 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,440 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,440 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,440 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,440 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,440 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,440 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,441 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,441 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,441 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,441 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,441 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,441 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,441 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,441 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,442 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,442 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,442 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,442 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,442 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,442 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,442 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,443 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,447 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,447 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,448 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,448 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,448 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,448 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,448 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,448 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,448 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,455 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,459 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,468 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,468 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,468 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,468 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,468 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,468 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,469 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,469 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,469 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,469 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,469 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,469 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,469 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,469 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,470 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,470 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,470 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,470 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,470 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,475 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,479 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,480 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,480 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,480 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,480 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,481 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,481 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,481 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,481 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,482 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,482 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,484 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,485 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,486 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,488 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,489 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,490 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,492 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,493 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,494 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,495 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,496 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,497 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,498 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,498 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,499 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,500 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,500 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,501 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,503 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,504 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,505 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,506 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,507 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,508 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,509 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,510 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,511 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,512 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,513 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,514 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:14,515 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:15,426 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:15,641 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:17:15,641 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:17:17,427 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:19,429 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:21,430 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:23,432 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:25,433 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:27,435 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:29,437 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:30,567 DEBUG   SenderThread:81687 [sender.py:send():235] send: stats
+2022-03-25 10:17:30,807 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:17:30,808 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:17:31,439 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:32,068 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:32,114 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:17:32,204 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:17:32,292 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:17:32,443 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:17:33,448 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:35,450 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:37,451 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:37,607 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:37,623 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:17:37,643 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:17:37,690 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:17:38,452 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:17:39,453 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:41,455 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:43,456 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:45,458 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:45,971 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:17:45,972 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:17:47,460 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:49,461 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:51,463 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:53,464 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:55,466 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:57,467 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:17:57,718 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:17:57,731 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:17:57,765 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:17:57,851 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:17:58,468 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:17:59,470 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:18:01,139 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 10:18:01,139 DEBUG   SenderThread:81687 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 10:18:01,472 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:18:01,614 DEBUG   SenderThread:81687 [sender.py:send():235] send: stats
+2022-03-25 10:18:01,715 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-25 10:18:01,727 DEBUG   SenderThread:81687 [sender.py:send():235] send: history
+2022-03-25 10:18:01,762 DEBUG   SenderThread:81687 [sender.py:send():235] send: summary
+2022-03-25 10:18:01,816 INFO    SenderThread:81687 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 10:18:02,473 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/wandb-summary.json
+2022-03-25 10:18:03,474 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:18:05,476 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:18:07,477 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:18:09,479 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:18:11,481 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:18:13,170 WARNING MainThread:81687 [internal.py:wandb_internal():155] Internal process interrupt: 1
+2022-03-25 10:18:13,482 INFO    Thread-7  :81687 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_101354-2c6kaxuf/files/output.log
+2022-03-25 10:18:13,931 DEBUG   HandlerThread:81687 [handler.py:handle_request():141] handle_request: pause
+2022-03-25 10:18:13,932 INFO    HandlerThread:81687 [handler.py:handle_request_pause():659] stopping system metrics thread

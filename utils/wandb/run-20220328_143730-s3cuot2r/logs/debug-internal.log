@@ -1,0 +1,267 @@
+2022-03-28 14:37:32,671 INFO    MainThread:112222 [internal.py:wandb_internal():92] W&B internal server running at pid: 112222, started at: 2022-03-28 14:37:32.670793
+2022-03-28 14:37:32,724 INFO    WriterThread:112222 [datastore.py:open_for_write():77] open: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/run-s3cuot2r.wandb
+2022-03-28 14:37:32,725 DEBUG   SenderThread:112222 [sender.py:send():235] send: header
+2022-03-28 14:37:32,725 DEBUG   SenderThread:112222 [sender.py:send():235] send: run
+2022-03-28 14:37:33,168 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: check_version
+2022-03-28 14:37:33,228 INFO    SenderThread:112222 [dir_watcher.py:__init__():169] watching files in: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files
+2022-03-28 14:37:33,228 INFO    SenderThread:112222 [sender.py:_start_run_threads():812] run started: s3cuot2r with start time 1648471050
+2022-03-28 14:37:33,228 DEBUG   SenderThread:112222 [sender.py:send():235] send: summary
+2022-03-28 14:37:33,244 INFO    SenderThread:112222 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-28 14:37:33,244 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: check_version
+2022-03-28 14:37:33,436 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: run_start
+2022-03-28 14:37:33,466 DEBUG   HandlerThread:112222 [meta.py:__init__():37] meta init
+2022-03-28 14:37:33,466 DEBUG   HandlerThread:112222 [meta.py:__init__():51] meta init done
+2022-03-28 14:37:33,466 DEBUG   HandlerThread:112222 [meta.py:probe():211] probe
+2022-03-28 14:37:33,474 DEBUG   HandlerThread:112222 [meta.py:_setup_git():201] setup git
+2022-03-28 14:37:33,507 DEBUG   HandlerThread:112222 [meta.py:_setup_git():208] setup git done
+2022-03-28 14:37:33,507 DEBUG   HandlerThread:112222 [meta.py:_save_pip():55] save pip
+2022-03-28 14:37:33,509 DEBUG   HandlerThread:112222 [meta.py:_save_pip():69] save pip done
+2022-03-28 14:37:33,509 DEBUG   HandlerThread:112222 [meta.py:_save_conda():76] save conda
+2022-03-28 14:37:34,231 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/requirements.txt
+2022-03-28 14:37:34,240 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/conda-environment.yaml
+2022-03-28 14:37:34,241 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/wandb-summary.json
+2022-03-28 14:37:38,254 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/conda-environment.yaml
+2022-03-28 14:37:38,420 DEBUG   HandlerThread:112222 [meta.py:_save_conda():86] save conda done
+2022-03-28 14:37:38,420 DEBUG   HandlerThread:112222 [meta.py:probe():249] probe done
+2022-03-28 14:37:39,164 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:37:39,165 DEBUG   SenderThread:112222 [sender.py:send():235] send: files
+2022-03-28 14:37:39,165 INFO    SenderThread:112222 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-03-28 14:37:39,166 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:37:39,269 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/wandb-metadata.json
+2022-03-28 14:37:39,270 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:37:39,339 DEBUG   SenderThread:112222 [sender.py:send():235] send: telemetry
+2022-03-28 14:37:40,025 INFO    Thread-11 :112222 [upload_job.py:push():137] Uploaded file /tmp/tmp0zoos6xuwandb/3blwrv2t-wandb-metadata.json
+2022-03-28 14:37:42,422 DEBUG   SenderThread:112222 [sender.py:send():235] send: telemetry
+2022-03-28 14:37:43,284 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:37:45,287 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:37:47,288 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:37:49,300 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:37:51,302 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:37:53,312 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:37:54,358 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:37:54,358 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:37:55,317 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:37:57,325 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:37:59,327 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:01,329 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:03,028 DEBUG   SenderThread:112222 [sender.py:send():235] send: stats
+2022-03-28 14:38:03,330 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/config.yaml
+2022-03-28 14:38:03,331 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:05,341 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:07,345 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:09,346 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:09,573 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:38:09,573 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:38:11,354 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:13,356 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:15,366 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:17,388 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:19,391 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:21,393 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:23,395 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:24,777 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:38:24,778 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:38:25,397 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:27,405 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:29,408 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:31,424 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:33,436 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:34,343 DEBUG   SenderThread:112222 [sender.py:send():235] send: stats
+2022-03-28 14:38:35,453 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:37,454 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:39,469 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:39,968 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:38:39,969 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:38:41,471 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:43,473 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:45,474 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:47,480 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:49,484 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:51,493 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:53,502 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:55,157 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:38:55,157 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:38:55,503 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:57,505 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:38:59,507 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:01,516 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:03,524 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:05,536 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:05,629 DEBUG   SenderThread:112222 [sender.py:send():235] send: stats
+2022-03-28 14:39:07,538 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:09,556 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:10,327 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:39:10,328 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:39:11,565 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:13,578 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:15,586 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:17,587 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:19,592 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:21,594 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:23,601 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:25,532 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:39:25,533 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:39:25,620 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:27,656 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:29,659 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:31,661 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:32,832 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: partial_history
+2022-03-28 14:39:32,856 DEBUG   SenderThread:112222 [sender.py:send():235] send: history
+2022-03-28 14:39:32,857 DEBUG   SenderThread:112222 [sender.py:send():235] send: summary
+2022-03-28 14:39:32,869 INFO    SenderThread:112222 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-28 14:39:33,665 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/wandb-summary.json
+2022-03-28 14:39:33,665 INFO    Thread-7  :112222 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_143730-s3cuot2r/files/output.log
+2022-03-28 14:39:35,136 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: pause
+2022-03-28 14:39:35,137 INFO    HandlerThread:112222 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-28 14:39:35,216 DEBUG   SenderThread:112222 [sender.py:send():235] send: stats
+2022-03-28 14:39:40,752 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:39:40,753 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:39:56,005 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:39:56,005 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:40:11,218 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:40:11,219 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:40:26,416 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:40:26,416 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:40:41,610 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:40:41,612 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:40:56,872 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:40:56,872 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:41:12,064 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:41:12,068 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:41:27,289 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:41:27,290 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:41:42,485 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:41:42,486 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:41:57,730 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:41:57,730 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:42:12,946 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:42:12,947 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:42:28,606 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:42:28,606 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:42:43,796 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:42:43,797 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:42:59,012 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:42:59,012 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:43:14,440 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:43:14,441 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:43:29,637 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:43:29,637 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:43:44,849 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:43:44,852 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:44:00,081 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:44:00,081 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:44:15,293 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:44:15,293 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:44:30,496 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:44:30,496 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:44:45,688 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:44:45,689 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:45:00,901 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:45:00,901 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:45:16,080 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:45:16,080 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:45:31,296 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:45:31,297 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:45:46,620 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:45:46,621 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:46:01,873 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:46:01,873 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:46:17,089 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:46:17,089 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:46:32,292 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:46:32,292 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:46:47,476 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:46:47,476 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:47:02,652 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:47:02,652 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:47:17,843 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:47:17,844 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:47:33,024 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:47:33,027 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:47:48,232 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:47:48,232 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:48:03,428 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:48:03,428 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:48:18,607 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:48:18,607 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:48:33,796 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:48:33,796 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:48:48,996 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:48:48,997 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:49:04,196 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:49:04,196 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:49:19,392 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:49:19,396 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:49:34,585 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:49:34,586 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:49:49,780 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:49:49,780 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:50:04,968 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:50:04,968 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:50:20,496 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:50:20,497 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:50:35,702 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:50:35,703 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:50:50,904 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:50:50,905 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:51:06,102 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:51:06,102 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:51:21,316 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:51:21,317 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:51:36,508 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:51:36,508 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:51:51,700 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:51:51,700 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:52:06,900 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:52:06,901 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:52:22,112 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:52:22,112 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:52:37,297 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:52:37,297 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:52:52,485 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:52:52,486 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:53:07,731 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:53:07,731 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:53:22,955 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:53:22,956 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:53:38,152 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:53:38,152 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:53:53,652 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:53:53,653 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:54:08,900 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:54:08,901 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:54:24,113 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:54:24,114 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:54:39,310 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:54:39,310 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:54:54,493 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:54:54,494 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:55:09,677 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:55:09,678 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:55:24,899 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:55:24,899 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:55:40,064 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:55:40,064 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:55:55,272 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:55:55,273 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:56:10,462 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:56:10,463 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:56:25,660 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:56:25,660 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:56:40,860 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:56:40,860 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:56:56,056 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:56:56,056 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:57:11,275 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:57:11,276 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:57:26,497 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:57:26,497 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:57:41,697 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:57:41,698 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:57:56,896 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:57:56,900 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:58:12,108 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:58:12,109 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:58:27,340 DEBUG   HandlerThread:112222 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 14:58:27,340 DEBUG   SenderThread:112222 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 14:58:29,899 WARNING MainThread:112222 [internal.py:wandb_internal():155] Internal process interrupt: 1

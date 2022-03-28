@@ -1,0 +1,30 @@
+2022-03-25 11:45:43,625 INFO    MainThread:124830 [wandb_setup.py:_flush():75] Loading settings from /share/etud/e2008984/.config/wandb/settings
+2022-03-25 11:45:43,625 INFO    MainThread:124830 [wandb_setup.py:_flush():75] Loading settings from /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/settings
+2022-03-25 11:45:43,625 INFO    MainThread:124830 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-03-25 11:45:43,625 INFO    MainThread:124830 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2022-03-25 11:45:43,625 INFO    MainThread:124830 [wandb_init.py:_log_setup():405] Logging user logs to /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_114543-2gwkndll/logs/debug.log
+2022-03-25 11:45:43,626 INFO    MainThread:124830 [wandb_init.py:_log_setup():406] Logging internal logs to /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_114543-2gwkndll/logs/debug-internal.log
+2022-03-25 11:45:43,626 INFO    MainThread:124830 [wandb_init.py:_jupyter_setup():355] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7fc06a8f4550>
+2022-03-25 11:45:43,626 INFO    MainThread:124830 [wandb_init.py:init():439] calling init triggers
+2022-03-25 11:45:43,626 INFO    MainThread:124830 [wandb_init.py:init():442] wandb.init called with sweep_config: {}
+config: {}
+2022-03-25 11:45:43,626 INFO    MainThread:124830 [wandb_init.py:init():492] starting backend
+2022-03-25 11:45:43,626 INFO    MainThread:124830 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-03-25 11:45:43,675 INFO    MainThread:124830 [backend.py:ensure_launched():219] starting backend process...
+2022-03-25 11:45:43,731 INFO    MainThread:124830 [backend.py:ensure_launched():224] started backend process with pid: 124988
+2022-03-25 11:45:43,736 INFO    MainThread:124830 [wandb_init.py:init():501] backend started and connected
+2022-03-25 11:45:43,795 INFO    MainThread:124830 [wandb_run.py:_label_probe_notebook():947] probe notebook
+2022-03-25 11:45:43,795 INFO    MainThread:124830 [wandb_run.py:_label_probe_notebook():957] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2022-03-25 11:45:43,799 INFO    MainThread:124830 [wandb_init.py:init():565] updated telemetry
+2022-03-25 11:45:43,947 INFO    MainThread:124830 [wandb_init.py:init():596] communicating run to backend with 30 second timeout
+2022-03-25 11:45:46,641 INFO    MainThread:124830 [wandb_run.py:_on_init():1759] communicating current version
+2022-03-25 11:45:46,763 INFO    MainThread:124830 [wandb_run.py:_on_init():1763] got version response 
+2022-03-25 11:45:46,763 INFO    MainThread:124830 [wandb_init.py:init():625] starting run threads in backend
+2022-03-25 11:45:51,810 INFO    MainThread:124830 [wandb_run.py:_console_start():1733] atexit reg
+2022-03-25 11:45:51,811 INFO    MainThread:124830 [wandb_run.py:_redirect():1606] redirect: SettingsConsole.WRAP
+2022-03-25 11:45:51,812 INFO    MainThread:124830 [wandb_run.py:_redirect():1643] Wrapping output streams.
+2022-03-25 11:45:51,843 INFO    MainThread:124830 [wandb_run.py:_redirect():1667] Redirects installed.
+2022-03-25 11:45:51,843 INFO    MainThread:124830 [wandb_init.py:init():664] run started, returning control to user process
+2022-03-25 11:45:55,618 INFO    MainThread:124830 [wandb_watch.py:watch():47] Watching
+2022-03-25 11:46:00,054 INFO    MainThread:124830 [wandb_init.py:_pause_backend():318] pausing backend
+2022-03-25 11:46:00,059 INFO    MainThread:124830 [jupyter.py:save_ipynb():374] not saving jupyter notebook

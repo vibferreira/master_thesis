@@ -1,0 +1,38 @@
+2022-03-25 11:55:43,644 INFO    MainThread:130562 [wandb_setup.py:_flush():75] Loading settings from /share/etud/e2008984/.config/wandb/settings
+2022-03-25 11:55:43,645 INFO    MainThread:130562 [wandb_setup.py:_flush():75] Loading settings from /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/settings
+2022-03-25 11:55:43,645 INFO    MainThread:130562 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-03-25 11:55:43,645 INFO    MainThread:130562 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2022-03-25 11:55:43,645 INFO    MainThread:130562 [wandb_init.py:_log_setup():405] Logging user logs to /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115543-2yt930mr/logs/debug.log
+2022-03-25 11:55:43,645 INFO    MainThread:130562 [wandb_init.py:_log_setup():406] Logging internal logs to /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115543-2yt930mr/logs/debug-internal.log
+2022-03-25 11:55:43,645 INFO    MainThread:130562 [wandb_init.py:_jupyter_setup():355] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7f96e118a4f0>
+2022-03-25 11:55:43,645 INFO    MainThread:130562 [wandb_init.py:init():439] calling init triggers
+2022-03-25 11:55:43,646 INFO    MainThread:130562 [wandb_init.py:init():442] wandb.init called with sweep_config: {}
+config: {}
+2022-03-25 11:55:43,646 INFO    MainThread:130562 [wandb_init.py:init():492] starting backend
+2022-03-25 11:55:43,646 INFO    MainThread:130562 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-03-25 11:55:43,766 INFO    MainThread:130562 [backend.py:ensure_launched():219] starting backend process...
+2022-03-25 11:55:43,838 INFO    MainThread:130562 [backend.py:ensure_launched():224] started backend process with pid: 130741
+2022-03-25 11:55:43,851 INFO    MainThread:130562 [wandb_init.py:init():501] backend started and connected
+2022-03-25 11:55:43,948 INFO    MainThread:130562 [wandb_run.py:_label_probe_notebook():947] probe notebook
+2022-03-25 11:55:43,949 INFO    MainThread:130562 [wandb_run.py:_label_probe_notebook():957] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2022-03-25 11:55:43,949 INFO    MainThread:130562 [wandb_init.py:init():565] updated telemetry
+2022-03-25 11:55:44,099 INFO    MainThread:130562 [wandb_init.py:init():596] communicating run to backend with 30 second timeout
+2022-03-25 11:55:47,023 WARNING MainThread:130562 [wandb_init.py:init():975] interrupted
+Traceback (most recent call last):
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 954, in init
+    run = wi.init()
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 597, in init
+    run_result = backend.interface.communicate_run(run, timeout=30)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 210, in communicate_run
+    return self._communicate_run(run, timeout=timeout)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 320, in _communicate_run
+    resp = self._communicate(req, timeout=timeout)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 222, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/router.py", line 37, in get
+    is_set = self._object_ready.wait(timeout)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/threading.py", line 574, in wait
+    signaled = self._cond.wait(timeout)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/threading.py", line 316, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

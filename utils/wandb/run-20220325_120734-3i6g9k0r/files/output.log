@@ -1,0 +1,11 @@
+
+Training the network for 5 epochs, with a batch size of 16
+  0%|                                                                              | 0/4 [00:00<?, ?it/s]/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+2022-03-25 08:59:16,225 INFO    MainThread:44627 [internal.py:wandb_internal():92] W&B internal server running at pid: 44627, started at: 2022-03-25 08:59:16.224897
+2022-03-25 08:59:16,228 INFO    WriterThread:44627 [datastore.py:open_for_write():77] open: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_085909-b7bmw480/run-b7bmw480.wandb
+2022-03-25 08:59:16,230 DEBUG   SenderThread:44627 [sender.py:send():235] send: header
+2022-03-25 08:59:16,230 DEBUG   SenderThread:44627 [sender.py:send():235] send: run
+2022-03-25 08:59:38,958 WARNING MainThread:44627 [internal.py:wandb_internal():155] Internal process interrupt: 1

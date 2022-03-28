@@ -1,0 +1,8 @@
+
+Training the network for 1 epochs, with a batch size of 8
+  0%|                                                                              | 0/7 [00:00<?, ?it/s]
+
+Validation Epoch [0/1]:  25%|▎| 1/4 [00:00<00:00,  6.31it/s, acc_val=0.7293949, iou_val=0.0004578571, los
+torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
+torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
+

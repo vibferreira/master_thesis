@@ -46,32 +46,75 @@ def jaccard_idx(pred:torch,
     union = torch.logical_or(pred,y)
     return (torch.sum(intersection) / torch.sum(union)).numpy() # return the intersection over union
 
+# Jaccard 
+def IoU(inputs, targets, smooth=1):
+        
+        # #comment out if your model contains a sigmoid or equivalent activation layer
+        # inputs = F.sigmoid(inputs)       
+        
+        #flatten label and prediction tensors
+        inputs = inputs.view(-1)
+        targets = targets.view(-1)
+        
+        #intersection is equivalent to True Positive count
+        #union is the mutually inclusive area of all labels & predictions 
+        intersection = (inputs * targets).sum()
+        total = (inputs + targets).sum()
+        union = total - intersection 
+        
+        IoU = (intersection + smooth)/(union + smooth)
+                
+        return 1 - IoU
+    
+# Dice
+def Dice(inputs, targets, smooth=1):
+        
+        #comment out if your model contains a sigmoid or equivalent activation layer
+        inputs = F.sigmoid(inputs)       
+        
+        #flatten label and prediction tensors
+        inputs = inputs.view(-1)
+        targets = targets.view(-1)
+        
+        intersection = (inputs * targets).sum()                            
+        dice = (2.*intersection + smooth)/(inputs.sum() + targets.sum() + smooth)  
+        
+        return 1 - dice
+
 # F1 Score
-def metrics(pred, y):
+def metrics(pred: torch.Tensor, 
+            y: torch.Tensor):
 
-    pred = pred.detach()
-    pred = pred.sigmoid()
-    pred = (pred > 0.5).float()
-    # # pred = pred.view(-1, )
-    # y = y.view(-1, ).float()
-
-    tp = torch.sum(pred * y)  # TP
-    fp = torch.sum(pred * (1 - y))  # FP
-    fn = torch.sum((1 - pred) * y)  # FN
-    tn = torch.sum((1 - pred) * (1 - y))  # TN
-
-    eps=1e-5
+    # pred = pred.detach().sigmoid()
+    # pred = (pred > 0.5).float()
+    
+    pred = pred.detach() # detach from the grads
+    pred = (pred > 0.5).float() # classify into 0 and 1 
+    
+    pred = pred.view(-1, )
+    y = y.view(-1, ).float()
+    
+    tp = torch.sum(torch.abs(pred * y))  # TP
+    fp = torch.sum(torch.abs(pred * (1 - y)))  # FP
+    fn = torch.sum(torch.abs((1 - pred) * y))  # FN
+    tn = torch.sum(torch.abs((1 - pred) * (1 - y)))  # TN
+    
+    eps = 1e-5 # avoid division by 0
     pixel_acc = (tp + tn + eps) / (tp + tn + fp + fn + eps)
-    iou = (tp + eps) / (fp + tp + fn + eps)
+    iou = (tp + eps) / (tp + fp + fn + eps)
     dice = (2 * tp + eps) / (2 * tp + fp + fn + eps)
+    
     precision = (tp + eps) / (tp + fp + eps)
     recall = (tp + eps) / (tp + fn + eps)
     specificity = (tn + eps) / (tn + fp + eps)
     f1score = 2 * precision * recall / (precision + recall)
 
-    return {'acc': pixel_acc.cpu().numpy(), 'iou':iou.cpu().numpy(), 'dice_coeff': dice.cpu().numpy(), 'f1score': f1score}
+    return {'false_preds': np.array([tp.cpu().numpy(), fp.cpu().numpy(), fn.cpu().numpy(), tn.cpu().numpy()]),
+            'acc': pixel_acc.cpu().numpy(), 
+            'iou':iou.cpu().numpy(), 
+            'dice_coeff': dice.cpu().numpy(), 
+            'f1score': f1score.cpu().numpy()}
 
 # Confusion metrics 
-
 # # assert the dimensions first
 # assert pred.shape == y.shape, f'Shape of pred is {pred.shape} and shape of y is {y.shape}'

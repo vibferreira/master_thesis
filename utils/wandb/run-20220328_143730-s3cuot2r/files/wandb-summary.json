@@ -1,0 +1,1 @@
+{"true_positives": 332.30063529845773, "true_negatives": 385701.3757167431, "false_negatives": 38.938409742602325, "false_positives": 137614.14245269494, "Train Loss": 0.9982366561889648, "Train Accuracy": 0.7371036287294616, "IoU_train": 0.0647291528595552, "_timestamp": 1648471172, "_runtime": 122, "_step": 0}

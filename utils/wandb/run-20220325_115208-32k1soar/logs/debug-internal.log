@@ -1,0 +1,91 @@
+2022-03-25 11:52:12,643 INFO    MainThread:129434 [internal.py:wandb_internal():92] W&B internal server running at pid: 129434, started at: 2022-03-25 11:52:12.642542
+2022-03-25 11:52:12,691 INFO    WriterThread:129434 [datastore.py:open_for_write():77] open: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/run-32k1soar.wandb
+2022-03-25 11:52:12,698 DEBUG   SenderThread:129434 [sender.py:send():235] send: header
+2022-03-25 11:52:12,698 DEBUG   SenderThread:129434 [sender.py:send():235] send: run
+2022-03-25 11:52:12,998 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: check_version
+2022-03-25 11:52:13,017 INFO    SenderThread:129434 [dir_watcher.py:__init__():169] watching files in: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files
+2022-03-25 11:52:13,017 INFO    SenderThread:129434 [sender.py:_start_run_threads():812] run started: 32k1soar with start time 1648205528
+2022-03-25 11:52:13,017 DEBUG   SenderThread:129434 [sender.py:send():235] send: summary
+2022-03-25 11:52:13,018 INFO    SenderThread:129434 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-03-25 11:52:13,019 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: check_version
+2022-03-25 11:52:13,098 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: run_start
+2022-03-25 11:52:13,143 DEBUG   HandlerThread:129434 [meta.py:__init__():37] meta init
+2022-03-25 11:52:13,144 DEBUG   HandlerThread:129434 [meta.py:__init__():51] meta init done
+2022-03-25 11:52:13,144 DEBUG   HandlerThread:129434 [meta.py:probe():211] probe
+2022-03-25 11:52:13,206 DEBUG   HandlerThread:129434 [meta.py:_setup_git():201] setup git
+2022-03-25 11:52:13,437 DEBUG   HandlerThread:129434 [meta.py:_setup_git():208] setup git done
+2022-03-25 11:52:13,438 DEBUG   HandlerThread:129434 [meta.py:_save_pip():55] save pip
+2022-03-25 11:52:13,439 DEBUG   HandlerThread:129434 [meta.py:_save_pip():69] save pip done
+2022-03-25 11:52:13,439 DEBUG   HandlerThread:129434 [meta.py:_save_conda():76] save conda
+2022-03-25 11:52:14,022 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/conda-environment.yaml
+2022-03-25 11:52:14,022 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/requirements.txt
+2022-03-25 11:52:14,022 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/wandb-summary.json
+2022-03-25 11:52:18,060 DEBUG   HandlerThread:129434 [meta.py:_save_conda():86] save conda done
+2022-03-25 11:52:18,071 DEBUG   HandlerThread:129434 [meta.py:probe():249] probe done
+2022-03-25 11:52:18,063 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/conda-environment.yaml
+2022-03-25 11:52:18,747 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:52:18,751 DEBUG   SenderThread:129434 [sender.py:send():235] send: files
+2022-03-25 11:52:18,751 INFO    SenderThread:129434 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-03-25 11:52:18,752 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:52:18,921 DEBUG   SenderThread:129434 [sender.py:send():235] send: telemetry
+2022-03-25 11:52:19,079 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:19,081 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/wandb-metadata.json
+2022-03-25 11:52:19,330 INFO    Thread-11 :129434 [upload_job.py:push():137] Uploaded file /tmp/tmphglg2lliwandb/24zvb6cd-wandb-metadata.json
+2022-03-25 11:52:22,951 DEBUG   SenderThread:129434 [sender.py:send():235] send: telemetry
+2022-03-25 11:52:25,128 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:29,131 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:31,133 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:33,135 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:33,930 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:52:33,931 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:52:35,141 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:37,143 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:39,145 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:41,147 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:42,501 DEBUG   SenderThread:129434 [sender.py:send():235] send: stats
+2022-03-25 11:52:43,155 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:44,156 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/config.yaml
+2022-03-25 11:52:45,157 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:47,159 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:49,149 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:52:49,150 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:52:49,165 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:51,172 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:53,174 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:55,175 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:57,177 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:52:59,185 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:01,203 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:03,205 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:04,822 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:53:04,823 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:53:05,223 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:07,225 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:09,228 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:11,229 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:13,234 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:13,725 DEBUG   SenderThread:129434 [sender.py:send():235] send: stats
+2022-03-25 11:53:15,248 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:17,267 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:19,291 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:19,658 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: pause
+2022-03-25 11:53:19,658 INFO    HandlerThread:129434 [handler.py:handle_request_pause():659] stopping system metrics thread
+2022-03-25 11:53:19,751 DEBUG   SenderThread:129434 [sender.py:send():235] send: stats
+2022-03-25 11:53:20,006 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:53:20,006 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:53:21,299 INFO    Thread-7  :129434 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220325_115208-32k1soar/files/output.log
+2022-03-25 11:53:35,220 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:53:35,221 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:53:50,404 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:53:50,405 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:54:05,588 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:54:05,588 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:54:20,784 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:54:20,785 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:54:35,987 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:54:35,988 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:54:51,164 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:54:51,164 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:55:06,328 DEBUG   HandlerThread:129434 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-25 11:55:06,339 DEBUG   SenderThread:129434 [sender.py:send_request():249] send_request: stop_status
+2022-03-25 11:55:10,677 WARNING MainThread:129434 [internal.py:wandb_internal():155] Internal process interrupt: 1
