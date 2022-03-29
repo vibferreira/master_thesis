@@ -208,3 +208,16 @@
 2022-03-28 18:25:04,800 INFO    Thread-7  :103076 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220328_182427-2pd8wz0x/files/output.log
 2022-03-28 18:25:08,472 DEBUG   HandlerThread:103076 [handler.py:handle_request():141] handle_request: stop_status
 2022-03-28 18:25:08,473 DEBUG   SenderThread:103076 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 18:25:23,673 DEBUG   HandlerThread:103076 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 18:25:23,674 DEBUG   SenderThread:103076 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 18:25:38,876 DEBUG   HandlerThread:103076 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 18:25:38,879 DEBUG   SenderThread:103076 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 18:25:54,073 DEBUG   HandlerThread:103076 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 18:25:54,073 DEBUG   SenderThread:103076 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 18:26:09,273 DEBUG   HandlerThread:103076 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 18:26:09,273 DEBUG   SenderThread:103076 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 18:26:24,461 DEBUG   HandlerThread:103076 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 18:26:24,461 DEBUG   SenderThread:103076 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 18:26:39,680 DEBUG   HandlerThread:103076 [handler.py:handle_request():141] handle_request: stop_status
+2022-03-28 18:26:39,681 DEBUG   SenderThread:103076 [sender.py:send_request():249] send_request: stop_status
+2022-03-28 18:26:52,418 WARNING MainThread:103076 [internal.py:wandb_internal():155] Internal process interrupt: 1

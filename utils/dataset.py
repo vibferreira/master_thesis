@@ -58,6 +58,7 @@ class HistoricalImagesDataset(Dataset):
             # Convert numpy array to PIL Image
             image = transformed['image']
             mask = transformed['mask']
+            # mask = mask.unsqueeze(0)
   
         return image, mask
 

@@ -1,0 +1,109 @@
+
+Training the network for 2 epochs, with a batch size of 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch [0/2]:  97%|▉| 292/300 [01:29<00:02,  3.54it/s, acc=0.8977356, dice=0.71189994, iou=0.5526
+
+
+
+
+
+Validation Epoch [0/2]:  84%|▊| 57/68 [00:10<00:02,  4.81it/s, acc_val=0.88746834, iou_val=0.6876244, los
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch [1/2]:  97%|▉| 292/300 [01:23<00:02,  3.59it/s, acc=0.90979195, dice=0.8179232, iou=0.6919
+
+
+
+
+
+
+Validation Epoch [1/2]:  88%|▉| 60/68 [00:11<00:01,  7.09it/s, acc_val=0.93315125, iou_val=0.8113772, los
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  2400
+Validation set size:  542
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  2400

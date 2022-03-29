@@ -13,6 +13,7 @@ import torch
 def plot_comparison(x:torch.Tensor, 
                     pred:torch.Tensor, 
                     y:torch.Tensor) -> None:
+    
     gt = np.squeeze(y.data.cpu().cpu().numpy()[0])
     pred = np.squeeze(pred.sigmoid().cpu().numpy())
     img = np.squeeze(x.data.cpu().cpu().numpy()[0])
@@ -38,10 +39,10 @@ def save_best_model(model,
     dest_path (str): destination path
     val_dict (dict): dictionary storing valdation accuracies'''
     
-    # iou = float(val_dic['IoU_val'][-1])
+    iou = float(val_dic['IoU_val'][-1])
     acc = float(val_dic['val_accuracy'][-1])
     [os.remove(f) for f in glob.glob(dest_path + '/*')] # remove previous saved files 
-    return torch.save(model.state_dict(), dest_path + f'/best_model_epoch_{e + 1}_acc_{round(acc,3)}.pth')
+    return torch.save(model.state_dict(), dest_path + f'/best_model_epoch_{e +1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
 
 
 def plot_grids(grids, titles = ["Input", 'Target']):

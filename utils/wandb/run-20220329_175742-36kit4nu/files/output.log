@@ -1,0 +1,225 @@
+
+Training the network for 2 epochs, with a batch size of 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch [0/2]:  99%|▉| 296/300 [01:17<00:01,  3.62it/s, acc=0.8310814, dice=0.6407921, iou=0.47144
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+Validation Epoch [0/2]:   9%| | 6/68 [00:01<00:10,  6.04it/s, acc_val=0.88253784, iou_val=0.2388862, loss
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+Validation Epoch [0/2]:  29%|▎| 20/68 [00:03<00:07,  6.55it/s, acc_val=0.82466316, iou_val=0.59320915, lo
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+Validation Epoch [0/2]:  46%|▍| 31/68 [00:04<00:06,  5.78it/s, acc_val=0.9091053, iou_val=0.5575784, loss
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+Validation Epoch [0/2]:  63%|▋| 43/68 [00:07<00:04,  5.44it/s, acc_val=0.9263344, iou_val=0.8402287, loss
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+Validation Epoch [0/2]:  79%|▊| 54/68 [00:09<00:02,  5.60it/s, acc_val=0.8606205, iou_val=0.33730844, los
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+Validation Epoch [0/2]:  99%|▉| 67/68 [00:11<00:00,  6.06it/s, acc_val=0.8655853, iou_val=0.5963826, loss
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+torch.Size([6, 256, 256])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  0%|                                                                             | 0/68 [00:00<?, ?it/s]
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+Validation Epoch [1/2]:  16%|▏| 11/68 [00:01<00:09,  5.92it/s, acc_val=0.9097786, iou_val=0.6604137, loss
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+Validation Epoch [1/2]:  34%|▎| 23/68 [00:04<00:07,  5.74it/s, acc_val=0.9314747, iou_val=0.60025144, los
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+Validation Epoch [1/2]:  51%|▌| 35/68 [00:05<00:04,  6.85it/s, acc_val=0.8505211, iou_val=0.3253736, loss
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+Validation Epoch [1/2]:  69%|▋| 47/68 [00:08<00:03,  5.86it/s, acc_val=0.9454441, iou_val=0.63364244, los
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+
+Validation Epoch [1/2]:  88%|▉| 60/68 [00:10<00:01,  6.10it/s, acc_val=0.94119835, iou_val=0.7755328, los
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+torch.Size([8, 256, 256])
+

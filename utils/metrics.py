@@ -84,9 +84,6 @@ def Dice(inputs, targets, smooth=1):
 # F1 Score
 def metrics(pred: torch.Tensor, 
             y: torch.Tensor):
-
-    # pred = pred.detach().sigmoid()
-    # pred = (pred > 0.5).float()
     
     pred = pred.detach() # detach from the grads
     pred = (pred > 0.5).float() # classify into 0 and 1 

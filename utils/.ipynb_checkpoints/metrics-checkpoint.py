@@ -91,8 +91,8 @@ def metrics(pred: torch.Tensor,
     pred = pred.detach() # detach from the grads
     pred = (pred > 0.5).float() # classify into 0 and 1 
     
-    pred = pred.view(-1, )
-    y = y.view(-1, ).float()
+    # pred = pred.view(-1, )
+    # y = y.view(-1, ).float()
     
     tp = torch.sum(torch.abs(pred * y))  # TP
     fp = torch.sum(torch.abs(pred * (1 - y)))  # FP

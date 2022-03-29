@@ -39,7 +39,7 @@ N_CLASSES = 1
 # TRAINING AND VALIDATION LOOPS
 # =========================================================== #
 LR = 0.001 # learning rate
-NUM_EPOCHS = 5
+NUM_EPOCHS = 2
 BATCH_SIZE =  8
 
 

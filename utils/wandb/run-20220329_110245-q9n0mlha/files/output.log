@@ -1,0 +1,688 @@
+
+Training the network for 2 epochs, with a batch size of 8
+  0%|                                                   | 0/300 [00:00<?, ?it/s]
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:   0%| | 1/300 [00:02<09:50,  1.98s/it, acc=0.73890114, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:   2%| | 7/300 [00:03<01:43,  2.83it/s, acc=0.84444046, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:   5%| | 14/300 [00:05<01:19,  3.60it/s, acc=0.85253143, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:   7%| | 22/300 [00:07<01:10,  3.95it/s, acc=0.9520607, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  10%| | 29/300 [00:09<01:20,  3.38it/s, acc=0.8212166, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  12%| | 36/300 [00:11<01:10,  3.77it/s, acc=0.6957741, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  15%|▏| 44/300 [00:13<01:12,  3.52it/s, acc=0.90507126, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  17%|▏| 51/300 [00:15<01:12,  3.42it/s, acc=0.88103104, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  20%|▏| 59/300 [00:17<00:59,  4.04it/s, acc=0.7896805, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  22%|▏| 67/300 [00:19<00:56,  4.15it/s, acc=0.90454865, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  25%|▎| 76/300 [00:21<00:47,  4.74it/s, acc=0.6473026, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  27%|▎| 82/300 [00:23<01:06,  3.26it/s, acc=0.85484314, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  30%|▎| 89/300 [00:26<01:05,  3.21it/s, acc=0.8858032, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  32%|▎| 96/300 [00:28<00:58,  3.46it/s, acc=0.8939514, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  34%|▎| 102/300 [00:29<00:58,  3.36it/s, acc=0.8079014, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  36%|▎| 109/300 [00:31<00:54,  3.51it/s, acc=0.91544724, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+
+Training Epoch [0/2]:  41%|▍| 124/300 [00:35<00:50,  3.50it/s, acc=0.92113495, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  44%|▍| 132/300 [00:37<00:41,  4.01it/s, acc=0.79949, dice
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  47%|▍| 141/300 [00:40<00:39,  4.04it/s, acc=0.9213543, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  49%|▍| 147/300 [00:41<00:46,  3.28it/s, acc=0.9162464, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  51%|▌| 154/300 [00:44<00:41,  3.49it/s, acc=0.81757164, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  53%|▌| 159/300 [00:45<00:53,  2.65it/s, acc=0.941967, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  55%|▌| 165/300 [00:48<00:44,  3.02it/s, acc=0.83599854, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  57%|▌| 171/300 [00:50<00:44,  2.88it/s, acc=0.8923149, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  59%|▌| 177/300 [00:52<00:36,  3.38it/s, acc=0.88379097, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  61%|▌| 183/300 [00:53<00:36,  3.25it/s, acc=0.9293976, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  64%|▋| 191/300 [00:56<00:28,  3.82it/s, acc=0.8849335, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  67%|▋| 200/300 [00:58<00:23,  4.20it/s, acc=0.85980797, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  69%|▋| 207/300 [01:00<00:24,  3.75it/s, acc=0.88070107, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  71%|▋| 214/300 [01:02<00:25,  3.43it/s, acc=0.95758057, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  74%|▋| 221/300 [01:04<00:22,  3.52it/s, acc=0.8391113, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  78%|▊| 233/300 [01:06<00:11,  5.86it/s, acc=0.7755203, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  81%|▊| 242/300 [01:07<00:11,  5.09it/s, acc=0.9350395, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  83%|▊| 250/300 [01:10<00:12,  4.08it/s, acc=0.95627403, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  86%|▊| 258/300 [01:12<00:09,  4.27it/s, acc=0.8112831, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  89%|▉| 267/300 [01:14<00:08,  4.06it/s, acc=0.93016434, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  92%|▉| 276/300 [01:16<00:04,  5.23it/s, acc=0.9456768, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  95%|▉| 285/300 [01:18<00:03,  4.26it/s, acc=0.8694992, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [0/2]:  98%|▉| 294/300 [01:20<00:01,  4.58it/s, acc=0.8581047, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+
+
+
+
+
+  0%|                                                   | 0/300 [00:00<?, ?it/s]
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:   2%| | 7/300 [00:02<01:15,  3.91it/s, acc=0.92837334, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:   6%| | 17/300 [00:03<01:01,  4.64it/s, acc=0.9074516, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+
+Training Epoch [1/2]:  12%| | 35/300 [00:07<01:02,  4.21it/s, acc=0.9117508, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  15%|▏| 44/300 [00:10<00:56,  4.55it/s, acc=0.90538216, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  17%|▏| 52/300 [00:11<01:01,  4.06it/s, acc=0.97304726, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  20%|▏| 60/300 [00:13<00:59,  4.02it/s, acc=0.7962742, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  23%|▏| 68/300 [00:16<01:01,  3.77it/s, acc=0.793808, dice
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  25%|▎| 76/300 [00:17<00:55,  4.01it/s, acc=0.910553, dice
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  29%|▎| 86/300 [00:20<00:43,  4.96it/s, acc=0.88809395, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  32%|▎| 95/300 [00:22<00:52,  3.93it/s, acc=0.9022026, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  34%|▎| 103/300 [00:24<00:47,  4.13it/s, acc=0.8531666, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  37%|▎| 111/300 [00:26<00:49,  3.81it/s, acc=0.7016125, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  39%|▍| 118/300 [00:28<00:45,  3.99it/s, acc=0.8429775, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  42%|▍| 127/300 [00:30<00:36,  4.69it/s, acc=0.8846741, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  45%|▍| 134/300 [00:31<00:41,  3.97it/s, acc=0.8462429, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  47%|▍| 142/300 [00:33<00:39,  3.95it/s, acc=0.8910866, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  50%|▌| 150/300 [00:35<00:39,  3.78it/s, acc=0.9168415, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  53%|▌| 158/300 [00:37<00:35,  4.04it/s, acc=0.78227425, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  55%|▌| 165/300 [00:39<00:37,  3.62it/s, acc=0.81095123, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  58%|▌| 174/300 [00:41<00:29,  4.28it/s, acc=0.8591671, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  61%|▌| 182/300 [00:43<00:28,  4.10it/s, acc=0.8467884, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  64%|▋| 191/300 [00:45<00:26,  4.19it/s, acc=0.8105984, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  67%|▋| 200/300 [00:47<00:22,  4.45it/s, acc=0.9534645, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  70%|▋| 209/300 [00:49<00:19,  4.72it/s, acc=0.9452934, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  73%|▋| 219/300 [00:51<00:16,  5.03it/s, acc=0.963068, dic
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  76%|▊| 227/300 [00:53<00:17,  4.20it/s, acc=0.98744965, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  78%|▊| 235/300 [00:55<00:15,  4.13it/s, acc=0.7502651, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  81%|▊| 244/300 [00:57<00:12,  4.39it/s, acc=0.8998165, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  84%|▊| 253/300 [00:59<00:10,  4.31it/s, acc=0.9444332, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  87%|▊| 262/300 [01:02<00:08,  4.50it/s, acc=0.9131317, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  90%|▉| 270/300 [01:03<00:07,  4.19it/s, acc=0.8788948, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  93%|▉| 278/300 [01:06<00:05,  4.06it/s, acc=0.7946434, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  95%|▉| 286/300 [01:07<00:03,  4.47it/s, acc=0.89875793, d
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Training Epoch [1/2]:  98%|▉| 295/300 [01:10<00:01,  3.89it/s, acc=0.8740158, di
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+Validation Epoch [1/2]:   4%| | 3/68 [00:00<00:15,  4.25it/s, acc_val=0.938818,
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+Data: torch.Size([8, 1, 256, 256]), Target: torch.Size([8, 1, 256, 256]), Pred: torch.Size([8, 1, 256, 256])
+
+
+
+
