@@ -40,12 +40,16 @@ class HistoricalImagesDataset(Dataset):
         image = cv2.imread(self.data_paths[idx], cv2.IMREAD_GRAYSCALE)
         # image = Image.open(self.data_paths[idx])
         # image = self.clahe_equalized(image)
-        # image = ToTensor()(image) # numpy array to a normalised tensor [0 to 1]
+        # image = ToTensor()(image) # numpy array to a normalised tensor [0 to 1] # 1, 
+        
+        # 256, 256, 1
 
         # Labels 
         mask = cv2.imread(self.label_paths[idx], cv2.IMREAD_GRAYSCALE)
         # mask = Image.open(self.label_paths[idx])
         # mask = ToTensor()(mask)
+        
+        # 256, 256, 1
         
         if self.transform is not None:
             # Convert PIL image to numpy array
@@ -56,9 +60,9 @@ class HistoricalImagesDataset(Dataset):
             transformed = self.transform(image=image, mask=mask)
             
             # Convert numpy array to PIL Image
-            image = transformed['image']
-            mask = transformed['mask']
-            # mask = mask.unsqueeze(0)
+            image = transformed['image'] # 1, 256, 256
+            mask = transformed['mask'] # 256, 256
+            # mask = mask.unsqueeze(0) # 1, 256, 256
   
         return image, mask
 

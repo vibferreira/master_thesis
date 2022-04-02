@@ -1,0 +1,56 @@
+
+  0%|                                                                            | 0/305 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch [1/2]:  90%|▉| 276/305 [00:20<00:02, 13.72it/s, acc=0.9044342, dice=0.7784362, iou=0.63724
+
+Validation Epoch [1/2]:  82%|▊| 54/66 [00:02<00:00, 26.46it/s, acc_val=0.8887234, iou_val=0.5825152, loss
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  2438
+Validation set size:  522
+Testing set size:  1046
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  2438
+Validation set size:  522
+Testing set size:  524
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  2438
+Validation set size:  522
+Testing set size:  524
+
+
+
+
+
+
+ 91%|█████████████████████████████████████████████████████████████▊      | 60/66 [00:11<00:01,  5.45it/s]
+
+ 24%|████████████████▍                                                   | 16/66 [00:00<00:01, 49.74it/s]
+
+ 39%|██████████████████████████▊                                         | 26/66 [00:00<00:01, 39.10it/s]
+
+ 68%|██████████████████████████████████████████████▎                     | 45/66 [00:00<00:00, 48.04it/s]
