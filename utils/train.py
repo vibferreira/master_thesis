@@ -1,3 +1,5 @@
+'''Training, Validation and Prediction functions'''
+
 from tqdm import tqdm
 import numpy as np
 
@@ -5,92 +7,70 @@ import torch
 import torch.optim as optim
 from torch.nn import BCEWithLogitsLoss
 
+import segmentation_models_pytorch
+
 import model
 import metrics
 import config
-import split
 
 import matplotlib.pyplot as plt
 
-# Initialize our model
-model = model.unet_model.to(config.DEVICE)
+def make_predictions(model:segmentation_models_pytorch.unet.model.Unet, 
+                     dataloader:torch.utils.data.dataloader.DataLoader) -> list:
+    model.eval()
 
-# initialize loss function and optimizer
-lossFunc = BCEWithLogitsLoss()
-opt = optim.Adam(model.parameters(), lr=config.LR)
-
-# calculate steps per epoch for training and test set
-trainSteps = len(split.train_dataset) // config.BATCH_SIZE
-valSteps = len(split.val_dataset) // config.BATCH_SIZE
-
-# initialize a dictionary to store TRAINING history (keep track on training)
-training_history = {"avg_train_loss": [], "train_accuracy": []}
-
-# initialize a dictionary to store VALIDATION history (keep track on VALIDATION)
-validation_history = {"avg_val_loss": [], "val_accuracy": []}
-
-# Training the network 
-print('Training the network...🤗')
-for e in tqdm(range(config.NUM_EPOCHS)):
-    # set the model in training mode
-    model.train()
-
-    # For each epoch initialize the: 
-    # total training
-    totalTrainLoss = 0
+    # Save total train loss
     totalValLoss = 0
 
-    # number of correctly classified pixels and the total number of pixels
-    train_correct = 0
-    total_n_pixels = 0
+    # log the predictions to WANDB
+    example_pred = []
+    example_gt = []
 
-    # loop over the training set
-    loop = tqdm(split.train_dataloader, leave=False)
-    for x, y in loop:
-        # send the input to the device
-        (x, y) = (x.to(config.DEVICE), y.to(config.DEVICE))
+    # save the predicons and the targets
+    y_hat_test = []
+    y_true_test = []
 
-        # perform a forward pass and calculate the training loss
-        pred = model(x)
-        loss = lossFunc(pred, y)
-        
-        opt.zero_grad()  # zero out any previously accumulated gradients
-        loss.backward() # obtain the gradients with respect to the loss
-        opt.step() # perform one step of gradient descendent
-        totalTrainLoss += loss  # add the loss to the total training loss so far
-        
-        # Accuracy
-        # metrics.pixel_acc(pred, y:torch, 
-        #       correct_pixels:int, 
-        #       total_pixels:int)
-        
-        
     # switch off autograd
     with torch.no_grad():
-    # set the model in evaluation mode
-        model.eval()
         # loop over the validation set
-        for (x_val, y_val) in split.val_dataloader:
+        loop = tqdm(dataloader, leave=False)
+
+        for batch_idx, (x_test, y_test) in enumerate(loop):
             # send the input to the device
-            (x_val, y_val) = (x_val.to(config.DEVICE), y_val.to(config.DEVICE))
-            # make the predictions and calculate the validation loss
-            pred_val = model(x_val)
-            loss = lossFunc(pred_val, y_val)
-            totalValLoss += loss
-            print(loss)
+            (x_test, y_test) = (x_test.to(config.DEVICE), y_test.to(config.DEVICE))
 
-    # calculate the average training and validation loss PER EPOCH
-    avgTrainLoss = totalTrainLoss / trainSteps 
-    avgValLoss = totalValLoss / valSteps
-    
-    print(f'avg train loss {avgTrainLoss}')
-    print('val loss', avgValLoss)
+            # predictions
+            pred_test = model(x_test)
 
-    ## update training history
-    training_history["avg_train_loss"].append(avgTrainLoss.cpu().detach().numpy()) # save the avg loss
-    validation_history["avg_val_loss"].append(avgValLoss.cpu().detach().numpy()) # save the avg loss
+            # Assign appropriate class 
+            pred_test = (pred_test > 0.5).float() # last layer is already sigmoid
 
-    print("[INFO] EPOCH: {}/{}".format(e + 1, config.NUM_EPOCHS))
+            # Storing predictions and true labels 
+            y_hat_test.append(pred_test.cpu().view(-1, ))
+            y_true_test.append(y_test.cpu().view(-1, ).float())
 
-print(training_history)
-print(validation_history)
+            # # Plotting test
+            # utis.plot_comparison(x_test, pred_test, y_test)
+
+            # # WandB – Log images in your test dataset automatically, along with predicted and true labels by passing pytorch tensors with image data into wandb.Image
+            example_pred.append(wandb.Image(pred_test[0], caption=f"pred_iter_n_{batch_idx}"))
+            example_gt.append(wandb.Image(y_test[0].float(), caption=f"gt_iter_n_{batch_idx}"))
+
+            # update tqdm
+            loop.set_description(f'Testing Epoch')
+            
+            # Save images
+            # print(f'Saving {pred_{idx}.png}')
+            # save_image(pred_test, f"{folder}/pred_{idx}.png") 
+            # save_image(y_test, f"{folder}/y_true_{idx}.png")
+
+        # WANDB
+        wandb.log({
+        "Predictions": example_pred,
+        "GT": example_gt})
+
+        # Stack and flatten for confusion matrix # GETTING SIZE ERROR AT THE MOMENT
+        y_hat_stack = torch.stack(y_hat_test)
+        y_true_stack = torch.stack(y_true_test)
+        
+        return y_hat_stack, y_true_stack

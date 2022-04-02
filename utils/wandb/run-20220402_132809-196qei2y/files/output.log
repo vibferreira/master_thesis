@@ -1,0 +1,31 @@
+
+Training the network for 2 epochs, with a batch size of 16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Validation Epoch [0/2]:  33%|▎| 11/33 [00:01<00:02,  9.53it/s, acc_val=0.9289198, iou_val=0.72975117, los
+
+
+
+
+
+
+
+
+
+
+
+
+
+Validation Epoch [1/2]:  85%|▊| 28/33 [00:02<00:00, 11.16it/s, acc_val=0.9003792, iou_val=0.68222004, los
