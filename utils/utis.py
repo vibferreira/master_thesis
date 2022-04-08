@@ -1,8 +1,9 @@
-'''Defines utils functions to save, plot and make predictions  '''
+'''Defines utils functions to save, plot and make predictions '''
 ''' Functions to plot using torchvision make_grid are from https://medium.com/analytics-vidhya/do-you-visualize-dataloaders-for-deep-neural-networks-7840ae58fee7'''
 
 import glob
 import os
+import re
 import numpy as np
 import matplotlib.pyplot as plt
 from torchvision.utils import make_grid
@@ -25,6 +26,20 @@ import wandb
 
 
 import torch
+
+
+def get_file_index(file:str) -> str:
+    '''Returns the idx name from file name'''
+    return re.split(r"[/_.]\s*", file)[-2]
+
+def filtered_paths(current_paths:list, 
+                   filter_paths:list)-> list:
+    ''' Returns only the paths that match the filter index'''
+    filtered_paths = []
+    for i in current_paths:
+        if np.isin(get_file_index(i), list(filter_paths)):
+            filtered_paths.append(i)
+    return filtered_paths
 
 def plot_comparison(x:torch.Tensor, 
                     pred:torch.Tensor, 
@@ -123,7 +138,7 @@ def make_predictions(model:segmentation_models_pytorch.unet.model.Unet,
             y_true_test.append(y_test.cpu().view(-1, ).float())
 
             # # Plotting test
-            # utis.plot_comparison(x_test, pred_test, y_test)
+            utis.plot_comparison(x_test, pred_test, y_test)
 
             # # WandB – Log images in your test dataset automatically, along with predicted and true labels by passing pytorch tensors with image data into wandb.Image
             example_pred.append(wandb.Image(pred_test[0], caption=f"pred_iter_n_{batch_idx}"))

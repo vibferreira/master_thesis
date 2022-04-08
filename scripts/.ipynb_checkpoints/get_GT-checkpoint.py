@@ -52,7 +52,7 @@ class Get_Ground_Truth:
                 dataset = self.rasterize_vect(mask_per_year[year])
                 out_grid_2 = dataset.to_array()
                 print('Bounds', out_grid_2.rio.bounds())
-                out_grid_2.rio.to_raster(f'{self.DEST_PATH}/{year}_temp.tif') # create a temp file (FIND A WAY TO SAVE THE TRANSFORM DIRECTLY WTH XARRAY)
+                out_grid_2.rio.to_raster(f'{self.DEST_PATH}/{year}_temp.tif') # create a temp file (FIND A WAY TO SAVE THE TRANSFORM DIRECTLY WITH XARRAY)
                 print(f' Image is rasterized in the folder {self.DEST_PATH}')
             else:
                 print(f'{year} is already rasterized!')
@@ -79,7 +79,7 @@ class Get_Ground_Truth:
         # saving 
         self.saving_binary_mask(years, mask_per_year)
           
-        # Fix the coordinates inversion
+        # THIS IS A WORK AROUND, FOUND OUT HOW TO REPROJECT DIRECTLY USING THE XARRAY
         for year in years:
             with rio.open(f'{self.DEST_PATH}/{year}_temp.tif') as src:
                 transform, width, height = calculate_default_transform(
@@ -109,12 +109,13 @@ class Get_Ground_Truth:
 # Testing if it works 
 if __name__ == '__main__':
     # Define the paths of the images, mask layers and grid
-    MASKS_PATH = 'data/geopackages/mask_per_year.gpkg'
+    MASKS_PATH = 'data/geopackages/updated_mask_per_year.gpkg'
     GRID_PATH = 'data/geopackages/grid.gpkg'
     DEST_PATH = 'data/masks'
 
     gt = Get_Ground_Truth(GRID_PATH, MASKS_PATH, DEST_PATH)
     print(gt.get_items())
     
+    # Delete the temp files 
     [os.remove(f) for f in glob.glob(DEST_PATH + '/*.tif') if f.endswith('_temp.tif') ] 
 

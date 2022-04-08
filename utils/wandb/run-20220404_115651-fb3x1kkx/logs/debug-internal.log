@@ -1,0 +1,488 @@
+2022-04-04 11:56:59,527 INFO    MainThread:43923 [internal.py:wandb_internal():92] W&B internal server running at pid: 43923, started at: 2022-04-04 11:56:59.526506
+2022-04-04 11:56:59,530 INFO    WriterThread:43923 [datastore.py:open_for_write():77] open: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/run-fb3x1kkx.wandb
+2022-04-04 11:56:59,532 DEBUG   SenderThread:43923 [sender.py:send():235] send: header
+2022-04-04 11:56:59,533 DEBUG   SenderThread:43923 [sender.py:send():235] send: run
+2022-04-04 11:56:59,734 INFO    SenderThread:43923 [dir_watcher.py:__init__():169] watching files in: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files
+2022-04-04 11:56:59,735 INFO    SenderThread:43923 [sender.py:_start_run_threads():812] run started: fb3x1kkx with start time 1649066218
+2022-04-04 11:56:59,735 DEBUG   SenderThread:43923 [sender.py:send():235] send: summary
+2022-04-04 11:56:59,735 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-04 11:56:59,739 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: check_version
+2022-04-04 11:56:59,739 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: check_version
+2022-04-04 11:56:59,849 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: run_start
+2022-04-04 11:56:59,860 DEBUG   HandlerThread:43923 [meta.py:__init__():37] meta init
+2022-04-04 11:56:59,860 DEBUG   HandlerThread:43923 [meta.py:__init__():51] meta init done
+2022-04-04 11:56:59,860 DEBUG   HandlerThread:43923 [meta.py:probe():211] probe
+2022-04-04 11:56:59,867 DEBUG   HandlerThread:43923 [meta.py:_setup_git():201] setup git
+2022-04-04 11:56:59,894 DEBUG   HandlerThread:43923 [meta.py:_setup_git():208] setup git done
+2022-04-04 11:56:59,894 DEBUG   HandlerThread:43923 [meta.py:_save_pip():55] save pip
+2022-04-04 11:56:59,896 DEBUG   HandlerThread:43923 [meta.py:_save_pip():69] save pip done
+2022-04-04 11:56:59,896 DEBUG   HandlerThread:43923 [meta.py:_save_conda():76] save conda
+2022-04-04 11:57:00,737 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/wandb-summary.json
+2022-04-04 11:57:00,738 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/requirements.txt
+2022-04-04 11:57:00,738 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/conda-environment.yaml
+2022-04-04 11:57:01,046 DEBUG   HandlerThread:43923 [meta.py:_save_conda():86] save conda done
+2022-04-04 11:57:01,046 DEBUG   HandlerThread:43923 [meta.py:probe():249] probe done
+2022-04-04 11:57:01,197 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:01,197 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-04-04 11:57:01,213 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-04 11:57:01,213 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: stop_status
+2022-04-04 11:57:01,389 DEBUG   SenderThread:43923 [sender.py:send():235] send: telemetry
+2022-04-04 11:57:01,737 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/conda-environment.yaml
+2022-04-04 11:57:01,737 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/output.log
+2022-04-04 11:57:01,737 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/wandb-metadata.json
+2022-04-04 11:57:01,753 INFO    Thread-11 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3w3jseof-wandb-metadata.json
+2022-04-04 11:57:03,738 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/output.log
+2022-04-04 11:57:03,976 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,976 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_0.png with policy now
+2022-04-04 11:57:03,977 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,977 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_1.png with policy now
+2022-04-04 11:57:03,981 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,981 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_2.png with policy now
+2022-04-04 11:57:03,981 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,981 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_3.png with policy now
+2022-04-04 11:57:03,982 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,983 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_4.png with policy now
+2022-04-04 11:57:03,986 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,986 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_5.png with policy now
+2022-04-04 11:57:03,986 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,986 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_6.png with policy now
+2022-04-04 11:57:03,990 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,990 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_7.png with policy now
+2022-04-04 11:57:03,990 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,990 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_8.png with policy now
+2022-04-04 11:57:03,991 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,991 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_9.png with policy now
+2022-04-04 11:57:03,995 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,995 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_10.png with policy now
+2022-04-04 11:57:03,995 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,995 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_11.png with policy now
+2022-04-04 11:57:03,999 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:03,999 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_12.png with policy now
+2022-04-04 11:57:04,000 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,000 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_13.png with policy now
+2022-04-04 11:57:04,000 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,000 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_14.png with policy now
+2022-04-04 11:57:04,001 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,002 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_15.png with policy now
+2022-04-04 11:57:04,005 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,005 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_16.png with policy now
+2022-04-04 11:57:04,005 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,005 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_17.png with policy now
+2022-04-04 11:57:04,010 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,010 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_18.png with policy now
+2022-04-04 11:57:04,010 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,010 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_19.png with policy now
+2022-04-04 11:57:04,011 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,011 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_20.png with policy now
+2022-04-04 11:57:04,011 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,011 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_21.png with policy now
+2022-04-04 11:57:04,016 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,016 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_22.png with policy now
+2022-04-04 11:57:04,017 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,017 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_23.png with policy now
+2022-04-04 11:57:04,018 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,018 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_24.png with policy now
+2022-04-04 11:57:04,022 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,022 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_25.png with policy now
+2022-04-04 11:57:04,024 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,024 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_26.png with policy now
+2022-04-04 11:57:04,028 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,028 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_27.png with policy now
+2022-04-04 11:57:04,028 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,028 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_28.png with policy now
+2022-04-04 11:57:04,034 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,034 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_29.png with policy now
+2022-04-04 11:57:04,037 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,038 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_30.png with policy now
+2022-04-04 11:57:04,042 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,042 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/Predictions_0_31.png with policy now
+2022-04-04 11:57:04,228 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,229 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_0.png with policy now
+2022-04-04 11:57:04,233 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,233 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_1.png with policy now
+2022-04-04 11:57:04,233 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,233 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_2.png with policy now
+2022-04-04 11:57:04,234 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,234 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_3.png with policy now
+2022-04-04 11:57:04,292 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,292 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_4.png with policy now
+2022-04-04 11:57:04,334 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,335 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_5.png with policy now
+2022-04-04 11:57:04,342 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,342 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_6.png with policy now
+2022-04-04 11:57:04,347 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,347 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_7.png with policy now
+2022-04-04 11:57:04,353 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,354 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_8.png with policy now
+2022-04-04 11:57:04,355 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,355 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_9.png with policy now
+2022-04-04 11:57:04,363 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,368 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_10.png with policy now
+2022-04-04 11:57:04,377 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,378 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_11.png with policy now
+2022-04-04 11:57:04,382 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,382 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_12.png with policy now
+2022-04-04 11:57:04,383 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,383 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_13.png with policy now
+2022-04-04 11:57:04,391 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,392 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_14.png with policy now
+2022-04-04 11:57:04,396 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,396 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_15.png with policy now
+2022-04-04 11:57:04,397 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,397 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_16.png with policy now
+2022-04-04 11:57:04,400 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,400 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_17.png with policy now
+2022-04-04 11:57:04,404 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,404 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_18.png with policy now
+2022-04-04 11:57:04,410 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,410 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_19.png with policy now
+2022-04-04 11:57:04,416 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,416 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_20.png with policy now
+2022-04-04 11:57:04,421 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,421 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_21.png with policy now
+2022-04-04 11:57:04,430 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,430 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_22.png with policy now
+2022-04-04 11:57:04,434 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,435 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_23.png with policy now
+2022-04-04 11:57:04,439 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,439 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_24.png with policy now
+2022-04-04 11:57:04,443 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,443 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_25.png with policy now
+2022-04-04 11:57:04,444 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,444 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_26.png with policy now
+2022-04-04 11:57:04,451 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,451 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_27.png with policy now
+2022-04-04 11:57:04,455 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,455 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_28.png with policy now
+2022-04-04 11:57:04,460 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,460 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_29.png with policy now
+2022-04-04 11:57:04,464 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,464 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_30.png with policy now
+2022-04-04 11:57:04,468 DEBUG   SenderThread:43923 [sender.py:send():235] send: files
+2022-04-04 11:57:04,468 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file media/images/GT_0_31.png with policy now
+2022-04-04 11:57:04,490 INFO    Thread-13 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/2mewph6a-media/images/Predictions_0_1.png
+2022-04-04 11:57:04,494 INFO    Thread-12 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/2mzy6ro7-media/images/Predictions_0_0.png
+2022-04-04 11:57:04,495 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-04 11:57:04,497 DEBUG   SenderThread:43923 [sender.py:send():235] send: history
+2022-04-04 11:57:04,498 DEBUG   SenderThread:43923 [sender.py:send():235] send: summary
+2022-04-04 11:57:04,502 INFO    Thread-15 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/rtdrn79k-media/images/Predictions_0_3.png
+2022-04-04 11:57:04,504 INFO    Thread-14 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3b0h7str-media/images/Predictions_0_2.png
+2022-04-04 11:57:04,506 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-04 11:57:04,516 INFO    Thread-17 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/2jqpwbc3-media/images/Predictions_0_5.png
+2022-04-04 11:57:04,528 INFO    Thread-18 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/28ylt3ns-media/images/Predictions_0_6.png
+2022-04-04 11:57:04,530 INFO    Thread-20 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/v8d4a1pm-media/images/Predictions_0_8.png
+2022-04-04 11:57:04,536 INFO    Thread-21 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/1mwrq0ff-media/images/Predictions_0_9.png
+2022-04-04 11:57:04,540 INFO    Thread-24 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/1436wsfs-media/images/Predictions_0_12.png
+2022-04-04 11:57:04,542 INFO    Thread-22 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3ifdbor1-media/images/Predictions_0_10.png
+2022-04-04 11:57:04,550 INFO    Thread-16 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/1r9dsk95-media/images/Predictions_0_4.png
+2022-04-04 11:57:04,557 INFO    Thread-25 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/2p2vila3-media/images/Predictions_0_13.png
+2022-04-04 11:57:04,563 INFO    Thread-19 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/39uzbpxd-media/images/Predictions_0_7.png
+2022-04-04 11:57:04,591 INFO    Thread-27 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/2c3oibyw-media/images/Predictions_0_15.png
+2022-04-04 11:57:04,596 INFO    Thread-26 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3d1j1987-media/images/Predictions_0_14.png
+2022-04-04 11:57:04,602 INFO    Thread-30 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/zpgv3eae-media/images/Predictions_0_18.png
+2022-04-04 11:57:04,608 INFO    Thread-28 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3ss69vch-media/images/Predictions_0_16.png
+2022-04-04 11:57:04,620 INFO    Thread-33 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3jnbdl4c-media/images/Predictions_0_21.png
+2022-04-04 11:57:04,628 INFO    Thread-32 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3q5wb7gf-media/images/Predictions_0_20.png
+2022-04-04 11:57:04,655 INFO    Thread-36 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/ahj94d4r-media/images/Predictions_0_24.png
+2022-04-04 11:57:04,659 INFO    Thread-34 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3tlk3p7g-media/images/Predictions_0_22.png
+2022-04-04 11:57:04,662 INFO    Thread-37 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3omn7vhu-media/images/Predictions_0_25.png
+2022-04-04 11:57:04,663 INFO    Thread-39 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/rmb5uzw9-media/images/Predictions_0_27.png
+2022-04-04 11:57:04,665 INFO    Thread-31 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/1hr16mu8-media/images/Predictions_0_19.png
+2022-04-04 11:57:04,668 INFO    Thread-41 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/14c75wz7-media/images/Predictions_0_29.png
+2022-04-04 11:57:04,676 INFO    Thread-43 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/2bajc6h4-media/images/Predictions_0_31.png
+2022-04-04 11:57:04,677 INFO    Thread-29 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/1xbpnjn5-media/images/Predictions_0_17.png
+2022-04-04 11:57:04,685 INFO    Thread-38 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/1m035c3c-media/images/Predictions_0_26.png
+2022-04-04 11:57:04,693 INFO    Thread-23 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3d79nr2t-media/images/Predictions_0_11.png
+2022-04-04 11:57:04,696 INFO    Thread-35 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/29ul0xvg-media/images/Predictions_0_23.png
+2022-04-04 11:57:04,717 INFO    Thread-42 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/2yx456u9-media/images/Predictions_0_30.png
+2022-04-04 11:57:04,722 INFO    Thread-40 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/230pw3ss-media/images/Predictions_0_28.png
+2022-04-04 11:57:04,767 INFO    Thread-44 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/1as38wjq-media/images/GT_0_0.png
+2022-04-04 11:57:04,779 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/wandb-summary.json
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_16.png
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_10.png
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_25.png
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_7.png
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_3.png
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_23.png
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_19.png
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_18.png
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_11.png
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_15.png
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_19.png
+2022-04-04 11:57:04,780 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_0.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_17.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_27.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_4.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_6.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_20.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_4.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_11.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_13.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_29.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_29.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_24.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_13.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_9.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_23.png
+2022-04-04 11:57:04,781 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_0.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_31.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_8.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_30.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_22.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_6.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_22.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_1.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_14.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_25.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_21.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_10.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_16.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_17.png
+2022-04-04 11:57:04,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_7.png
+2022-04-04 11:57:04,783 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_30.png
+2022-04-04 11:57:04,783 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_5.png
+2022-04-04 11:57:04,783 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_24.png
+2022-04-04 11:57:04,783 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_15.png
+2022-04-04 11:57:04,783 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_26.png
+2022-04-04 11:57:04,783 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_9.png
+2022-04-04 11:57:04,783 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_20.png
+2022-04-04 11:57:04,783 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_2.png
+2022-04-04 11:57:04,783 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_1.png
+2022-04-04 11:57:04,783 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_26.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_8.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_18.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_12.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_2.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_14.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_28.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_12.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_5.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_21.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_28.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_31.png
+2022-04-04 11:57:04,784 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_27.png
+2022-04-04 11:57:04,785 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_3.png
+2022-04-04 11:57:04,785 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images
+2022-04-04 11:57:04,785 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media
+2022-04-04 11:57:04,843 INFO    Thread-46 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3ub5p7am-media/images/GT_0_2.png
+2022-04-04 11:57:04,844 INFO    Thread-45 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3gd3uze8-media/images/GT_0_1.png
+2022-04-04 11:57:04,876 INFO    Thread-48 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/2rsy4fp0-media/images/GT_0_4.png
+2022-04-04 11:57:04,878 INFO    Thread-47 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/219s56nr-media/images/GT_0_3.png
+2022-04-04 11:57:04,901 INFO    Thread-51 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/2rc38eim-media/images/GT_0_7.png
+2022-04-04 11:57:04,904 INFO    Thread-49 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3lwjc1yo-media/images/GT_0_5.png
+2022-04-04 11:57:04,915 INFO    Thread-50 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/xxk3bhgf-media/images/GT_0_6.png
+2022-04-04 11:57:04,922 INFO    Thread-53 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/21q83a8r-media/images/GT_0_9.png
+2022-04-04 11:57:04,938 INFO    Thread-55 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/2gl9i4uh-media/images/GT_0_11.png
+2022-04-04 11:57:05,000 INFO    Thread-57 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/19ixg322-media/images/GT_0_13.png
+2022-04-04 11:57:05,016 INFO    Thread-54 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/ldvwj0t1-media/images/GT_0_10.png
+2022-04-04 11:57:05,024 INFO    Thread-58 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/ct0x2pfm-media/images/GT_0_14.png
+2022-04-04 11:57:05,028 INFO    Thread-63 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/qm1u3yf3-media/images/GT_0_19.png
+2022-04-04 11:57:05,030 INFO    Thread-52 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3kbsmjp6-media/images/GT_0_8.png
+2022-04-04 11:57:05,042 INFO    Thread-60 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3m7oicxt-media/images/GT_0_16.png
+2022-04-04 11:57:05,059 INFO    Thread-56 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/12dqb9nh-media/images/GT_0_12.png
+2022-04-04 11:57:05,072 INFO    Thread-61 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/23zds5px-media/images/GT_0_17.png
+2022-04-04 11:57:05,075 INFO    Thread-66 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/tgp2vf5g-media/images/GT_0_22.png
+2022-04-04 11:57:05,084 INFO    Thread-67 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/2hapzdz0-media/images/GT_0_23.png
+2022-04-04 11:57:05,087 INFO    Thread-71 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/lqgzno2e-media/images/GT_0_27.png
+2022-04-04 11:57:05,088 INFO    Thread-64 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/1b2w63zi-media/images/GT_0_20.png
+2022-04-04 11:57:05,092 INFO    Thread-70 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/1ydunpmz-media/images/GT_0_26.png
+2022-04-04 11:57:05,095 INFO    Thread-65 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/lgwrk2l6-media/images/GT_0_21.png
+2022-04-04 11:57:05,099 INFO    Thread-75 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/1x5dlw5g-media/images/GT_0_31.png
+2022-04-04 11:57:05,099 INFO    Thread-69 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/11hmoyog-media/images/GT_0_25.png
+2022-04-04 11:57:05,104 INFO    Thread-72 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/3c7qmwrr-media/images/GT_0_28.png
+2022-04-04 11:57:05,106 INFO    Thread-73 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/th4tl0nr-media/images/GT_0_29.png
+2022-04-04 11:57:05,118 INFO    Thread-62 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/1pna5h2j-media/images/GT_0_18.png
+2022-04-04 11:57:05,126 INFO    Thread-74 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/mrm6ednf-media/images/GT_0_30.png
+2022-04-04 11:57:05,203 INFO    Thread-68 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/25t9nkzp-media/images/GT_0_24.png
+2022-04-04 11:57:05,290 INFO    Thread-59 :43923 [upload_job.py:push():137] Uploaded file /tmp/tmp0x98yniowandb/21mgfacg-media/images/GT_0_15.png
+2022-04-04 11:57:05,782 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/output.log
+2022-04-04 11:57:16,391 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-04 11:57:16,391 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: stop_status
+2022-04-04 11:57:28,416 DEBUG   SenderThread:43923 [sender.py:send():235] send: stats
+2022-04-04 11:57:30,838 INFO    Thread-7  :43923 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/config.yaml
+2022-04-04 11:57:31,563 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-04 11:57:31,564 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: stop_status
+2022-04-04 11:57:34,270 DEBUG   SenderThread:43923 [sender.py:send():235] send: telemetry
+2022-04-04 11:57:34,276 DEBUG   SenderThread:43923 [sender.py:send():235] send: telemetry
+2022-04-04 11:57:34,276 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-04 11:57:34,398 DEBUG   SenderThread:43923 [sender.py:send():235] send: exit
+2022-04-04 11:57:34,399 INFO    SenderThread:43923 [sender.py:send_exit():371] handling exit code: 0
+2022-04-04 11:57:34,399 INFO    SenderThread:43923 [sender.py:send_exit():373] handling runtime: 34
+2022-04-04 11:57:34,402 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:34,402 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-04 11:57:34,402 INFO    SenderThread:43923 [sender.py:send_exit():379] send defer
+2022-04-04 11:57:34,403 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:34,404 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: defer
+2022-04-04 11:57:34,404 INFO    HandlerThread:43923 [handler.py:handle_request_defer():164] handle defer: 0
+2022-04-04 11:57:34,404 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: defer
+2022-04-04 11:57:34,404 INFO    SenderThread:43923 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-04-04 11:57:34,404 INFO    SenderThread:43923 [sender.py:transition_state():392] send defer: 1
+2022-04-04 11:57:34,404 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: defer
+2022-04-04 11:57:34,405 INFO    HandlerThread:43923 [handler.py:handle_request_defer():164] handle defer: 1
+2022-04-04 11:57:34,524 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:34,524 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: defer
+2022-04-04 11:57:34,525 INFO    SenderThread:43923 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-04-04 11:57:34,525 INFO    SenderThread:43923 [sender.py:transition_state():392] send defer: 2
+2022-04-04 11:57:34,525 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:34,526 DEBUG   SenderThread:43923 [sender.py:send():235] send: stats
+2022-04-04 11:57:34,526 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: defer
+2022-04-04 11:57:34,527 INFO    HandlerThread:43923 [handler.py:handle_request_defer():164] handle defer: 2
+2022-04-04 11:57:34,527 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: defer
+2022-04-04 11:57:34,527 INFO    SenderThread:43923 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-04-04 11:57:34,527 INFO    SenderThread:43923 [sender.py:transition_state():392] send defer: 3
+2022-04-04 11:57:34,527 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: defer
+2022-04-04 11:57:34,527 INFO    HandlerThread:43923 [handler.py:handle_request_defer():164] handle defer: 3
+2022-04-04 11:57:34,528 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: defer
+2022-04-04 11:57:34,528 INFO    SenderThread:43923 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-04-04 11:57:34,528 INFO    SenderThread:43923 [sender.py:transition_state():392] send defer: 4
+2022-04-04 11:57:34,528 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: defer
+2022-04-04 11:57:34,528 INFO    HandlerThread:43923 [handler.py:handle_request_defer():164] handle defer: 4
+2022-04-04 11:57:34,528 DEBUG   SenderThread:43923 [sender.py:send():235] send: summary
+2022-04-04 11:57:34,530 INFO    SenderThread:43923 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-04 11:57:34,530 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: defer
+2022-04-04 11:57:34,530 INFO    SenderThread:43923 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-04-04 11:57:34,530 INFO    SenderThread:43923 [sender.py:transition_state():392] send defer: 5
+2022-04-04 11:57:34,531 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: defer
+2022-04-04 11:57:34,531 INFO    HandlerThread:43923 [handler.py:handle_request_defer():164] handle defer: 5
+2022-04-04 11:57:34,531 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: defer
+2022-04-04 11:57:34,531 INFO    SenderThread:43923 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-04-04 11:57:34,627 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:34,727 INFO    SenderThread:43923 [sender.py:transition_state():392] send defer: 6
+2022-04-04 11:57:34,727 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:34,728 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: defer
+2022-04-04 11:57:34,728 INFO    HandlerThread:43923 [handler.py:handle_request_defer():164] handle defer: 6
+2022-04-04 11:57:34,728 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: defer
+2022-04-04 11:57:34,728 INFO    SenderThread:43923 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-04-04 11:57:34,728 INFO    SenderThread:43923 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-04-04 11:57:34,829 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:34,842 INFO    SenderThread:43923 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/config.yaml
+2022-04-04 11:57:34,843 INFO    SenderThread:43923 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/wandb-summary.json
+2022-04-04 11:57:34,843 INFO    SenderThread:43923 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/output.log
+2022-04-04 11:57:34,843 INFO    SenderThread:43923 [dir_watcher.py:finish():313] scan: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files
+2022-04-04 11:57:34,844 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/wandb-metadata.json wandb-metadata.json
+2022-04-04 11:57:34,844 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/wandb-summary.json wandb-summary.json
+2022-04-04 11:57:34,844 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/conda-environment.yaml conda-environment.yaml
+2022-04-04 11:57:34,849 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/requirements.txt requirements.txt
+2022-04-04 11:57:34,853 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/config.yaml config.yaml
+2022-04-04 11:57:34,853 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/output.log output.log
+2022-04-04 11:57:34,866 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_2.png media/images/GT_0_2.png
+2022-04-04 11:57:34,866 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_30.png media/images/GT_0_30.png
+2022-04-04 11:57:34,866 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_20.png media/images/Predictions_0_20.png
+2022-04-04 11:57:34,866 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_1.png media/images/GT_0_1.png
+2022-04-04 11:57:34,866 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_28.png media/images/Predictions_0_28.png
+2022-04-04 11:57:34,866 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_3.png media/images/GT_0_3.png
+2022-04-04 11:57:34,866 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_13.png media/images/GT_0_13.png
+2022-04-04 11:57:34,867 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_4.png media/images/GT_0_4.png
+2022-04-04 11:57:34,867 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_4.png media/images/Predictions_0_4.png
+2022-04-04 11:57:34,867 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_15.png media/images/GT_0_15.png
+2022-04-04 11:57:34,867 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_10.png media/images/Predictions_0_10.png
+2022-04-04 11:57:34,867 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_28.png media/images/GT_0_28.png
+2022-04-04 11:57:34,867 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_25.png media/images/GT_0_25.png
+2022-04-04 11:57:34,867 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_19.png media/images/GT_0_19.png
+2022-04-04 11:57:34,867 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_7.png media/images/Predictions_0_7.png
+2022-04-04 11:57:34,867 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_12.png media/images/GT_0_12.png
+2022-04-04 11:57:34,868 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_5.png media/images/GT_0_5.png
+2022-04-04 11:57:34,868 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_18.png media/images/Predictions_0_18.png
+2022-04-04 11:57:34,868 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_7.png media/images/GT_0_7.png
+2022-04-04 11:57:34,868 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_25.png media/images/Predictions_0_25.png
+2022-04-04 11:57:34,868 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_13.png media/images/Predictions_0_13.png
+2022-04-04 11:57:34,868 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_11.png media/images/Predictions_0_11.png
+2022-04-04 11:57:34,868 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_8.png media/images/Predictions_0_8.png
+2022-04-04 11:57:34,868 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_6.png media/images/Predictions_0_6.png
+2022-04-04 11:57:34,869 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_0.png media/images/GT_0_0.png
+2022-04-04 11:57:34,869 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_16.png media/images/Predictions_0_16.png
+2022-04-04 11:57:34,869 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_14.png media/images/GT_0_14.png
+2022-04-04 11:57:34,869 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_1.png media/images/Predictions_0_1.png
+2022-04-04 11:57:34,869 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_21.png media/images/GT_0_21.png
+2022-04-04 11:57:34,869 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_6.png media/images/GT_0_6.png
+2022-04-04 11:57:34,869 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_31.png media/images/GT_0_31.png
+2022-04-04 11:57:34,869 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_17.png media/images/Predictions_0_17.png
+2022-04-04 11:57:34,869 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_9.png media/images/GT_0_9.png
+2022-04-04 11:57:34,870 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_23.png media/images/GT_0_23.png
+2022-04-04 11:57:34,870 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_26.png media/images/Predictions_0_26.png
+2022-04-04 11:57:34,870 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_14.png media/images/Predictions_0_14.png
+2022-04-04 11:57:34,870 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_27.png media/images/Predictions_0_27.png
+2022-04-04 11:57:34,870 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_19.png media/images/Predictions_0_19.png
+2022-04-04 11:57:34,870 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_24.png media/images/GT_0_24.png
+2022-04-04 11:57:34,870 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_10.png media/images/GT_0_10.png
+2022-04-04 11:57:34,870 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_11.png media/images/GT_0_11.png
+2022-04-04 11:57:34,870 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_17.png media/images/GT_0_17.png
+2022-04-04 11:57:34,870 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_2.png media/images/Predictions_0_2.png
+2022-04-04 11:57:34,871 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_24.png media/images/Predictions_0_24.png
+2022-04-04 11:57:34,871 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_9.png media/images/Predictions_0_9.png
+2022-04-04 11:57:34,871 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_0.png media/images/Predictions_0_0.png
+2022-04-04 11:57:34,871 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_29.png media/images/Predictions_0_29.png
+2022-04-04 11:57:34,871 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_23.png media/images/Predictions_0_23.png
+2022-04-04 11:57:34,871 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_22.png media/images/GT_0_22.png
+2022-04-04 11:57:34,871 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_3.png media/images/Predictions_0_3.png
+2022-04-04 11:57:34,871 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_21.png media/images/Predictions_0_21.png
+2022-04-04 11:57:34,871 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_26.png media/images/GT_0_26.png
+2022-04-04 11:57:34,872 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_29.png media/images/GT_0_29.png
+2022-04-04 11:57:34,872 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_27.png media/images/GT_0_27.png
+2022-04-04 11:57:34,872 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_20.png media/images/GT_0_20.png
+2022-04-04 11:57:34,872 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_18.png media/images/GT_0_18.png
+2022-04-04 11:57:34,872 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_15.png media/images/Predictions_0_15.png
+2022-04-04 11:57:34,872 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_12.png media/images/Predictions_0_12.png
+2022-04-04 11:57:34,873 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_16.png media/images/GT_0_16.png
+2022-04-04 11:57:34,873 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_5.png media/images/Predictions_0_5.png
+2022-04-04 11:57:34,873 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_31.png media/images/Predictions_0_31.png
+2022-04-04 11:57:34,873 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_22.png media/images/Predictions_0_22.png
+2022-04-04 11:57:34,873 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/Predictions_0_30.png media/images/Predictions_0_30.png
+2022-04-04 11:57:34,873 INFO    SenderThread:43923 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/media/images/GT_0_8.png media/images/GT_0_8.png
+2022-04-04 11:57:34,873 INFO    SenderThread:43923 [sender.py:transition_state():392] send defer: 7
+2022-04-04 11:57:34,874 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:34,874 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: defer
+2022-04-04 11:57:34,874 INFO    HandlerThread:43923 [handler.py:handle_request_defer():164] handle defer: 7
+2022-04-04 11:57:34,875 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: defer
+2022-04-04 11:57:34,875 INFO    SenderThread:43923 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-04-04 11:57:34,875 INFO    SenderThread:43923 [file_pusher.py:finish():145] shutting down file pusher
+2022-04-04 11:57:34,977 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:34,977 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:35,079 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:35,079 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:35,182 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:35,182 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:35,285 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:35,285 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:35,373 INFO    Thread-79 :43923 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/config.yaml
+2022-04-04 11:57:35,379 INFO    Thread-78 :43923 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/requirements.txt
+2022-04-04 11:57:35,382 INFO    Thread-76 :43923 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/wandb-summary.json
+2022-04-04 11:57:35,387 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:35,387 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:35,394 INFO    Thread-80 :43923 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/output.log
+2022-04-04 11:57:35,417 INFO    Thread-77 :43923 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/files/conda-environment.yaml
+2022-04-04 11:57:35,489 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:35,489 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:35,591 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:35,591 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:35,617 INFO    Thread-6  :43923 [sender.py:transition_state():392] send defer: 8
+2022-04-04 11:57:35,617 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: defer
+2022-04-04 11:57:35,617 INFO    HandlerThread:43923 [handler.py:handle_request_defer():164] handle defer: 8
+2022-04-04 11:57:35,618 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: defer
+2022-04-04 11:57:35,618 INFO    SenderThread:43923 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-04-04 11:57:35,693 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:36,290 INFO    SenderThread:43923 [sender.py:transition_state():392] send defer: 9
+2022-04-04 11:57:36,290 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:36,291 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: defer
+2022-04-04 11:57:36,291 INFO    HandlerThread:43923 [handler.py:handle_request_defer():164] handle defer: 9
+2022-04-04 11:57:36,291 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: defer
+2022-04-04 11:57:36,291 INFO    SenderThread:43923 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-04-04 11:57:36,292 INFO    SenderThread:43923 [sender.py:transition_state():392] send defer: 10
+2022-04-04 11:57:36,292 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: defer
+2022-04-04 11:57:36,292 DEBUG   SenderThread:43923 [sender.py:send():235] send: final
+2022-04-04 11:57:36,292 INFO    HandlerThread:43923 [handler.py:handle_request_defer():164] handle defer: 10
+2022-04-04 11:57:36,293 DEBUG   SenderThread:43923 [sender.py:send():235] send: footer
+2022-04-04 11:57:36,293 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: defer
+2022-04-04 11:57:36,293 INFO    SenderThread:43923 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-04-04 11:57:36,392 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-04 11:57:36,392 DEBUG   SenderThread:43923 [sender.py:send_request():249] send_request: poll_exit
+2022-04-04 11:57:36,393 INFO    SenderThread:43923 [file_pusher.py:join():150] waiting for file pusher
+2022-04-04 11:57:36,826 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: sampled_history
+2022-04-04 11:57:36,826 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: get_summary
+2022-04-04 11:57:36,827 DEBUG   HandlerThread:43923 [handler.py:handle_request():141] handle_request: shutdown
+2022-04-04 11:57:36,828 INFO    HandlerThread:43923 [handler.py:finish():778] shutting down handler
+2022-04-04 11:57:37,293 INFO    WriterThread:43923 [datastore.py:close():281] close: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220404_115651-fb3x1kkx/run-fb3x1kkx.wandb
+2022-04-04 11:57:37,723 INFO    SenderThread:43923 [sender.py:finish():1078] shutting down sender
+2022-04-04 11:57:37,724 INFO    SenderThread:43923 [file_pusher.py:finish():145] shutting down file pusher
+2022-04-04 11:57:37,724 INFO    SenderThread:43923 [file_pusher.py:join():150] waiting for file pusher
+2022-04-04 11:57:37,735 INFO    MainThread:43923 [internal.py:handle_exit():82] Internal process exited

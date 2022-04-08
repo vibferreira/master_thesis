@@ -53,8 +53,11 @@ def IoU(inputs, targets, smooth=1):
         # inputs = F.sigmoid(inputs)       
         
         #flatten label and prediction tensors
-        inputs = inputs.view(-1)
-        targets = targets.view(-1)
+#         inputs = inputs.view(-1)
+#         targets = targets.view(-1)
+        bs = targets.size(0)
+        targets = targets.view(bs, 1, -1)
+        inputs = inputs.view(bs, 1, -1)
         
         #intersection is equivalent to True Positive count
         #union is the mutually inclusive area of all labels & predictions 
@@ -88,8 +91,12 @@ def metrics(pred: torch.Tensor,
     pred = pred.detach() # detach from the grads
     pred = (pred > 0.5).float() # classify into 0 and 1 
     
-    pred = pred.view(-1, )
-    y = y.view(-1, ).float()
+    # pred = pred.view(-1, )
+    # y = y.view(-1, ).float()
+    
+    bs = y.size(0)
+    y = y.view(bs, 1, -1).float()
+    pred = pred.view(bs, 1, -1)
     
     tp = torch.sum(torch.abs(pred * y))  # TP
     fp = torch.sum(torch.abs(pred * (1 - y)))  # FP

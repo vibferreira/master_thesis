@@ -109,7 +109,7 @@ class Get_Ground_Truth:
 # Testing if it works 
 if __name__ == '__main__':
     # Define the paths of the images, mask layers and grid
-    MASKS_PATH = 'data/geopackages/mask_per_year.gpkg'
+    MASKS_PATH = 'data/geopackages/updated_mask_per_year.gpkg'
     GRID_PATH = 'data/geopackages/grid.gpkg'
     DEST_PATH = 'data/masks'
 
