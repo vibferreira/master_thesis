@@ -5,10 +5,11 @@ import glob
 import os
 import re
 import numpy as np
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt, cm
 from torchvision.utils import make_grid
 import segmentation_models_pytorch
 from tqdm import tqdm
+import cv2
 
 import model
 import metrics
@@ -32,13 +33,25 @@ def get_file_index(file:str) -> str:
     '''Returns the idx name from file name'''
     return re.split(r"[/_.]\s*", file)[-2]
 
+# def remove_paths_with_more_than_one_class(mask_paths:list, image_paths:list) -> list:
+#     '''Returns only images that does not contain more than one label'''
+#     i = 0
+#     for mask, img in zip(mask_paths, image_paths):
+#         data = cv2.imread(mask, cv2.IMREAD_GRAYSCALE)
+#         if len(np.unique(data)) > 1:
+#             image_paths.remove(img)
+#             mask_paths.remove(mask)
+#             i+=1
+#     print(f'{i} paths removed')
+#     return mask_paths, image_paths
+
 def filtered_paths(current_paths:list, 
                    filter_paths:list)-> list:
-    ''' Returns only the paths that match the filter index'''
+    ''' Returns only the paths that match the filter index and does not conain more than one label'''
     filtered_paths = []
     for i in current_paths:
         if np.isin(get_file_index(i), list(filter_paths)):
-            filtered_paths.append(i)
+            filtered_paths.append(i)      
     return filtered_paths
 
 def plot_comparison(x:torch.Tensor, 
@@ -50,12 +63,14 @@ def plot_comparison(x:torch.Tensor,
     img = np.squeeze(x.data.cpu().cpu().numpy()[0])
     _, ax = plt.subplots(1, 3, sharey='row')
     
+    # cmap = cm.get_cmap('gray') # define color map
     plt.gray()
     ax[0].imshow(img)
     ax[0].set_title('Image')
-    ax[1].imshow(gt)
+    ax[1].imshow(gt) # 
+    # ax[1].imshow(gt, cmap=cmap, vmin=0) # 
     ax[1].set_title('Ground Truth')
-    ax[2].imshow(pred[0])
+    ax[2].imshow(pred[0], cmap=cmap, vmin=0)
     ax[2].set_title('Prediction')
     plt.show()
 
