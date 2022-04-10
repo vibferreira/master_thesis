@@ -1,0 +1,6 @@
+
+Training the network for 2 epochs, with a batch size of 8
+
+
+
+Training Epoch [1/2]:  21%|▏| 4/19 [00:00<00:01, 10.22it/s, acc=0.97890854, dice=0.97844946, iou=0.957808

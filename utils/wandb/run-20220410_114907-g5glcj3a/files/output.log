@@ -1,0 +1,39 @@
+
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+Testing Epoch:   6%|███▍                                                  | 1/16 [00:00<00:09,  1.61it/s]
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+
+Testing Epoch:  25%|█████████████▌                                        | 4/16 [00:02<00:07,  1.69it/s]
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+
+Testing Epoch:  44%|███████████████████████▋                              | 7/16 [00:04<00:05,  1.54it/s]
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+
+Testing Epoch:  62%|█████████████████████████████████▏                   | 10/16 [00:06<00:03,  1.64it/s]
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+
+Testing Epoch:  81%|███████████████████████████████████████████          | 13/16 [00:07<00:01,  1.64it/s]
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+
+torch.Size([2, 256, 256]) torch.Size([2, 1, 256, 256]) torch.Size([2, 1, 256, 256])
+Exception in thread NetStatThr:
+Traceback (most recent call last):
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 149, in check_network_status
+    status_response = self._interface.communicate_network_status()
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 125, in communicate_network_status
+    resp = self._communicate_network_status(status)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 397, in _communicate_network_status
+    resp = self._communicate(req, local=True)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 222, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 227, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")

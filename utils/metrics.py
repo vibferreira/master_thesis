@@ -2,10 +2,14 @@
 # make it as a class later
 
 import torch
-from sklearn.metrics import f1_score
 import torch.nn.functional as F
 import numpy as np
 
+from sklearn.metrics import f1_score, confusion_matrix, classification_report
+
+import seaborn as sns
+
+from matplotlib import pyplot as plt, cm
 
 def pixel_accuracy(pred:torch, 
                    y:torch) -> int:
@@ -122,3 +126,36 @@ def metrics(pred: torch.Tensor,
 # Confusion metrics 
 # # assert the dimensions first
 # assert pred.shape == y.shape, f'Shape of pred is {pred.shape} and shape of y is {y.shape}'
+
+def cm_and_class_report(pred: torch, y:torch) -> None:
+    ''' Return confusion matix and classification report for the predictions'''
+    
+    # F1 score per class 
+    pred = pred.flatten()
+    y = y.flatten()
+    labels=[0, 1]
+    f1_scores = f1_score(y, pred, average=None, labels=labels)
+    f1_scores_with_labels = {label:score for label, score in zip(labels, f1_scores)}
+
+    # Confusion Matrix 
+    target_names = ['Non-veg', 'Veg']
+
+    ax= plt.subplot()
+    cf_matrix = confusion_matrix(y, pred)
+    sns.heatmap(cf_matrix/np.sum(cf_matrix), fmt='.4%', annot=True, ax=ax); 
+
+    # labels, title and ticks
+    ax.set_xlabel('Predicted labels')
+    ax.set_ylabel('True labels')
+    ax.set_title('Confusion Matrix')
+    ax.xaxis.set_ticklabels(target_names)
+    ax.yaxis.set_ticklabels(target_names)
+
+    plt.show()
+
+    # classification report
+    print(classification_report(y, pred, target_names=target_names))
+    
+    # IOU or DICE 
+    
+    # ROC Curve

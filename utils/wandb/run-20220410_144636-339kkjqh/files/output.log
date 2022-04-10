@@ -1,0 +1,9 @@
+torch.Size([8, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
+torch.Size([8, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
+torch.Size([8, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
+torch.Size([8, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
+              precision    recall  f1-score   support
+     Non-veg       1.00      0.98      0.99   1114112
+         Veg       0.97      1.00      0.99    983040
+    accuracy                           0.99   2097152
+   macro avg       0.99      0.99      0.99   2097152

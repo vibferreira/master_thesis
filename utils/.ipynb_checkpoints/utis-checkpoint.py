@@ -58,20 +58,28 @@ def plot_comparison(x:torch.Tensor,
                     pred:torch.Tensor, 
                     y:torch.Tensor) -> None:
     
+    # print(y.shape, pred.shape, x.shape)
+    
     gt = np.squeeze(y.data.cpu().cpu().numpy()[0])
-    pred = np.squeeze(pred.sigmoid().cpu().numpy())
+    pred = np.squeeze(pred.sigmoid().cpu().numpy()[0])
     img = np.squeeze(x.data.cpu().cpu().numpy()[0])
     _, ax = plt.subplots(1, 3, sharey='row')
     
-    # cmap = cm.get_cmap('gray') # define color map
+     # Assign appropriate class 
+    pred = (pred > 0.5)
+    
+    plt.figure()
+    cmap = cm.get_cmap('gray') # define color map
     plt.gray()
     ax[0].imshow(img)
     ax[0].set_title('Image')
-    ax[1].imshow(gt) # 
+    
+    ax[1].imshow(gt, cmap=cmap, vmin=0) # 0 are balck and white are 1  
     # ax[1].imshow(gt, cmap=cmap, vmin=0) # 
     ax[1].set_title('Ground Truth')
-    ax[2].imshow(pred[0], cmap=cmap, vmin=0)
-    ax[2].set_title('Prediction')
+    
+    ax[2].imshow(pred, cmap=cmap, vmin=0)
+    ax[2].set_title(f'Prediction')
     plt.show()
 
 def save_best_model(model, 
