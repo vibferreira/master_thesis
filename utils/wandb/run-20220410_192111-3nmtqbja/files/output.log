@@ -1,2 +1,15 @@
 
 
+Testing Epoch:  50%|███████████████████████████▌                           | 3/6 [00:00<00:00,  4.03it/s]
+              precision    recall  f1-score   support
+     Non-veg       0.99      0.99      0.99   1452326
+         Veg       0.99      0.99      0.99   1693402
+    accuracy                           0.99   3145728
+   macro avg       0.99      0.99      0.99   3145728
+weighted avg       0.99      0.99      0.99   3145728
+Veg Paths:  90
+10 paths removed
+Non-Veg Paths:  128
+4 paths removed
+Veg Paths:  86
+10 paths removed

@@ -148,3 +148,18 @@ local_info {
 2022-04-10 19:21:18,251 INFO    MainThread:94176 [wandb_init.py:init():664] run started, returning control to user process
 2022-04-10 19:21:20,811 INFO    MainThread:94176 [wandb_init.py:_pause_backend():318] pausing backend
 2022-04-10 19:21:20,811 INFO    MainThread:94176 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-04-10 19:28:06,409 INFO    MainThread:94176 [wandb_init.py:_resume_backend():327] resuming backend
+2022-04-10 19:28:15,378 INFO    MainThread:94176 [wandb_init.py:_pause_backend():318] pausing backend
+2022-04-10 19:28:15,380 INFO    MainThread:94176 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-04-10 19:31:22,676 INFO    MainThread:94176 [wandb_init.py:_resume_backend():327] resuming backend
+2022-04-10 19:31:24,589 INFO    MainThread:94176 [wandb_init.py:_pause_backend():318] pausing backend
+2022-04-10 19:31:24,589 INFO    MainThread:94176 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-04-10 19:34:10,084 INFO    MainThread:94176 [wandb_init.py:_resume_backend():327] resuming backend
+2022-04-10 19:34:11,822 INFO    MainThread:94176 [wandb_init.py:_pause_backend():318] pausing backend
+2022-04-10 19:34:11,823 INFO    MainThread:94176 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-04-10 19:34:17,794 INFO    MainThread:94176 [wandb_init.py:_resume_backend():327] resuming backend
+2022-04-10 19:34:19,542 INFO    MainThread:94176 [wandb_init.py:_pause_backend():318] pausing backend
+2022-04-10 19:34:19,543 INFO    MainThread:94176 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-04-10 19:34:23,819 INFO    MainThread:94176 [wandb_init.py:_resume_backend():327] resuming backend
+2022-04-10 19:34:25,694 INFO    MainThread:94176 [wandb_init.py:_pause_backend():318] pausing backend
+2022-04-10 19:34:25,694 INFO    MainThread:94176 [jupyter.py:save_ipynb():374] not saving jupyter notebook

@@ -47,15 +47,15 @@ class Get_Ground_Truth:
     def saving_binary_mask(self, years:list, mask_per_year:gpd.GeoDataFrame) -> None: 
         '''Saves the binary masks into .tif files'''
         for year in years:
-            if not path.exists(f'{self.DEST_PATH}/{year}.tif'): # this should be passed to the class as well 
-                print(f'Rasterizing year {year}')
-                dataset = self.rasterize_vect(mask_per_year[year])
-                out_grid_2 = dataset.to_array()
-                print('Bounds', out_grid_2.rio.bounds())
-                out_grid_2.rio.to_raster(f'{self.DEST_PATH}/{year}_temp.tif') # create a temp file (FIND A WAY TO SAVE THE TRANSFORM DIRECTLY WITH XARRAY)
-                print(f' Image is rasterized in the folder {self.DEST_PATH}')
-            else:
-                print(f'{year} is already rasterized!')
+            # if not path.exists(f'{self.DEST_PATH}/{year}.tif'): # this should be passed to the class as well 
+            print(f'Rasterizing year {year}')
+            dataset = self.rasterize_vect(mask_per_year[year])
+            out_grid_2 = dataset.to_array()
+            print('Bounds', out_grid_2.rio.bounds())
+            out_grid_2.rio.to_raster(f'{self.DEST_PATH}/{year}_temp.tif') # create a temp file (FIND A WAY TO SAVE THE TRANSFORM DIRECTLY WITH XARRAY)
+            print(f' Image is rasterized in the folder {self.DEST_PATH}')
+            # else:
+            #     print(f'{year} is already rasterized!')
                 
     def get_items(self) -> None:
         grid = gpd.read_file(self.GRID_PATH)
@@ -109,7 +109,7 @@ class Get_Ground_Truth:
 # Testing if it works 
 if __name__ == '__main__':
     # Define the paths of the images, mask layers and grid
-    MASKS_PATH = 'data/geopackages/updated_mask_per_year.gpkg'
+    MASKS_PATH = 'data/geopackages/UPDATED2_mask_per_year.gpkg'
     GRID_PATH = 'data/geopackages/grid.gpkg'
     DEST_PATH = 'data/masks'
 

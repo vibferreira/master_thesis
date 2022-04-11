@@ -1,0 +1,58 @@
+
+Training the network for 150 epochs, with a batch size of 8
+
+
+
+
+
+Training Epoch [1/150]:  21%|▏| 8/38 [00:00<00:02, 10.37it/s, acc=0.94797325, dice=0.9594175, iou=0.92200
+Process wandb_internal:
+Traceback (most recent call last):
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/internal/internal.py", line 162, in wandb_internal
+    thread.join()
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/threading.py", line 1053, in join
+    self._wait_for_tstate_lock()
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/threading.py", line 1069, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Exception in thread NetStatThr:
+Traceback (most recent call last):
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 149, in check_network_status
+    status_response = self._interface.communicate_network_status()
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 125, in communicate_network_status
+    resp = self._communicate_network_status(status)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 397, in _communicate_network_status
+    resp = self._communicate(req, local=True)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 222, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 227, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+Exception in thread ChkStopThr:
+Traceback (most recent call last):
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 167, in check_status
+    status_response = self._interface.communicate_stop_status()
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 114, in communicate_stop_status
+    resp = self._communicate_stop_status(status)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 387, in _communicate_stop_status
+    resp = self._communicate(req, local=True)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 222, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 227, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+Error in callback <function _WandbInit._resume_backend at 0x7f2efc7ea790> (for pre_run_cell):
+Error in callback <function _WandbInit._pause_backend at 0x7f2efc7eaa60> (for post_run_cell):
+Error in callback <function _WandbInit._resume_backend at 0x7f2efc7ea790> (for pre_run_cell):
