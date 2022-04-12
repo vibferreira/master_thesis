@@ -50,7 +50,7 @@ def filtered_paths(current_paths:list,
     ''' Returns only the paths that match the filter index and does not conain more than one label'''
     filtered_paths = []
     for i in current_paths:
-        if np.isin(get_file_index(i), list(filter_paths)):
+        if np.isin(int(get_file_index(i)), list(filter_paths)):
             filtered_paths.append(i)      
     return filtered_paths
 

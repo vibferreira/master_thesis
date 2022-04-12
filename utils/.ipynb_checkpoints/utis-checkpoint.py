@@ -50,7 +50,7 @@ def filtered_paths(current_paths:list,
     ''' Returns only the paths that match the filter index and does not conain more than one label'''
     filtered_paths = []
     for i in current_paths:
-        if np.isin(get_file_index(i), list(filter_paths)):
+        if np.isin(int(get_file_index(i)), list(filter_paths)):
             filtered_paths.append(i)      
     return filtered_paths
 
@@ -60,9 +60,9 @@ def plot_comparison(x:torch.Tensor,
     
     # print(y.shape, pred.shape, x.shape)
     
-    gt = np.squeeze(y.data.cpu().cpu().numpy()[2])
-    pred = np.squeeze(pred.sigmoid().cpu().numpy()[2])
-    img = np.squeeze(x.data.cpu().cpu().numpy()[2])
+    gt = np.squeeze(y.data.cpu().cpu().numpy()[0])
+    pred = np.squeeze(pred.sigmoid().cpu().numpy()[0])
+    img = np.squeeze(x.data.cpu().cpu().numpy()[0])
     _, ax = plt.subplots(1, 3, sharey='row')
     
      # Assign appropriate class 
