@@ -1,0 +1,1481 @@
+2022-04-12 21:17:56,333 INFO    MainThread:53710 [internal.py:wandb_internal():92] W&B internal server running at pid: 53710, started at: 2022-04-12 21:17:56.332774
+2022-04-12 21:17:56,337 INFO    WriterThread:53710 [datastore.py:open_for_write():77] open: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/run-2hlth11y.wandb
+2022-04-12 21:17:56,339 DEBUG   SenderThread:53710 [sender.py:send():235] send: header
+2022-04-12 21:17:56,339 DEBUG   SenderThread:53710 [sender.py:send():235] send: run
+2022-04-12 21:17:56,620 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: check_version
+2022-04-12 21:17:56,622 INFO    SenderThread:53710 [dir_watcher.py:__init__():169] watching files in: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files
+2022-04-12 21:17:56,622 INFO    SenderThread:53710 [sender.py:_start_run_threads():812] run started: 2hlth11y with start time 1649791074
+2022-04-12 21:17:56,622 DEBUG   SenderThread:53710 [sender.py:send():235] send: summary
+2022-04-12 21:17:56,623 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-12 21:17:56,623 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: check_version
+2022-04-12 21:17:56,691 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: run_start
+2022-04-12 21:17:56,701 DEBUG   HandlerThread:53710 [meta.py:__init__():37] meta init
+2022-04-12 21:17:56,701 DEBUG   HandlerThread:53710 [meta.py:__init__():51] meta init done
+2022-04-12 21:17:56,701 DEBUG   HandlerThread:53710 [meta.py:probe():211] probe
+2022-04-12 21:17:56,708 DEBUG   HandlerThread:53710 [meta.py:_setup_git():201] setup git
+2022-04-12 21:17:56,730 DEBUG   HandlerThread:53710 [meta.py:_setup_git():208] setup git done
+2022-04-12 21:17:56,730 DEBUG   HandlerThread:53710 [meta.py:_save_pip():55] save pip
+2022-04-12 21:17:56,732 DEBUG   HandlerThread:53710 [meta.py:_save_pip():69] save pip done
+2022-04-12 21:17:56,732 DEBUG   HandlerThread:53710 [meta.py:_save_conda():76] save conda
+2022-04-12 21:17:57,626 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/requirements.txt
+2022-04-12 21:17:57,627 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/wandb-summary.json
+2022-04-12 21:17:57,627 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/conda-environment.yaml
+2022-04-12 21:17:57,756 DEBUG   HandlerThread:53710 [meta.py:_save_conda():86] save conda done
+2022-04-12 21:17:57,756 DEBUG   HandlerThread:53710 [meta.py:probe():249] probe done
+2022-04-12 21:17:57,960 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:17:57,960 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-04-12 21:17:57,972 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:17:57,972 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:17:58,130 DEBUG   SenderThread:53710 [sender.py:send():235] send: telemetry
+2022-04-12 21:17:58,494 INFO    Thread-11 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1l3ztoiu-wandb-metadata.json
+2022-04-12 21:17:58,623 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/conda-environment.yaml
+2022-04-12 21:17:58,624 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:17:58,624 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/wandb-metadata.json
+2022-04-12 21:18:00,636 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:18:02,638 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:18:04,639 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:18:06,640 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:18:08,642 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:18:10,643 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:18:12,645 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:18:13,132 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:18:13,132 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:18:14,646 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:18:16,647 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:18:17,898 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,899 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_0.png with policy now
+2022-04-12 21:18:17,900 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,900 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_1.png with policy now
+2022-04-12 21:18:17,903 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,903 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_2.png with policy now
+2022-04-12 21:18:17,903 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,903 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_3.png with policy now
+2022-04-12 21:18:17,904 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,904 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_4.png with policy now
+2022-04-12 21:18:17,907 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,907 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_5.png with policy now
+2022-04-12 21:18:17,907 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,907 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_6.png with policy now
+2022-04-12 21:18:17,908 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,908 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_7.png with policy now
+2022-04-12 21:18:17,911 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,911 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_8.png with policy now
+2022-04-12 21:18:17,911 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,911 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_9.png with policy now
+2022-04-12 21:18:17,914 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,915 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_10.png with policy now
+2022-04-12 21:18:17,915 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,915 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_11.png with policy now
+2022-04-12 21:18:17,915 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,916 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_12.png with policy now
+2022-04-12 21:18:17,916 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,916 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_13.png with policy now
+2022-04-12 21:18:17,919 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,919 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_14.png with policy now
+2022-04-12 21:18:17,919 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,919 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_15.png with policy now
+2022-04-12 21:18:17,924 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,924 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_16.png with policy now
+2022-04-12 21:18:17,925 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,925 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_17.png with policy now
+2022-04-12 21:18:17,926 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,926 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_18.png with policy now
+2022-04-12 21:18:17,929 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,929 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_19.png with policy now
+2022-04-12 21:18:17,929 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,930 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_20.png with policy now
+2022-04-12 21:18:17,930 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,930 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_21.png with policy now
+2022-04-12 21:18:17,933 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,933 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_22.png with policy now
+2022-04-12 21:18:17,934 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,934 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_23.png with policy now
+2022-04-12 21:18:17,937 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,937 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_24.png with policy now
+2022-04-12 21:18:17,941 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,942 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_25.png with policy now
+2022-04-12 21:18:17,942 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,942 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_26.png with policy now
+2022-04-12 21:18:17,947 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,947 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_27.png with policy now
+2022-04-12 21:18:17,951 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,951 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_28.png with policy now
+2022-04-12 21:18:17,951 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,951 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_29.png with policy now
+2022-04-12 21:18:17,955 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,955 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_30.png with policy now
+2022-04-12 21:18:17,956 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,956 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_31.png with policy now
+2022-04-12 21:18:17,959 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,959 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_32.png with policy now
+2022-04-12 21:18:17,959 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,959 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_33.png with policy now
+2022-04-12 21:18:17,963 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,963 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_34.png with policy now
+2022-04-12 21:18:17,966 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,966 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_35.png with policy now
+2022-04-12 21:18:17,970 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,970 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_36.png with policy now
+2022-04-12 21:18:17,972 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,972 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_37.png with policy now
+2022-04-12 21:18:17,976 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,976 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_38.png with policy now
+2022-04-12 21:18:17,980 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,980 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_39.png with policy now
+2022-04-12 21:18:17,984 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,984 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_40.png with policy now
+2022-04-12 21:18:17,987 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,987 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_41.png with policy now
+2022-04-12 21:18:17,991 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,991 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_42.png with policy now
+2022-04-12 21:18:17,995 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,995 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_43.png with policy now
+2022-04-12 21:18:17,998 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:17,999 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_44.png with policy now
+2022-04-12 21:18:18,003 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,003 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_45.png with policy now
+2022-04-12 21:18:18,009 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,009 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_46.png with policy now
+2022-04-12 21:18:18,012 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,012 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_47.png with policy now
+2022-04-12 21:18:18,013 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,014 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_48.png with policy now
+2022-04-12 21:18:18,020 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,020 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_49.png with policy now
+2022-04-12 21:18:18,024 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,024 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_50.png with policy now
+2022-04-12 21:18:18,031 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,031 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_51.png with policy now
+2022-04-12 21:18:18,033 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,035 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_52.png with policy now
+2022-04-12 21:18:18,039 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,039 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_53.png with policy now
+2022-04-12 21:18:18,043 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,043 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_54.png with policy now
+2022-04-12 21:18:18,050 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,050 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_55.png with policy now
+2022-04-12 21:18:18,054 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,054 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_56.png with policy now
+2022-04-12 21:18:18,058 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,058 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_57.png with policy now
+2022-04-12 21:18:18,062 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,062 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_58.png with policy now
+2022-04-12 21:18:18,065 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,065 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_59.png with policy now
+2022-04-12 21:18:18,069 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,069 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_60.png with policy now
+2022-04-12 21:18:18,095 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,095 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_61.png with policy now
+2022-04-12 21:18:18,098 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,098 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_62.png with policy now
+2022-04-12 21:18:18,163 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,163 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_63.png with policy now
+2022-04-12 21:18:18,371 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,371 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/Predictions_0_64.png with policy now
+2022-04-12 21:18:18,396 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,396 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_0.png with policy now
+2022-04-12 21:18:18,403 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,403 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_1.png with policy now
+2022-04-12 21:18:18,406 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,406 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_2.png with policy now
+2022-04-12 21:18:18,408 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,409 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_3.png with policy now
+2022-04-12 21:18:18,411 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,411 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_4.png with policy now
+2022-04-12 21:18:18,414 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,414 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_5.png with policy now
+2022-04-12 21:18:18,416 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,416 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_6.png with policy now
+2022-04-12 21:18:18,419 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,419 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_7.png with policy now
+2022-04-12 21:18:18,421 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,421 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_8.png with policy now
+2022-04-12 21:18:18,423 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,424 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_9.png with policy now
+2022-04-12 21:18:18,428 INFO    Thread-13 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/11r88b6s-media/images/Predictions_0_1.png
+2022-04-12 21:18:18,434 INFO    Thread-14 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2hu7tvef-media/images/Predictions_0_2.png
+2022-04-12 21:18:18,438 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,438 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_10.png with policy now
+2022-04-12 21:18:18,443 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,443 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_11.png with policy now
+2022-04-12 21:18:18,444 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,444 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_12.png with policy now
+2022-04-12 21:18:18,448 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,448 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_13.png with policy now
+2022-04-12 21:18:18,451 INFO    Thread-20 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/10v54sei-media/images/Predictions_0_8.png
+2022-04-12 21:18:18,458 INFO    Thread-17 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/33t2w1s8-media/images/Predictions_0_5.png
+2022-04-12 21:18:18,458 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,458 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_14.png with policy now
+2022-04-12 21:18:18,465 INFO    Thread-16 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2wn20a8l-media/images/Predictions_0_4.png
+2022-04-12 21:18:18,465 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,465 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_15.png with policy now
+2022-04-12 21:18:18,471 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,471 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_16.png with policy now
+2022-04-12 21:18:18,474 INFO    Thread-22 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/35sccr8n-media/images/Predictions_0_10.png
+2022-04-12 21:18:18,476 INFO    Thread-23 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/ml6rnrmi-media/images/Predictions_0_11.png
+2022-04-12 21:18:18,479 INFO    Thread-19 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/35t7fugq-media/images/Predictions_0_7.png
+2022-04-12 21:18:18,487 INFO    Thread-21 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3242kmv5-media/images/Predictions_0_9.png
+2022-04-12 21:18:18,488 INFO    Thread-26 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3altq00d-media/images/Predictions_0_14.png
+2022-04-12 21:18:18,490 INFO    Thread-25 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/33tqvi1e-media/images/Predictions_0_13.png
+2022-04-12 21:18:18,498 INFO    Thread-28 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2qwjsct2-media/images/Predictions_0_16.png
+2022-04-12 21:18:18,499 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,499 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_17.png with policy now
+2022-04-12 21:18:18,504 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,504 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_18.png with policy now
+2022-04-12 21:18:18,515 INFO    Thread-12 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1jvm2i44-media/images/Predictions_0_0.png
+2022-04-12 21:18:18,516 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,516 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_19.png with policy now
+2022-04-12 21:18:18,521 INFO    Thread-30 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/tt3j5xdi-media/images/Predictions_0_18.png
+2022-04-12 21:18:18,523 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,523 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_20.png with policy now
+2022-04-12 21:18:18,529 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-12 21:18:18,530 INFO    Thread-18 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2g3bo0g8-media/images/Predictions_0_6.png
+2022-04-12 21:18:18,532 INFO    Thread-31 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1k5vmhwf-media/images/Predictions_0_19.png
+2022-04-12 21:18:18,536 INFO    Thread-24 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/fveh9jqj-media/images/Predictions_0_12.png
+2022-04-12 21:18:18,549 INFO    Thread-37 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3anu89bb-media/images/Predictions_0_25.png
+2022-04-12 21:18:18,554 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,555 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_21.png with policy now
+2022-04-12 21:18:18,565 INFO    Thread-27 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2v4bozko-media/images/Predictions_0_15.png
+2022-04-12 21:18:18,578 INFO    Thread-40 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1arfn0ba-media/images/Predictions_0_28.png
+2022-04-12 21:18:18,600 INFO    Thread-29 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2s50p82c-media/images/Predictions_0_17.png
+2022-04-12 21:18:18,601 INFO    Thread-33 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/ldft9mj9-media/images/Predictions_0_21.png
+2022-04-12 21:18:18,602 INFO    Thread-35 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3miad561-media/images/Predictions_0_23.png
+2022-04-12 21:18:18,605 INFO    Thread-34 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1pf4wkxy-media/images/Predictions_0_22.png
+2022-04-12 21:18:18,608 INFO    Thread-38 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/218homs9-media/images/Predictions_0_26.png
+2022-04-12 21:18:18,611 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,615 INFO    Thread-41 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2ubiynby-media/images/Predictions_0_29.png
+2022-04-12 21:18:18,617 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_22.png with policy now
+2022-04-12 21:18:18,620 INFO    Thread-32 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/390f5c6p-media/images/Predictions_0_20.png
+2022-04-12 21:18:18,635 INFO    Thread-36 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/morwdtrd-media/images/Predictions_0_24.png
+2022-04-12 21:18:18,651 INFO    Thread-45 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1kterb5n-media/images/Predictions_0_33.png
+2022-04-12 21:18:18,658 INFO    Thread-49 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1lexco8m-media/images/Predictions_0_37.png
+2022-04-12 21:18:18,663 INFO    Thread-42 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1meupzfs-media/images/Predictions_0_30.png
+2022-04-12 21:18:18,676 INFO    Thread-46 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3r2o5hlv-media/images/Predictions_0_34.png
+2022-04-12 21:18:18,695 INFO    Thread-51 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/iue5ql49-media/images/Predictions_0_39.png
+2022-04-12 21:18:18,697 INFO    Thread-56 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/f7uhsuky-media/images/Predictions_0_44.png
+2022-04-12 21:18:18,701 INFO    Thread-59 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/jdghgo03-media/images/Predictions_0_47.png
+2022-04-12 21:18:18,705 INFO    Thread-43 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2egmlb40-media/images/Predictions_0_31.png
+2022-04-12 21:18:18,705 INFO    Thread-60 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/34myz8zw-media/images/Predictions_0_48.png
+2022-04-12 21:18:18,707 INFO    Thread-50 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3btmvp4h-media/images/Predictions_0_38.png
+2022-04-12 21:18:18,709 INFO    Thread-53 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/ha9m47cr-media/images/Predictions_0_41.png
+2022-04-12 21:18:18,715 INFO    Thread-55 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/uietrx15-media/images/Predictions_0_43.png
+2022-04-12 21:18:18,715 INFO    Thread-47 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/19jxiqgj-media/images/Predictions_0_35.png
+2022-04-12 21:18:18,715 INFO    Thread-62 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1fnp9l4y-media/images/Predictions_0_50.png
+2022-04-12 21:18:18,736 INFO    Thread-52 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/4elw7mgz-media/images/Predictions_0_40.png
+2022-04-12 21:18:18,739 INFO    Thread-57 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2ly1zj0x-media/images/Predictions_0_45.png
+2022-04-12 21:18:18,749 INFO    Thread-58 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/gv4dkypf-media/images/Predictions_0_46.png
+2022-04-12 21:18:18,759 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,762 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_23.png with policy now
+2022-04-12 21:18:18,764 INFO    Thread-44 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2f1rgnhq-media/images/Predictions_0_32.png
+2022-04-12 21:18:18,766 INFO    Thread-61 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1nrpuhtx-media/images/Predictions_0_49.png
+2022-04-12 21:18:18,768 INFO    Thread-39 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1oivacrk-media/images/Predictions_0_27.png
+2022-04-12 21:18:18,794 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,794 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_24.png with policy now
+2022-04-12 21:18:18,802 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:18:18,802 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_33.png
+2022-04-12 21:18:18,810 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,810 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_25.png with policy now
+2022-04-12 21:18:18,822 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_59.png
+2022-04-12 21:18:18,823 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_16.png
+2022-04-12 21:18:18,823 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_42.png
+2022-04-12 21:18:18,824 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_21.png
+2022-04-12 21:18:18,826 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_14.png
+2022-04-12 21:18:18,827 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_64.png
+2022-04-12 21:18:18,827 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_16.png
+2022-04-12 21:18:18,829 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_9.png
+2022-04-12 21:18:18,829 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_49.png
+2022-04-12 21:18:18,833 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,833 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_26.png with policy now
+2022-04-12 21:18:18,841 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_60.png
+2022-04-12 21:18:18,853 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,855 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_27.png with policy now
+2022-04-12 21:18:18,861 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_4.png
+2022-04-12 21:18:18,861 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_41.png
+2022-04-12 21:18:18,861 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_40.png
+2022-04-12 21:18:18,863 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,863 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_28.png with policy now
+2022-04-12 21:18:18,869 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_62.png
+2022-04-12 21:18:18,870 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,870 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_29.png with policy now
+2022-04-12 21:18:18,876 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_63.png
+2022-04-12 21:18:18,876 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_43.png
+2022-04-12 21:18:18,876 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_64.png
+2022-04-12 21:18:18,877 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,877 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_30.png with policy now
+2022-04-12 21:18:18,884 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_41.png
+2022-04-12 21:18:18,885 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,885 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_31.png with policy now
+2022-04-12 21:18:18,892 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_56.png
+2022-04-12 21:18:18,892 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_57.png
+2022-04-12 21:18:18,892 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_0.png
+2022-04-12 21:18:18,892 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_58.png
+2022-04-12 21:18:18,892 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_11.png
+2022-04-12 21:18:18,892 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_15.png
+2022-04-12 21:18:18,892 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_62.png
+2022-04-12 21:18:18,892 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_48.png
+2022-04-12 21:18:18,893 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_6.png
+2022-04-12 21:18:18,893 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_26.png
+2022-04-12 21:18:18,893 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_50.png
+2022-04-12 21:18:18,895 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,895 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_32.png with policy now
+2022-04-12 21:18:18,902 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_47.png
+2022-04-12 21:18:18,903 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,904 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_33.png with policy now
+2022-04-12 21:18:18,908 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_52.png
+2022-04-12 21:18:18,908 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_10.png
+2022-04-12 21:18:18,908 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_1.png
+2022-04-12 21:18:18,909 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_36.png
+2022-04-12 21:18:18,909 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_27.png
+2022-04-12 21:18:18,909 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_39.png
+2022-04-12 21:18:18,909 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_45.png
+2022-04-12 21:18:18,910 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,910 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_34.png with policy now
+2022-04-12 21:18:18,915 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_22.png
+2022-04-12 21:18:18,916 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_26.png
+2022-04-12 21:18:18,916 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_60.png
+2022-04-12 21:18:18,916 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_7.png
+2022-04-12 21:18:18,916 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_2.png
+2022-04-12 21:18:18,916 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_31.png
+2022-04-12 21:18:18,916 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_49.png
+2022-04-12 21:18:18,916 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_32.png
+2022-04-12 21:18:18,916 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_14.png
+2022-04-12 21:18:18,917 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_38.png
+2022-04-12 21:18:18,917 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,917 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_35.png with policy now
+2022-04-12 21:18:18,922 INFO    Thread-63 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1g5qsc93-media/images/Predictions_0_51.png
+2022-04-12 21:18:18,924 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_34.png
+2022-04-12 21:18:18,924 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_8.png
+2022-04-12 21:18:18,925 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_46.png
+2022-04-12 21:18:18,925 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_17.png
+2022-04-12 21:18:18,925 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_51.png
+2022-04-12 21:18:18,925 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_61.png
+2022-04-12 21:18:18,925 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,925 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_36.png with policy now
+2022-04-12 21:18:18,927 INFO    Thread-66 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/wwgiu924-media/images/Predictions_0_54.png
+2022-04-12 21:18:18,933 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_5.png
+2022-04-12 21:18:18,933 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_12.png
+2022-04-12 21:18:18,933 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_21.png
+2022-04-12 21:18:18,933 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_43.png
+2022-04-12 21:18:18,933 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,933 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_37.png with policy now
+2022-04-12 21:18:18,942 INFO    Thread-64 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/jvy4t5w0-media/images/Predictions_0_52.png
+2022-04-12 21:18:18,945 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_44.png
+2022-04-12 21:18:18,946 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_2.png
+2022-04-12 21:18:18,946 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_25.png
+2022-04-12 21:18:18,946 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_58.png
+2022-04-12 21:18:18,947 INFO    Thread-68 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2ai6w8jk-media/images/Predictions_0_56.png
+2022-04-12 21:18:18,949 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,949 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_38.png with policy now
+2022-04-12 21:18:18,963 INFO    Thread-67 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2f11yfgr-media/images/Predictions_0_55.png
+2022-04-12 21:18:18,964 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_36.png
+2022-04-12 21:18:18,964 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_28.png
+2022-04-12 21:18:18,965 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_51.png
+2022-04-12 21:18:18,966 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:18,967 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_39.png with policy now
+2022-04-12 21:18:19,013 INFO    Thread-48 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2447ze6b-media/images/Predictions_0_36.png
+2022-04-12 21:18:19,020 INFO    Thread-69 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/gurr39wz-media/images/Predictions_0_57.png
+2022-04-12 21:18:19,023 INFO    Thread-65 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2v7mbi84-media/images/Predictions_0_53.png
+2022-04-12 21:18:19,027 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_20.png
+2022-04-12 21:18:19,028 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_9.png
+2022-04-12 21:18:19,029 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_55.png
+2022-04-12 21:18:19,029 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,030 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_40.png with policy now
+2022-04-12 21:18:19,044 INFO    Thread-74 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3mhewkoy-media/images/Predictions_0_62.png
+2022-04-12 21:18:19,047 INFO    Thread-15 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/26pbni8p-media/images/Predictions_0_3.png
+2022-04-12 21:18:19,053 INFO    Thread-75 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/248dis5n-media/images/Predictions_0_63.png
+2022-04-12 21:18:19,067 INFO    Thread-77 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2cu2e12z-media/images/GT_0_0.png
+2022-04-12 21:18:19,068 INFO    Thread-71 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2mtc9wvh-media/images/Predictions_0_59.png
+2022-04-12 21:18:19,070 INFO    Thread-73 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/kgjj9wfq-media/images/Predictions_0_61.png
+2022-04-12 21:18:19,079 INFO    Thread-80 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/19xksmsw-media/images/GT_0_3.png
+2022-04-12 21:18:19,085 INFO    Thread-78 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/pvg3v9cr-media/images/GT_0_1.png
+2022-04-12 21:18:19,089 INFO    Thread-81 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/33jq65wi-media/images/GT_0_4.png
+2022-04-12 21:18:19,100 INFO    Thread-72 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/z979um70-media/images/Predictions_0_60.png
+2022-04-12 21:18:19,105 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_5.png
+2022-04-12 21:18:19,105 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,105 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_35.png
+2022-04-12 21:18:19,105 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_41.png with policy now
+2022-04-12 21:18:19,106 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_7.png
+2022-04-12 21:18:19,106 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_0.png
+2022-04-12 21:18:19,107 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_11.png
+2022-04-12 21:18:19,107 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_18.png
+2022-04-12 21:18:19,109 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_59.png
+2022-04-12 21:18:19,113 INFO    Thread-76 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1p4ota5j-media/images/Predictions_0_64.png
+2022-04-12 21:18:19,119 INFO    Thread-79 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2r695isb-media/images/GT_0_2.png
+2022-04-12 21:18:19,142 INFO    Thread-54 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1gypvcom-media/images/Predictions_0_42.png
+2022-04-12 21:18:19,149 INFO    Thread-83 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1z1nzc8m-media/images/GT_0_6.png
+2022-04-12 21:18:19,155 INFO    Thread-82 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1x4ocj0o-media/images/GT_0_5.png
+2022-04-12 21:18:19,156 INFO    Thread-70 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/m1wjpyq1-media/images/Predictions_0_58.png
+2022-04-12 21:18:19,162 INFO    Thread-86 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3rrmu7pd-media/images/GT_0_9.png
+2022-04-12 21:18:19,172 INFO    Thread-84 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/ulaam8em-media/images/GT_0_7.png
+2022-04-12 21:18:19,181 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,182 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_42.png with policy now
+2022-04-12 21:18:19,184 INFO    Thread-87 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/usixrt68-media/images/GT_0_10.png
+2022-04-12 21:18:19,185 INFO    Thread-85 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2z26zers-media/images/GT_0_8.png
+2022-04-12 21:18:19,187 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_3.png
+2022-04-12 21:18:19,188 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_55.png
+2022-04-12 21:18:19,189 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_48.png
+2022-04-12 21:18:19,199 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,199 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_43.png with policy now
+2022-04-12 21:18:19,200 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_32.png
+2022-04-12 21:18:19,201 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_46.png
+2022-04-12 21:18:19,211 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,212 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_44.png with policy now
+2022-04-12 21:18:19,213 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_44.png
+2022-04-12 21:18:19,228 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,228 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_45.png with policy now
+2022-04-12 21:18:19,229 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_17.png
+2022-04-12 21:18:19,230 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_27.png
+2022-04-12 21:18:19,230 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_29.png
+2022-04-12 21:18:19,230 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_28.png
+2022-04-12 21:18:19,231 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_13.png
+2022-04-12 21:18:19,231 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_12.png
+2022-04-12 21:18:19,231 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_23.png
+2022-04-12 21:18:19,232 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_45.png
+2022-04-12 21:18:19,232 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_3.png
+2022-04-12 21:18:19,233 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_6.png
+2022-04-12 21:18:19,233 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_24.png
+2022-04-12 21:18:19,233 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_53.png
+2022-04-12 21:18:19,243 INFO    Thread-88 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3fi4t82c-media/images/GT_0_11.png
+2022-04-12 21:18:19,249 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,249 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_46.png with policy now
+2022-04-12 21:18:19,251 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_40.png
+2022-04-12 21:18:19,251 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_37.png
+2022-04-12 21:18:19,251 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_19.png
+2022-04-12 21:18:19,251 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_23.png
+2022-04-12 21:18:19,252 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_18.png
+2022-04-12 21:18:19,252 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_25.png
+2022-04-12 21:18:19,255 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_61.png
+2022-04-12 21:18:19,256 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_57.png
+2022-04-12 21:18:19,261 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,262 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_47.png with policy now
+2022-04-12 21:18:19,264 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_50.png
+2022-04-12 21:18:19,264 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_63.png
+2022-04-12 21:18:19,274 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,274 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_48.png with policy now
+2022-04-12 21:18:19,276 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_35.png
+2022-04-12 21:18:19,277 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_54.png
+2022-04-12 21:18:19,287 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,287 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_49.png with policy now
+2022-04-12 21:18:19,298 INFO    Thread-90 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1h5azqtg-media/images/GT_0_13.png
+2022-04-12 21:18:19,299 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_15.png
+2022-04-12 21:18:19,300 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_13.png
+2022-04-12 21:18:19,303 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_8.png
+2022-04-12 21:18:19,304 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_29.png
+2022-04-12 21:18:19,304 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_39.png
+2022-04-12 21:18:19,304 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_54.png
+2022-04-12 21:18:19,305 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_4.png
+2022-04-12 21:18:19,305 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_34.png
+2022-04-12 21:18:19,305 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_10.png
+2022-04-12 21:18:19,306 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_38.png
+2022-04-12 21:18:19,306 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_24.png
+2022-04-12 21:18:19,306 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_53.png
+2022-04-12 21:18:19,307 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_1.png
+2022-04-12 21:18:19,307 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_30.png
+2022-04-12 21:18:19,307 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_22.png
+2022-04-12 21:18:19,308 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_56.png
+2022-04-12 21:18:19,314 INFO    Thread-93 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/kodh8uk2-media/images/GT_0_16.png
+2022-04-12 21:18:19,318 INFO    Thread-92 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/7wpun6zc-media/images/GT_0_15.png
+2022-04-12 21:18:19,326 INFO    Thread-89 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1vy0co7d-media/images/GT_0_12.png
+2022-04-12 21:18:19,333 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_37.png
+2022-04-12 21:18:19,334 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_31.png
+2022-04-12 21:18:19,334 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_47.png
+2022-04-12 21:18:19,335 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_20.png
+2022-04-12 21:18:19,335 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,335 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_50.png with policy now
+2022-04-12 21:18:19,336 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_19.png
+2022-04-12 21:18:19,336 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_52.png
+2022-04-12 21:18:19,345 INFO    Thread-91 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1tnjh3x1-media/images/GT_0_14.png
+2022-04-12 21:18:19,346 INFO    Thread-95 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/r12qy6wt-media/images/GT_0_18.png
+2022-04-12 21:18:19,359 INFO    Thread-97 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/sxbp2t1z-media/images/GT_0_20.png
+2022-04-12 21:18:19,363 INFO    Thread-101:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/kbgul05x-media/images/GT_0_24.png
+2022-04-12 21:18:19,365 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,365 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_51.png with policy now
+2022-04-12 21:18:19,372 INFO    Thread-98 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1skq42k4-media/images/GT_0_21.png
+2022-04-12 21:18:19,374 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/GT_0_42.png
+2022-04-12 21:18:19,375 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_30.png
+2022-04-12 21:18:19,375 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images/Predictions_0_33.png
+2022-04-12 21:18:19,375 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media
+2022-04-12 21:18:19,376 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/media/images
+2022-04-12 21:18:19,384 INFO    Thread-102:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1pxvk651-media/images/GT_0_25.png
+2022-04-12 21:18:19,391 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,392 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_52.png with policy now
+2022-04-12 21:18:19,393 INFO    Thread-94 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2tll4wpd-media/images/GT_0_17.png
+2022-04-12 21:18:19,398 INFO    Thread-104:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/37chgjr7-media/images/GT_0_27.png
+2022-04-12 21:18:19,399 INFO    Thread-96 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2u4ui3by-media/images/GT_0_19.png
+2022-04-12 21:18:19,403 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,403 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_53.png with policy now
+2022-04-12 21:18:19,405 INFO    Thread-100:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3fcsa3jh-media/images/GT_0_23.png
+2022-04-12 21:18:19,416 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,416 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_54.png with policy now
+2022-04-12 21:18:19,418 INFO    Thread-103:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2hy2xlse-media/images/GT_0_26.png
+2022-04-12 21:18:19,425 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,425 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_55.png with policy now
+2022-04-12 21:18:19,432 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,432 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_56.png with policy now
+2022-04-12 21:18:19,440 INFO    Thread-105:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1e378hjy-media/images/GT_0_28.png
+2022-04-12 21:18:19,441 INFO    Thread-107:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/19xo5ix3-media/images/GT_0_30.png
+2022-04-12 21:18:19,443 INFO    Thread-108:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1fpqu0at-media/images/GT_0_31.png
+2022-04-12 21:18:19,456 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,456 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_57.png with policy now
+2022-04-12 21:18:19,463 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,463 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_58.png with policy now
+2022-04-12 21:18:19,474 INFO    Thread-112:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/38wxb1ww-media/images/GT_0_35.png
+2022-04-12 21:18:19,487 INFO    Thread-114:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2d50c9dt-media/images/GT_0_37.png
+2022-04-12 21:18:19,489 INFO    Thread-113:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3i2ag189-media/images/GT_0_36.png
+2022-04-12 21:18:19,489 INFO    Thread-99 :53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2sdxz2e7-media/images/GT_0_22.png
+2022-04-12 21:18:19,493 INFO    Thread-111:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1bqrzqdq-media/images/GT_0_34.png
+2022-04-12 21:18:19,495 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,495 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_59.png with policy now
+2022-04-12 21:18:19,501 INFO    Thread-110:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/8xg8z2ds-media/images/GT_0_33.png
+2022-04-12 21:18:19,505 INFO    Thread-106:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/lc3w1rz1-media/images/GT_0_29.png
+2022-04-12 21:18:19,505 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,506 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_60.png with policy now
+2022-04-12 21:18:19,508 INFO    Thread-109:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/25ufyscy-media/images/GT_0_32.png
+2022-04-12 21:18:19,515 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,515 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_61.png with policy now
+2022-04-12 21:18:19,522 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,522 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_62.png with policy now
+2022-04-12 21:18:19,537 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,537 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_63.png with policy now
+2022-04-12 21:18:19,544 DEBUG   SenderThread:53710 [sender.py:send():235] send: files
+2022-04-12 21:18:19,544 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file media/images/GT_0_64.png with policy now
+2022-04-12 21:18:19,555 DEBUG   SenderThread:53710 [sender.py:send():235] send: history
+2022-04-12 21:18:19,556 DEBUG   SenderThread:53710 [sender.py:send():235] send: summary
+2022-04-12 21:18:19,557 INFO    SenderThread:53710 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-12 21:18:19,562 INFO    Thread-115:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/39mpqh8d-media/images/GT_0_38.png
+2022-04-12 21:18:19,652 INFO    Thread-116:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1p6l8yl9-media/images/GT_0_39.png
+2022-04-12 21:18:19,712 INFO    Thread-118:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3fdm3f5b-media/images/GT_0_41.png
+2022-04-12 21:18:19,728 INFO    Thread-119:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1ya1yh6c-media/images/GT_0_42.png
+2022-04-12 21:18:19,739 INFO    Thread-117:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/122qt2up-media/images/GT_0_40.png
+2022-04-12 21:18:19,773 INFO    Thread-120:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/brjyc21j-media/images/GT_0_43.png
+2022-04-12 21:18:19,785 INFO    Thread-122:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1xz5d852-media/images/GT_0_45.png
+2022-04-12 21:18:19,791 INFO    Thread-121:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/101vvbmt-media/images/GT_0_44.png
+2022-04-12 21:18:19,804 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/wandb-summary.json
+2022-04-12 21:18:19,846 INFO    Thread-124:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/208eenq1-media/images/GT_0_47.png
+2022-04-12 21:18:19,847 INFO    Thread-125:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3jkwerc0-media/images/GT_0_48.png
+2022-04-12 21:18:19,879 INFO    Thread-126:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/giyglpd4-media/images/GT_0_49.png
+2022-04-12 21:18:19,895 INFO    Thread-123:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2i1f0iyf-media/images/GT_0_46.png
+2022-04-12 21:18:19,940 INFO    Thread-129:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/27ya2vzs-media/images/GT_0_52.png
+2022-04-12 21:18:20,005 INFO    Thread-130:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3sjiv21m-media/images/GT_0_53.png
+2022-04-12 21:18:20,028 INFO    Thread-127:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/26zlhg7f-media/images/GT_0_50.png
+2022-04-12 21:18:20,030 INFO    Thread-128:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3o3ss1y0-media/images/GT_0_51.png
+2022-04-12 21:18:20,035 INFO    Thread-132:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2va1qvy2-media/images/GT_0_55.png
+2022-04-12 21:18:20,037 INFO    Thread-133:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/mx094ncx-media/images/GT_0_56.png
+2022-04-12 21:18:20,037 INFO    Thread-134:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/grngnwg8-media/images/GT_0_57.png
+2022-04-12 21:18:20,049 INFO    Thread-139:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3nen0i8o-media/images/GT_0_62.png
+2022-04-12 21:18:20,058 INFO    Thread-140:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1nttmd32-media/images/GT_0_63.png
+2022-04-12 21:18:20,066 INFO    Thread-131:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2crhx1es-media/images/GT_0_54.png
+2022-04-12 21:18:20,069 INFO    Thread-136:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/3i009d00-media/images/GT_0_59.png
+2022-04-12 21:18:20,075 INFO    Thread-138:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/1l0t29d6-media/images/GT_0_61.png
+2022-04-12 21:18:20,077 INFO    Thread-137:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2b3uzk5p-media/images/GT_0_60.png
+2022-04-12 21:18:20,081 INFO    Thread-135:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/329vxpxr-media/images/GT_0_58.png
+2022-04-12 21:18:20,089 INFO    Thread-141:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/2g3zm4ch-media/images/GT_0_64.png
+2022-04-12 21:18:20,382 INFO    Thread-142:53710 [upload_job.py:push():137] Uploaded file /tmp/tmpf1gwd92rwandb/27nm26qv-media/images/GT_0_44.png
+2022-04-12 21:18:25,665 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:18:27,844 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/config.yaml
+2022-04-12 21:18:28,300 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:18:28,300 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:18:43,472 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:18:43,473 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:18:56,348 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:18:58,637 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:18:58,638 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:19:13,801 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:19:13,802 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:19:27,032 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:19:28,989 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:19:28,989 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:19:44,166 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:19:44,166 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:19:57,705 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:19:59,335 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:19:59,336 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:20:14,509 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:20:14,510 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:20:20,109 INFO    Thread-7  :53710 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220412_210903-2hlth11y/files/output.log
+2022-04-12 21:20:28,386 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:20:29,686 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:20:29,686 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:20:44,859 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:20:44,859 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:20:59,050 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:21:00,028 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:21:00,028 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:21:15,204 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:21:15,204 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:21:29,713 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:21:30,373 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:21:30,373 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:21:45,542 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:21:45,543 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:22:00,370 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:22:00,704 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:22:00,704 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:22:15,879 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:22:15,879 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:22:31,001 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:22:31,083 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:22:31,083 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:22:46,252 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:22:46,252 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:23:01,448 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:23:01,449 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:23:01,691 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:23:16,617 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:23:16,617 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:23:31,792 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:23:31,793 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:23:32,390 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:23:46,969 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:23:46,969 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:24:02,132 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:24:02,133 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:24:03,056 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:24:17,307 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:24:17,307 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:24:32,483 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:24:32,484 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:24:33,761 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:24:47,656 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:24:47,656 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:25:02,828 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:25:02,828 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:25:04,446 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:25:18,000 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:25:18,000 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:25:33,171 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:25:33,171 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:25:35,087 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:25:48,350 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:25:48,351 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:26:03,522 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:26:03,522 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:26:05,760 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:26:18,698 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:26:18,699 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:26:33,874 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:26:33,875 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:26:36,429 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:26:49,045 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:26:49,045 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:27:04,265 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:27:04,266 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:27:07,104 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:27:19,440 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:27:19,440 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:27:34,611 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:27:34,611 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:27:37,727 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:27:49,777 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:27:49,777 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:28:04,955 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:28:04,956 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:28:08,419 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:28:20,140 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:28:20,140 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:28:35,316 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:28:35,317 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:28:39,192 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:28:50,496 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:28:50,496 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:29:05,667 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:29:05,668 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:29:09,914 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:29:20,845 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:29:20,845 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:29:36,015 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:29:36,016 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:29:40,730 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:29:51,185 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:29:51,185 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:30:06,355 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:30:06,356 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:30:11,456 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:30:21,533 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:30:21,533 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:30:36,712 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:30:36,712 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:30:42,095 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:30:52,056 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:30:52,056 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:31:07,228 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:31:07,228 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:31:12,750 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:31:22,407 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:31:22,408 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:31:37,581 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:31:37,582 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:31:43,398 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:31:52,750 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:31:52,751 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:32:07,923 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:32:07,923 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:32:14,052 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:32:23,094 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:32:23,094 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:32:38,269 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:32:38,270 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:32:44,685 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:32:53,442 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:32:53,442 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:33:08,611 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:33:08,611 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:33:15,338 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:33:23,916 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:33:23,917 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:33:39,135 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:33:39,136 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:33:45,933 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:33:54,613 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:33:54,613 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:34:09,789 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:34:09,790 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:34:16,565 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:34:24,969 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:34:24,969 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:34:40,147 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:34:40,147 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:34:47,207 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:34:55,322 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:34:55,322 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:35:10,492 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:35:10,492 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:35:17,851 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:35:25,662 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:35:25,663 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:35:40,833 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:35:40,833 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:35:48,495 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:35:56,002 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:35:56,002 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:36:11,173 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:36:11,173 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:36:19,246 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:36:26,351 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:36:26,351 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:36:41,522 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:36:41,522 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:36:49,871 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:36:56,714 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:36:56,714 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:37:11,884 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:37:11,885 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:37:20,567 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:37:27,066 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:37:27,067 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:37:42,244 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:37:42,244 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:37:51,131 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:37:57,413 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:37:57,413 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:38:12,600 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:38:12,600 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:38:21,801 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:38:27,771 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:38:27,771 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:38:42,948 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:38:42,949 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:38:52,504 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:38:58,115 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:38:58,116 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:39:13,284 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:39:13,285 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:39:23,179 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:39:28,465 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:39:28,466 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:39:43,846 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:39:43,846 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:39:53,751 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:39:59,443 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:39:59,444 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:40:14,636 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:40:14,637 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:40:24,413 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:40:29,810 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:40:29,810 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:40:45,035 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:40:45,035 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:40:55,129 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:41:00,221 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:41:00,222 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:41:15,398 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:41:15,398 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:41:25,848 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:41:30,565 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:41:30,565 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:41:45,742 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:41:45,742 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:41:56,487 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:42:01,394 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:42:01,395 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:42:16,555 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:42:16,555 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:42:27,147 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:42:31,727 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:42:31,727 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:42:46,907 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:42:46,908 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:42:57,809 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:43:02,078 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:43:02,078 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:43:17,249 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:43:17,250 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:43:28,492 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:43:32,440 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:43:32,441 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:43:47,622 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:43:47,623 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:43:59,195 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:44:02,799 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:44:02,799 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:44:17,979 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:44:17,979 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:44:29,828 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:44:33,153 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:44:33,153 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:44:48,327 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:44:48,327 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:45:00,514 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:45:03,500 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:45:03,500 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:45:18,690 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:45:18,691 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:45:31,211 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:45:33,860 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:45:33,860 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:45:49,031 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:45:49,032 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:46:01,896 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:46:04,208 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:46:04,209 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:46:19,387 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:46:19,387 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:46:32,496 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:46:34,552 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:46:34,552 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:46:49,711 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:46:49,712 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:47:03,173 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:47:04,887 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:47:04,888 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:47:20,071 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:47:20,072 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:47:33,863 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:47:35,243 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:47:35,243 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:47:50,412 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:47:50,412 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:48:04,549 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:48:05,589 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:48:05,589 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:48:20,781 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:48:20,781 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:48:35,203 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:48:35,953 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:48:35,954 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:48:51,126 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:48:51,127 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:49:05,906 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:49:06,297 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:49:06,298 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:49:21,456 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:49:21,456 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:49:36,627 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:49:36,627 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:49:36,799 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:49:51,800 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:49:51,800 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:50:06,969 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:50:06,969 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:50:07,322 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:50:22,145 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:50:22,146 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:50:37,327 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:50:37,327 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:50:37,987 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:50:52,498 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:50:52,498 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:51:07,686 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:51:07,687 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:51:08,663 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:51:22,859 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:51:22,859 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:51:38,031 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:51:38,031 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:51:39,328 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:51:53,218 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:51:53,218 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:52:08,388 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:52:08,388 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:52:09,968 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:52:23,761 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:52:23,761 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:52:38,930 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:52:38,930 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:52:40,693 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:52:54,102 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:52:54,103 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:53:09,274 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:53:09,275 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:53:11,456 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:53:24,454 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:53:24,454 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:53:39,629 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:53:39,630 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:53:42,138 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:53:54,792 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:53:54,792 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:54:09,962 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:54:09,962 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:54:12,857 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:54:25,132 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:54:25,132 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:54:40,306 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:54:40,307 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:54:43,432 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:54:55,494 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:54:55,494 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:55:10,668 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:55:10,669 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:55:14,054 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:55:25,841 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:55:25,841 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:55:41,011 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:55:41,012 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:55:44,679 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:55:56,191 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:55:56,192 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:56:11,495 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:56:11,495 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:56:15,313 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:56:26,671 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:56:26,671 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:56:41,848 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:56:41,849 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:56:45,960 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:56:57,021 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:56:57,022 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:57:12,198 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:57:12,199 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:57:16,617 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:57:27,373 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:57:27,374 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:57:42,544 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:57:42,545 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:57:47,271 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:57:57,764 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:57:57,764 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:58:12,952 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:58:12,953 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:58:17,907 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:58:28,124 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:58:28,125 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:58:43,294 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:58:43,294 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:58:48,536 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:58:58,467 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:58:58,467 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:59:13,661 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:59:13,661 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:59:19,204 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:59:28,836 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:59:28,836 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:59:44,057 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:59:44,058 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 21:59:49,822 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 21:59:59,231 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 21:59:59,231 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:00:14,407 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:00:14,407 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:00:20,472 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:00:29,585 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:00:29,586 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:00:44,755 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:00:44,755 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:00:51,159 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:00:59,927 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:00:59,928 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:01:15,097 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:01:15,098 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:01:21,896 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:01:30,287 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:01:30,287 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:01:45,454 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:01:45,454 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:01:52,519 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:02:00,627 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:02:00,628 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:02:15,794 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:02:15,795 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:02:23,171 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:02:31,167 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:02:31,167 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:02:46,338 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:02:46,339 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:02:53,877 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:03:01,509 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:03:01,509 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:03:16,694 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:03:16,695 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:03:24,550 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:03:31,870 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:03:31,871 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:03:47,040 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:03:47,041 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:03:55,213 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:04:02,268 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:04:02,269 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:04:17,461 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:04:17,461 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:04:25,825 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:04:32,729 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:04:32,729 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:04:47,896 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:04:47,896 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:04:56,367 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:05:03,070 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:05:03,071 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:05:18,241 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:05:18,241 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:05:26,962 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:05:33,443 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:05:33,443 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:05:48,614 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:05:48,615 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:05:57,626 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:06:03,810 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:06:03,811 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:06:18,997 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:06:18,997 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:06:28,325 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:06:34,167 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:06:34,168 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:06:49,342 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:06:49,342 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:06:58,983 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:07:06,878 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:07:06,879 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:07:22,050 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:07:22,050 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:07:29,584 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:07:37,422 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:07:37,423 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:07:52,596 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:07:52,597 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:08:00,190 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:08:07,771 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:08:07,771 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:08:22,969 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:08:22,969 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:08:30,868 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:08:38,202 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:08:38,203 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:08:53,377 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:08:53,377 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:09:01,475 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:09:08,554 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:09:08,554 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:09:23,741 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:09:23,742 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:09:32,176 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:09:38,917 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:09:38,918 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:09:54,095 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:09:54,095 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:10:02,851 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:10:09,267 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:10:09,267 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:10:24,485 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:10:24,485 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:10:33,497 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:10:39,659 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:10:39,659 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:10:54,832 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:10:54,832 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:11:04,163 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:11:10,003 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:11:10,004 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:11:25,177 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:11:25,177 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:11:34,877 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:11:40,356 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:11:40,356 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:11:55,528 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:11:55,529 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:12:05,525 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:12:10,702 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:12:10,702 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:12:25,879 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:12:25,879 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:12:36,265 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:12:41,049 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:12:41,050 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:12:56,237 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:12:56,237 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:13:06,892 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:13:11,409 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:13:11,410 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:13:26,580 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:13:26,580 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:13:37,552 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:13:41,757 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:13:41,758 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:13:56,936 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:13:56,937 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:14:08,219 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:14:12,109 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:14:12,110 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:14:27,282 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:14:27,282 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:14:38,946 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:14:42,456 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:14:42,456 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:14:57,624 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:14:57,625 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:15:09,485 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:15:12,798 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:15:12,798 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:15:27,967 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:15:27,968 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:15:40,174 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:15:43,138 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:15:43,138 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:15:58,577 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:15:58,578 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:16:10,843 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:16:13,749 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:16:13,749 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:16:28,921 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:16:28,921 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:16:41,532 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:16:44,114 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:16:44,114 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:16:59,293 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:16:59,293 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:17:12,195 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:17:14,462 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:17:14,462 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:17:29,637 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:17:29,637 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:17:42,903 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:17:44,819 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:17:44,819 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:17:59,989 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:17:59,989 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:18:13,484 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:18:15,184 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:18:15,185 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:18:30,356 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:18:30,357 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:18:44,090 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:18:45,529 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:18:45,529 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:19:00,755 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:19:00,755 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:19:14,663 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:19:15,910 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:19:15,910 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:19:31,075 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:19:31,075 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:19:45,278 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:19:46,239 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:19:46,239 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:20:01,412 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:20:01,413 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:20:15,878 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:20:16,581 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:20:16,581 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:20:31,752 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:20:31,752 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:20:46,478 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:20:46,919 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:20:46,919 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:21:02,089 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:21:02,089 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:21:17,064 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:21:17,250 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:21:17,250 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:21:32,422 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:21:32,422 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:21:47,598 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:21:47,598 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:21:47,761 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:22:02,762 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:22:02,763 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:22:17,954 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:22:17,955 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:22:18,287 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:22:33,131 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:22:33,131 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:22:48,302 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:22:48,302 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:22:48,896 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:23:03,483 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:23:03,483 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:23:18,655 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:23:18,656 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:23:19,530 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:23:33,833 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:23:33,834 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:23:49,002 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:23:49,003 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:23:50,183 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:24:04,185 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:24:04,185 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:24:19,358 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:24:19,359 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:24:20,748 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:24:34,526 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:24:34,526 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:24:49,689 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:24:49,689 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:24:51,324 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:25:04,884 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:25:04,884 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:25:20,057 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:25:20,057 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:25:21,947 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:25:35,225 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:25:35,225 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:25:50,420 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:25:50,420 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:25:52,551 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:26:05,599 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:26:05,600 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:26:20,797 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:26:20,797 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:26:23,162 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:26:35,969 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:26:35,969 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:26:51,130 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:26:51,131 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:26:53,817 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:27:07,340 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:27:07,340 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:27:22,498 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:27:22,499 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:27:24,559 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:27:37,656 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:27:37,656 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:27:52,827 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:27:52,827 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:27:55,270 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:28:08,042 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:28:08,042 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:28:23,253 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:28:23,253 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:28:25,912 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:28:38,409 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:28:38,409 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:28:53,581 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:28:53,581 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:28:56,533 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:29:08,756 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:29:08,756 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:29:23,932 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:29:23,932 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:29:27,187 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:29:39,194 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:29:39,194 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:29:54,367 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:29:54,367 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:29:57,882 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:30:09,539 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:30:09,539 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:30:24,729 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:30:24,730 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:30:28,529 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:30:39,927 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:30:39,928 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:30:55,097 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:30:55,097 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:30:59,186 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:31:10,256 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:31:10,257 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:31:25,429 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:31:25,429 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:31:29,860 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:31:40,593 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:31:40,593 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:31:55,765 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:31:55,765 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:32:00,479 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:32:11,025 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:32:11,025 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:32:26,199 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:32:26,200 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:32:31,142 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:32:41,373 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:32:41,374 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:32:56,553 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:32:56,554 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:33:01,757 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:33:11,722 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:33:11,723 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:33:27,059 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:33:27,059 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:33:32,435 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:33:42,226 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:33:42,226 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:33:57,399 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:33:57,400 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:34:03,099 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:34:12,571 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:34:12,572 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:34:27,743 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:34:27,744 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:34:33,753 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:34:42,914 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:34:42,914 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:34:58,086 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:34:58,087 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:35:04,421 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:35:13,257 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:35:13,257 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:35:28,428 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:35:28,429 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:35:35,033 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:35:43,606 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:35:43,606 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:35:58,777 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:35:58,777 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:36:05,651 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:36:13,951 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:36:13,952 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:36:29,125 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:36:29,126 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:36:36,250 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:36:44,294 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:36:44,294 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:36:59,468 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:36:59,468 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:37:06,888 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:37:14,642 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:37:14,642 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:37:29,811 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:37:29,812 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:37:37,601 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:37:44,987 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:37:44,988 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:38:00,151 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:38:00,151 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:38:08,233 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:38:15,315 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:38:15,315 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:38:30,491 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:38:30,491 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:38:38,896 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:38:45,845 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:38:45,846 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:39:01,044 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:39:01,044 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:39:09,620 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:39:16,214 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:39:16,214 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:39:31,546 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:39:31,546 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:39:40,270 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:39:46,718 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:39:46,718 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:40:01,877 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:40:01,877 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:40:10,916 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:40:17,033 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:40:17,034 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:40:32,203 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:40:32,204 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:40:41,588 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:40:47,380 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:40:47,380 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:41:02,542 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:41:02,543 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:41:12,294 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:41:17,714 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:41:17,715 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:41:32,900 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:41:32,900 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:41:42,979 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:41:48,063 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:41:48,064 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:42:03,236 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:42:03,237 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:42:13,666 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:42:18,408 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:42:18,408 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:42:33,576 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:42:33,577 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:42:44,356 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:42:48,746 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:42:48,747 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:43:03,917 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:43:03,918 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:43:14,965 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:43:19,098 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:43:19,098 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:43:34,269 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:43:34,269 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:43:45,564 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:43:49,436 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:43:49,436 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:44:04,753 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:44:04,753 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:44:16,165 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:44:19,946 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:44:19,946 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:44:35,113 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:44:35,114 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:44:46,733 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:44:50,277 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:44:50,277 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:45:05,448 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:45:05,448 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:45:17,298 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:45:20,628 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:45:20,628 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:45:35,809 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:45:35,809 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:45:47,916 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:45:50,981 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:45:50,981 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:46:06,155 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:46:06,156 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:46:18,535 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:46:21,330 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:46:21,331 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:46:36,498 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:46:36,499 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:46:49,171 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:46:51,677 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:46:51,678 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:47:06,854 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:47:06,855 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:47:19,739 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:47:22,029 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:47:22,029 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:47:37,189 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:47:37,189 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:47:50,329 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:47:52,360 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:47:52,361 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:48:07,538 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:48:07,539 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:48:20,900 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:48:22,719 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:48:22,719 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:48:37,887 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:48:37,887 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:48:51,478 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:48:53,059 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:48:53,059 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:49:08,230 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:49:08,231 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:49:22,099 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:49:23,396 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:49:23,397 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:49:38,567 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:49:38,567 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:49:52,678 DEBUG   SenderThread:53710 [sender.py:send():235] send: stats
+2022-04-12 22:49:53,756 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:49:53,756 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status
+2022-04-12 22:50:08,924 DEBUG   HandlerThread:53710 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-12 22:50:08,925 DEBUG   SenderThread:53710 [sender.py:send_request():249] send_request: stop_status

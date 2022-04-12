@@ -1,0 +1,10 @@
+8
+8
+8
+Testing Epoch:  60%|█████████████████████████████████                      | 3/5 [00:00<00:00,  4.46it/s]
+8
+
+8
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  2438
+Validation set size:  523
