@@ -8,6 +8,8 @@ import numpy as np
 from matplotlib import pyplot as plt, cm
 from torchvision.utils import make_grid
 import segmentation_models_pytorch
+from sklearn.model_selection import train_test_split
+
 from tqdm import tqdm
 import cv2
 
@@ -185,3 +187,62 @@ def make_predictions(model:segmentation_models_pytorch.unet.model.Unet,
         y_true_stack = torch.stack(y_true_test)
         
         return y_hat_stack, y_true_stack
+    
+def remove_paths_with_more_than_one_class(mask_paths:list, image_paths:list) -> list:
+    i = 0
+    for mask, img in zip(mask_paths,image_paths):
+        data = cv2.imread(mask, cv2.IMREAD_GRAYSCALE)
+        if len(np.unique(data)) > 1:
+            image_paths.remove(img)
+            mask_paths.remove(mask)
+            i+=1
+    print(f'{i} paths removed')
+    return image_paths, mask_paths
+
+def train_images_paths(paths:list, test:list) -> list:
+    ''' Returns list of images paths that DOES NOT exist on the test list'''
+    train_paths = []
+    for i in paths:
+        if not np.isin(i, test):
+            train_paths.append(i)
+    return train_paths
+
+def custom_split(filters:dict, image_paths:list, 
+                 mask_paths:list, 
+                 test_size:float, 
+                 whole_data:bool=False) -> list:
+    
+    ''' Returns Train, Val and Test datasets based on the filter status
+    Args:
+    filters (dict): dict with the filtered paths by status
+    test_size (float): percentage of the dataset that will be used to test
+    whole_data (bool): if True uses the whole data but preserved the test dataset. if falses uses a only the daya defined in the filters'''
+
+    # sample to the same size of the smallest dataset
+    sample_size = min([len(value) for key, value in filters.items()])
+    new_dic = {key:value.sample(n=sample_size, replace=False) for key, value in filters.items()} #random sample
+
+    # select a percentage of idxs from each dataset to train, val and test
+    test_idx = {key:value.sample(n=int(sample_size*test_size), replace=False, random_state=42) for key, value in new_dic.items()}
+    val_idx =  {key:value.sample(n=int(sample_size*test_size), replace=False, random_state= 0) for key, value in new_dic.items()}
+    train_idx = {key:value.sample(n=int(sample_size*(test_size*2)-1), replace=False, random_state= 1) for key, value in new_dic.items()}
+
+    # Filter the patches accordigngly 
+    
+    X_test = np.concatenate([filtered_paths(image_paths, value) for key, value in test_idx.items()])
+    y_test = np.concatenate([filtered_paths(mask_paths, value) for key, value in test_idx.items()])
+    
+    if whole_data: # if all patches are used
+        X_train = train_images_paths(image_paths, X_test)
+        y_train = train_images_paths(mask_paths, y_test)
+
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42, shuffle=True)
+
+    else:
+        X_train = np.concatenate([filtered_paths(image_paths, value) for key, value in train_idx.items()])
+        y_train = np.concatenate([filtered_paths(mask_paths, value) for key, value in train_idx.items()])
+
+        X_val = np.concatenate([filtered_paths(image_paths, value) for key, value in val_idx.items()])
+        y_val = np.concatenate([filtered_paths(mask_paths, value) for key, value in val_idx.items()])
+    
+    return X_train, y_train, X_val, y_val, X_test, y_test
