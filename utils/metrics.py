@@ -4,12 +4,14 @@
 import torch
 import torch.nn.functional as F
 import numpy as np
+import pandas as pd
 
 from sklearn.metrics import f1_score, confusion_matrix, classification_report
 
 import seaborn as sns
 
 from matplotlib import pyplot as plt, cm
+from matplotlib.ticker import PercentFormatter
 
 def pixel_accuracy(pred:torch, 
                    y:torch) -> int:
@@ -157,5 +159,58 @@ def cm_and_class_report(pred: torch, y:torch) -> None:
     print(classification_report(y, pred, target_names=target_names))
     
     # IOU or DICE 
+    
+    # ROC Curve
+    
+
+def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
+    """
+    Adapted from Mesquita : https://gist.github.com/mesquita/f6beffcc2579c6f3a97c9d93e278a9f1
+    
+    Generate matrix plot of confusion matrix with pretty annotations.
+    The plot image is saved to disk.
+    args: 
+      y_true:    true label of the data, with shape (nsamples,)
+      y_pred:    prediction of the data, with shape (nsamples,)
+      filename:  filename of figure file to save
+      labels:    string array, name the order of class labels in the confusion matrix.
+                 use `clf.classes_` if using scikit-learn models.
+                 with shape (nclass,).
+      classes:   aliases for the labels. String array to be shown in the cm plot.
+      figsize:   the size of the figure plotted.
+    """
+    sns.set(font_scale=1)
+
+    cm = confusion_matrix(y_true.squeeze(0), y_pred.squeeze(0))
+    cm_sum = np.sum(cm, axis=1, keepdims=True)
+    cm_perc = cm / cm_sum.astype(float) * 100
+    annot = np.empty_like(cm).astype(str)
+    nrows, ncols = cm.shape
+    for i in range(nrows):
+        for j in range(ncols):
+            c = cm[i, j]
+            p = cm_perc[i, j]
+            if i == j:
+                s = cm_sum[i]
+                annot[i, j] = '%.2f%%\n%d/%d' % (p, c, s)
+            #elif c == 0:
+            #    annot[i, j] = ''
+            else:
+                annot[i, j] = '%.2f%%\n%d' % (p, c)
+    cm = confusion_matrix(y_true.squeeze(0), y_pred.squeeze(0), labels=labels, normalize='true')
+    cm = pd.DataFrame(cm, index=labels, columns=labels)
+    cm = cm * 100
+    cm.index.name = 'True Label'
+    cm.columns.name = 'Predicted Label'
+    fig, ax = plt.subplots(figsize=figsize)
+    plt.yticks(va='center')
+
+    sns.heatmap(cm, annot=annot, fmt='', ax=ax, xticklabels=classes, cbar=True, cbar_kws={'format':PercentFormatter()}, yticklabels=classes, cmap="Blues")
+    # plt.savefig(filename,  bbox_inches='tight')
+    ax.set_title('Confusion Matrix')
+    plt.show()
+    
+    # classification report
+    print(classification_report(y_true.squeeze(0), y_pred.squeeze(0), target_names=classes))
     
     # ROC Curve

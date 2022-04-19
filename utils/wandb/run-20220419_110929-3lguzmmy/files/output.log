@@ -1,0 +1,44 @@
+
+4
+              precision    recall  f1-score   support
+     Non-veg       0.99      0.91      0.95    140372
+         Veg       0.90      0.99      0.94    121772
+    accuracy                           0.94    262144
+   macro avg       0.95      0.95      0.94    262144
+weighted avg       0.95      0.94      0.94    262144
+/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/sklearn/metrics/_classification.py:312: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  elif np.all([l not in y_true for l in labels]):
+/tmp/ipykernel_56550/2640415289.py:50: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax.xaxis.set_ticklabels(target_names)
+/tmp/ipykernel_56550/2640415289.py:51: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax.yaxis.set_ticklabels(target_names)
+wandb: Network error (ReadTimeout), entering retry loop.
+              precision    recall  f1-score   support
+     Non-veg       0.99      0.91      0.95    140372
+         Veg       0.90      0.99      0.94    121772
+    accuracy                           0.94    262144
+   macro avg       0.95      0.95      0.94    262144
+weighted avg       0.95      0.94      0.94    262144
+              precision    recall  f1-score   support
+     Non-veg       0.99      0.91      0.95    140372
+         Veg       0.90      0.99      0.94    121772
+    accuracy                           0.94    262144
+   macro avg       0.95      0.95      0.94    262144
+weighted avg       0.95      0.94      0.94    262144
+              precision    recall  f1-score   support
+     Non-veg       0.99      0.91      0.95    140372
+         Veg       0.90      0.99      0.94    121772
+    accuracy                           0.94    262144
+   macro avg       0.95      0.95      0.94    262144
+weighted avg       0.95      0.94      0.94    262144
+              precision    recall  f1-score   support
+     Non-veg       0.99      0.91      0.95    140372
+         Veg       0.90      0.99      0.94    121772
+    accuracy                           0.94    262144
+   macro avg       0.95      0.95      0.94    262144
+weighted avg       0.95      0.94      0.94    262144
+              precision    recall  f1-score   support
+     Non-veg       0.99      0.91      0.95    140372
+         Veg       0.90      0.99      0.94    121772
+    accuracy                           0.94    262144
+   macro avg       0.95      0.95      0.94    262144

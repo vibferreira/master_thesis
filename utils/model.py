@@ -7,5 +7,6 @@ unet_model = smp.Unet(
     encoder_weights="imagenet",     # use `imagenet` pre-trained weights for encoder initialization
     in_channels=config.N_CHANNELS,  # model input channels (1 for gray-scale images, 3 for RGB, etc.)
     classes= config.N_CLASSES, # model output channels (number of classes in your dataset)
-    activation = 'sigmoid' # activation function, default is None
+    activation = 'sigmoid', # activation function, default is None
+    decoder_attention_type = None # Attention module used in decoder of the model. Available options are **None** and **scse** (https://arxiv.org/abs/1808.08127)
 )

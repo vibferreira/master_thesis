@@ -1,0 +1,134 @@
+
+Training the network for 150 epochs, with a batch size of 8
+
+
+
+
+
+
+Validation Epoch [4/150]:   0%| | 0/4 [00:00<?, ?it/s, acc_val=0.92821693, iou_val=0.7585209, loss_val=0.
+
+  0%|                                                                             | 0/16 [00:00<?, ?it/s]
+
+Validation Epoch [10/150]:   0%| | 0/4 [00:00<?, ?it/s, acc_val=0.896719, iou_val=0.62530535, loss_val=0.
+
+
+
+
+
+
+
+Training Epoch [18/150]:  88%|▉| 14/16 [00:01<00:00, 13.55it/s, acc=0.93738747, dice=0.8745898, iou=0.777
+
+
+
+Validation Epoch [21/150]:   0%| | 0/4 [00:00<?, ?it/s, acc_val=0.8806591, iou_val=0.64669645, loss_val=0
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch [34/150]:  88%|▉| 14/16 [00:01<00:00, 14.58it/s, acc=0.9419842, dice=0.8505726, iou=0.7399
+
+
+
+
+
+  0%|                                                                              | 0/4 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+Validation Epoch [50/150]:   0%| | 0/4 [00:00<?, ?it/s, acc_val=0.94270706, iou_val=0.79288995, loss_val=
+
+
+
+
+
+
+
+Validation Epoch [60/150]:   0%| | 0/4 [00:00<?, ?it/s, acc_val=0.8765564, iou_val=0.56390196, loss_val=0
+
+
+
+
+
+
+  0%|                                                                              | 0/4 [00:00<?, ?it/s]
+
+
+
+
+
+
+Training Epoch [76/150]:  88%|▉| 14/16 [00:01<00:00, 13.23it/s, acc=0.9519844, dice=0.88109994, iou=0.787
+
+
+
+
+
+
+Training Epoch [85/150]:  81%|▊| 13/16 [00:01<00:00, 13.95it/s, acc=0.9556961, dice=0.8555275, iou=0.7475
+
+
+
+
+  0%|                                                                              | 0/4 [00:00<?, ?it/s]
+
+
+
+
+
+
+Validation Epoch [99/150]:   0%| | 0/4 [00:00<?, ?it/s, acc_val=0.9084568, iou_val=0.7203659, loss_val=0.
+
+
+
+
+Training Epoch [105/150]:  81%|▊| 13/16 [00:01<00:00, 11.50it/s, acc=0.9030571, dice=0.7921465, iou=0.655
+
+Training Epoch [109/150]:   0%| | 0/16 [00:00<?, ?it/s, acc=0.9396782, dice=0.7382604, iou=0.5851131, los
+
+
+
+
+Training Epoch [114/150]:  75%|▊| 12/16 [00:00<00:00, 13.67it/s, acc=0.9681568, dice=0.9227373, iou=0.856
+
+
+
+
+
+
+Training Epoch [121/150]:  88%|▉| 14/16 [00:01<00:00, 14.27it/s, acc=0.9515171, dice=0.8836696, iou=0.791
+
+
+
+
+Training Epoch [129/150]:  50%|▌| 8/16 [00:00<00:00, 13.10it/s, acc=0.9157734, dice=0.30755964, iou=0.181
+
+
+Training Epoch [131/150]:  88%|▉| 14/16 [00:01<00:00, 13.19it/s, acc=0.9772396, dice=0.95735765, iou=0.91
+
+
+
+
+
+
+
+
+
+Validation Epoch [143/150]:   0%| | 0/4 [00:00<?, ?it/s, acc_val=0.96089363, iou_val=0.8180342, loss_val=
+
+
+
+
+Training Epoch [149/150]:  75%|▊| 12/16 [00:00<00:00, 12.64it/s, acc=0.9652195, dice=0.85205466, iou=0.74

@@ -1,0 +1,14 @@
+
+7
+              precision    recall  f1-score   support
+     Non-veg       0.92      0.89      0.90    166100
+         Veg       0.94      0.96      0.95    292652
+    accuracy                           0.93    458752
+   macro avg       0.93      0.92      0.92    458752
+weighted avg       0.93      0.93      0.93    458752
+              precision    recall  f1-score   support
+     Non-veg       0.92      0.89      0.90    166100
+         Veg       0.94      0.96      0.95    292652
+    accuracy                           0.93    458752
+   macro avg       0.93      0.92      0.92    458752
+weighted avg       0.93      0.93      0.93    458752

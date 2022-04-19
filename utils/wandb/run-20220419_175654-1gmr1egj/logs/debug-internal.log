@@ -1,0 +1,57 @@
+2022-04-19 17:57:07,261 INFO    MainThread:11365 [internal.py:wandb_internal():92] W&B internal server running at pid: 11365, started at: 2022-04-19 17:57:07.261137
+2022-04-19 17:57:07,265 INFO    WriterThread:11365 [datastore.py:open_for_write():77] open: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/run-1gmr1egj.wandb
+2022-04-19 17:57:07,268 DEBUG   SenderThread:11365 [sender.py:send():235] send: header
+2022-04-19 17:57:07,268 DEBUG   SenderThread:11365 [sender.py:send():235] send: run
+2022-04-19 17:57:07,505 INFO    SenderThread:11365 [dir_watcher.py:__init__():169] watching files in: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files
+2022-04-19 17:57:07,505 INFO    SenderThread:11365 [sender.py:_start_run_threads():812] run started: 1gmr1egj with start time 1650383822
+2022-04-19 17:57:07,505 DEBUG   SenderThread:11365 [sender.py:send():235] send: summary
+2022-04-19 17:57:07,506 DEBUG   HandlerThread:11365 [handler.py:handle_request():141] handle_request: check_version
+2022-04-19 17:57:07,506 INFO    SenderThread:11365 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-19 17:57:07,507 DEBUG   SenderThread:11365 [sender.py:send_request():249] send_request: check_version
+2022-04-19 17:57:07,569 DEBUG   HandlerThread:11365 [handler.py:handle_request():141] handle_request: run_start
+2022-04-19 17:57:07,579 DEBUG   HandlerThread:11365 [meta.py:__init__():37] meta init
+2022-04-19 17:57:07,579 DEBUG   HandlerThread:11365 [meta.py:__init__():51] meta init done
+2022-04-19 17:57:07,579 DEBUG   HandlerThread:11365 [meta.py:probe():211] probe
+2022-04-19 17:57:07,586 DEBUG   HandlerThread:11365 [meta.py:_setup_git():201] setup git
+2022-04-19 17:57:07,608 DEBUG   HandlerThread:11365 [meta.py:_setup_git():208] setup git done
+2022-04-19 17:57:07,608 DEBUG   HandlerThread:11365 [meta.py:_save_pip():55] save pip
+2022-04-19 17:57:07,610 DEBUG   HandlerThread:11365 [meta.py:_save_pip():69] save pip done
+2022-04-19 17:57:07,610 DEBUG   HandlerThread:11365 [meta.py:_save_conda():76] save conda
+2022-04-19 17:57:08,508 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/wandb-summary.json
+2022-04-19 17:57:08,508 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/conda-environment.yaml
+2022-04-19 17:57:08,508 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/requirements.txt
+2022-04-19 17:57:10,364 DEBUG   HandlerThread:11365 [meta.py:_save_conda():86] save conda done
+2022-04-19 17:57:10,364 DEBUG   HandlerThread:11365 [meta.py:probe():249] probe done
+2022-04-19 17:57:10,510 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/conda-environment.yaml
+2022-04-19 17:57:10,511 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/wandb-metadata.json
+2022-04-19 17:57:10,762 DEBUG   SenderThread:11365 [sender.py:send():235] send: files
+2022-04-19 17:57:10,762 INFO    SenderThread:11365 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-04-19 17:57:10,776 DEBUG   HandlerThread:11365 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-19 17:57:10,777 DEBUG   SenderThread:11365 [sender.py:send_request():249] send_request: stop_status
+2022-04-19 17:57:10,933 DEBUG   SenderThread:11365 [sender.py:send():235] send: telemetry
+2022-04-19 17:57:11,215 DEBUG   SenderThread:11365 [sender.py:send():235] send: files
+2022-04-19 17:57:11,215 INFO    SenderThread:11365 [sender.py:_save_file():947] saving file media/images/Predictions_0_0.png with policy now
+2022-04-19 17:57:11,279 INFO    Thread-11 :11365 [upload_job.py:push():137] Uploaded file /tmp/tmpou84bf91wandb/1wvst9xf-wandb-metadata.json
+2022-04-19 17:57:11,377 DEBUG   SenderThread:11365 [sender.py:send():235] send: files
+2022-04-19 17:57:11,377 INFO    SenderThread:11365 [sender.py:_save_file():947] saving file media/images/GT_0_0.png with policy now
+2022-04-19 17:57:11,512 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/media/images/GT_0_0.png
+2022-04-19 17:57:11,512 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/output.log
+2022-04-19 17:57:11,512 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/media/images/Predictions_0_0.png
+2022-04-19 17:57:11,513 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/media
+2022-04-19 17:57:11,513 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/media/images
+2022-04-19 17:57:11,540 DEBUG   HandlerThread:11365 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-19 17:57:11,541 DEBUG   SenderThread:11365 [sender.py:send():235] send: history
+2022-04-19 17:57:11,541 DEBUG   SenderThread:11365 [sender.py:send():235] send: summary
+2022-04-19 17:57:11,544 INFO    SenderThread:11365 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-19 17:57:11,729 INFO    Thread-12 :11365 [upload_job.py:push():137] Uploaded file /tmp/tmpou84bf91wandb/1zjm9let-media/images/Predictions_0_0.png
+2022-04-19 17:57:11,880 INFO    Thread-13 :11365 [upload_job.py:push():137] Uploaded file /tmp/tmpou84bf91wandb/31rixxu3-media/images/GT_0_0.png
+2022-04-19 17:57:12,513 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/wandb-summary.json
+2022-04-19 17:57:13,514 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/output.log
+2022-04-19 17:57:15,517 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/output.log
+2022-04-19 17:57:25,935 DEBUG   HandlerThread:11365 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-19 17:57:25,936 DEBUG   SenderThread:11365 [sender.py:send_request():249] send_request: stop_status
+2022-04-19 17:57:36,171 DEBUG   SenderThread:11365 [sender.py:send():235] send: stats
+2022-04-19 17:57:38,540 INFO    Thread-7  :11365 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220419_175654-1gmr1egj/files/config.yaml
+2022-04-19 17:57:41,093 DEBUG   HandlerThread:11365 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-19 17:57:41,093 DEBUG   SenderThread:11365 [sender.py:send_request():249] send_request: stop_status
+2022-04-19 17:57:45,266 WARNING MainThread:11365 [internal.py:wandb_internal():155] Internal process interrupt: 1

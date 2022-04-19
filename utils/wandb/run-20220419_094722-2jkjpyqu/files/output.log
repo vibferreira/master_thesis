@@ -1,0 +1,28 @@
+
+2
+              precision    recall  f1-score   support
+     Non-veg       1.00      0.81      0.90     80782
+         Veg       0.77      1.00      0.87     50290
+    accuracy                           0.88    131072
+   macro avg       0.88      0.91      0.88    131072
+weighted avg       0.91      0.88      0.89    131072
+wandb: Network error (ReadTimeout), entering retry loop.
+/share/etud/e2008984/miniconda3/envs/torch_env/lib/python3.9/site-packages/sklearn/utils/validation.py:70: FutureWarning: Pass labels=[0, 1] as keyword args. From version 1.0 (renaming of 0.25) passing these as positional arguments will result in an error
+  warnings.warn(f"Pass {args_msg} as keyword args. From version "
+              precision    recall  f1-score   support
+     Non-veg       1.00      0.81      0.90     80782
+         Veg       0.77      1.00      0.87     50290
+    accuracy                           0.88    131072
+   macro avg       0.88      0.91      0.88    131072
+weighted avg       0.91      0.88      0.89    131072
+              precision    recall  f1-score   support
+     Non-veg       1.00      0.81      0.90     80782
+         Veg       0.77      1.00      0.87     50290
+    accuracy                           0.88    131072
+   macro avg       0.88      0.91      0.88    131072
+weighted avg       0.91      0.88      0.89    131072
+              precision    recall  f1-score   support
+     Non-veg       1.00      0.81      0.90     80782
+         Veg       0.77      1.00      0.87     50290
+    accuracy                           0.88    131072
+   macro avg       0.88      0.91      0.88    131072

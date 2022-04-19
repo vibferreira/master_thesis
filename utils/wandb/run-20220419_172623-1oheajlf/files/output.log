@@ -1,0 +1,16 @@
+
+7
+              precision    recall  f1-score   support
+     Non-veg       0.91      0.95      0.93    349228
+         Veg       0.82      0.69      0.75    109524
+    accuracy                           0.89    458752
+   macro avg       0.86      0.82      0.84    458752
+weighted avg       0.89      0.89      0.89    458752
+[34m[1mwandb[39m[22m: Currently logged in as: [33mvibferreira[39m (use `wandb login --relogin` to force relogin)
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  127
+Validation set size:  32
+Testing set size:  1
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  124
+Validation set size:  32

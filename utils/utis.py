@@ -30,32 +30,6 @@ import wandb
 
 import torch
 
-
-def get_file_index(file:str) -> str:
-    '''Returns the idx name from file name'''
-    return re.split(r"[/_.]\s*", file)[-2]
-
-# def remove_paths_with_more_than_one_class(mask_paths:list, image_paths:list) -> list:
-#     '''Returns only images that does not contain more than one label'''
-#     i = 0
-#     for mask, img in zip(mask_paths, image_paths):
-#         data = cv2.imread(mask, cv2.IMREAD_GRAYSCALE)
-#         if len(np.unique(data)) > 1:
-#             image_paths.remove(img)
-#             mask_paths.remove(mask)
-#             i+=1
-#     print(f'{i} paths removed')
-#     return mask_paths, image_paths
-
-def filtered_paths(current_paths:list, 
-                   filter_paths:list)-> list:
-    ''' Returns only the paths that match the filter index and does not conain more than one label'''
-    filtered_paths = []
-    for i in current_paths:
-        if np.isin(int(get_file_index(i)), list(filter_paths)):
-            filtered_paths.append(i)      
-    return filtered_paths
-
 def plot_comparison(x:torch.Tensor, 
                     pred:torch.Tensor, 
                     y:torch.Tensor) -> None:
@@ -207,6 +181,31 @@ def train_images_paths(paths:list, test:list) -> list:
             train_paths.append(i)
     return train_paths
 
+def get_file_index(file:str) -> str:
+    '''Returns the idx name from file name'''
+    return re.split(r"[/_.]\s*", file)[-2]
+
+# def remove_paths_with_more_than_one_class(mask_paths:list, image_paths:list) -> list:
+#     '''Returns only images that does not contain more than one label'''
+#     i = 0
+#     for mask, img in zip(mask_paths, image_paths):
+#         data = cv2.imread(mask, cv2.IMREAD_GRAYSCALE)
+#         if len(np.unique(data)) > 1:
+#             image_paths.remove(img)
+#             mask_paths.remove(mask)
+#             i+=1
+#     print(f'{i} paths removed')
+#     return mask_paths, image_paths
+
+def filtered_paths(current_paths:list, 
+                   filter_paths:list)-> list:
+    ''' Returns only the paths that match the filter index and does not conain more than one label'''
+    filtered_paths = []
+    for i in current_paths:
+        if np.isin(int(get_file_index(i)), list(filter_paths)):
+            filtered_paths.append(i)      
+    return filtered_paths
+
 def custom_split(filters:dict, image_paths:list, 
                  mask_paths:list, 
                  test_size:float, 
@@ -216,11 +215,12 @@ def custom_split(filters:dict, image_paths:list,
     Args:
     filters (dict): dict with the filtered paths by status
     test_size (float): percentage of the dataset that will be used to test
-    whole_data (bool): if True uses the whole data but preserved the test dataset. if falses uses a only the daya defined in the filters'''
+    whole_data (bool): if True uses the whole data but preserved the test dataset. if falses uses only the daya defined in the filters'''
 
     # sample to the same size of the smallest dataset
     sample_size = min([len(value) for key, value in filters.items()])
-    new_dic = {key:value.sample(n=sample_size, replace=False) for key, value in filters.items()} #random sample
+    print('sample size', sample_size)
+    new_dic = {key:value.sample(n=sample_size, replace=False, random_state=0) for key, value in filters.items()} #random sample
 
     # select a percentage of idxs from each dataset to train, val and test
     test_idx = {key:value.sample(n=int(sample_size*test_size), replace=False, random_state=42) for key, value in new_dic.items()}
@@ -228,7 +228,6 @@ def custom_split(filters:dict, image_paths:list,
     train_idx = {key:value.sample(n=int(sample_size*(test_size*2)-1), replace=False, random_state= 1) for key, value in new_dic.items()}
 
     # Filter the patches accordigngly 
-    
     X_test = np.concatenate([filtered_paths(image_paths, value) for key, value in test_idx.items()])
     y_test = np.concatenate([filtered_paths(mask_paths, value) for key, value in test_idx.items()])
     
