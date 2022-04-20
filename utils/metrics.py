@@ -180,8 +180,12 @@ def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
       figsize:   the size of the figure plotted.
     """
     sns.set(font_scale=1)
+    
+    # reshape tensor
+    y_true = y_true.squeeze(0).view(-1)
+    y_pred = y_pred.squeeze(0).view(-1)
 
-    cm = confusion_matrix(y_true.squeeze(0), y_pred.squeeze(0))
+    cm = confusion_matrix(y_true, y_pred)
     cm_sum = np.sum(cm, axis=1, keepdims=True)
     cm_perc = cm / cm_sum.astype(float) * 100
     annot = np.empty_like(cm).astype(str)
@@ -197,7 +201,7 @@ def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
             #    annot[i, j] = ''
             else:
                 annot[i, j] = '%.2f%%\n%d' % (p, c)
-    cm = confusion_matrix(y_true.squeeze(0), y_pred.squeeze(0), labels=labels, normalize='true')
+    cm = confusion_matrix(y_true, y_pred, labels=labels, normalize='true')
     cm = pd.DataFrame(cm, index=labels, columns=labels)
     cm = cm * 100
     cm.index.name = 'True Label'
@@ -211,6 +215,6 @@ def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
     plt.show()
     
     # classification report
-    print(classification_report(y_true.squeeze(0), y_pred.squeeze(0), target_names=classes))
+    print(classification_report(y_true, y_pred, target_names=classes))
     
     # ROC Curve
