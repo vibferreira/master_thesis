@@ -210,8 +210,7 @@ def custom_split(filters:dict, image_paths:list,
                  mask_paths:list, 
                  test_size:float, 
                  whole_data:bool=False) -> list:
-    
-    ''' Returns Train, Val and Test datasets based on the filter status
+    ''' Split the dataset based on the filter status
     Args:
     filters (dict): dict with the filtered paths by status
     test_size (float): percentage of the dataset that will be used to test
@@ -219,29 +218,34 @@ def custom_split(filters:dict, image_paths:list,
 
     # sample to the same size of the smallest dataset
     sample_size = min([len(value) for key, value in filters.items()])
-    print('sample size', sample_size)
     new_dic = {key:value.sample(n=sample_size, replace=False, random_state=0) for key, value in filters.items()} #random sample
 
-    # select a percentage of idxs from each dataset to train, val and test
-    test_idx = {key:value.sample(n=int(sample_size*test_size), replace=False, random_state=42) for key, value in new_dic.items()}
-    val_idx =  {key:value.sample(n=int(sample_size*test_size), replace=False, random_state= 0) for key, value in new_dic.items()}
-    train_idx = {key:value.sample(n=int(sample_size*(test_size*2)-1), replace=False, random_state= 1) for key, value in new_dic.items()}
+    # sample from each category the sample number of samples, lets say 8, so the final dataset has a balanced 
+    test_size = int(sample_size*test_size)
+    test_idx = np.concatenate([value.sample(n=test_size, replace=False, random_state=42) for value in new_dic.values()])
+    val_idx = np.concatenate([value.sample(n=test_size, replace=False, random_state=3) for value in new_dic.values()])
 
-    # Filter the patches accordigngly 
-    X_test = np.concatenate([filtered_paths(image_paths, value) for key, value in test_idx.items()])
-    y_test = np.concatenate([filtered_paths(mask_paths, value) for key, value in test_idx.items()])
-    
+    # train consists of the remaining dataset
+    t_train = np.concatenate([value for value in new_dic.values()])
+    train_idx = train_images_paths(t_train, list(test_idx) + list(val_idx))
+
+    # Filter the paths from the path lists
+    # Note the test dataset is the SAME for either whole data or partial data 
+    X_test = filtered_paths(image_paths, test_idx) 
+    y_test = filtered_paths(mask_paths, test_idx) 
+
+    # Decide if using whole data or ONLY the filtered paths 
     if whole_data: # if all patches are used
         X_train = train_images_paths(image_paths, X_test)
         y_train = train_images_paths(mask_paths, y_test)
 
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42, shuffle=True)
 
-    else:
-        X_train = np.concatenate([filtered_paths(image_paths, value) for key, value in train_idx.items()])
-        y_train = np.concatenate([filtered_paths(mask_paths, value) for key, value in train_idx.items()])
+    else: # if only the filtered patches are used 
+        X_train = filtered_paths(image_paths, train_idx) 
+        y_train = filtered_paths(mask_paths, train_idx) 
 
-        X_val = np.concatenate([filtered_paths(image_paths, value) for key, value in val_idx.items()])
-        y_val = np.concatenate([filtered_paths(mask_paths, value) for key, value in val_idx.items()])
-    
+        X_val = filtered_paths(image_paths, val_idx) 
+        y_val = filtered_paths(mask_paths, val_idx) 
+
     return X_train, y_train, X_val, y_val, X_test, y_test

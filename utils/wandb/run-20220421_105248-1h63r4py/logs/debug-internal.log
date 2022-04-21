@@ -101,3 +101,18 @@
 2022-04-21 10:54:47,013 DEBUG   HandlerThread:92890 [handler.py:handle_request():141] handle_request: stop_status
 2022-04-21 10:54:47,013 DEBUG   SenderThread:92890 [sender.py:send_request():249] send_request: stop_status
 2022-04-21 10:54:58,604 DEBUG   SenderThread:92890 [sender.py:send():235] send: stats
+2022-04-21 10:55:02,185 DEBUG   HandlerThread:92890 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-21 10:55:02,185 DEBUG   SenderThread:92890 [sender.py:send_request():249] send_request: stop_status
+2022-04-21 10:55:17,363 DEBUG   HandlerThread:92890 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-21 10:55:17,363 DEBUG   SenderThread:92890 [sender.py:send_request():249] send_request: stop_status
+2022-04-21 10:55:29,285 DEBUG   SenderThread:92890 [sender.py:send():235] send: stats
+2022-04-21 10:55:32,538 DEBUG   HandlerThread:92890 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-21 10:55:32,539 DEBUG   SenderThread:92890 [sender.py:send_request():249] send_request: stop_status
+2022-04-21 10:55:47,711 DEBUG   HandlerThread:92890 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-21 10:55:47,712 DEBUG   SenderThread:92890 [sender.py:send_request():249] send_request: stop_status
+2022-04-21 10:55:59,975 DEBUG   SenderThread:92890 [sender.py:send():235] send: stats
+2022-04-21 10:56:02,915 DEBUG   HandlerThread:92890 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-21 10:56:02,915 DEBUG   SenderThread:92890 [sender.py:send_request():249] send_request: stop_status
+2022-04-21 10:56:18,204 DEBUG   HandlerThread:92890 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-21 10:56:18,205 DEBUG   SenderThread:92890 [sender.py:send_request():249] send_request: stop_status
+2022-04-21 10:56:25,319 WARNING MainThread:92890 [internal.py:wandb_internal():155] Internal process interrupt: 1
