@@ -103,66 +103,6 @@ def create_segement_grids(loader_iter, nrofItems = 5, pad = 4):
     '''# Create list of two image grids - Input Images & Target Mask Images for Segmentation task'''
     inp, target = next(loader_iter)
     return create_grids([inp, target], nrofItems, pad)
-
-def make_predictions(model:segmentation_models_pytorch.unet.model.Unet, 
-                     dataloader:torch.utils.data.dataloader.DataLoader) -> list:
-    model.eval()
-
-    # Save total train loss
-    totalValLoss = 0
-
-    # log the predictions to WANDB
-    example_pred = []
-    example_gt = []
-
-    # save the predicons and the targets
-    y_hat_test = []
-    y_true_test = []
-
-    # switch off autograd
-    with torch.no_grad():
-        # loop over the validation set
-        loop = tqdm(dataloader, leave=False)
-
-        for batch_idx, (x_test, y_test) in enumerate(loop):
-            # send the input to the device
-            (x_test, y_test) = (x_test.to(config.DEVICE), y_test.to(config.DEVICE))
-
-            # predictions
-            pred_test = model(x_test)
-
-            # Assign appropriate class 
-            pred_test = (pred_test > 0.5).float() # last layer is already sigmoid
-
-            # Storing predictions and true labels 
-            y_hat_test.append(pred_test.cpu().view(-1, ))
-            y_true_test.append(y_test.cpu().view(-1, ).float())
-
-            # # Plotting test
-            utis.plot_comparison(x_test, pred_test, y_test)
-
-            # # WandB – Log images in your test dataset automatically, along with predicted and true labels by passing pytorch tensors with image data into wandb.Image
-            example_pred.append(wandb.Image(pred_test[0], caption=f"pred_iter_n_{batch_idx}"))
-            example_gt.append(wandb.Image(y_test[0].float(), caption=f"gt_iter_n_{batch_idx}"))
-
-            # update tqdm
-            loop.set_description(f'Testing Epoch')
-            
-            # Save images
-            # print(f'Saving {pred_{idx}.png}')
-            # save_image(pred_test, f"{folder}/pred_{idx}.png") 
-            # save_image(y_test, f"{folder}/y_true_{idx}.png")
-
-        # WANDB
-        wandb.log({
-        "Predictions": example_pred,
-        "GT": example_gt})
-
-        # Stack and flatten for confusion matrix # GETTING SIZE ERROR AT THE MOMENT
-        y_hat_stack = torch.stack(y_hat_test)
-        y_true_stack = torch.stack(y_true_test)
-        
-        return y_hat_stack, y_true_stack
     
 # def remove_paths_with_more_than_one_class(mask_paths:list, image_paths:list) -> list:
 #     '''Returns only images that does not contain more than one label'''
@@ -205,7 +145,7 @@ def custom_split(filters:dict, image_paths:list,
     Args:
     filters (dict): dict with the filtered paths by status
     test_size (float): percentage of the dataset that will be used to test
-    whole_data (str): 'coarse_plus_fine', 'fine' or 'coarse' define which portion of the data to use'''
+    whole_data (str):  'coarse_plus_fine_labels', 'fine_labels' or 'coarse_labels' define which portion of the data to use'''
 
     # sample to the same size of the smallest dataset
     sample_size = min([len(value) for key, value in filters.items()])
@@ -227,29 +167,29 @@ def custom_split(filters:dict, image_paths:list,
     y_test = filtered_paths(mask_paths, test_idx) 
     
     # Decide if using whole data or ONLY the filtered paths 
-    if data_portion == 'coarse_plus_fine': # if all patches are used
-        print(X_test)
+    if data_portion == 'coarse_plus_fine_labels': # if all patches are used
         X_train = train_images_paths(image_paths, X_test)
         y_train = train_images_paths(mask_paths, y_test)
 
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42, shuffle=True)
         
-    elif data_portion == 'coarse': # if only coarse patches are used
+    elif data_portion == 'coarse_labels': # if only coarse patches are used
         # all fine idx
         idxs = list(test_idx) + list(val_idx) + list(train_idx)
-        X_idxs = filtered_paths(image_paths, idxs)
-        y_idxs = filtered_paths(mask_paths, idxs)
+        X_idxs = filtered_paths(image_paths, idxs) 
+        y_idxs = filtered_paths(mask_paths, idxs)  
         
-        X_train = train_images_paths(image_paths, X_idxs)
-        y_train = train_images_paths(mask_paths, y_idxs)
+        X_train = train_images_paths(image_paths, X_idxs) # all patches but the fine ones
+        y_train = train_images_paths(mask_paths, y_idxs) # all patches but the fine ones
 
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42, shuffle=True)
         
-    else: # if only the fine patches are used 
+    elif data_portion == 'fine_labels': # if only the fine patches are used 
         X_train = filtered_paths(image_paths, train_idx) 
         y_train = filtered_paths(mask_paths, train_idx) 
 
         X_val = filtered_paths(image_paths, val_idx) 
         y_val = filtered_paths(mask_paths, val_idx) 
+        
 
     return X_train, y_train, X_val, y_val, X_test, y_test
