@@ -1,0 +1,40 @@
+
+Training Epoch [0/2]:   3%| | 1/37 [00:01<00:52,  1.47s/it, acc=0.36117744, dice=0.36795375, iou=0.225455
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training Epoch [1/2]:  97%|▉| 36/37 [00:10<00:00,  3.44it/s, acc=0.942606, dice=0.9370893, iou=0.88162565
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  305
+Validation set size:  15
+Testing set size:  15
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  305
+Validation set size:  15
+Testing set size:  15
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  305
+Validation set size:  15
+Testing set size:  15
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  305
+Validation set size:  15
+Testing set size:  15
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  295
+Validation set size:  20
+Testing set size:  20
+shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
+Training set size:  325
+Validation set size:  5

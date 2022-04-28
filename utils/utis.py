@@ -33,45 +33,48 @@ def plot_comparison(x:torch.Tensor,
                     pred:torch.Tensor, 
                     y:torch.Tensor) -> None:
     
-    # print(y.shape, pred.shape, x.shape)
-    
-    gt = np.squeeze(y.data.cpu().cpu().numpy()[0])
-    pred = np.squeeze(pred.sigmoid().cpu().numpy()[0])
-    img = np.squeeze(x.data.cpu().cpu().numpy()[0])
-    _, ax = plt.subplots(1, 3, sharey='row')
-    
-     # Assign appropriate class 
+    gt = np.squeeze(y.data.cpu().cpu().numpy())
+    pred = np.squeeze(pred.sigmoid().cpu().numpy())
+    img = np.squeeze(x.data.cpu().cpu().numpy())
+   
+    # Assign appropriate class 
     pred = (pred > 0.5)
-    
-    plt.figure()
-    cmap = cm.get_cmap('gray') # define color map
-    plt.gray()
-    ax[0].imshow(img)
-    ax[0].set_title('Image')
-    
-    ax[1].imshow(gt, cmap=cmap, vmin=0) # 0 are balck and white are 1  
-    # ax[1].imshow(gt, cmap=cmap, vmin=0) # 
-    ax[1].set_title('Ground Truth')
-    
-    ax[2].imshow(pred, cmap=cmap, vmin=0)
-    ax[2].set_title(f'Prediction')
+
+    for i in range(x.shape[0]):
+        _, ax = plt.subplots(1, 3, sharey='row')
+
+        plt.figure()
+        cmap = cm.get_cmap('gray') # define color map
+        plt.gray()
+        ax[0].imshow(img[i])
+        ax[0].set_title('Image')
+
+        ax[1].imshow(gt[i], cmap=cmap, vmin=0) # 0 are balck and white are 1  
+        # ax[1].imshow(gt, cmap=cmap, vmin=0) # 
+        ax[1].set_title('Ground Truth')
+
+        ax[2].imshow(pred[i], cmap=cmap, vmin=0)
+        ax[2].set_title(f'Prediction')
     plt.show()
 
 def save_best_model(model, 
                     dest_path: str, 
                     val_dic:dict, 
-                    e) -> None:
+                    e:int,
+                    data_portion: str) -> None:
     
     ''' Saves the best model
     Args: 
     model (class): instance of the the model class
     dest_path (str): destination path
-    val_dict (dict): dictionary storing valdation accuracies'''
+    val_dict (dict): dictionary storing valdation accuracies
+    e (int): epoch, 
+    data_portion (str): type of the data used ['coarse_plus_fine_labels', 'fine_labels', 'coarse_labels']'''
     
     iou = float(val_dic['IoU_val'][-1])
     acc = float(val_dic['val_accuracy'][-1])
-    [os.remove(f) for f in glob.glob(dest_path + '/*')] # remove previous saved files 
-    return torch.save(model.state_dict(), dest_path + f'/best_model_epoch_{e +1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
+    [os.remove(f) for f in glob.glob(dest_path + '/*') if f.startswith(data_portion, 14)] # remove previous saved files 
+    return torch.save(model.state_dict(), dest_path + f'/{data_portion}_best_model_epoch_{e +1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
 
 
 def plot_grids(grids, titles = ["Input", 'Target']):

@@ -17,10 +17,27 @@ import segmentation_models_pytorch
 import model
 import metrics
 import config
+import utis
+
+# Ignore excessive warnings
+import logging
+logging.propagate = False 
+logging.getLogger().setLevel(logging.ERROR)
+
+# WandB – Import the wandb library
+import wandb
+
 
 import matplotlib.pyplot as plt
 
-def train(model, dataloader, optim, lossFunc, epoch, scaler):
+def force_cudnn_initialization():
+    s = 32
+    dev = torch.device('cuda')
+    torch.nn.functional.conv2d(torch.zeros(s, s, s, s, device=dev), torch.zeros(s, s, s, s, device=dev))
+
+def train(model, dataloader, optim, lossFunc, epoch, scaler, training_history):
+    
+    # force_cudnn_initialization()
     # set the model in training mode
     model.train()
 
@@ -40,22 +57,22 @@ def train(model, dataloader, optim, lossFunc, epoch, scaler):
         (x, y) = (x.to(config.DEVICE), y.float().to(config.DEVICE))
         
         # forward with autocast        
-        with autocast():
-            pred = model(x)
-            loss = lossFunc(pred, y)
+#         with autocast():
+#             pred = model(x)
+#             loss = lossFunc(pred, y)
             
-        optim.zero_grad()  # zero out any previously accumulated gradients    
-        scaler.scale(loss).backward() # study this 
-        scaler.step(optim)
-        scaler.update()
+#         optim.zero_grad()  # zero out any previously accumulated gradients    
+#         scaler.scale(loss).backward() # study this 
+#         scaler.step(optim)
+#         scaler.update()
         
-#         # perform a forward pass and calculate the training loss
-#         pred = model(x)
-#         loss = lossFunc(pred, y)
+        # perform a forward pass and calculate the training loss
+        pred = model(x)
+        loss = lossFunc(pred, y)
         
-#         opt.zero_grad()  # zero out any previously accumulated gradients
-#         loss.backward() # obtain the gradients with respect to the loss
-#         opt.step() # perform one step of gradient descendent
+        opt.zero_grad()  # zero out any previously accumulated gradients
+        loss.backward() # obtain the gradients with respect to the loss
+        opt.step() # perform one step of gradient descendent
         
         totalTrainLoss += loss  # add the loss to the total training loss so far 
         
@@ -90,18 +107,75 @@ def train(model, dataloader, optim, lossFunc, epoch, scaler):
     
     return training_history
 
-
-
-def make_predictions(model:segmentation_models_pytorch.unet.model.Unet, 
-                     dataloader:torch.utils.data.dataloader.DataLoader) -> list:
+def validation(model, dataloader, lossFunc, epoch, validation_history):
+    
+    # set the model in evaluation mode
     model.eval()
-
     # Save total train loss
     totalValLoss = 0
-
-    # log the predictions to WANDB
+    
+    # metrics
+    accuracy_val = 0
+    iou_val = 0
+    f1score_val = 0
+    
+    # switch off autograd
     example_pred = []
     example_gt = []
+    
+    with torch.no_grad():
+        # loop over the validation set
+        loop = tqdm(dataloader, leave=False)
+        
+        for batch_idx, (x_val, y_val) in enumerate(loop):
+            # send the input to the device
+            (x_val, y_val) = (x_val.to(config.DEVICE), y_val.to(config.DEVICE))
+            
+            # make the predictions and calculate the validation loss
+            pred_val = model(x_val)
+            loss = lossFunc(pred_val, y_val)
+            totalValLoss += loss
+            
+            # metrics      
+            all_metrics = metrics.metrics(pred_val, y_val)
+            accuracy_val += all_metrics['acc']
+            iou_val += all_metrics['iou']
+            f1score_val += all_metrics['f1score']
+
+            # WandB – Log images in your test dataset automatically, along with predicted and true labels by passing pytorch tensors with image data into wandb.Image
+            example_pred.append(wandb.Image(pred_val[0], caption=f"pred_iter_n_{batch_idx}"))
+            # print(y_val.shape)
+            example_gt.append(wandb.Image(y_val[0].float(), caption=f"gt_iter_n_{batch_idx}"))
+            
+            # update tqdm
+            loop.set_description(f'Validation Epoch [{epoch}/{config.NUM_EPOCHS}]')
+            loop.set_postfix(loss_val=loss.item(), acc_val = all_metrics['acc'], iou_val=all_metrics['iou'])
+                        
+    # calculate the average VALIDATION loss PER EPOCH
+    avgValLoss = totalValLoss / len(dataloader)
+    avgAccLoss = accuracy_val / len(dataloader)
+    avgIOU = iou_val / len(dataloader)
+    avgF1score = f1score_val / len(dataloader)
+
+    ## update VALIDATION history
+    validation_history["avg_val_loss"].append(avgValLoss.cpu().detach().numpy()) # save the avg loss
+    validation_history["val_accuracy"].append(avgAccLoss) # save the acc
+    validation_history["IoU_val"].append(avgIOU) # save the acc
+    
+    # WANDB
+    wandb.log({
+    "Predictions": example_pred,
+    "GT": example_gt,
+    "Val Accuracy": avgAccLoss,
+    "Val Loss": avgValLoss,
+    "IoU_val": avgIOU})
+    
+    return validation_history
+
+
+def make_predictions(model, 
+                     dataloader) -> list:
+    model.eval()
 
     # save the predicons and the targets
     y_hat_test = []
@@ -110,9 +184,7 @@ def make_predictions(model:segmentation_models_pytorch.unet.model.Unet,
     # switch off autograd
     with torch.no_grad():
         # loop over the validation set
-        loop = tqdm(dataloader, leave=False)
-
-        for batch_idx, (x_test, y_test) in enumerate(loop):
+        for batch_idx, (x_test, y_test) in enumerate(dataloader):
             # send the input to the device
             (x_test, y_test) = (x_test.to(config.DEVICE), y_test.to(config.DEVICE))
 
@@ -120,33 +192,22 @@ def make_predictions(model:segmentation_models_pytorch.unet.model.Unet,
             pred_test = model(x_test)
 
             # Assign appropriate class 
-            pred_test = (pred_test > 0.5).float() # last layer is already sigmoid
+            pred_test_class = (pred_test > 0.5).detach().float() # last layer is already sigmoid
 
             # Storing predictions and true labels 
-            y_hat_test.append(pred_test.cpu().view(-1, ))
+            y_hat_test.append(pred_test_class.cpu().view(-1, ))
             y_true_test.append(y_test.cpu().view(-1, ).float())
 
             # # Plotting test
-            # utis.plot_comparison(x_test, pred_test, y_test)
+ 
+            utis.plot_comparison(x_test, pred_test_class, y_test)
 
-            # # WandB – Log images in your test dataset automatically, along with predicted and true labels by passing pytorch tensors with image data into wandb.Image
-            example_pred.append(wandb.Image(pred_test[0], caption=f"pred_iter_n_{batch_idx}"))
-            example_gt.append(wandb.Image(y_test[0].float(), caption=f"gt_iter_n_{batch_idx}"))
-
-            # update tqdm
-            loop.set_description(f'Testing Epoch')
-            
             # Save images
             # print(f'Saving {pred_{idx}.png}')
             # save_image(pred_test, f"{folder}/pred_{idx}.png") 
             # save_image(y_test, f"{folder}/y_true_{idx}.png")
 
-        # WANDB
-        wandb.log({
-        "Predictions": example_pred,
-        "GT": example_gt})
-
-        # Stack and flatten for confusion matrix # GETTING SIZE ERROR AT THE MOMENT
+        # Stack and flatten for confusion matrix 
         y_hat_stack = torch.stack(y_hat_test)
         y_true_stack = torch.stack(y_true_test)
         
