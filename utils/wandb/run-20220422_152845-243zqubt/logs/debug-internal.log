@@ -1,0 +1,153 @@
+2022-04-22 15:28:53,166 INFO    MainThread:94327 [internal.py:wandb_internal():92] W&B internal server running at pid: 94327, started at: 2022-04-22 15:28:53.165515
+2022-04-22 15:28:53,169 INFO    WriterThread:94327 [datastore.py:open_for_write():77] open: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/run-243zqubt.wandb
+2022-04-22 15:28:53,176 DEBUG   SenderThread:94327 [sender.py:send():235] send: header
+2022-04-22 15:28:53,176 DEBUG   SenderThread:94327 [sender.py:send():235] send: run
+2022-04-22 15:28:53,401 INFO    SenderThread:94327 [dir_watcher.py:__init__():169] watching files in: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files
+2022-04-22 15:28:53,401 INFO    SenderThread:94327 [sender.py:_start_run_threads():812] run started: 243zqubt with start time 1650634130
+2022-04-22 15:28:53,401 DEBUG   SenderThread:94327 [sender.py:send():235] send: summary
+2022-04-22 15:28:53,402 INFO    SenderThread:94327 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 15:28:53,405 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: check_version
+2022-04-22 15:28:53,405 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: check_version
+2022-04-22 15:28:53,479 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: run_start
+2022-04-22 15:28:53,489 DEBUG   HandlerThread:94327 [meta.py:__init__():37] meta init
+2022-04-22 15:28:53,489 DEBUG   HandlerThread:94327 [meta.py:__init__():51] meta init done
+2022-04-22 15:28:53,489 DEBUG   HandlerThread:94327 [meta.py:probe():211] probe
+2022-04-22 15:28:53,496 DEBUG   HandlerThread:94327 [meta.py:_setup_git():201] setup git
+2022-04-22 15:28:53,535 DEBUG   HandlerThread:94327 [meta.py:_setup_git():208] setup git done
+2022-04-22 15:28:53,535 DEBUG   HandlerThread:94327 [meta.py:_save_pip():55] save pip
+2022-04-22 15:28:53,537 DEBUG   HandlerThread:94327 [meta.py:_save_pip():69] save pip done
+2022-04-22 15:28:53,537 DEBUG   HandlerThread:94327 [meta.py:_save_conda():76] save conda
+2022-04-22 15:28:54,404 INFO    Thread-7  :94327 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/wandb-summary.json
+2022-04-22 15:28:54,405 INFO    Thread-7  :94327 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/requirements.txt
+2022-04-22 15:28:54,405 INFO    Thread-7  :94327 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/conda-environment.yaml
+2022-04-22 15:28:56,057 DEBUG   HandlerThread:94327 [meta.py:_save_conda():86] save conda done
+2022-04-22 15:28:56,057 DEBUG   HandlerThread:94327 [meta.py:probe():249] probe done
+2022-04-22 15:28:56,344 DEBUG   SenderThread:94327 [sender.py:send():235] send: files
+2022-04-22 15:28:56,345 INFO    SenderThread:94327 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-04-22 15:28:56,356 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-22 15:28:56,356 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: stop_status
+2022-04-22 15:28:56,405 INFO    Thread-7  :94327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/conda-environment.yaml
+2022-04-22 15:28:56,405 INFO    Thread-7  :94327 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/wandb-metadata.json
+2022-04-22 15:28:56,406 INFO    Thread-7  :94327 [dir_watcher.py:_on_file_created():217] file/dir created: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/output.log
+2022-04-22 15:28:56,517 DEBUG   SenderThread:94327 [sender.py:send():235] send: telemetry
+2022-04-22 15:28:56,896 INFO    Thread-11 :94327 [upload_job.py:push():137] Uploaded file /tmp/tmpt3xrsv1xwandb/rsgzx83b-wandb-metadata.json
+2022-04-22 15:29:11,518 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-22 15:29:11,519 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: stop_status
+2022-04-22 15:29:18,108 DEBUG   SenderThread:94327 [sender.py:send():235] send: telemetry
+2022-04-22 15:29:18,114 DEBUG   SenderThread:94327 [sender.py:send():235] send: telemetry
+2022-04-22 15:29:18,114 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 15:29:18,962 DEBUG   SenderThread:94327 [sender.py:send():235] send: exit
+2022-04-22 15:29:18,962 INFO    SenderThread:94327 [sender.py:send_exit():371] handling exit code: 0
+2022-04-22 15:29:18,962 INFO    SenderThread:94327 [sender.py:send_exit():373] handling runtime: 25
+2022-04-22 15:29:18,965 INFO    SenderThread:94327 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 15:29:18,965 INFO    SenderThread:94327 [sender.py:send_exit():379] send defer
+2022-04-22 15:29:18,965 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:18,966 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:18,966 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 15:29:18,966 INFO    HandlerThread:94327 [handler.py:handle_request_defer():164] handle defer: 0
+2022-04-22 15:29:18,967 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: defer
+2022-04-22 15:29:18,967 INFO    SenderThread:94327 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-04-22 15:29:18,967 INFO    SenderThread:94327 [sender.py:transition_state():392] send defer: 1
+2022-04-22 15:29:18,967 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 15:29:18,967 INFO    HandlerThread:94327 [handler.py:handle_request_defer():164] handle defer: 1
+2022-04-22 15:29:19,020 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: defer
+2022-04-22 15:29:19,020 INFO    SenderThread:94327 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-04-22 15:29:19,021 INFO    SenderThread:94327 [sender.py:transition_state():392] send defer: 2
+2022-04-22 15:29:19,021 DEBUG   SenderThread:94327 [sender.py:send():235] send: stats
+2022-04-22 15:29:19,021 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 15:29:19,021 INFO    HandlerThread:94327 [handler.py:handle_request_defer():164] handle defer: 2
+2022-04-22 15:29:19,022 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: defer
+2022-04-22 15:29:19,022 INFO    SenderThread:94327 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-04-22 15:29:19,022 INFO    SenderThread:94327 [sender.py:transition_state():392] send defer: 3
+2022-04-22 15:29:19,022 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 15:29:19,022 INFO    HandlerThread:94327 [handler.py:handle_request_defer():164] handle defer: 3
+2022-04-22 15:29:19,022 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: defer
+2022-04-22 15:29:19,022 INFO    SenderThread:94327 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-04-22 15:29:19,023 INFO    SenderThread:94327 [sender.py:transition_state():392] send defer: 4
+2022-04-22 15:29:19,023 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 15:29:19,023 INFO    HandlerThread:94327 [handler.py:handle_request_defer():164] handle defer: 4
+2022-04-22 15:29:19,023 DEBUG   SenderThread:94327 [sender.py:send():235] send: summary
+2022-04-22 15:29:19,024 INFO    SenderThread:94327 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 15:29:19,024 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: defer
+2022-04-22 15:29:19,025 INFO    SenderThread:94327 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-04-22 15:29:19,025 INFO    SenderThread:94327 [sender.py:transition_state():392] send defer: 5
+2022-04-22 15:29:19,025 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 15:29:19,025 INFO    HandlerThread:94327 [handler.py:handle_request_defer():164] handle defer: 5
+2022-04-22 15:29:19,025 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: defer
+2022-04-22 15:29:19,025 INFO    SenderThread:94327 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-04-22 15:29:19,074 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:19,225 INFO    SenderThread:94327 [sender.py:transition_state():392] send defer: 6
+2022-04-22 15:29:19,225 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:19,225 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 15:29:19,226 INFO    HandlerThread:94327 [handler.py:handle_request_defer():164] handle defer: 6
+2022-04-22 15:29:19,226 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: defer
+2022-04-22 15:29:19,226 INFO    SenderThread:94327 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-04-22 15:29:19,226 INFO    SenderThread:94327 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-04-22 15:29:19,327 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:19,409 INFO    SenderThread:94327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/wandb-summary.json
+2022-04-22 15:29:19,410 INFO    SenderThread:94327 [dir_watcher.py:_on_file_modified():230] file/dir modified: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/config.yaml
+2022-04-22 15:29:19,410 INFO    SenderThread:94327 [dir_watcher.py:finish():313] scan: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files
+2022-04-22 15:29:19,410 INFO    SenderThread:94327 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/wandb-metadata.json wandb-metadata.json
+2022-04-22 15:29:19,411 INFO    SenderThread:94327 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/wandb-summary.json wandb-summary.json
+2022-04-22 15:29:19,411 INFO    SenderThread:94327 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/conda-environment.yaml conda-environment.yaml
+2022-04-22 15:29:19,416 INFO    SenderThread:94327 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/requirements.txt requirements.txt
+2022-04-22 15:29:19,421 INFO    SenderThread:94327 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/config.yaml config.yaml
+2022-04-22 15:29:19,428 INFO    SenderThread:94327 [dir_watcher.py:finish():327] scan save: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/output.log output.log
+2022-04-22 15:29:19,429 INFO    SenderThread:94327 [sender.py:transition_state():392] send defer: 7
+2022-04-22 15:29:19,433 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:19,434 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 15:29:19,434 INFO    HandlerThread:94327 [handler.py:handle_request_defer():164] handle defer: 7
+2022-04-22 15:29:19,434 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: defer
+2022-04-22 15:29:19,435 INFO    SenderThread:94327 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-04-22 15:29:19,435 INFO    SenderThread:94327 [file_pusher.py:finish():145] shutting down file pusher
+2022-04-22 15:29:19,541 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:19,541 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:19,643 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:19,643 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:19,745 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:19,745 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:19,847 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:19,848 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:19,949 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:19,949 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:19,980 INFO    Thread-12 :94327 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/wandb-summary.json
+2022-04-22 15:29:19,982 INFO    Thread-15 :94327 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/config.yaml
+2022-04-22 15:29:19,986 INFO    Thread-14 :94327 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/requirements.txt
+2022-04-22 15:29:20,051 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:20,051 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:20,130 INFO    Thread-13 :94327 [upload_job.py:push():137] Uploaded file /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/files/conda-environment.yaml
+2022-04-22 15:29:20,152 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:20,152 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:20,254 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:20,254 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:20,330 INFO    Thread-6  :94327 [sender.py:transition_state():392] send defer: 8
+2022-04-22 15:29:20,331 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 15:29:20,331 INFO    HandlerThread:94327 [handler.py:handle_request_defer():164] handle defer: 8
+2022-04-22 15:29:20,331 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: defer
+2022-04-22 15:29:20,331 INFO    SenderThread:94327 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-04-22 15:29:20,355 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:20,786 INFO    SenderThread:94327 [sender.py:transition_state():392] send defer: 9
+2022-04-22 15:29:20,786 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:20,786 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 15:29:20,786 INFO    HandlerThread:94327 [handler.py:handle_request_defer():164] handle defer: 9
+2022-04-22 15:29:20,787 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: defer
+2022-04-22 15:29:20,787 INFO    SenderThread:94327 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-04-22 15:29:20,787 INFO    SenderThread:94327 [sender.py:transition_state():392] send defer: 10
+2022-04-22 15:29:20,787 DEBUG   SenderThread:94327 [sender.py:send():235] send: final
+2022-04-22 15:29:20,787 DEBUG   SenderThread:94327 [sender.py:send():235] send: footer
+2022-04-22 15:29:20,787 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 15:29:20,787 INFO    HandlerThread:94327 [handler.py:handle_request_defer():164] handle defer: 10
+2022-04-22 15:29:20,787 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: defer
+2022-04-22 15:29:20,787 INFO    SenderThread:94327 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-04-22 15:29:20,887 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 15:29:20,887 DEBUG   SenderThread:94327 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 15:29:20,887 INFO    SenderThread:94327 [file_pusher.py:join():150] waiting for file pusher
+2022-04-22 15:29:21,324 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: sampled_history
+2022-04-22 15:29:21,324 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: get_summary
+2022-04-22 15:29:21,325 DEBUG   HandlerThread:94327 [handler.py:handle_request():141] handle_request: shutdown
+2022-04-22 15:29:21,325 INFO    HandlerThread:94327 [handler.py:finish():778] shutting down handler
+2022-04-22 15:29:21,787 INFO    WriterThread:94327 [datastore.py:close():281] close: /share/mastoc/projects/erasmus/dl_historical_images/master_thesis/utils/wandb/run-20220422_152845-243zqubt/run-243zqubt.wandb
+2022-04-22 15:29:22,222 INFO    SenderThread:94327 [sender.py:finish():1078] shutting down sender
+2022-04-22 15:29:22,222 INFO    SenderThread:94327 [file_pusher.py:finish():145] shutting down file pusher
+2022-04-22 15:29:22,223 INFO    SenderThread:94327 [file_pusher.py:join():150] waiting for file pusher
+2022-04-22 15:29:22,303 INFO    MainThread:94327 [internal.py:handle_exit():82] Internal process exited

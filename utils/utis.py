@@ -17,7 +17,6 @@ import model
 import metrics
 import config
 import utis
-import train
 
 # Ignore excessive warnings
 import logging
@@ -162,16 +161,17 @@ def make_predictions(model:segmentation_models_pytorch.unet.model.Unet,
         
         return y_hat_stack, y_true_stack
     
-def remove_paths_with_more_than_one_class(mask_paths:list, image_paths:list) -> list:
-    i = 0
-    for mask, img in zip(mask_paths,image_paths):
-        data = cv2.imread(mask, cv2.IMREAD_GRAYSCALE)
-        if len(np.unique(data)) > 1:
-            image_paths.remove(img)
-            mask_paths.remove(mask)
-            i+=1
-    print(f'{i} paths removed')
-    return image_paths, mask_paths
+# def remove_paths_with_more_than_one_class(mask_paths:list, image_paths:list) -> list:
+#     '''Returns only images that does not contain more than one label'''
+#     i = 0
+#     for mask, img in zip(mask_paths, image_paths):
+#         data = cv2.imread(mask, cv2.IMREAD_GRAYSCALE)
+#         if len(np.unique(data)) > 1:
+#             image_paths.remove(img)
+#             mask_paths.remove(mask)
+#             i+=1
+#     print(f'{i} paths removed')
+#     return mask_paths, image_paths
 
 def train_images_paths(paths:list, test:list) -> list:
     ''' Returns list of images paths that DOES NOT exist on the test list'''
@@ -185,18 +185,6 @@ def get_file_index(file:str) -> str:
     '''Returns the idx name from file name'''
     return re.split(r"[/_.]\s*", file)[-2]
 
-# def remove_paths_with_more_than_one_class(mask_paths:list, image_paths:list) -> list:
-#     '''Returns only images that does not contain more than one label'''
-#     i = 0
-#     for mask, img in zip(mask_paths, image_paths):
-#         data = cv2.imread(mask, cv2.IMREAD_GRAYSCALE)
-#         if len(np.unique(data)) > 1:
-#             image_paths.remove(img)
-#             mask_paths.remove(mask)
-#             i+=1
-#     print(f'{i} paths removed')
-#     return mask_paths, image_paths
-
 def filtered_paths(current_paths:list, 
                    filter_paths:list)-> list:
     ''' Returns only the paths that match the filter index and does not conain more than one label'''
@@ -208,40 +196,53 @@ def filtered_paths(current_paths:list,
 
 def custom_split(filters:dict, image_paths:list, 
                  mask_paths:list, 
-                 test_size:float, 
-                 whole_data:bool=False) -> list:
+                 test_size:int, 
+                 data_portion:str) -> list:
     ''' Split the dataset based on the filter status
     Args:
     filters (dict): dict with the filtered paths by status
     test_size (float): percentage of the dataset that will be used to test
-    whole_data (bool): if True uses the whole data but preserved the test dataset. if falses uses only the daya defined in the filters'''
+    whole_data (str): 'coarse_plus_fine', 'fine' or 'coarse' define which portion of the data to use'''
 
     # sample to the same size of the smallest dataset
     sample_size = min([len(value) for key, value in filters.items()])
-    new_dic = {key:value.sample(n=sample_size, replace=False, random_state=0) for key, value in filters.items()} #random sample
+    new_dic = {key:value.sample(n=sample_size, replace=False, random_state=0) for key, value in filters.items()} # random sample
 
-    # sample from each category the sample number of samples, lets say 8, so the final dataset has a balanced 
+    # sample from each category the sample number of samples, lets say 8, so the final dataset has is balanced 
+    test_size = test_size/(sample_size*5)
     test_size = int(sample_size*test_size)
     test_idx = np.concatenate([value.sample(n=test_size, replace=False, random_state=42) for value in new_dic.values()])
-    val_idx = np.concatenate([value.sample(n=test_size, replace=False, random_state=3) for value in new_dic.values()])
+    val_idx = np.concatenate([value.sample(n=test_size, replace=False, random_state=0) for value in new_dic.values()])
 
     # train consists of the remaining dataset
     t_train = np.concatenate([value for value in new_dic.values()])
     train_idx = train_images_paths(t_train, list(test_idx) + list(val_idx))
 
     # Filter the paths from the path lists
-    # Note the test dataset is the SAME for either whole data or partial data 
+    # Note the test dataset is the SAME for all data portions
     X_test = filtered_paths(image_paths, test_idx) 
     y_test = filtered_paths(mask_paths, test_idx) 
-
+    
     # Decide if using whole data or ONLY the filtered paths 
-    if whole_data: # if all patches are used
+    if data_portion == 'coarse_plus_fine': # if all patches are used
+        print(X_test)
         X_train = train_images_paths(image_paths, X_test)
         y_train = train_images_paths(mask_paths, y_test)
 
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42, shuffle=True)
+        
+    elif data_portion == 'coarse': # if only coarse patches are used
+        # all fine idx
+        idxs = list(test_idx) + list(val_idx) + list(train_idx)
+        X_idxs = filtered_paths(image_paths, idxs)
+        y_idxs = filtered_paths(mask_paths, idxs)
+        
+        X_train = train_images_paths(image_paths, X_idxs)
+        y_train = train_images_paths(mask_paths, y_idxs)
 
-    else: # if only the filtered patches are used 
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42, shuffle=True)
+        
+    else: # if only the fine patches are used 
         X_train = filtered_paths(image_paths, train_idx) 
         y_train = filtered_paths(mask_paths, train_idx) 
 

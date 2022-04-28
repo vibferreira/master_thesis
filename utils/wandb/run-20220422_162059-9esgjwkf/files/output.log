@@ -1,0 +1,13 @@
+
+8
+  0%|                                                                              | 0/5 [00:00<?, ?it/s]
+8
+8
+8
+
+8
+              precision    recall  f1-score   support
+     Non-veg       0.94      0.95      0.94   1445706
+         Veg       0.94      0.92      0.93   1175734
+    accuracy                           0.94   2621440
+   macro avg       0.94      0.94      0.94   2621440

@@ -159,6 +159,14 @@ def cm_and_class_report(pred: torch, y:torch) -> None:
     print(classification_report(y, pred, target_names=target_names))
     
     # IOU or DICE 
+    eps = 1e-5 # avoid division by 0
+    tp = torch.sum(torch.abs(pred * y))  # TP
+    fp = torch.sum(torch.abs(pred * (1 - y)))  # FP
+    fn = torch.sum(torch.abs((1 - pred) * y))  # FN
+    
+    iou = (tp + eps) / (tp + fp + fn + eps)
+    
+    print('IoU', iou)
     
     # ROC Curve
     
@@ -218,3 +226,13 @@ def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
     print(classification_report(y_true, y_pred, target_names=classes))
     
     # ROC Curve
+    
+    # IOU or DICE 
+    eps = 1e-5 # avoid division by 0
+    tp = torch.sum(torch.abs(y_pred * y_true))  # TP
+    fp = torch.sum(torch.abs(y_pred * (1 - y_true)))  # FP
+    fn = torch.sum(torch.abs((1 - y_pred) * y_true))  # FN
+    
+    iou = (tp + eps) / (tp + fp + fn + eps)
+    
+    print('IoU', iou.numpy())

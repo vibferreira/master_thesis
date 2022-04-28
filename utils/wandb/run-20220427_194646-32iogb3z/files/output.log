@@ -1,0 +1,157 @@
+
+ 40%|████████████████████████████                                          | 2/5 [00:00<00:01,  2.52it/s]
+8
+
+8
+8
+8
+8
+              precision    recall  f1-score   support
+     Non-veg       0.97      0.97      0.97   1601737
+         Veg       0.95      0.96      0.95   1019703
+    accuracy                           0.96   2621440
+   macro avg       0.96      0.96      0.96   2621440
+weighted avg       0.96      0.96      0.96   2621440
+ 60%|██████████████████████████████████████████                            | 3/5 [00:01<00:01,  1.86it/s]
+8
+8
+8
+
+8
+8
+  0%|                                                                              | 0/5 [00:00<?, ?it/s]
+8
+8
+8
+8
+8
+  0%|                                                                              | 0/5 [00:00<?, ?it/s]
+  0%|                                                                              | 0/5 [00:00<?, ?it/s]
+              precision    recall  f1-score   support
+     Non-veg       0.97      0.97      0.97   1601737
+         Veg       0.95      0.96      0.95   1019703
+    accuracy                           0.96   2621440
+   macro avg       0.96      0.96      0.96   2621440
+weighted avg       0.96      0.96      0.96   2621440
+torch.Size([8, 1, 256, 256])
+torch.Size([8, 1, 256, 256])
+torch.Size([8, 1, 256, 256])
+torch.Size([8, 1, 256, 256])
+
+torch.Size([8, 1, 256, 256])
+0
+1
+2
+3
+4
+5
+6
+7
+0
+1
+2
+3
+4
+5
+6
+7
+0
+1
+2
+3
+4
+5
+6
+7
+0
+1
+2
+3
+4
+5
+6
+7
+0
+1
+2
+3
+4
+5
+6
+7
+0
+1
+0
+1
+../data/patches/masks/1942/1942_339.tif
+../data/patches/masks/1942/1942_339.tif
+../data/patches/masks/1942/1942_339.tif
+../data/patches/masks/1942/1942_339.tif
+../data/patches/masks/1942/1942_339.tif
+0
+1
+0
+1
+2
+3
+4
+5
+6
+7
+0
+1
+2
+3
+4
+5
+6
+7
+0
+1
+2
+3
+4
+5
+6
+7
+0
+1
+2
+3
+4
+5
+6
+7
+0
+1
+2
+3
+4
+5
+6
+7
+              precision    recall  f1-score   support
+     Non-veg       0.97      0.97      0.97   1601737
+         Veg       0.95      0.96      0.95   1019703
+    accuracy                           0.96   2621440
+   macro avg       0.96      0.96      0.96   2621440
+weighted avg       0.96      0.96      0.96   2621440
+              precision    recall  f1-score   support
+     Non-veg       0.97      0.97      0.97   1601737
+         Veg       0.95      0.96      0.95   1019703
+    accuracy                           0.96   2621440
+   macro avg       0.96      0.96      0.96   2621440
+weighted avg       0.96      0.96      0.96   2621440
+              precision    recall  f1-score   support
+     Non-veg       0.97      0.97      0.97   1601737
+         Veg       0.95      0.96      0.95   1019703
+    accuracy                           0.96   2621440
+   macro avg       0.96      0.96      0.96   2621440
+weighted avg       0.96      0.96      0.96   2621440
+IoU tensor(0.9114)
+              precision    recall  f1-score   support
+     Non-veg       0.97      0.97      0.97   1601737
+         Veg       0.95      0.96      0.95   1019703
+    accuracy                           0.96   2621440
+   macro avg       0.96      0.96      0.96   2621440
+weighted avg       0.96      0.96      0.96   2621440

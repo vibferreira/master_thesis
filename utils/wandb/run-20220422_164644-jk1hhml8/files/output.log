@@ -1,0 +1,13 @@
+
+Testing Epoch:  40%|██████████████████████                                 | 2/5 [00:00<00:00,  3.23it/s]
+8
+
+8
+8
+8
+8
+              precision    recall  f1-score   support
+     Non-veg       0.68      0.94      0.79   1445706
+         Veg       0.86      0.46      0.60   1175734
+    accuracy                           0.73   2621440
+   macro avg       0.77      0.70      0.70   2621440
