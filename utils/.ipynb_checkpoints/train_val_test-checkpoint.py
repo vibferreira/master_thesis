@@ -174,12 +174,14 @@ def validation(model, dataloader, lossFunc, epoch, validation_history):
 
 
 def make_predictions(model, 
-                     dataloader) -> list:
+                     dataloader, 
+                     print_pred=True) -> list:
     model.eval()
 
     # save the predicons and the targets
     y_hat_test = []
     y_true_test = []
+    y_score_test = []
 
     # switch off autograd
     with torch.no_grad():
@@ -195,13 +197,16 @@ def make_predictions(model,
             pred_test_class = (pred_test > 0.5).detach().float() # last layer is already sigmoid
 
             # Storing predictions and true labels 
-            y_hat_test.append(pred_test_class.cpu().view(-1, ))
-            y_true_test.append(y_test.cpu().view(-1, ).float())
+            y_hat_test.append(pred_test_class.cpu().view(-1))
+            y_true_test.append(y_test.cpu().view(-1).float())
+            y_score_test.append(pred_test)
 
             # # Plotting test
- 
-            utis.plot_comparison(x_test, pred_test_class, y_test)
-
+            
+            # if print_pred:
+            #     utis.plot_comparison(x_test, pred_test_class, y_test)
+            # plt.show()
+            
             # Save images
             # print(f'Saving {pred_{idx}.png}')
             # save_image(pred_test, f"{folder}/pred_{idx}.png") 
@@ -210,5 +215,6 @@ def make_predictions(model,
         # Stack and flatten for confusion matrix 
         y_hat_stack = torch.stack(y_hat_test)
         y_true_stack = torch.stack(y_true_test)
+        y_score_stack = torch.stack(y_score_test)
         
-        return y_hat_stack, y_true_stack
+        return y_hat_stack.view(-1), y_true_stack.view(-1), y_score_stack.view(-1)

@@ -148,8 +148,11 @@ def custom_split(filters:dict, image_paths:list,
     data_portion (str):  'coarse_plus_fine_labels', 'fine_labels' or 'coarse_labels' define which portion of the data to use'''
 
     # sample to the same size of the smallest dataset
-    sample_size = min([len(value) for key, value in filters.items()])
-    new_dic = {key:value.sample(n=sample_size, replace=False, random_state=0) for key, value in filters.items()} # random sample
+    veg_filters = filters.copy()
+    if np.isin('coarse_to_very_coarse', list(veg_filters.keys())):
+        del veg_filters['coarse_to_very_coarse']
+    sample_size = min([len(value) for key, value in veg_filters.items()])
+    new_dic = {key:value.sample(n=sample_size, replace=False, random_state=0) for key, value in veg_filters.items()} # random sample
 
     # sample from each category the sample number of samples, lets say 8, so the final dataset has is balanced 
     test_size = test_size/(sample_size*5)
@@ -170,13 +173,13 @@ def custom_split(filters:dict, image_paths:list,
     assert np.isin(data_portion, portions)
     
     # Decide if using whole data or ONLY the filtered paths 
-    if data_portion == 'coarse_plus_fine_labels': # if all patches are used
+    if data_portion == 'coarse_plus_fine_labels': # all patches are used
         X_train = train_images_paths(image_paths, X_test)
         y_train = train_images_paths(mask_paths, y_test)
 
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42, shuffle=True)
         
-    elif data_portion == 'coarse_labels': # if only coarse patches are used
+    elif data_portion == 'all_coarse_labels': # all patches but the fine ones
         # all fine idx
         idxs = list(test_idx) + list(val_idx) + list(train_idx)
         X_idxs = filtered_paths(image_paths, idxs) 
@@ -186,6 +189,12 @@ def custom_split(filters:dict, image_paths:list,
         y_train = train_images_paths(mask_paths, y_idxs) # all patches but the fine ones
 
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42, shuffle=True)
+        
+    elif data_portion == 'coarse_labels': # if only coarse patches are used
+        X_train = filtered_paths(image_paths, filters['coarse_to_very_coarse'])
+        y_train = filtered_paths(mask_paths, filters['coarse_to_very_coarse'])
+
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=40, random_state=42, shuffle=True)     
         
     elif data_portion == 'fine_labels': # if only the fine patches are used 
         X_train = filtered_paths(image_paths, train_idx) 
