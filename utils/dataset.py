@@ -12,15 +12,19 @@ from torchvision.transforms import ToTensor
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
+import utis
+
 class HistoricalImagesDataset(Dataset):
     def __init__(self, data_paths:list, 
                  label_paths:list, 
-                 transform:bool=None) -> None:
+                 transform:bool=None, 
+                 split_type:str=None) -> None:
         
         # List of files 
         self.data_paths = data_paths
         self.label_paths = label_paths
         self.transform = transform
+        self.split_type = split_type
 
     def __len__(self) -> int:
         # Lenght 
@@ -37,20 +41,17 @@ class HistoricalImagesDataset(Dataset):
         Returns:
         Tensor: specific data on index converted to Tensor'''
         # Image
+        img_idx = utis.get_file_index(self.data_paths[idx])
         image = cv2.imread(self.data_paths[idx], cv2.IMREAD_GRAYSCALE)
         # image = Image.open(self.data_paths[idx])
         # image = self.clahe_equalized(image)
         # image = ToTensor()(image) # numpy array to a normalised tensor [0 to 1] # 1, 
-        
-        # 256, 256, 1
 
         # Labels 
         mask = cv2.imread(self.label_paths[idx], cv2.IMREAD_GRAYSCALE)
         # mask = Image.open(self.label_paths[idx])
         # mask = ToTensor()(mask)
-        
-        # 256, 256, 1
-        
+     
         if self.transform is not None:
             # Convert PIL image to numpy array
             # image_np = np.asarray(image)
@@ -63,8 +64,15 @@ class HistoricalImagesDataset(Dataset):
             image = transformed['image'] # 1, 256, 256
             mask = transformed['mask'] # 256, 256
             # mask = mask.unsqueeze(0) # 1, 256, 256
-  
-        return image, mask
+           
+        img = {}
+        msk = {} 
+        if self.split_type == 'test':
+            img.update([(img_idx,image)])
+            msk.update([(img_idx, mask)])
+            return img, msk
+        else:
+            return image, mask
 
 
 
