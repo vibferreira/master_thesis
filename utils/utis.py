@@ -11,6 +11,10 @@ from torchvision.utils import make_grid
 import segmentation_models_pytorch
 from sklearn.model_selection import train_test_split
 
+import rasterio as rio
+from rasterio.transform import from_origin
+from rasterio.crs import CRS
+
 from tqdm import tqdm
 import cv2
 
@@ -40,8 +44,6 @@ def plot_comparison(x:torch.Tensor,
 
     _, ax = plt.subplots(1, 3, sharey='row')
     
-    
-
     plt.figure()
     cmap = cm.get_cmap('gray') # define color map
     plt.gray()
@@ -49,7 +51,6 @@ def plot_comparison(x:torch.Tensor,
     ax[0].set_title('Image')
 
     ax[1].imshow(gt, cmap=cmap, vmin=0) # 0 are balck and white are 1  
-    # ax[1].imshow(gt, cmap=cmap, vmin=0) # 
     ax[1].set_title('Ground Truth')
 
     ax[2].imshow(pred, cmap=cmap, vmin=0)
@@ -230,3 +231,63 @@ def custom_split(filters:dict, image_paths:list,
         y_val = filtered_paths(mask_paths, val_idx) 
 
     return X_train, y_train, X_val, y_val, X_test, y_test
+
+def get_coords (image_list:list) -> dict:
+    '''
+    Return the rasterio profile of the images
+    Args:
+    image_list (list) : list of image paths
+    Returns:
+    coords (dict) : rasterio profile with image id
+    '''
+    coords = {}
+    for img in image_list:
+        # and its respective id
+        ids = get_file_index(img)
+
+        # get the profile of the patches
+        with rio.open(img) as src:
+            ras_data = src.read().astype('uint8')
+            profile = src.profile # get the original image profile
+
+        # save in a dict
+        coords.update([(ids, profile)])
+    return coords
+
+def custom_save_patches(patch: torch.Tensor,
+                        coords: dict, 
+                        file_id: str,
+                        batch_idx: int,
+                        folder: str,
+                        subfolder:str = 'masks') -> None:
+    '''
+    Saves the patches according to the original crs
+    
+    Args:
+    patchs(torch.Tensor): patches to save
+    coords(dict): rasterio profile with image id
+    file_id(str): patch id
+    batch_idx(int): batch number
+    folder(str): path to folder
+    subfolder(str): subfolder name
+    
+    Returns:
+    None
+    '''
+    # torch to numpy
+    patch = np.squeeze(patch.detach().cpu().numpy())
+    
+    file_path = f"{folder}/{subfolder}/{subfolder}_{batch_idx}_id_{file_id}.png"
+
+    transform = from_origin(coords[file_id]['transform'][2],coords[file_id]['transform'][5],0.75,0.75)
+    crs = CRS.from_epsg('2154')
+
+    with rio.open(file_path, 'w',
+                driver='GTiff',
+                height=patch.shape[0],
+                width=patch.shape[1],
+                dtype=patch.dtype,
+                count=1, # number of bands, CAREFUL if the image has RGB
+                crs = crs, 
+                transform=transform) as dst:
+                dst.write(patch[np.newaxis,:,:]) # add a new axis, required by rasterio 
