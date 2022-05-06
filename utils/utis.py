@@ -39,6 +39,8 @@ def plot_comparison(x:torch.Tensor,
     gt = np.squeeze(y.data.cpu().cpu().numpy())
 
     _, ax = plt.subplots(1, 3, sharey='row')
+    
+    
 
     plt.figure()
     cmap = cm.get_cmap('gray') # define color map

@@ -20,7 +20,7 @@ mask_paths = glob.glob(MASK_PATH +'\*.tif')
 # SET WHICH DEVICE TO USE
 # =========================================================== #
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
-# DEVICE = 'cpu'
+DEVICE = 'cpu'
 
 # =========================================================== #
 # DATASET AND DATALOADER
@@ -30,7 +30,6 @@ PATCH_SIZE = 256
 # =========================================================== #
 # MODEL
 # =========================================================== #
-
 BACKBONE = "mobilenet_v2"
 N_CHANNELS = 1
 N_CLASSES = 1
