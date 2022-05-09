@@ -172,10 +172,57 @@ def validation(model, dataloader, lossFunc, epoch, validation_history):
     
     return validation_history
 
+# def make_predictions(model, 
+#                      dataloader, 
+#                      print_pred=True) -> list:
+#     model.eval()
 
+#     # save the predicons and the targets
+#     y_hat_test = []
+#     y_true_test = []
+#     y_score_test = []
+
+#     # switch off autograd
+#     with torch.no_grad():
+#         # loop over the validation set
+#         for batch_idx, (x_test, y_test) in enumerate(dataloader):
+#             # send the input to the device
+#             (x_test, y_test) = (x_test.to(config.DEVICE), y_test.to(config.DEVICE))
+
+#             # predictions
+#             pred_test = model(x_test)
+
+#             # Assign appropriate class 
+#             pred_test_class = (pred_test > 0.5).detach().float() # last layer is already sigmoid
+
+#             # Storing predictions and true labels 
+#             y_hat_test.append(pred_test_class.cpu().view(-1))
+#             y_true_test.append(y_test.cpu().view(-1).float())
+#             y_score_test.append(pred_test)
+
+#             # # Plotting test       
+#             if print_pred:
+#                 utis.plot_comparison(x_test, pred_test_class, y_test)
+#             plt.show()
+            
+#             # Save images
+#             # print(f'Saving {pred_{idx}.png}')
+#             # save_image(pred_test, f"{folder}/pred_{idx}.png") 
+#             # save_image(y_test, f"{folder}/y_true_{idx}.png")
+
+#         # Stack and flatten for confusion matrix 
+#         y_hat_stack = torch.stack(y_hat_test)
+#         y_true_stack = torch.stack(y_true_test)
+#         y_score_stack = torch.stack(y_score_test)
+        
+#         return y_hat_stack.view(-1), y_true_stack.view(-1), y_score_stack.view(-1)
+    
 def make_predictions(model, 
                      dataloader, 
-                     print_pred=True) -> list:
+                     X_test,
+                     folder,
+                     print_pred=False, 
+                     save_patches=False) -> list:
     model.eval()
 
     # save the predicons and the targets
@@ -183,33 +230,39 @@ def make_predictions(model,
     y_true_test = []
     y_score_test = []
 
+    # retrieve X_test's ids
+    file_idxs = [utis.get_file_index(ids) for ids in X_test]
+
+    # get the image coords
+    coords = utis.get_coords(X_test)
+
     # switch off autograd
     with torch.no_grad():
         # loop over the validation set
-        for batch_idx, (x_test, y_test) in enumerate(dataloader):
-            # send the input to the device
-            (x_test, y_test) = (x_test.to(config.DEVICE), y_test.to(config.DEVICE))
+        for batch_idx, ((x_test, y_test), file_id) in enumerate(zip(dataloader, file_idxs)):
+            (x_test[file_id], y_test[file_id]) = (x_test[file_id].to(config.DEVICE), y_test[file_id].to(config.DEVICE))
 
             # predictions
-            pred_test = model(x_test)
+            pred_test = model(x_test[file_id])
 
             # Assign appropriate class 
             pred_test_class = (pred_test > 0.5).detach().float() # last layer is already sigmoid
 
             # Storing predictions and true labels 
             y_hat_test.append(pred_test_class.cpu().view(-1))
-            y_true_test.append(y_test.cpu().view(-1).float())
+            y_true_test.append(y_test[file_id].cpu().view(-1).float())
             y_score_test.append(pred_test)
 
-            # # Plotting test       
+            # Plotting test       
             if print_pred:
-                utis.plot_comparison(x_test, pred_test_class, y_test)
+                utis.plot_comparison(x_test[file_id], pred_test_class, y_test[file_id])
             plt.show()
-            
-            # Save images
-            # print(f'Saving {pred_{idx}.png}')
-            # save_image(pred_test, f"{folder}/pred_{idx}.png") 
-            # save_image(y_test, f"{folder}/y_true_{idx}.png")
+
+            # Save patches 
+            if save_patches:
+                print(f'Saving patch_{batch_idx}_id_{file_id}.png')
+                utis.custom_save_patches(y_test[file_id], coords, file_id, batch_idx, folder, subfolder='masks') 
+                utis.custom_save_patches(pred_test_class, coords, file_id, batch_idx, folder, subfolder='predictions') 
 
         # Stack and flatten for confusion matrix 
         y_hat_stack = torch.stack(y_hat_test)
@@ -217,3 +270,5 @@ def make_predictions(model,
         y_score_stack = torch.stack(y_score_test)
         
         return y_hat_stack.view(-1), y_true_stack.view(-1), y_score_stack.view(-1)
+            
+        
