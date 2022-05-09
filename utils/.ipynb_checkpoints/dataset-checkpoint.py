@@ -70,6 +70,7 @@ class HistoricalImagesDataset(Dataset):
         if self.split_type == 'test':
             img.update([(img_idx,image)])
             msk.update([(img_idx, mask)])
+            # print(img)
             return img, msk
         else:
             return image, mask

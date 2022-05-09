@@ -161,26 +161,25 @@ def custom_split(filters:dict, image_paths:list,
 
     # sample to the same size of the smallest dataset
     veg_filters = filters.copy()
-    
+
     # coarse to very coarse is not considered in the fine dataset filter 
     if np.isin('coarse_to_very_coarse', list(veg_filters.keys())):
         del veg_filters['coarse_to_very_coarse']
-    
+
     # find the minimum dataset size among the classs in the filter, so all of them are equally represented    
     sample_size = min([len(value) for key, value in veg_filters.items()])
-   
-    # random sample sample_size points from each filter class
-    new_dic = {key:value.sample(n=sample_size, replace=False, random_state=0) for key, value in veg_filters.items()} # random sample
 
-    # sample from each category the sample number of samples, lets say 8, so the final dataset has is balanced 
+    # get all veg_filter idx
+    all_filter_idx = np.concatenate([i for i in veg_filters.values()])
+    
+    # random sample sample_size points from each filter class to create the TEST DATASET
     test_size = test_size/(sample_size*5) # 5 is the number of filters
     test_size = int(sample_size*test_size)
-    test_idx = np.concatenate([value.sample(n=test_size, replace=False, random_state=42) for value in new_dic.values()])
-    val_idx = np.concatenate([value.sample(n=test_size, replace=False, random_state=0) for value in new_dic.values()])
-
-    # train consists of the remaining dataset
-    t_train = np.concatenate([value for value in new_dic.values()])
-    train_idx = train_images_paths(t_train, list(test_idx) + list(val_idx)) # all dataset minus test and val
+    test_dic = {key:value.sample(n=test_size, replace=False, random_state=0) for key, value in veg_filters.items()} # random sample
+    test_idx = np.concatenate([i for i in test_dic.values()])
+    
+    # get the remaining patches from the filters to be the X_train and X_val of the fine patches
+    val_train_idxs = train_images_paths(all_filter_idx, test_idx)
 
     # Filter the paths from the path lists
     # Note the test dataset is the SAME for all data portions
@@ -221,14 +220,13 @@ def custom_split(filters:dict, image_paths:list,
         X_train = filtered_paths(image_paths, filters['coarse_to_very_coarse'])
         y_train = filtered_paths(mask_paths, filters['coarse_to_very_coarse'])
 
-        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=40, random_state=42, shuffle=True)     
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42, shuffle=True)     
         
     elif data_portion == 'fine_labels': # if only the fine patches are used 
-        X_train = filtered_paths(image_paths, train_idx) 
-        y_train = filtered_paths(mask_paths, train_idx) 
+        fine_X_idx = filtered_paths(image_paths, val_train_idxs) 
+        fine_y_idx = filtered_paths(mask_paths, val_train_idxs) 
 
-        X_val = filtered_paths(image_paths, val_idx) 
-        y_val = filtered_paths(mask_paths, val_idx) 
+        X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=0.20, random_state=42, shuffle=True) 
 
     return X_train, y_train, X_val, y_val, X_test, y_test
 
