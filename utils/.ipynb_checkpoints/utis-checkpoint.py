@@ -147,7 +147,6 @@ def filtered_paths(current_paths:list,
             filtered_paths.append(i)      
     return filtered_paths
 
-
 def save_test_dataset(DEST_PATH:str,
                       list_of_imgs:list) -> None:
     
@@ -204,16 +203,20 @@ def custom_split(filters:dict, image_paths:list,
     y_test = filtered_paths(mask_paths, test_idx) 
     
     # save a separate test dataset 
-    save_test_dataset(f'{DEST_PATH}/images', X_test)
-    save_test_dataset(f'{DEST_PATH}/masks', y_test)
+    if data_portion == 'fine_labels':
+        save_test_dataset(f'{DEST_PATH}/images', X_test)
+        save_test_dataset(f'{DEST_PATH}/masks', y_test)
+        
+    X_test = glob.glob(f'{DEST_PATH}/images' +'/*.tif') 
+    y_test = glob.glob(f'{DEST_PATH}/masks' +'/*.tif') 
     
     portions = ['all_coarse_labels','coarse_plus_fine_labels', 'fine_labels', 'coarse_labels']
     assert np.isin(data_portion, portions)
     
     # Decide if using whole data or ONLY the filtered paths 
     if data_portion == 'coarse_plus_fine_labels': # all patches are used
-        X_train = train_images_paths(image_paths, X_test)
-        y_train = train_images_paths(mask_paths, y_test)
+        X_train = train_images_paths(f'{DEST_PATH}/images', X_test)
+        y_train = train_images_paths(f'{DEST_PATH}/masks', y_test)
 
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42, shuffle=True)
         
