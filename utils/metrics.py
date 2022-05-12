@@ -165,8 +165,17 @@ def cm_and_class_report(pred: torch, y:torch) -> None:
     fn = torch.sum(torch.abs((1 - pred) * y))  # FN
     
     iou = (tp + eps) / (tp + fp + fn + eps)
+    dice = (2 * tp + eps) / (2 * tp + fp + fn + eps)
+    
+    precision = (tp + eps) / (tp + fp + eps)
+    recall = (tp + eps) / (tp + fn + eps)
+    specificity = (tn + eps) / (tn + fp + eps)
+    f1score = 2 * precision * recall / (precision + recall)
     
     print('IoU', iou)
+    print('F1 score', f1score)
+    print('Dice score', dice)
+    
     
     # ROC Curve
     
@@ -232,7 +241,18 @@ def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
     tp = torch.sum(torch.abs(y_pred * y_true))  # TP
     fp = torch.sum(torch.abs(y_pred * (1 - y_true)))  # FP
     fn = torch.sum(torch.abs((1 - y_pred) * y_true))  # FN
+    tn = torch.sum(torch.abs((1 - y_pred) * (1 - y_true)))  # TN
     
     iou = (tp + eps) / (tp + fp + fn + eps)
     
+    dice = (2 * tp + eps) / (2 * tp + fp + fn + eps)
+    
+    precision = (tp + eps) / (tp + fp + eps)
+    recall = (tp + eps) / (tp + fn + eps)
+    specificity = (tn + eps) / (tn + fp + eps)
+    f1score = 2 * precision * recall / (precision + recall)
+    
     print('IoU', iou.numpy())
+    print('F1 score', f1score.numpy())
+    print('Dice score', dice.numpy())
+    

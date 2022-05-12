@@ -31,6 +31,13 @@ logging.getLogger().setLevel(logging.ERROR)
 # WandB – Import the wandb library
 import wandb
 
+from plotly.offline import init_notebook_mode, iplot
+init_notebook_mode(connected=True)  
+import plotly.offline as pyo
+import plotly.graph_objs as go
+import plotly.io as pio
+pio.renderers.default = 'iframe'
+import plotly.express as px
 
 import torch
 
@@ -76,10 +83,14 @@ def save_best_model(model,
     acc = float(val_dic['val_accuracy'][-1])
     # [os.remove(f) for f in glob.glob(dest_path + '/*') if f.startswith(data_portion, 14)] # remove previous saved files 
     
-    if data_portion == 'all_coarse_labels':
+    if data_portion == 'coarse_labels':
         # remove previous saved files 
         [os.remove(f) for f in glob.glob(dest_path + '/coarse_sizes' + '/*') if f.startswith(f'/rate_{rate_of_coarse_labels}_{data_portion}', 26)] 
         return torch.save(model.state_dict(), dest_path + '/coarse_sizes' + f'/rate_{rate_of_coarse_labels}_{data_portion}_best_model_epoch_{e+1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
+    
+    elif data_portion == 'fine_labels':
+        [os.remove(f) for f in glob.glob(dest_path + '/fine_sizes' + '/*') if f.startswith(f'/rate_{rate_of_coarse_labels}_{data_portion}', 24)] 
+        return torch.save(model.state_dict(), dest_path + '/fine_sizes' + f'/rate_{rate_of_coarse_labels}_{data_portion}_best_model_epoch_{e+1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
     
     else:
         # remove previous saved files
@@ -243,12 +254,23 @@ def custom_split(filters:dict, image_paths:list,
     elif data_portion == 'coarse_labels': # if only coarse patches are used
         fine_X_idx = filtered_paths(image_paths, val_train_idxs) 
         fine_y_idx = filtered_paths(mask_paths, val_train_idxs) 
+        print('hey')
+        
+#         # List of ALL coarse labels 
+#         X_train = train_images_paths(image_paths, fine_X_idxs) # all patches but the fine ones
+#         all_coarse_idxs = [get_file_index(i) for i in X_train]
+        
+#         # select random percentage of coarse labels
+#         random.seed(41)
+#         sampled_coarse_idxs = random.sample(all_coarse_idxs, int(len(all_coarse_idxs)*rate_of_coarse_labels))
+        
 
         X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=0.20, random_state=42, shuffle=True)    
         
     elif data_portion == 'fine_labels': # if only the fine patches are used 
         fine_X_idx = filtered_paths(image_paths, val_train_idxs) 
         fine_y_idx = filtered_paths(mask_paths, val_train_idxs) 
+        print('carai')
 
         X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=0.20, random_state=42, shuffle=True) 
 
@@ -313,3 +335,38 @@ def custom_save_patches(patch: torch.Tensor,
                 crs = crs, 
                 transform=transform) as dst:
                 dst.write(patch[np.newaxis,:,:]) # add a new axis, required by rasterio 
+            
+def count_data_dist(y_test: list) -> np.array :
+    ''' Count bins on numpy array
+    y_test(list): list of mask images'''
+    counts = np.zeros((len(y_test),2))
+
+    for i, img in enumerate(y_test):
+        # read image
+        IMG = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
+        # count 0 and 1
+        x = np.bincount(IMG.reshape(-1))
+        # set 0 to label one when only black imgs is available
+        if len(x) < 2:
+            x = [x[0], 0]
+
+        # store in an array    
+        counts[i] = x
+
+    return counts.sum(axis=0)
+
+def plot_pizza(y_test: list, title:str) -> None:
+    ''' Plot pizza graph of the data distribution
+    y_test(list): list of mask images'''
+        
+    f_counts = count_data_dist(y_test)
+    df_avg_veg = {'average vegetation count': f_counts, 'label': ['non-trees','trees']}
+    fig = px.pie(df_avg_veg, names='label', values='average vegetation count', color_discrete_sequence=px.colors.diverging.RdYlGn_r, 
+    title=f'Percentage of trees and non-trees in the {title}')
+
+    fig.update_layout(legend=dict(
+        yanchor="top",
+        y= 0.8,
+        xanchor="right",
+        x = 1.1))
+    fig.show(renderer="svg")
