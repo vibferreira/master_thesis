@@ -260,7 +260,7 @@ def make_predictions(model,
 
             # Save patches 
             if save_patches:
-                print(f'Saving patch_{batch_idx}_id_{file_id}.png')
+                print(f'Saving patch_{batch_idx}_id_{file_id}.tif')
                 utis.custom_save_patches(y_test[file_id], coords, file_id, batch_idx, folder, subfolder='masks') 
                 utis.custom_save_patches(pred_test_class, coords, file_id, batch_idx, folder, subfolder='predictions') 
 

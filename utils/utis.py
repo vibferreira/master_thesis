@@ -22,6 +22,7 @@ import model
 import metrics
 import config
 import utis
+import train_val_test
 
 # Ignore excessive warnings
 import logging
@@ -166,12 +167,20 @@ def save_test_dataset(DEST_PATH:str,
     DEST_PATH (str): destination folder
     list_of_imgs(list): list of images to save'''
     
+    coords = get_coords(X_test)
+    
     if not glob.glob(DEST_PATH +'/*.tif'):
         #save test dataset on the folder
         for img in list_of_imgs:
             idx = utis.get_file_index(img)
-            img = cv2.imread(img, cv2.COLOR_BGR2GRAY)
-            cv2.imwrite(f'{DEST_PATH}/1942_{idx}.tif', img)
+            with rio.open(img) as src:
+                data = src.read().astype('uint8')
+                profile = src.profile
+
+            print(f'Saving dataset {DEST_PATH}/1942_{idx}.tif')
+            with rio.open(f'{DEST_PATH}/1942_{idx}.tif', 'w', **profile) as dst:
+                dst.write(np.squeeze(data), 1)  
+
             
 def custom_split(filters:dict, image_paths:list, 
                  mask_paths:list, 
@@ -321,7 +330,7 @@ def custom_save_patches(patch: torch.Tensor,
     # torch to numpy
     patch = np.squeeze(patch.detach().cpu().numpy())
     
-    file_path = f"{folder}/{subfolder}/{subfolder}_{batch_idx}_id_{file_id}.png"
+    file_path = f"{folder}/{subfolder}/{subfolder}_{batch_idx}_id_{file_id}.tif"
 
     transform = from_origin(coords[file_id]['transform'][2],coords[file_id]['transform'][5],0.75,0.75)
     crs = CRS.from_epsg('2154')
@@ -370,3 +379,31 @@ def plot_pizza(y_test: list, title:str) -> None:
         xanchor="right",
         x = 1.1))
     fig.show(renderer="svg")
+    
+def iou_on_test_dataset(MODEL:str, 
+                        number_patches:list,
+                        dataloader,
+                        X_test,
+                        folder) -> dict:
+    ''' Return dict with the IoU according to number 
+    of patches the model was trained with
+    Args:
+    MODEL(str): pytorch model saved with the weights already sorted by number of patches
+    number_patches(list): list with the number of patches already sorted '''
+    
+    iou_all = {}
+    for i, rate in zip(MODEL, number_patches):
+        # load the model 
+        model_ = model.unet_model.to(config.DEVICE)
+        model_.load_state_dict(torch.load(i))
+
+        # get the y_hat and y_true
+        y_hat, y_true, y_score = train_val_test.make_predictions(model_, dataloader, X_test, folder, print_pred=False, save_patches=False)
+
+        # get IoU
+        all_metrics = metrics.metrics(y_hat, y_true)
+        iou = all_metrics['iou']
+
+        # save dict
+        iou_all.update([(rate,iou)])
+    return iou_all
