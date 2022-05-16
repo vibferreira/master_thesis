@@ -1,4 +1,4 @@
-'''Defines utils functions to save, plot and make predictions '''
+''' Defines utils functions '''
 ''' Functions to plot using torchvision make_grid are from https://medium.com/analytics-vidhya/do-you-visualize-dataloaders-for-deep-neural-networks-7840ae58fee7'''
 
 import glob
@@ -159,6 +159,28 @@ def filtered_paths(current_paths:list,
             filtered_paths.append(i)      
     return filtered_paths
 
+def get_coords (image_list:list) -> dict:
+    '''
+    Return the rasterio profile of the images
+    Args:
+    image_list (list) : list of image paths
+    Returns:
+    coords (dict) : rasterio profile with image id
+    '''
+    coords = {}
+    for img in image_list:
+        # and its respective id
+        ids = get_file_index(img)
+
+        # get the profile of the patches
+        with rio.open(img) as src:
+            ras_data = src.read().astype('uint8')
+            profile = src.profile # get the original image profile
+
+        # save in a dict
+        coords.update([(ids, profile)])
+    return coords
+
 def save_test_dataset(DEST_PATH:str,
                       list_of_imgs:list) -> None:
     
@@ -167,12 +189,13 @@ def save_test_dataset(DEST_PATH:str,
     DEST_PATH (str): destination folder
     list_of_imgs(list): list of images to save'''
     
-    coords = get_coords(X_test)
+    coords = get_coords(list_of_imgs)
     
     if not glob.glob(DEST_PATH +'/*.tif'):
         #save test dataset on the folder
         for img in list_of_imgs:
             idx = utis.get_file_index(img)
+            print(img)
             with rio.open(img) as src:
                 data = src.read().astype('uint8')
                 profile = src.profile
@@ -284,28 +307,6 @@ def custom_split(filters:dict, image_paths:list,
         X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=0.20, random_state=42, shuffle=True) 
 
     return X_train, y_train, X_val, y_val, X_test, y_test
-
-def get_coords (image_list:list) -> dict:
-    '''
-    Return the rasterio profile of the images
-    Args:
-    image_list (list) : list of image paths
-    Returns:
-    coords (dict) : rasterio profile with image id
-    '''
-    coords = {}
-    for img in image_list:
-        # and its respective id
-        ids = get_file_index(img)
-
-        # get the profile of the patches
-        with rio.open(img) as src:
-            ras_data = src.read().astype('uint8')
-            profile = src.profile # get the original image profile
-
-        # save in a dict
-        coords.update([(ids, profile)])
-    return coords
 
 def custom_save_patches(patch: torch.Tensor,
                         coords: dict, 
