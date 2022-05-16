@@ -1,4 +1,4 @@
-'''Defines utils functions to save, plot and make predictions '''
+''' Defines utils functions '''
 ''' Functions to plot using torchvision make_grid are from https://medium.com/analytics-vidhya/do-you-visualize-dataloaders-for-deep-neural-networks-7840ae58fee7'''
 
 import glob
@@ -159,6 +159,47 @@ def filtered_paths(current_paths:list,
             filtered_paths.append(i)      
     return filtered_paths
 
+def get_n_training_samples(image_paths,
+                           mask_paths,
+                           filtered_idxs, 
+                           number_training_patchs):
+    
+        all_coarse_idxs = [get_file_index(i) for i in filtered_idxs]
+
+        # select random percentage of coarse labels
+        random.seed(41)
+        val_samples = int(0.30*number_training_patchs)
+        n_samples = number_training_patchs + int(0.30*number_training_patchs)
+        sampled_coarse_idxs = random.sample(all_coarse_idxs, n_samples)
+        
+        # get the paths 
+        X_idxs = filtered_paths(image_paths, sampled_coarse_idxs) 
+        y_idxs = filtered_paths(mask_paths, sampled_coarse_idxs)
+        
+        return val_samples, X_idxs, y_idxs
+    
+def get_coords (image_list:list) -> dict:
+    '''
+    Return the rasterio profile of the images
+    Args:
+    image_list (list) : list of image paths
+    Returns:
+    coords (dict) : rasterio profile with image id
+    '''
+    coords = {}
+    for img in image_list:
+        # and its respective id
+        ids = get_file_index(img)
+
+        # get the profile of the patches
+        with rio.open(img) as src:
+            ras_data = src.read().astype('uint8')
+            profile = src.profile # get the original image profile
+
+        # save in a dict
+        coords.update([(ids, profile)])
+    return coords  
+
 def save_test_dataset(DEST_PATH:str,
                       list_of_imgs:list) -> None:
     
@@ -167,19 +208,52 @@ def save_test_dataset(DEST_PATH:str,
     DEST_PATH (str): destination folder
     list_of_imgs(list): list of images to save'''
     
+    coords = get_coords(list_of_imgs)
+    
+    if not glob.glob(DEST_PATH +'/*.tif'):
+        #save test dataset on the dest folder WITH CRS
+        for img in list_of_imgs:
+            idx = utis.get_file_index(img)
+            print(img)
+            with rio.open(img) as src:
+                data = src.read().astype('uint8')
+                profile = src.profile
+
+            print(f'Saving dataset {DEST_PATH}/1942_{idx}.tif')
+            with rio.open(f'{DEST_PATH}/1942_{idx}.tif', 'w', **profile) as dst:
+                dst.write(np.squeeze(data), 1)  
+
+
+def save_test_dataset(DEST_PATH:str,
+                      list_of_imgs:list) -> None:
+    
+    ''' Save the test dataset in a separate folder
+    Args:
+    DEST_PATH (str): destination folder
+    list_of_imgs(list): list of images to save'''
+    
+    coords = get_coords(list_of_imgs)
+    
     if not glob.glob(DEST_PATH +'/*.tif'):
         #save test dataset on the folder
         for img in list_of_imgs:
             idx = utis.get_file_index(img)
-            img = cv2.imread(img, cv2.COLOR_BGR2GRAY)
-            cv2.imwrite(f'{DEST_PATH}/1942_{idx}.tif', img)
+            print(img)
+            with rio.open(img) as src:
+                data = src.read().astype('uint8')
+                profile = src.profile
+
+            print(f'Saving dataset {DEST_PATH}/1942_{idx}.tif')
+            with rio.open(f'{DEST_PATH}/1942_{idx}.tif', 'w', **profile) as dst:
+                dst.write(np.squeeze(data), 1)  
+
             
 def custom_split(filters:dict, image_paths:list, 
                  mask_paths:list, 
                  test_size:int, 
                  data_portion:str, 
                  DEST_PATH:str, 
-                 rate_of_coarse_labels = 1) -> list:
+                 number_training_patchs = 20) -> list:
     
     ''' Split the dataset based on the filter status
     Args:
@@ -214,7 +288,7 @@ def custom_split(filters:dict, image_paths:list,
     X_test = filtered_paths(image_paths, test_idx) 
     y_test = filtered_paths(mask_paths, test_idx) 
     
-    # save a separate test dataset 
+#     # save a separate test dataset 
     if data_portion == 'fine_labels':
         save_test_dataset(f'{DEST_PATH}/images', X_test)
         save_test_dataset(f'{DEST_PATH}/masks', y_test)
@@ -226,78 +300,35 @@ def custom_split(filters:dict, image_paths:list,
     assert np.isin(data_portion, portions)
     
     # Decide if using whole data or ONLY the filtered paths 
-    if data_portion == 'coarse_plus_fine_labels': # all patches are used
-        X_train = train_images_paths(f'{DEST_PATH}/images', X_test)
-        y_train = train_images_paths(f'{DEST_PATH}/masks', y_test)
+#     if data_portion == 'coarse_plus_fine_labels': # all patches are used
+#         X_train = train_images_paths(f'{DEST_PATH}/images', X_test)
+#         y_train = train_images_paths(f'{DEST_PATH}/masks', y_test)
 
-        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.20, random_state=42, shuffle=True)
+#         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.30, random_state=42, shuffle=True)
         
-    elif data_portion == 'all_coarse_labels': # all patches but the fine ones
-        # Get a list with all fine idxs 
-        idxs = list(test_idx) + list(val_idx) + list(train_idx)  # all fine idx               
-        fine_X_idxs = filtered_paths(image_paths, idxs) 
-        fine_y_idxs = filtered_paths(mask_paths, idxs)  
-          
-        # List of ALL coarse labels 
-        X_train = train_images_paths(image_paths, fine_X_idxs) # all patches but the fine ones
-        all_coarse_idxs = [get_file_index(i) for i in X_train]
+    if data_portion == 'coarse_labels': # if only coarse patches are used
+        coarse_X_idx = filtered_paths(image_paths, val_train_idxs) 
+        coarse_y_idx = filtered_paths(mask_paths, val_train_idxs) 
         
-        # select random percentage of coarse labels
-        random.seed(41)
-        sampled_coarse_idxs = random.sample(all_coarse_idxs, int(len(all_coarse_idxs)*rate_of_coarse_labels))
-        
-        # get the paths 
-        coarse_X_idxs = filtered_paths(image_paths, sampled_coarse_idxs) 
-        coarse_y_idxs = filtered_paths(mask_paths, sampled_coarse_idxs)
-        
-        X_train, X_val, y_train, y_val = train_test_split(coarse_X_idxs, coarse_y_idxs, test_size=0.20, random_state=42, shuffle=True)
-        
-    elif data_portion == 'coarse_labels': # if only coarse patches are used
-        fine_X_idx = filtered_paths(image_paths, val_train_idxs) 
-        fine_y_idx = filtered_paths(mask_paths, val_train_idxs) 
-        print('hey')
-        
-#         # List of ALL coarse labels 
-#         X_train = train_images_paths(image_paths, fine_X_idxs) # all patches but the fine ones
-#         all_coarse_idxs = [get_file_index(i) for i in X_train]
-        
-#         # select random percentage of coarse labels
-#         random.seed(41)
-#         sampled_coarse_idxs = random.sample(all_coarse_idxs, int(len(all_coarse_idxs)*rate_of_coarse_labels))
-        
+        val_samples, coarse_X_idx, coarse_y_idx = get_n_training_samples(image_paths,
+                           mask_paths,
+                           coarse_X_idx, 
+                           number_training_patchs)
 
-        X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=0.20, random_state=42, shuffle=True)    
+        X_train, X_val, y_train, y_val = train_test_split(coarse_X_idx, coarse_y_idx, test_size=val_samples, random_state=42, shuffle=True)    
         
     elif data_portion == 'fine_labels': # if only the fine patches are used 
         fine_X_idx = filtered_paths(image_paths, val_train_idxs) 
         fine_y_idx = filtered_paths(mask_paths, val_train_idxs) 
-        print('carai')
+        
+        val_samples, fine_X_idx, fine_y_idx = get_n_training_samples(image_paths,
+                           mask_paths,
+                           fine_X_idx, 
+                           number_training_patchs)
 
-        X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=0.20, random_state=42, shuffle=True) 
+        X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=val_samples, random_state=42, shuffle=True) 
 
     return X_train, y_train, X_val, y_val, X_test, y_test
-
-def get_coords (image_list:list) -> dict:
-    '''
-    Return the rasterio profile of the images
-    Args:
-    image_list (list) : list of image paths
-    Returns:
-    coords (dict) : rasterio profile with image id
-    '''
-    coords = {}
-    for img in image_list:
-        # and its respective id
-        ids = get_file_index(img)
-
-        # get the profile of the patches
-        with rio.open(img) as src:
-            ras_data = src.read().astype('uint8')
-            profile = src.profile # get the original image profile
-
-        # save in a dict
-        coords.update([(ids, profile)])
-    return coords
 
 def custom_save_patches(patch: torch.Tensor,
                         coords: dict, 
@@ -369,7 +400,9 @@ def plot_pizza(y_test: list, title:str) -> None:
         yanchor="top",
         y= 0.8,
         xanchor="right",
-        x = 1.1))
+        x = 1.1, 
+        font=dict(size=15),    
+        ))
     fig.show(renderer="svg")
     
 def iou_on_test_dataset(MODEL:str, 
