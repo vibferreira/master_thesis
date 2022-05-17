@@ -432,3 +432,18 @@ def iou_on_test_dataset(MODEL:str,
         # save dict
         iou_all.update([(rate,iou)])
     return iou_all
+
+def create_new_dir(new_dir_path:str) -> None:
+    ''' create a new dir
+    Args:
+    new_dir_path(str): new directory path'''
+    os.makedirs(new_dir_path)
+    
+def save_model(model_to_save, dir_to_create, fold, dic_results, epoch) -> None:
+    path_save = f'{dir_to_create}/fold_{fold}_epoch_{epoch}_iou_{dic_results}.pth'
+    
+    # print(f'Training process has finished. Saving trained model at: {path_save}')
+    
+    path_save.startswith(f'fold_{fold}', 30)
+    [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 30)]
+    torch.save(model_to_save.state_dict(), path_save)

@@ -271,4 +271,12 @@ def make_predictions(model,
         
         return y_hat_stack.view(-1), y_true_stack.view(-1), y_score_stack.view(-1)
             
-        
+def reset_weights(m):
+  '''
+    Try resetting model weights to avoid
+    weight leakage.
+  '''
+  for layer in m.children():
+        if hasattr(layer, 'reset_parameters'):
+            # print(f'Reset trainable parameters of layer = {layer}')
+            layer.reset_parameters()
