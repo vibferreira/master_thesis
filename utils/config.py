@@ -19,8 +19,8 @@ mask_paths = glob.glob(MASK_PATH +'\*.tif')
 # =========================================================== #
 # SET WHICH DEVICE TO USE
 # =========================================================== #
-DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
-# DEVICE = 'cpu'
+# DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
+DEVICE = 'cpu'
 
 # =========================================================== #
 # DATASET AND DATALOADER
@@ -38,7 +38,7 @@ N_CLASSES = 1
 # TRAINING AND VALIDATION LOOPS
 # =========================================================== #
 LR = 0.0001 # learning rate
-NUM_EPOCHS = 50
+NUM_EPOCHS = 1
 BATCH_SIZE = 16
 
 
