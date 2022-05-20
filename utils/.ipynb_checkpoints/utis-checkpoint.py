@@ -10,6 +10,8 @@ from matplotlib import pyplot as plt, cm
 from torchvision.utils import make_grid
 import segmentation_models_pytorch
 from sklearn.model_selection import train_test_split
+from pathlib import Path
+
 
 import rasterio as rio
 from rasterio.transform import from_origin
@@ -98,33 +100,6 @@ def save_best_model(model,
         [os.remove(f) for f in glob.glob(dest_path + '/*') if f.startswith(data_portion, 14)] 
         return torch.save(model.state_dict(), dest_path + f'/{data_portion}_best_model_epoch_{e+1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
 
-
-def plot_grids(grids, titles = ["Input", 'Target']):
-    nrow = len(grids)
-    fig = plt.figure(figsize=(8, nrow), dpi=300)
-    # Remove the space between the grids
-    fig.subplots_adjust(wspace=0, hspace=0)
-    # Each grid is new subplot
-    for i in range(1,nrow+1):
-        sub = fig.add_subplot(nrow,1,i)
-        # Dont show the x-axis
-        sub.xaxis.set_visible(False)
-        # Remove y axis ticks and set yaxis label
-        sub.set_yticks([])
-        sub.set_ylabel(titles[i-1], rotation=0, fontsize=5, labelpad=15)
-        sub.imshow(grids[i-1])
-    plt.show()
-
-def create_grids(imgList, nrofItems, pad, norm = True):
-    '''Create a list of Image grids from Torch tensors'''
-    # Permute the axis as numpy expects image of shape (H x W x C) 
-    return list(map(lambda imgs: make_grid(imgs[:nrofItems], normalize=norm, padding = pad, nrow=nrofItems).permute(1, 2, 0), imgList))
-
-# Create list of two image grids - Input Images & Target Mask Images for Segmentation task
-def create_segement_grids(loader_iter, nrofItems = 5, pad = 4):
-    '''# Create list of two image grids - Input Images & Target Mask Images for Segmentation task'''
-    inp, target = next(loader_iter)
-    return create_grids([inp, target], nrofItems, pad)
     
 # def remove_paths_with_more_than_one_class(mask_paths:list, image_paths:list) -> list:
 #     '''Returns only images that does not contain more than one label'''
@@ -167,7 +142,7 @@ def get_n_training_samples(image_paths,
         all_coarse_idxs = [get_file_index(i) for i in filtered_idxs]
 
         # select random percentage of coarse labels
-        random.seed(41)
+        random.seed(42)
         val_samples = int(0.30*number_training_patchs)
         n_samples = number_training_patchs + int(0.30*number_training_patchs)
         sampled_coarse_idxs = random.sample(all_coarse_idxs, n_samples)
@@ -222,31 +197,6 @@ def save_test_dataset(DEST_PATH:str,
             print(f'Saving dataset {DEST_PATH}/1942_{idx}.tif')
             with rio.open(f'{DEST_PATH}/1942_{idx}.tif', 'w', **profile) as dst:
                 dst.write(np.squeeze(data), 1)  
-
-
-def save_test_dataset(DEST_PATH:str,
-                      list_of_imgs:list) -> None:
-    
-    ''' Save the test dataset in a separate folder
-    Args:
-    DEST_PATH (str): destination folder
-    list_of_imgs(list): list of images to save'''
-    
-    coords = get_coords(list_of_imgs)
-    
-    if not glob.glob(DEST_PATH +'/*.tif'):
-        #save test dataset on the folder
-        for img in list_of_imgs:
-            idx = utis.get_file_index(img)
-            print(img)
-            with rio.open(img) as src:
-                data = src.read().astype('uint8')
-                profile = src.profile
-
-            print(f'Saving dataset {DEST_PATH}/1942_{idx}.tif')
-            with rio.open(f'{DEST_PATH}/1942_{idx}.tif', 'w', **profile) as dst:
-                dst.write(np.squeeze(data), 1)  
-
             
 def custom_split(filters:dict, image_paths:list, 
                  mask_paths:list, 
@@ -296,15 +246,24 @@ def custom_split(filters:dict, image_paths:list,
     X_test = glob.glob(f'{DEST_PATH}/images' +'/*.tif') 
     y_test = glob.glob(f'{DEST_PATH}/masks' +'/*.tif') 
     
-    portions = ['all_coarse_labels','coarse_plus_fine_labels', 'fine_labels', 'coarse_labels']
+    portions = ['all_labels','coarse_plus_fine_labels', 'fine_labels', 'coarse_labels']
     assert np.isin(data_portion, portions)
     
     # Decide if using whole data or ONLY the filtered paths 
-#     if data_portion == 'coarse_plus_fine_labels': # all patches are used
-#         X_train = train_images_paths(f'{DEST_PATH}/images', X_test)
-#         y_train = train_images_paths(f'{DEST_PATH}/masks', y_test)
-
-#         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.30, random_state=42, shuffle=True)
+    if data_portion == 'all_labels': # all patches are used
+        all_X_idx = filtered_paths(image_paths, val_train_idxs) 
+        all_y_idx = filtered_paths(mask_paths, val_train_idxs) 
+        
+        # get only the given number 
+        random.seed(42)
+        all_coarse_idxs = [get_file_index(i) for i in all_X_idx]
+        sampled_all_idxs = random.sample(all_coarse_idxs, number_training_patchs)
+        
+        # get the paths 
+        X_idxs = filtered_paths(image_paths, sampled_all_idxs) 
+        y_idxs = filtered_paths(mask_paths, sampled_all_idxs)
+        
+        return X_idxs, y_idxs
         
     if data_portion == 'coarse_labels': # if only coarse patches are used
         coarse_X_idx = filtered_paths(image_paths, val_train_idxs) 
@@ -317,6 +276,8 @@ def custom_split(filters:dict, image_paths:list,
 
         X_train, X_val, y_train, y_val = train_test_split(coarse_X_idx, coarse_y_idx, test_size=val_samples, random_state=42, shuffle=True)    
         
+        return X_train, y_train, X_val, y_val, X_test, y_test
+    
     elif data_portion == 'fine_labels': # if only the fine patches are used 
         fine_X_idx = filtered_paths(image_paths, val_train_idxs) 
         fine_y_idx = filtered_paths(mask_paths, val_train_idxs) 
@@ -328,7 +289,7 @@ def custom_split(filters:dict, image_paths:list,
 
         X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=val_samples, random_state=42, shuffle=True) 
 
-    return X_train, y_train, X_val, y_val, X_test, y_test
+        return X_train, y_train, X_val, y_val, X_test, y_test
 
 def custom_save_patches(patch: torch.Tensor,
                         coords: dict, 
@@ -440,10 +401,50 @@ def create_new_dir(new_dir_path:str) -> None:
     os.makedirs(new_dir_path)
     
 def save_model(model_to_save, dir_to_create, fold, dic_results, epoch) -> None:
-    path_save = f'{dir_to_create}/fold_{fold}_epoch_{epoch}_iou_{dic_results}.pth'
+    path_save = f'{dir_to_create}/fold_{fold}_epoch_{epoch}_iou_{dic_results:.3f}.pth'
     
     # print(f'Training process has finished. Saving trained model at: {path_save}')
-    
-    path_save.startswith(f'fold_{fold}', 30)
-    [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 30)]
+    [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 27) or f.startswith(f'fold_{fold}', 28)]
     torch.save(model_to_save.state_dict(), path_save)
+    
+def mean_per_folder(MODELS: list) -> dict:
+    ''' Calculate the mean per folder
+    Args:
+    MODELS (list): list of models
+    Return:
+    dict: dictionaty with folder name as key and mean iou as value'''
+    #
+    mean_kfold_iou = np.zeros(5)
+    dic = {}
+    
+    # file path
+    n_patches = re.split(r"[/_]\s*", MODELS [0])[5]
+    # store the iou per fold 
+    for i, model in enumerate(MODELS): 
+        iou = float(re.split(r"[/_]\s*", model)[-1][:-4])
+        mean_kfold_iou[i] = iou 
+    
+    # calculate the mean
+    dic[n_patches] = round(mean_kfold_iou.mean(),3)
+    
+    return dic
+
+
+def interact_over_folder_mean(file_path): 
+    # list the subdirectories 
+    list_subdirectories = [f for f in file_path.iterdir() if f.is_dir()][1:]
+
+    final_means= {}
+    
+    for sub_dic in list_subdirectories:
+        # list the files in each subdirectory 
+        list_files_each_folder = list(Path(sub_dic).glob('**/*'))
+        list_files_each_folder.sort()
+        list_files_each_folder =  [str(d) for d in list_files_each_folder[1:]]
+        
+        # get the mean
+        dic = mean_per_folder(list_files_each_folder)
+
+        final_means.update(dic)
+        
+    return final_means

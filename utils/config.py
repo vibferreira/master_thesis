@@ -10,17 +10,21 @@ import torch
 # PATHS (IMAGES, MASKS, DESTINATION FOLDER)
 # =========================================================== #
 
-IMAGES_PATH = r'data\patches\images\1942'
-MASK_PATH = r'data\patches\masks\1942'
+IMAGES_PATH = '../data/patches/images/1942'
+MASK_PATH = '../data/patches/masks/1942'
+BEST_MODEL = '../best_model'
 
-image_paths = glob.glob(IMAGES_PATH +'\*.tif')
-mask_paths = glob.glob(MASK_PATH +'\*.tif')
+FILTER_PATH = 'data/geopackages/patch_keys.gpkg'
+TEST_DATASET_PATH = '../data/test_dataset'
+
+image_paths = glob.glob(IMAGES_PATH +'/*.tif')
+mask_paths = glob.glob(MASK_PATH +'/*.tif')
 
 # =========================================================== #
 # SET WHICH DEVICE TO USE
 # =========================================================== #
-# DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
-DEVICE = 'cpu'
+DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
+# DEVICE = 'cpu'
 
 # =========================================================== #
 # DATASET AND DATALOADER
@@ -38,7 +42,7 @@ N_CLASSES = 1
 # TRAINING AND VALIDATION LOOPS
 # =========================================================== #
 LR = 0.0001 # learning rate
-NUM_EPOCHS = 1
-BATCH_SIZE = 16
+NUM_EPOCHS = 100
+BATCH_SIZE = 4
 
 

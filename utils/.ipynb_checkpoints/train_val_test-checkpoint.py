@@ -75,8 +75,8 @@ def training(network,
     
     # averages per epoch
     avg_loss = current_loss / len(trainloader)
-    avg_iou = iou_train / len(trainloader)
-    avg_acc = iou_train / len(trainloader)
+    avg_iou = (iou_train / len(trainloader))*100
+    avg_acc = (acc / len(trainloader))*100
     
     # save
     training_history["avg_loss"].append(avg_loss.cpu().detach().numpy()) # save the avg loss
@@ -132,8 +132,8 @@ def val(network,
     avgACC = acc / len(testloader)
 
     # Print accuracy
-    print('IoU for fold %d: %d %%' % (fold, 100.0 * avgIOU))
-    print('--------------------------------')
+    # print('IoU for fold %d: %d %%' % (fold, 100.0 * avgIOU))
+    # print('--------------------------------')
     results = 100.0 * (avgIOU)
     
     # store results
@@ -210,6 +210,7 @@ def reset_weights(m):
 def k_fold_dataloaders(train_idx, 
                     test_idx, 
                     dataset):
+    torch.manual_seed(42)
     
     # Sample elements randomly from a given list of ids, no replacement.
     train_subsampler = torch.utils.data.SubsetRandomSampler(train_idx) 
