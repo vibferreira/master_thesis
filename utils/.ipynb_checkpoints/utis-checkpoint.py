@@ -11,7 +11,7 @@ from torchvision.utils import make_grid
 import segmentation_models_pytorch
 from sklearn.model_selection import train_test_split
 from pathlib import Path
-
+import pandas as pd
 
 import rasterio as rio
 from rasterio.transform import from_origin
@@ -210,7 +210,7 @@ def custom_split(filters:dict, image_paths:list,
     filters (dict): dict with the filtered paths by status
     test_size (float): percentage of the dataset that will be used to test
     data_portion (str):  'coarse_plus_fine_labels', 'fine_labels' or 'coarse_labels' define which portion of the data to use'''
-
+    
     # sample to the same size of the smallest dataset
     veg_filters = filters.copy()
 
@@ -223,6 +223,7 @@ def custom_split(filters:dict, image_paths:list,
 
     # get all veg_filter idx
     all_filter_idx = np.concatenate([i for i in veg_filters.values()])
+
     
     # random sample sample_size points from each filter class to create the TEST DATASET
     test_size = test_size/(sample_size*5) # 5 is the number of filters
@@ -231,7 +232,9 @@ def custom_split(filters:dict, image_paths:list,
     test_idx = np.concatenate([i for i in test_dic.values()])
     
     # get the remaining patches from the filters to be the X_train and X_val of the fine patches
+    random.seed(42)
     val_train_idxs = train_images_paths(all_filter_idx, test_idx)
+    sampled_all_idxs = random.sample(val_train_idxs, number_training_patchs)
 
     # Filter the paths from the path lists
     # Note the test dataset is the SAME for all data portions
@@ -251,14 +254,6 @@ def custom_split(filters:dict, image_paths:list,
     
     # Decide if using whole data or ONLY the filtered paths 
     if data_portion == 'all_labels': # all patches are used
-        all_X_idx = filtered_paths(image_paths, val_train_idxs) 
-        all_y_idx = filtered_paths(mask_paths, val_train_idxs) 
-        
-        # get only the given number 
-        random.seed(42)
-        all_coarse_idxs = [get_file_index(i) for i in all_X_idx]
-        sampled_all_idxs = random.sample(all_coarse_idxs, number_training_patchs)
-        
         # get the paths 
         X_idxs = filtered_paths(image_paths, sampled_all_idxs) 
         y_idxs = filtered_paths(mask_paths, sampled_all_idxs)
@@ -404,7 +399,8 @@ def save_model(model_to_save, dir_to_create, fold, dic_results, epoch) -> None:
     path_save = f'{dir_to_create}/fold_{fold}_epoch_{epoch}_iou_{dic_results:.3f}.pth'
     
     # print(f'Training process has finished. Saving trained model at: {path_save}')
-    [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 27) or f.startswith(f'fold_{fold}', 28)]
+    # [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 27) or f.startswith(f'fold_{fold}', 28)] #27 or 26
+    [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 25) or f.startswith(f'fold_{fold}', 26)] #27 or 26
     torch.save(model_to_save.state_dict(), path_save)
     
 def mean_per_folder(MODELS: list) -> dict:
@@ -416,31 +412,28 @@ def mean_per_folder(MODELS: list) -> dict:
     #
     mean_kfold_iou = np.zeros(5)
     dic = {}
-    
     # file path
-    n_patches = re.split(r"[/_]\s*", MODELS [0])[5]
+
+    n_patches = re.split(r"[/_]\s*", MODELS[0])[5]
     # store the iou per fold 
     for i, model in enumerate(MODELS): 
         iou = float(re.split(r"[/_]\s*", model)[-1][:-4])
         mean_kfold_iou[i] = iou 
-    
     # calculate the mean
     dic[n_patches] = round(mean_kfold_iou.mean(),3)
     
     return dic
 
-
-def interact_over_folder_mean(file_path): 
+def interact_over_folder_mean(file_path) -> dict: 
     # list the subdirectories 
-    list_subdirectories = [f for f in file_path.iterdir() if f.is_dir()][1:]
-
+    list_subdirectories = [f for f in file_path.iterdir() if f.is_dir() and '.ipynb_checkpoints' not in str(f)]
     final_means= {}
     
     for sub_dic in list_subdirectories:
         # list the files in each subdirectory 
         list_files_each_folder = list(Path(sub_dic).glob('**/*'))
         list_files_each_folder.sort()
-        list_files_each_folder =  [str(d) for d in list_files_each_folder[1:]]
+        list_files_each_folder =  [str(d) for d in list_files_each_folder if '.ipynb_checkpoints' not in str(d)]
         
         # get the mean
         dic = mean_per_folder(list_files_each_folder)
@@ -448,3 +441,19 @@ def interact_over_folder_mean(file_path):
         final_means.update(dic)
         
     return final_means
+
+def get_DF_with_the_means(my_file) -> pd.DataFrame: 
+    
+    # GET DICT WITH THE MEANS
+    means = utis.interact_over_folder_mean(my_file) # 
+    df = pd.DataFrame.from_dict(means, orient='index').reset_index()
+    df.columns = ['NUMBER OF PATCHES', 'IOU']
+    
+    # CREATTING A COLUMN WITH THE FILE NAME
+    df = df.assign(data_portion = lambda x: re.split(r"[/_.]\s*", str(my_file))[-2])
+    
+    # CHANGE TO NUMERIC DATA TYPE
+    df['NUMBER OF PATCHES'] = pd.to_numeric(df["NUMBER OF PATCHES"]) 
+    df.sort_values(by = 'NUMBER OF PATCHES', inplace=True) # SORTING BY NUMBER OF PATCHES
+    
+    return df 

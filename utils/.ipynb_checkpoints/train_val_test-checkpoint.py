@@ -42,7 +42,8 @@ def training(network,
           loss_function, 
           save_path, 
           epoch,
-          training_history):
+          training_history, 
+          scaler):
     
     current_loss = 0.0 # Set current loss value
     iou_train, acc = 0.0, 0.0  # metrics
@@ -55,14 +56,24 @@ def training(network,
         inputs, targets = (x.to(config.DEVICE), y.to(config.DEVICE))
 
         # training loop
-        optimizer.zero_grad() # Zero the gradients
-        outputs = network(inputs)# Perform forward pass
-        loss = loss_function(outputs, targets) # Compute loss
-        loss.backward()# Perform backward pass
-        optimizer.step() # Perform optimization
+        # optimizer.zero_grad() # Zero the gradients
+        # outputs = network(inputs) # Perform forward pass
+        # loss = loss_function(outputs, targets) # Compute loss
+        # loss.backward()# Perform backward pass
+        # optimizer.step() # Perform optimization
+        
+        # forward with autocast        
+        with autocast():
+            outputs = network(inputs)
+            loss = loss_function(outputs, targets)
+            
+        optimizer.zero_grad()  # zero out any previously accumulated gradients    
+        scaler.scale(loss).backward() # study this 
+        scaler.step(optimizer)
+        scaler.update()
         
         # total loss
-        current_loss += loss
+        current_loss += loss.item()
         
         # metrics      
         all_metrics = metrics.metrics(outputs, targets)
@@ -79,7 +90,7 @@ def training(network,
     avg_acc = (acc / len(trainloader))*100
     
     # save
-    training_history["avg_loss"].append(avg_loss.cpu().detach().numpy()) # save the avg loss
+    training_history["avg_loss"].append(avg_loss) # save the avg loss
     training_history["accuracy"].append(avg_acc) # save the acc
     training_history["iou"].append(avg_iou) # save the acc
     
@@ -210,6 +221,7 @@ def reset_weights(m):
 def k_fold_dataloaders(train_idx, 
                     test_idx, 
                     dataset):
+    # 
     torch.manual_seed(42)
     
     # Sample elements randomly from a given list of ids, no replacement.

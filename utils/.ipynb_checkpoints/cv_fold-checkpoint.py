@@ -1,6 +1,7 @@
 import glob
 import copy
 import os
+import numpy as np
 
 import model
 import metrics
@@ -30,28 +31,28 @@ from sklearn.model_selection import KFold
 
 geo_df = gpd.read_file(config.FILTER_PATH) # contains the idxs with a selection of non-noisy and noisy data
 
-
 def kfold_cross_validation(n_splits, 
                            filters, 
                            val_transform, 
                            train_transform, 
-                           save_path) -> None: 
+                           save_path,
+                           scaler) -> None: 
     
     # Define the K-fold Cross Validator
     kfold = KFold(n_splits=n_splits, shuffle=True, random_state=42)
 
     save_models = {}
 
-    for n_patches in [20]: 
+    for n_patches in [370]: #np.arange(20, 370, 35)
 
         # Define X_train, X_val, X_test
         data_portion = 'all_labels'
         X_train, y_train = utis.custom_split(filters, test_size=40, 
-                                                                           image_paths=image_paths, 
-                                                                           mask_paths=mask_paths,  
-                                                                           data_portion=data_portion,
-                                                                           DEST_PATH = TEST_DATASET_PATH,
-                                                                           number_training_patchs=n_patches)
+                                                                   image_paths=config.image_paths, 
+                                                                   mask_paths=config.mask_paths,  
+                                                                   data_portion='all_labels',
+                                                                   DEST_PATH = config.TEST_DATASET_PATH,
+                                                                   number_training_patchs=n_patches)
         # Datasets
         train_dataset = HistoricalImagesDataset(X_train, y_train, transform=train_transform, split_type=None)
 
@@ -68,7 +69,7 @@ def kfold_cross_validation(n_splits,
         # # # initialize a dictionary to store VALIDATION history (keep track on VALIDATION)
         validation_history = {"avg_val_loss": [], "val_accuracy": [], "IoU_val":[]}
 
-        for fold,(train_idx, test_idx) in enumerate(kfold.split(train_datasets)):
+        for fold,(train_idx, test_idx) in enumerate(kfold.split(train_dataset)):
             print('------------fold no---------{}----------------------'.format(fold))
             print(f'''Training the network for {config.NUM_EPOCHS} epochs, with a batch size of {config.BATCH_SIZE}''') # try with logger
 
@@ -78,7 +79,7 @@ def kfold_cross_validation(n_splits,
             # get the dataloader based on the kfold indexs
             trainloader, testloader = train_val_test.k_fold_dataloaders(train_idx, 
                             test_idx, 
-                            train_datasets)
+                            train_dataset)
 
             # Model, optmizer, loss
             unet = model.unet_model.to(config.DEVICE) # initialize the model
@@ -93,7 +94,7 @@ def kfold_cross_validation(n_splits,
                 trained = train_val_test.training(network=unet, 
                                                   trainloader=trainloader, 
                                                   optimizer=opt, loss_function=lossFunc, 
-                                                  save_path=save_path, epoch=epoch, training_history=training_history)
+                                                  save_path=save_path, epoch=epoch, training_history=training_history, scaler=scaler)
                 dic_results, validated = train_val_test.val(unet, testloader, epoch, lossFunc, validation_history, fold)
 
                 # create a folder named with the number of patches used o train
@@ -110,6 +111,7 @@ def kfold_cross_validation(n_splits,
 
             save_models[fold] = copy.deepcopy(unet)
             del unet
+            torch.cuda.empty_cache()
 
 # Testing if it works 
 if __name__ == '__main__':
@@ -134,12 +136,16 @@ if __name__ == '__main__':
           A.Normalize(mean=(0.512), std=(0.167)),
           ToTensorV2()])
     
+    # Autocasting 
+    scaler = GradScaler()
+    
     # calling cross validation
     kfold_cross_validation(5, 
                            filters, 
                            val_transform, 
                            train_transform, 
-                           save_path = 'best_model/coarse_sizes')
+                           save_path = 'best_model/fine_sizes', 
+                           scaler=scaler)
 
     # one_path = 'best_model/coarse_sizes/20'
     # print(glob.glob(one_path + '/*'))
