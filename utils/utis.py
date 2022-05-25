@@ -223,7 +223,6 @@ def custom_split(filters:dict, image_paths:list,
 
     # get all veg_filter idx
     all_filter_idx = np.concatenate([i for i in veg_filters.values()])
-
     
     # random sample sample_size points from each filter class to create the TEST DATASET
     test_size = test_size/(sample_size*5) # 5 is the number of filters
@@ -249,7 +248,7 @@ def custom_split(filters:dict, image_paths:list,
     X_test = glob.glob(f'{DEST_PATH}/images' +'/*.tif') 
     y_test = glob.glob(f'{DEST_PATH}/masks' +'/*.tif') 
     
-    portions = ['all_labels','coarse_plus_fine_labels', 'fine_labels', 'coarse_labels']
+    portions = ['all_labels','coarse_plus_fine_labels', 'fine_labels', 'coarse_labels', 'all_coarse_labels']
     assert np.isin(data_portion, portions)
     
     # Decide if using whole data or ONLY the filtered paths 
@@ -259,6 +258,17 @@ def custom_split(filters:dict, image_paths:list,
         y_idxs = filtered_paths(mask_paths, sampled_all_idxs)
         
         return X_idxs, y_idxs
+    
+    elif data_portion == 'all_coarse_labels':
+        X_test = filtered_paths(image_paths, all_filter_idx) 
+        y_test = filtered_paths(mask_paths, all_filter_idx)
+        
+        X_train = train_images_paths(image_paths, X_test)
+        y_train = train_images_paths(mask_paths, y_test)
+        
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.3, random_state=42, shuffle=True)   
+        
+        return X_train, y_train, X_val, y_val, X_test, y_test
         
     if data_portion == 'coarse_labels': # if only coarse patches are used
         coarse_X_idx = filtered_paths(image_paths, val_train_idxs) 
@@ -399,10 +409,10 @@ def save_model(model_to_save, dir_to_create, fold, dic_results, epoch) -> None:
     path_save = f'{dir_to_create}/fold_{fold}_epoch_{epoch}_iou_{dic_results:.3f}.pth'
     
     # print(f'Training process has finished. Saving trained model at: {path_save}')
-    # [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 27) or f.startswith(f'fold_{fold}', 28)] #27 or 26
-    [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 25) or f.startswith(f'fold_{fold}', 26)] #27 or 26
+    [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 27) or f.startswith(f'fold_{fold}', 28)] #27 or 26
+    # [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 25) or f.startswith(f'fold_{fold}', 26)] #27 or 26
     torch.save(model_to_save.state_dict(), path_save)
-    
+
 def mean_per_folder(MODELS: list) -> dict:
     ''' Calculate the mean per folder
     Args:
@@ -411,6 +421,7 @@ def mean_per_folder(MODELS: list) -> dict:
     dict: dictionaty with folder name as key and mean iou as value'''
     #
     mean_kfold_iou = np.zeros(5)
+    std_dev_iou = np.zeros(5)
     dic = {}
     # file path
 
@@ -420,11 +431,43 @@ def mean_per_folder(MODELS: list) -> dict:
         iou = float(re.split(r"[/_]\s*", model)[-1][:-4])
         mean_kfold_iou[i] = iou 
     # calculate the mean
-    dic[n_patches] = round(mean_kfold_iou.mean(),3)
+    dic[n_patches] = [round(mean_kfold_iou.mean(),3), round(mean_kfold_iou.std(),3)]
+    
     
     return dic
 
-def interact_over_folder_mean(file_path) -> dict: 
+def get_mean_independet_test_dataset(MODELS:list, 
+                                     test_dataloader, 
+                                     X_test:list):
+    
+    n_patches = re.split(r"[/_]\s*", MODELS[0])[5]
+    iou_mean = np.zeros(len(MODELS))
+    dic = {}
+    
+    for n, i in enumerate(MODELS):
+        model_ = model.unet_model.to(config.DEVICE)
+        model_.load_state_dict(torch.load(i))
+
+        # get the y_hat and y_true
+        y_hat, y_true, y_score = train_val_test.make_predictions(model_, 
+                                                                 test_dataloader, 
+                                                                 X_test, 
+                                                                 folder=None, 
+                                                                 print_pred=False, 
+                                                                 save_patches=False)
+        # get IoU
+        all_metrics = metrics.metrics(y_hat, y_true)
+        iou = all_metrics['iou']
+        iou_mean[n] = iou * 100
+    
+    dic[n_patches] = [iou_mean.mean(), iou_mean.std()]
+    
+    return dic
+
+def interact_over_folder_mean(file_path, 
+                              independent_test=False, 
+                              test_dataloader=None, 
+                              X_test=None) -> dict: 
     # list the subdirectories 
     list_subdirectories = [f for f in file_path.iterdir() if f.is_dir() and '.ipynb_checkpoints' not in str(f)]
     final_means= {}
@@ -439,24 +482,38 @@ def interact_over_folder_mean(file_path) -> dict:
         dic = mean_per_folder(list_files_each_folder)
         
         # get the mean in the independent dataset
+        if independent_test:
+            dic = get_mean_independet_test_dataset(list_files_each_folder, test_dataloader, X_test)
+            
+        else:
+            # get the simple mean
+            dic = mean_per_folder(list_files_each_folder)
         
-
         final_means.update(dic)
         
     return final_means
 
-def get_DF_with_the_means(my_file) -> pd.DataFrame: 
+def get_DF_with_the_means(my_file, 
+                          label,
+                          independent_test=False, 
+                          test_dataloader=None, 
+                          X_test=None) -> pd.DataFrame: 
     
     # GET DICT WITH THE MEANS
-    means = utis.interact_over_folder_mean(my_file) # 
+    if independent_test:
+        means = interact_over_folder_mean(my_file, independent_test=True, test_dataloader=test_dataloader, X_test=X_test)
+    else:
+        means = utis.interact_over_folder_mean(my_file) # 
+        
     df = pd.DataFrame.from_dict(means, orient='index').reset_index()
-    df.columns = ['NUMBER OF PATCHES', 'IOU']
+    df.columns = ['N_PATCHES', 'IOU', 'STD_DEV']
     
-    # CREATTING A COLUMN WITH THE FILE NAME
-    df = df.assign(data_portion = lambda x: re.split(r"[/_.]\s*", str(my_file))[-2])
+    # CREATING A COLUMN WITH THE FILE NAME
+    file_name=re.split(r"[/_.]\s*", str(my_file))[-2]
+    df = df.assign(DATA_PORTION = lambda x: f'{file_name}_{label}')
     
     # CHANGE TO NUMERIC DATA TYPE
-    df['NUMBER OF PATCHES'] = pd.to_numeric(df["NUMBER OF PATCHES"]) 
-    df.sort_values(by = 'NUMBER OF PATCHES', inplace=True) # SORTING BY NUMBER OF PATCHES
+    df['N_PATCHES'] = pd.to_numeric(df['N_PATCHES']) 
+    df.sort_values(by = 'N_PATCHES', inplace=True) # SORTING BY NUMBER OF PATCHES
     
     return df 

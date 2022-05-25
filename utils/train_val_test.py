@@ -45,6 +45,9 @@ def training(network,
           training_history, 
           scaler):
     
+    # set the model in training mode
+    network.train()
+    
     current_loss = 0.0 # Set current loss value
     iou_train, acc = 0.0, 0.0  # metrics
     loop = tqdm(trainloader, leave=False) # training tracker
@@ -110,9 +113,12 @@ def val(network,
         validation_history,
         fold):
     
+    # set the model in evaluation mode
+    network.eval()
+    
     current_loss = 0.0
     iou_val, acc = 0.0,0.0
-    
+
     with torch.no_grad():
         loop = tqdm(testloader, leave=False)
         

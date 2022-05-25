@@ -43,16 +43,16 @@ def kfold_cross_validation(n_splits,
 
     save_models = {}
 
-    for n_patches in [370]: #np.arange(20, 370, 35)
+    for n_patches in np.arange(20, 400, 35): #np.arange(20, 370, 35)
 
         # Define X_train, X_val, X_test
         data_portion = 'all_labels'
         X_train, y_train = utis.custom_split(filters, test_size=40, 
-                                                                   image_paths=config.image_paths, 
-                                                                   mask_paths=config.mask_paths,  
-                                                                   data_portion='all_labels',
-                                                                   DEST_PATH = config.TEST_DATASET_PATH,
-                                                                   number_training_patchs=n_patches)
+                                                      image_paths=config.image_paths, 
+                                                      mask_paths=config.mask_paths,  
+                                                      data_portion='all_labels',
+                                                      DEST_PATH = config.TEST_DATASET_PATH,
+                                                      number_training_patchs=n_patches)
         # Datasets
         train_dataset = HistoricalImagesDataset(X_train, y_train, transform=train_transform, split_type=None)
 
@@ -108,10 +108,8 @@ def kfold_cross_validation(n_splits,
                     utis.save_model(unet, dir_to_create, fold, dic_results,epoch)
                     best_accuracy = dic_results
     
-
-            save_models[fold] = copy.deepcopy(unet)
-            del unet
-            torch.cuda.empty_cache()
+            del unet # delete model instance after each fold
+            torch.cuda.empty_cache() # clean cuda cache
 
 # Testing if it works 
 if __name__ == '__main__':
@@ -144,7 +142,7 @@ if __name__ == '__main__':
                            filters, 
                            val_transform, 
                            train_transform, 
-                           save_path = 'best_model/fine_sizes', 
+                           save_path = 'best_model/coarse_sizes', 
                            scaler=scaler)
 
     # one_path = 'best_model/coarse_sizes/20'
