@@ -36,129 +36,267 @@ def force_cudnn_initialization():
     dev = torch.device('cuda')
     torch.nn.functional.conv2d(torch.zeros(s, s, s, s, device=dev), torch.zeros(s, s, s, s, device=dev))
 
-def training(network, 
-          trainloader, 
-          optimizer, 
-          loss_function, 
-          save_path, 
-          epoch,
-          training_history, 
-          scaler):
+# def training(network, 
+#           trainloader, 
+#           optimizer, 
+#           loss_function, 
+#           save_path, 
+#           epoch,
+#           training_history, 
+#           scaler):
     
-    # set the model in training mode
-    network.train()
+#     # set the model in training mode
+#     network.train()
     
-    current_loss = 0.0 # Set current loss value
-    iou_train, acc = 0.0, 0.0  # metrics
-    loop = tqdm(trainloader, leave=False) # training tracker
+#     current_loss = 0.0 # Set current loss value
+#     iou_train, acc = 0.0, 0.0  # metrics
+#     loop = tqdm(trainloader, leave=False) # training tracker
     
-    # Iterate over the DataLoader for training data
-    for i, (x, y) in enumerate(loop, 0):
+#     # Iterate over the DataLoader for training data
+#     for i, (x, y) in enumerate(loop, 0):
 
-        # Get inputs
-        inputs, targets = (x.to(config.DEVICE), y.to(config.DEVICE))
+#         # Get inputs
+#         inputs, targets = (x.to(config.DEVICE), y.to(config.DEVICE))
 
-        # training loop
-        # optimizer.zero_grad() # Zero the gradients
-        # outputs = network(inputs) # Perform forward pass
-        # loss = loss_function(outputs, targets) # Compute loss
-        # loss.backward()# Perform backward pass
-        # optimizer.step() # Perform optimization
+#         # training loop
+#         # optimizer.zero_grad() # Zero the gradients
+#         # outputs = network(inputs) # Perform forward pass
+#         # loss = loss_function(outputs, targets) # Compute loss
+#         # loss.backward()# Perform backward pass
+#         # optimizer.step() # Perform optimization
         
-        # forward with autocast        
-        with autocast():
-            outputs = network(inputs)
-            loss = loss_function(outputs, targets)
+#         # forward with autocast        
+#         with autocast():
+#             outputs = network(inputs)
+#             loss = loss_function(outputs, targets)
             
-        optimizer.zero_grad()  # zero out any previously accumulated gradients    
-        scaler.scale(loss).backward() # study this 
-        scaler.step(optimizer)
-        scaler.update()
+#         optimizer.zero_grad()  # zero out any previously accumulated gradients    
+#         scaler.scale(loss).backward() # study this 
+#         scaler.step(optimizer)
+#         scaler.update()
         
-        # total loss
-        current_loss += loss.item()
+#         # total loss
+#         current_loss += loss.item()
+        
+#         # metrics      
+#         all_metrics = metrics.metrics(outputs, targets)
+#         iou_train += all_metrics['iou']
+#         acc += all_metrics['acc']
+        
+#         print('iou',iou_train)
+        
+#         # update tqdm
+#         loop.set_description(f'Training Epoch [{epoch}/{config.NUM_EPOCHS}]')
+#         loop.set_postfix(loss_train=loss.item(), iou_train = iou_train, acc=acc)
+    
+#     # averages per epoch
+#     avg_loss = current_loss / len(trainloader)
+#     avg_iou = (iou_train / len(trainloader))*100
+#     avg_acc = (acc / len(trainloader))*100
+    
+#     # save
+#     training_history["avg_loss"].append(avg_loss) # save the avg loss
+#     training_history["accuracy"].append(avg_acc) # save the acc
+#     training_history["iou"].append(avg_iou) # save the acc
+    
+#     # WANDB
+#     # wandb.log({
+#     # # "Examples": example_images,
+#     # "Train Loss": avg_loss,
+#     # "Train Accuracy": avg_acc,
+#     # "IoU_train":avg_iou})
+    
+#     return training_history
+
+# def val(network, 
+#         testloader, 
+#         epoch,
+#         loss_function,
+#         validation_history,
+#         fold):
+    
+#     # set the model in evaluation mode
+#     network.eval()
+    
+#     current_loss = 0.0
+#     iou_val, acc = 0.0,0.0
+
+#     with torch.no_grad():
+#         loop = tqdm(testloader, leave=False)
+        
+#         # Iterate over the test data and generate predictions
+#         for i, (x, y) in enumerate(loop, 0):
+
+#             # Get inputs
+#             inputs, targets = (x.to(config.DEVICE), y.to(config.DEVICE))
+
+#             # Generate outputs
+#             outputs = network(inputs)
+            
+#             #loss
+#             loss = loss_function(outputs, targets) 
+#             current_loss += loss
+
+#             # metrics      
+#             all_metrics = metrics.metrics(outputs, targets)
+#             iou_val += all_metrics['iou']
+#             acc += all_metrics['acc']
+            
+#             print(iou_val)
+#             # update tqdm
+#             loop.set_description(f'Validation Epoch [{epoch}/{config.NUM_EPOCHS}]')
+#             loop.set_postfix(iou_val = iou_val, acc = acc)
+        
+#     avgIOU = iou_val / len(testloader) * 100
+#     avgLoss = current_loss / len(testloader)
+#     avgACC = acc / len(testloader) * 100
+
+#     # Print accuracy
+#     # print('IoU for fold %d: %d %%' % (fold, 100.0 * avgIOU))
+#     # print('--------------------------------')
+#     results = 100.0 * (avgIOU)
+    
+#     # store results
+#     validation_history["avg_val_loss"].append(avgLoss.cpu().detach().numpy()) # save the avg loss
+#     validation_history["val_accuracy"].append(avgACC) # save the acc
+#     validation_history["IoU_val"].append(avgIOU) # save the acc
+    
+#     return results, validation_history
+
+
+def train(model, dataloader, opt, lossFunc, epoch, scaler, training_history):
+    # set the model in training mode
+    model.train()
+
+    # Save total train loss
+    totalTrainLoss = 0
+    
+    # metrics
+    accuracy = 0
+    iou = 0
+    f1score = 0
+    dice = 0
+    
+    # loop over the training set
+    loop = tqdm(dataloader, leave=False)
+    for x, y in loop:
+        # send the input to the device
+        (x, y) = (x.to(config.DEVICE), y.float().to(config.DEVICE))
+        
+#         # forward with autocast        
+#         with autocast():
+#             pred = model(x)
+#             loss = lossFunc(pred, y)
+            
+#         optim.zero_grad()  # zero out any previously accumulated gradients    
+#         scaler.scale(loss).backward() # study this 
+#         scaler.step(optim)
+#         scaler.update()
+        
+        # perform a forward pass and calculate the training loss
+        pred = model(x)
+        loss = lossFunc(pred, y)
+        
+        opt.zero_grad()  # zero out any previously accumulated gradients
+        loss.backward() # obtain the gradients with respect to the loss
+        opt.step() # perform one step of gradient descendent
+        
+        totalTrainLoss += loss  # add the loss to the total training loss so far 
         
         # metrics      
-        all_metrics = metrics.metrics(outputs, targets)
-        iou_train += all_metrics['iou']
-        acc += all_metrics['acc']
+        all_metrics = metrics.metrics(pred, y)
+        accuracy += all_metrics['acc']
+        iou += all_metrics['iou']
+        f1score += all_metrics['f1score']
+        dice += all_metrics['dice_coeff']
         
         # update tqdm
         loop.set_description(f'Training Epoch [{epoch}/{config.NUM_EPOCHS}]')
-        loop.set_postfix(loss_train=loss.item(), iou_train = iou_train, acc=acc)
+        loop.set_postfix(loss=loss.item(), acc = all_metrics['acc'], iou=all_metrics['iou'], dice = all_metrics['dice_coeff'])
+        
+    # calculate the average training loss PER EPOCH
+    avgTrainLoss = totalTrainLoss / len(dataloader)
+    avgAccLoss = accuracy / len(dataloader)
+    avgIOU = iou / len(dataloader)
+    avgF1score = f1score / len(dataloader)
+    avgDice = dice / len(dataloader)
     
-    # averages per epoch
-    avg_loss = current_loss / len(trainloader)
-    avg_iou = (iou_train / len(trainloader))*100
-    avg_acc = (acc / len(trainloader))*100
-    
-    # save
-    training_history["avg_loss"].append(avg_loss) # save the avg loss
-    training_history["accuracy"].append(avg_acc) # save the acc
-    training_history["iou"].append(avg_iou) # save the acc
+    ## update training history
+    training_history["avg_train_loss"].append(avgTrainLoss.cpu().detach().numpy()) # save the avg loss
+    training_history["train_accuracy"].append(avgAccLoss) # save the acc 
+    training_history["IoU"].append(avgIOU) # save the acc 
     
     # WANDB
     # wandb.log({
     # # "Examples": example_images,
-    # "Train Loss": avg_loss,
-    # "Train Accuracy": avg_acc,
-    # "IoU_train":avg_iou})
+    # "Train Loss": avgTrainLoss,
+    # "Train Accuracy": avgAccLoss,
+    # "IoU_train":avgIOU})
     
     return training_history
 
-def val(network, 
-        testloader, 
-        epoch,
-        loss_function,
-        validation_history,
-        fold):
+def validation(model, dataloader, lossFunc, epoch, validation_history):
     
     # set the model in evaluation mode
-    network.eval()
+    model.eval()
+    # Save total train loss
+    totalValLoss = 0
     
-    current_loss = 0.0
-    iou_val, acc = 0.0,0.0
-
+    # metrics
+    accuracy_val = 0
+    iou_val = 0
+    f1score_val = 0
+    
+    example_pred = []
+    example_gt = []
+    # switch off autograd
     with torch.no_grad():
-        loop = tqdm(testloader, leave=False)
+        # loop over the validation set
+        loop = tqdm(dataloader, leave=False)
         
-        # Iterate over the test data and generate predictions
-        for i, (x, y) in enumerate(loop, 0):
-
-            # Get inputs
-            inputs, targets = (x.to(config.DEVICE), y.to(config.DEVICE))
-
-            # Generate outputs
-            outputs = network(inputs)
+        for batch_idx, (x_val, y_val) in enumerate(loop):
+            # send the input to the device
+            (x_val, y_val) = (x_val.to(config.DEVICE), y_val.to(config.DEVICE))
             
-            #loss
-            loss = loss_function(outputs, targets) 
-            current_loss += loss
-
+            # make the predictions and calculate the validation loss
+            pred_val = model(x_val)
+            loss = lossFunc(pred_val, y_val)
+            totalValLoss += loss
+            
             # metrics      
-            all_metrics = metrics.metrics(outputs, targets)
+            all_metrics = metrics.metrics(pred_val, y_val)
+            accuracy_val += all_metrics['acc']
             iou_val += all_metrics['iou']
-            acc += all_metrics['acc']
+            f1score_val += all_metrics['f1score']
+
+            # WandB – Log images in your test dataset automatically, along with predicted and true labels by passing pytorch tensors with image data into wandb.Image
+            # example_pred.append(wandb.Image(pred_val[0], caption=f"pred_iter_n_{batch_idx}"))
+            # example_gt.append(wandb.Image(y_val[0].float(), caption=f"gt_iter_n_{batch_idx}"))
             
             # update tqdm
             loop.set_description(f'Validation Epoch [{epoch}/{config.NUM_EPOCHS}]')
-            loop.set_postfix(iou_val = iou_val, acc = acc)
-        
-    avgIOU = iou_val / len(testloader)
-    avgLoss = current_loss / len(testloader)
-    avgACC = acc / len(testloader)
+            loop.set_postfix(loss_val=loss.item(), acc_val = all_metrics['acc'], iou_val=all_metrics['iou'])
+                        
+    # calculate the average VALIDATION loss PER EPOCH
+    avgValLoss = totalValLoss / len(dataloader)
+    avgAccLoss = accuracy_val / len(dataloader)
+    avgIOU = iou_val / len(dataloader)
+    avgF1score = f1score_val / len(dataloader)
 
-    # Print accuracy
-    # print('IoU for fold %d: %d %%' % (fold, 100.0 * avgIOU))
-    # print('--------------------------------')
-    results = 100.0 * (avgIOU)
-    
-    # store results
-    validation_history["avg_val_loss"].append(avgLoss.cpu().detach().numpy()) # save the avg loss
-    validation_history["val_accuracy"].append(avgACC) # save the acc
+    ## update VALIDATION history
+    validation_history["avg_val_loss"].append(avgValLoss.cpu().detach().numpy()) # save the avg loss
+    validation_history["val_accuracy"].append(avgAccLoss) # save the acc
     validation_history["IoU_val"].append(avgIOU) # save the acc
     
-    return results, validation_history
+    # WANDB
+    # wandb.log({
+    # "Predictions": example_pred,
+    # "GT": example_gt,
+    # "Val Accuracy": avgAccLoss,
+    # "Val Loss": avgValLoss,
+    # "IoU_val": avgIOU})
+    
+    return validation_history
     
 def make_predictions(model, 
                      dataloader, 
@@ -231,18 +369,23 @@ def k_fold_dataloaders(train_idx,
     torch.manual_seed(42)
     
     # Sample elements randomly from a given list of ids, no replacement.
-    train_subsampler = torch.utils.data.SubsetRandomSampler(train_idx) 
-    test_subsampler = torch.utils.data.SubsetRandomSampler(test_idx)
+    train_subsampler = torch.utils.data.Subset(dataset, train_idx) 
+    test_subsampler = torch.utils.data.Subset(dataset, test_idx)
     # print('number of train samples', len(train_subsampler))
 
     # Define data loaders for training and testing data in this fold
     trainloader = torch.utils.data.DataLoader(
-                      dataset, 
-                      batch_size=config.BATCH_SIZE, sampler=train_subsampler)
+                      train_subsampler, 
+                      batch_size=config.BATCH_SIZE,
+                      shuffle = True
+                      # sampler=train_subsampler
+    )
 
     testloader = torch.utils.data.DataLoader(
-                      dataset,
-                      batch_size=config.BATCH_SIZE, sampler=test_subsampler)
+                      test_subsampler,
+                      batch_size=config.BATCH_SIZE,
+                      shuffle = True
+                      # sampler=test_subsampler
+    )
 
-    
     return trainloader, testloader

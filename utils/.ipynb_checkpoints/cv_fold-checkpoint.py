@@ -19,6 +19,8 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.cuda.amp import GradScaler, autocast
 import segmentation_models_pytorch as smp
+from torch.optim.lr_scheduler import ReduceLROnPlateau
+
 
 import albumentations as A
 import albumentations.augmentations.functional as F
@@ -36,14 +38,15 @@ def kfold_cross_validation(n_splits,
                            val_transform, 
                            train_transform, 
                            save_path,
-                           scaler) -> None: 
+                           scaler,
+                           path_) -> None: 
     
     # Define the K-fold Cross Validator
     kfold = KFold(n_splits=n_splits, shuffle=True, random_state=42)
 
     save_models = {}
 
-    for n_patches in np.arange(20, 400, 35): #np.arange(20, 370, 35)
+    for n_patches in  np.arange(20, 400, 35): #np.arange(20, 370, 35) # np.arange(20, 400, 35)
 
         # Define X_train, X_val, X_test
         data_portion = 'all_labels'
@@ -64,7 +67,7 @@ def kfold_cross_validation(n_splits,
         print(dir_to_create)
 
         # # initialize a dictionary to store TRAINING history (keep track on training)
-        training_history = {"avg_loss": [], "accuracy": [], "iou":[]} # initialize a dictionary to store TRAINING history (keep track on training)
+        training_history = {"avg_train_loss": [], "train_accuracy": [], "IoU":[]} # initialize a dictionary to store TRAINING history (keep track on training)
 
         # # # initialize a dictionary to store VALIDATION history (keep track on VALIDATION)
         validation_history = {"avg_val_loss": [], "val_accuracy": [], "IoU_val":[]}
@@ -77,38 +80,52 @@ def kfold_cross_validation(n_splits,
             best_accuracy = 0.0
 
             # get the dataloader based on the kfold indexs
-            trainloader, testloader = train_val_test.k_fold_dataloaders(train_idx, 
+            trainloader, testloader = train_val_test.k_fold_dataloaders(
+                            train_idx, 
                             test_idx, 
                             train_dataset)
+            
+            print('N of train samples', len(trainloader))
+            print('N of test samples', len(testloader))
 
             # Model, optmizer, loss
             unet = model.unet_model.to(config.DEVICE) # initialize the model
             opt = optim.Adam(unet.parameters(), lr=config.LR)
             lossFunc = smp.losses.DiceLoss(smp.losses.BINARY_MODE, from_logits=True)
             scaler = GradScaler()
+            scheduler = ReduceLROnPlateau(opt, mode='max', factor=0.1, patience=10, verbose=True)
 
-            # reset weights
-            # unet.apply(train_val_test.reset_weights)
 
-            for epoch in range(0, config.NUM_EPOCHS):
-                trained = train_val_test.training(network=unet, 
-                                                  trainloader=trainloader, 
-                                                  optimizer=opt, loss_function=lossFunc, 
-                                                  save_path=save_path, epoch=epoch, training_history=training_history, scaler=scaler)
-                dic_results, validated = train_val_test.val(unet, testloader, epoch, lossFunc, validation_history, fold)
+            for epoch in range(0, config.NUM_EPOCHS):        
+                trained = train_val_test.train(unet, 
+                                               trainloader, 
+                                               opt=opt, 
+                                               lossFunc=lossFunc, 
+                                               epoch=epoch, 
+                                               scaler=scaler, 
+                                               training_history=training_history)
+                
+                validated = train_val_test.validation(unet, 
+                                       testloader, 
+                                       lossFunc, 
+                                       epoch,
+                                       validation_history)
+                
+                # scheduler.step(validated['IoU_val'][-1])
 
                 # create a folder named with the number of patches used o train
                 if not os.path.exists(dir_to_create):
                     utis.create_new_dir(dir_to_create)
 
                 # Save best model
-                if dic_results > best_accuracy and epoch > 10: # maybe add a minimum number of epochs as conditions
+                if validated["IoU_val"][-1] > best_accuracy and epoch > 10: # maybe add a minimum number of epochs as conditions
                     # Saving the model
-                    results[fold] = dic_results
-                    utis.save_model(unet, dir_to_create, fold, dic_results,epoch)
-                    best_accuracy = dic_results
+                    results[fold] = validated["IoU_val"][-1]
+                    utis.save_model(unet, dir_to_create, fold, validated["IoU_val"][-1],epoch, path_)
+                    best_accuracy = validated["IoU_val"][-1]
     
             del unet # delete model instance after each fold
+            del opt # delete the optmizer instance after each fold
             torch.cuda.empty_cache() # clean cuda cache
 
 # Testing if it works 
@@ -138,12 +155,14 @@ if __name__ == '__main__':
     scaler = GradScaler()
     
     # calling cross validation
+    path_ = 'coarse_sizes'
     kfold_cross_validation(5, 
                            filters, 
                            val_transform, 
                            train_transform, 
-                           save_path = 'best_model/coarse_sizes', 
-                           scaler=scaler)
+                           save_path = f'best_model/{path_}', 
+                           scaler=scaler,
+                           path_=path_)
 
     # one_path = 'best_model/coarse_sizes/20'
     # print(glob.glob(one_path + '/*'))

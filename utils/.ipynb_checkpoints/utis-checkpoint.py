@@ -333,7 +333,7 @@ def custom_save_patches(patch: torch.Tensor,
                 crs = crs, 
                 transform=transform) as dst:
                 dst.write(patch[np.newaxis,:,:]) # add a new axis, required by rasterio 
-            
+
 def count_data_dist(y_test: list) -> np.array :
     ''' Count bins on numpy array
     y_test(list): list of mask images'''
@@ -359,8 +359,12 @@ def plot_pizza(y_test: list, title:str) -> None:
         
     f_counts = count_data_dist(y_test)
     df_avg_veg = {'average vegetation count': f_counts, 'label': ['non-trees','trees']}
-    fig = px.pie(df_avg_veg, names='label', values='average vegetation count', color_discrete_sequence=px.colors.diverging.RdYlGn_r, 
-    title=f'Percentage of trees and non-trees in the {title}')
+
+    fig = px.pie(df_avg_veg, names='label', 
+                 values='average vegetation count', 
+                 color='label',
+                 color_discrete_map={'non-trees':'#89890A','trees':'#0B950D'}, 
+                 title=f'Percentage of trees and non-trees in the {title}')
 
     fig.update_layout(legend=dict(
         yanchor="top",
@@ -405,12 +409,14 @@ def create_new_dir(new_dir_path:str) -> None:
     new_dir_path(str): new directory path'''
     os.makedirs(new_dir_path)
     
-def save_model(model_to_save, dir_to_create, fold, dic_results, epoch) -> None:
+def save_model(model_to_save, dir_to_create, fold, dic_results, epoch, path_) -> None:
     path_save = f'{dir_to_create}/fold_{fold}_epoch_{epoch}_iou_{dic_results:.3f}.pth'
     
     # print(f'Training process has finished. Saving trained model at: {path_save}')
-    [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 27) or f.startswith(f'fold_{fold}', 28)] #27 or 26
-    # [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 25) or f.startswith(f'fold_{fold}', 26)] #27 or 26
+    if path_ == 'coarse_sizes': 
+        [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 27) or f.startswith(f'fold_{fold}', 28)] #27 or 26
+    elif path_ == 'fine_sizes':
+        [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 25) or f.startswith(f'fold_{fold}', 26)] #27 or 26
     torch.save(model_to_save.state_dict(), path_save)
 
 def mean_per_folder(MODELS: list) -> dict:
