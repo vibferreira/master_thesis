@@ -85,8 +85,8 @@ def kfold_cross_validation(n_splits,
                             test_idx, 
                             train_dataset)
             
-            print('N of train samples', len(trainloader))
-            print('N of test samples', len(testloader))
+            print('N of train samples', len(train_idx))
+            print('N of test samples', len(test_idx))
 
             # Model, optmizer, loss
             unet = model.unet_model.to(config.DEVICE) # initialize the model
