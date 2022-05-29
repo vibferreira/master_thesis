@@ -129,7 +129,7 @@ def metrics(pred: torch.Tensor,
 # # assert the dimensions first
 # assert pred.shape == y.shape, f'Shape of pred is {pred.shape} and shape of y is {y.shape}'
 
-def cm_and_class_report(pred: torch, y:torch) -> None:
+def cm_and_class_report(pred: torch.Tensor, y:torch.Tensor) -> None:
     ''' Return confusion matix and classification report for the predictions'''
     
     # F1 score per class 
@@ -218,6 +218,7 @@ def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
             #    annot[i, j] = ''
             else:
                 annot[i, j] = '%.2f%%\n%d' % (p, c)
+                
     cm = confusion_matrix(y_true, y_pred, labels=labels, normalize='true')
     cm = pd.DataFrame(cm, index=labels, columns=labels)
     cm = cm * 100
@@ -234,25 +235,12 @@ def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
     # classification report
     print(classification_report(y_true, y_pred, target_names=classes))
     
-    # ROC Curve
-    
     # IOU or DICE 
-    eps = 1e-5 # avoid division by 0
-    tp = torch.sum(torch.abs(y_pred * y_true))  # TP
-    fp = torch.sum(torch.abs(y_pred * (1 - y_true)))  # FP
-    fn = torch.sum(torch.abs((1 - y_pred) * y_true))  # FN
-    tn = torch.sum(torch.abs((1 - y_pred) * (1 - y_true)))  # TN
+    all_metrics = metrics(y_pred, y_true)
+    iou = all_metrics['iou']
+    f1score = all_metrics['f1score']
     
-    iou = (tp + eps) / (tp + fp + fn + eps)
-    
-    dice = (2 * tp + eps) / (2 * tp + fp + fn + eps)
-    
-    precision = (tp + eps) / (tp + fp + eps)
-    recall = (tp + eps) / (tp + fn + eps)
-    specificity = (tn + eps) / (tn + fp + eps)
-    f1score = 2 * precision * recall / (precision + recall)
-    
-    print('IoU', iou.numpy())
-    print('F1 score', f1score.numpy())
-    print('Dice score', dice.numpy())
+    print('IoU', iou)
+    print('F1 score', f1score)
+
     

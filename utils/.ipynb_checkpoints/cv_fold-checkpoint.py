@@ -19,7 +19,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.cuda.amp import GradScaler, autocast
 import segmentation_models_pytorch as smp
-from torch.optim.lr_scheduler import ReduceLROnPlateau
+from torch.optim.lr_scheduler import ReduceLROnPlateau, StepLR
 
 
 import albumentations as A
@@ -46,14 +46,14 @@ def kfold_cross_validation(n_splits,
 
     save_models = {}
 
-    for n_patches in  np.arange(20, 400, 35): #np.arange(20, 370, 35) # np.arange(20, 400, 35)
+    for n_patches in [411]: #np.arange(20, 370, 35) # np.arange(20, 400, 35)
 
         # Define X_train, X_val, X_test
-        data_portion = 'all_labels'
+        data_portion = 'fine_patches_WITH_X_test'
         X_train, y_train = utis.custom_split(filters, test_size=40, 
                                                       image_paths=config.image_paths, 
                                                       mask_paths=config.mask_paths,  
-                                                      data_portion='all_labels',
+                                                      data_portion=data_portion,
                                                       DEST_PATH = config.TEST_DATASET_PATH,
                                                       number_training_patchs=n_patches)
         # Datasets
@@ -93,7 +93,8 @@ def kfold_cross_validation(n_splits,
             opt = optim.Adam(unet.parameters(), lr=config.LR)
             lossFunc = smp.losses.DiceLoss(smp.losses.BINARY_MODE, from_logits=True)
             scaler = GradScaler()
-            scheduler = ReduceLROnPlateau(opt, mode='max', factor=0.1, patience=10, verbose=True)
+            # scheduler = ReduceLROnPlateau(opt, mode='max', factor=0.1, patience=10, verbose=True)
+            scheduler = StepLR(opt, step_size=20, gamma=0.1)
 
 
             for epoch in range(0, config.NUM_EPOCHS):        
@@ -111,7 +112,7 @@ def kfold_cross_validation(n_splits,
                                        epoch,
                                        validation_history)
                 
-                # scheduler.step(validated['IoU_val'][-1])
+                scheduler.step()
 
                 # create a folder named with the number of patches used o train
                 if not os.path.exists(dir_to_create):
@@ -155,8 +156,8 @@ if __name__ == '__main__':
     scaler = GradScaler()
     
     # calling cross validation
-    path_ = 'coarse_sizes'
-    kfold_cross_validation(5, 
+    path_ = 'fine_sizes'
+    kfold_cross_validation(10, 
                            filters, 
                            val_transform, 
                            train_transform, 

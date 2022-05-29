@@ -41,9 +41,11 @@ N_CLASSES = 1
 # =========================================================== #
 # TRAINING AND VALIDATION LOOPS
 # =========================================================== #
-LR = 0.0001 # learning rate
+LR = 0.001 # learning rate
 NUM_EPOCHS = 100
 BATCH_SIZE = 16
 
-
-
+# =========================================================== #
+# Attention
+# =========================================================== #
+ATT = 'scse' # None or'scse' Attention module used in decoder of the model. Available options are **None** and **scse** (https://arxiv.org/abs/1808.08127)

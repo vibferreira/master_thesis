@@ -223,6 +223,7 @@ def custom_split(filters:dict, image_paths:list,
 
     # get all veg_filter idx
     all_filter_idx = np.concatenate([i for i in veg_filters.values()])
+    print(len(all_filter_idx))
     
     # random sample sample_size points from each filter class to create the TEST DATASET
     test_size = test_size/(sample_size*5) # 5 is the number of filters
@@ -233,7 +234,8 @@ def custom_split(filters:dict, image_paths:list,
     # get the remaining patches from the filters to be the X_train and X_val of the fine patches
     random.seed(42)
     val_train_idxs = train_images_paths(all_filter_idx, test_idx)
-    sampled_all_idxs = random.sample(val_train_idxs, number_training_patchs)
+    if not data_portion == 'fine_patches_WITH_X_test':
+        sampled_all_idxs = random.sample(val_train_idxs, number_training_patchs)
 
     # Filter the paths from the path lists
     # Note the test dataset is the SAME for all data portions
@@ -248,20 +250,30 @@ def custom_split(filters:dict, image_paths:list,
     X_test = glob.glob(f'{DEST_PATH}/images' +'/*.tif') 
     y_test = glob.glob(f'{DEST_PATH}/masks' +'/*.tif') 
     
-    portions = ['all_labels','coarse_plus_fine_labels', 'fine_labels', 'coarse_labels', 'all_coarse_labels']
+    portions = ['fine_patches_but_X_test', 'fine_patches_WITH_X_test', 'all_coarse_labels','fine_labels', 'coarse_labels', 'all_coarse_labels']
     assert np.isin(data_portion, portions)
     
     # Decide if using whole data or ONLY the filtered paths 
-    if data_portion == 'all_labels': # all patches are used
+    if data_portion == 'fine_patches_but_X_test': 
         # get the paths 
+        # all patches BUT the X_test
         X_idxs = filtered_paths(image_paths, sampled_all_idxs) 
         y_idxs = filtered_paths(mask_paths, sampled_all_idxs)
         
         return X_idxs, y_idxs
     
+    if data_portion == 'fine_patches_WITH_X_test': 
+        # get the paths 
+        # all patches BUT the X_test
+        print('hey')
+        X_idxs = filtered_paths(image_paths, all_filter_idx) 
+        y_idxs = filtered_paths(mask_paths, all_filter_idx)
+        
+        return X_idxs, y_idxs
+    
     elif data_portion == 'all_coarse_labels':
-        X_test = filtered_paths(image_paths, all_filter_idx) 
-        y_test = filtered_paths(mask_paths, all_filter_idx)
+        X_test = filtered_paths(image_paths, all_filter_idx) # USE ALL FINE PATHS FOR TESTING
+        y_test = filtered_paths(mask_paths, all_filter_idx) # USE ALL FINE PATHS FOR TESTING
         
         X_train = train_images_paths(image_paths, X_test)
         y_train = train_images_paths(mask_paths, y_test)
@@ -292,7 +304,7 @@ def custom_split(filters:dict, image_paths:list,
                            fine_X_idx, 
                            number_training_patchs)
 
-        X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=val_samples, random_state=42, shuffle=True) 
+        X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=val_samples, random_state=29, shuffle=True) 
 
         return X_train, y_train, X_val, y_val, X_test, y_test
 
@@ -464,7 +476,7 @@ def get_mean_independet_test_dataset(MODELS:list,
         # get IoU
         all_metrics = metrics.metrics(y_hat, y_true)
         iou = all_metrics['iou']
-        iou_mean[n] = iou * 100
+        iou_mean[n] = iou 
     
     dic[n_patches] = [iou_mean.mean(), iou_mean.std()]
     
@@ -509,7 +521,7 @@ def get_DF_with_the_means(my_file,
     if independent_test:
         means = interact_over_folder_mean(my_file, independent_test=True, test_dataloader=test_dataloader, X_test=X_test)
     else:
-        means = utis.interact_over_folder_mean(my_file) # 
+        means = interact_over_folder_mean(my_file) # 
         
     df = pd.DataFrame.from_dict(means, orient='index').reset_index()
     df.columns = ['N_PATCHES', 'IOU', 'STD_DEV']
