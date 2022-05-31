@@ -10,9 +10,9 @@ import torch
 # PATHS (IMAGES, MASKS, DESTINATION FOLDER)
 # =========================================================== #
 
-IMAGES_PATH = '../data/patches/images/1942'
-MASK_PATH = '../data/patches/masks/1942'
-BEST_MODEL = '../best_model'
+IMAGES_PATH = 'data/patches/images/1942'
+MASK_PATH = 'data/patches/masks/1942'
+BEST_MODEL = 'best_model'
 
 FILTER_PATH = 'data/geopackages/patch_keys.gpkg'
 TEST_DATASET_PATH = '../data/test_dataset'

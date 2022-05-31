@@ -2,6 +2,7 @@ import glob
 import copy
 import os
 import numpy as np
+from pathlib import Path
 
 import model
 import metrics
@@ -30,26 +31,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_curve, auc
 from sklearn.model_selection import KFold
 
-
-geo_df = gpd.read_file(config.FILTER_PATH) # contains the idxs with a selection of non-noisy and noisy data
-
 def kfold_cross_validation(n_splits, 
                            filters, 
                            val_transform, 
                            train_transform, 
                            save_path,
                            scaler,
-                           path_) -> None: 
+                           path_to_save_models) -> None: 
     
     # Define the K-fold Cross Validator
     kfold = KFold(n_splits=n_splits, shuffle=True, random_state=42)
 
     save_models = {}
 
-    for n_patches in [411]: #np.arange(20, 370, 35) # np.arange(20, 400, 35)
+    for n_patches in [335,370]:#np.arange(20, 400, 35):
 
         # Define X_train, X_val, X_test
-        data_portion = 'fine_patches_WITH_X_test'
+        data_portion = 'fine_patches_but_X_test'
+        # n_patches=411
+
+        print(len(config.image_paths))
         X_train, y_train = utis.custom_split(filters, test_size=40, 
                                                       image_paths=config.image_paths, 
                                                       mask_paths=config.mask_paths,  
@@ -57,7 +58,9 @@ def kfold_cross_validation(n_splits,
                                                       DEST_PATH = config.TEST_DATASET_PATH,
                                                       number_training_patchs=n_patches)
         # Datasets
+        print(len(X_train))
         train_dataset = HistoricalImagesDataset(X_train, y_train, transform=train_transform, split_type=None)
+        print('train dataset', len(train_dataset))
 
         # load the datasetsuscuic
         # datasets = torch.utils.data.ConcatDataset([train_dataset, val_dataset])
@@ -84,7 +87,7 @@ def kfold_cross_validation(n_splits,
                             train_idx, 
                             test_idx, 
                             train_dataset)
-            
+
             print('N of train samples', len(train_idx))
             print('N of test samples', len(test_idx))
 
@@ -105,13 +108,13 @@ def kfold_cross_validation(n_splits,
                                                epoch=epoch, 
                                                scaler=scaler, 
                                                training_history=training_history)
-                
+
                 validated = train_val_test.validation(unet, 
                                        testloader, 
                                        lossFunc, 
                                        epoch,
                                        validation_history)
-                
+
                 scheduler.step()
 
                 # create a folder named with the number of patches used o train
@@ -122,16 +125,22 @@ def kfold_cross_validation(n_splits,
                 if validated["IoU_val"][-1] > best_accuracy and epoch > 10: # maybe add a minimum number of epochs as conditions
                     # Saving the model
                     results[fold] = validated["IoU_val"][-1]
-                    utis.save_model(unet, dir_to_create, fold, validated["IoU_val"][-1],epoch, path_)
+                    utis.save_model(unet, dir_to_create, fold, validated["IoU_val"][-1],epoch, path_to_save_models)
                     best_accuracy = validated["IoU_val"][-1]
-    
+
             del unet # delete model instance after each fold
             del opt # delete the optmizer instance after each fold
             torch.cuda.empty_cache() # clean cuda cache
 
 # Testing if it works 
 if __name__ == '__main__':
-    # Define the filters 
+    # Define the filters
+    # hey = 'data//patches/images/1942'
+    # jude = glob.glob(config.IMAGES_PATH +'/*.tif')
+    # print(len(jude))
+
+    geo_df = gpd.read_file(config.FILTER_PATH) # contains the idxs with a selection of non-noisy and noisy data
+    
     filters = {'non_veg_idxs' : geo_df.query("status == 0")['index'],
            'veg_idxs' :  geo_df.query("status == 1")['index'], 
            'mixed': geo_df.query("status == 2")['index'], 
@@ -156,14 +165,15 @@ if __name__ == '__main__':
     scaler = GradScaler()
     
     # calling cross validation
-    path_ = 'fine_sizes'
+    path_ = 'coarse_sizes'
+    path_to_save_models = input("Name of folder to save: ")
     kfold_cross_validation(10, 
                            filters, 
                            val_transform, 
                            train_transform, 
                            save_path = f'best_model/{path_}', 
                            scaler=scaler,
-                           path_=path_)
+                           path_to_save_models=path_to_save_models)
 
     # one_path = 'best_model/coarse_sizes/20'
     # print(glob.glob(one_path + '/*'))

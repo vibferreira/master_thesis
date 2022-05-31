@@ -129,6 +129,7 @@ def filtered_paths(current_paths:list,
                    filter_paths:list)-> list:
     ''' Returns only the paths that match the filter index and does not conain more than one label'''
     filtered_paths = []
+    
     for i in current_paths:
         if np.isin(int(get_file_index(i)), list(filter_paths)):
             filtered_paths.append(i)      
@@ -223,7 +224,6 @@ def custom_split(filters:dict, image_paths:list,
 
     # get all veg_filter idx
     all_filter_idx = np.concatenate([i for i in veg_filters.values()])
-    print(len(all_filter_idx))
     
     # random sample sample_size points from each filter class to create the TEST DATASET
     test_size = test_size/(sample_size*5) # 5 is the number of filters
@@ -265,10 +265,9 @@ def custom_split(filters:dict, image_paths:list,
     if data_portion == 'fine_patches_WITH_X_test': 
         # get the paths 
         # all patches BUT the X_test
-        print('hey')
+        print('ATTENTION all filter idx', len(all_filter_idx))
         X_idxs = filtered_paths(image_paths, all_filter_idx) 
         y_idxs = filtered_paths(mask_paths, all_filter_idx)
-        
         return X_idxs, y_idxs
     
     elif data_portion == 'all_coarse_labels':
@@ -375,7 +374,7 @@ def plot_pizza(y_test: list, title:str) -> None:
     fig = px.pie(df_avg_veg, names='label', 
                  values='average vegetation count', 
                  color='label',
-                 color_discrete_map={'non-trees':'#89890A','trees':'#0B950D'}, 
+                 color_discrete_map={'non-trees':'#B9948C','trees':'#2E8B57'}, 
                  title=f'Percentage of trees and non-trees in the {title}')
 
     fig.update_layout(legend=dict(
@@ -421,14 +420,21 @@ def create_new_dir(new_dir_path:str) -> None:
     new_dir_path(str): new directory path'''
     os.makedirs(new_dir_path)
     
-def save_model(model_to_save, dir_to_create, fold, dic_results, epoch, path_) -> None:
+def save_model(model_to_save, 
+               dir_to_create, 
+               fold, 
+               dic_results, 
+               epoch, 
+               path_to_save_models) -> None:
+    
+    # path name
     path_save = f'{dir_to_create}/fold_{fold}_epoch_{epoch}_iou_{dic_results:.3f}.pth'
     
-    # print(f'Training process has finished. Saving trained model at: {path_save}')
-    if path_ == 'coarse_sizes': 
-        [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 27) or f.startswith(f'fold_{fold}', 28)] #27 or 26
-    elif path_ == 'fine_sizes':
-        [os.remove(f) for f in glob.glob(dir_to_create + '/*') if f.startswith(f'fold_{fold}', 25) or f.startswith(f'fold_{fold}', 26)] #27 or 26
+    # remove previous files saved with the same fold name
+    path_list = glob.glob(dir_to_create + '/*')
+    [os.remove(f) for f in path_list if f'fold_{fold}' in f] #27 or 26
+    
+    # save the model
     torch.save(model_to_save.state_dict(), path_save)
 
 def mean_per_folder(MODELS: list) -> dict:
@@ -438,8 +444,8 @@ def mean_per_folder(MODELS: list) -> dict:
     Return:
     dict: dictionaty with folder name as key and mean iou as value'''
     #
-    mean_kfold_iou = np.zeros(5)
-    std_dev_iou = np.zeros(5)
+    mean_kfold_iou = np.zeros(len(MODELS))
+    std_dev_iou = np.zeros(len(MODELS))
     dic = {}
     # file path
 
@@ -535,3 +541,41 @@ def get_DF_with_the_means(my_file,
     df.sort_values(by = 'N_PATCHES', inplace=True) # SORTING BY NUMBER OF PATCHES
     
     return df 
+
+def bar_chat_datasets(masks:list, 
+                      names:list) -> px.bar:
+    
+    ''' 
+    Plot bar chart comparing the percentage of non-trees (0) and trees (1) in each dataset (train, val, test)
+    Args:
+    masks(list): list of datasets
+    names(list) : list of datasets names
+    '''
+
+    df_avg_veg ={}
+    for mask, name in zip(masks, names): 
+        f_counts = count_data_dist(mask)
+        df_avg_veg.update({name: f_counts})
+
+    df = pd.DataFrame(df_avg_veg)
+    df = df.melt() # invert axis 
+    df['label'] = ['non-trees','trees', 'non-trees','trees', 'non-trees','trees'] # name accordingly 
+    df['rate'] = df.groupby('variable').transform(lambda x: (x/x.sum())*100) # calculate the percentage
+    
+    # Plotting it 
+    fig = px.bar(df, x="variable", y="rate",
+             color='label', barmode='group',
+             height=400,
+             template="plotly_white",
+             color_discrete_map={
+                "non-trees": "#99d8c9",
+                "trees": "#2ca25f"})
+
+    fig.update_layout(
+        title = 'Percentage of non-trees and trees in each dataset',
+        xaxis_title="Dataset",
+        yaxis_title="Rate",
+        legend_title="",
+        font=dict(size=13))
+
+    fig.show()
