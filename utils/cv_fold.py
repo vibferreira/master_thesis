@@ -44,7 +44,7 @@ def kfold_cross_validation(n_splits,
 
     save_models = {}
 
-    for n_patches in [335,370]:#np.arange(20, 400, 35):
+    for n_patches in [20 ,370]:#np.arange(20, 400, 35):
 
         # Define X_train, X_val, X_test
         data_portion = 'fine_patches_but_X_test'
@@ -124,7 +124,8 @@ def kfold_cross_validation(n_splits,
                 # Save best model
                 if validated["IoU_val"][-1] > best_accuracy and epoch > 10: # maybe add a minimum number of epochs as conditions
                     # Saving the model
-                    results[fold] = validated["IoU_val"][-1]
+                    results[fold] = unet
+                    
                     utis.save_model(unet, dir_to_create, fold, validated["IoU_val"][-1],epoch, path_to_save_models)
                     best_accuracy = validated["IoU_val"][-1]
 
@@ -165,13 +166,12 @@ if __name__ == '__main__':
     scaler = GradScaler()
     
     # calling cross validation
-    path_ = 'coarse_sizes'
     path_to_save_models = input("Name of folder to save: ")
     kfold_cross_validation(10, 
                            filters, 
                            val_transform, 
                            train_transform, 
-                           save_path = f'best_model/{path_}', 
+                           save_path = f'best_model/{path_to_save_models}', 
                            scaler=scaler,
                            path_to_save_models=path_to_save_models)
 
