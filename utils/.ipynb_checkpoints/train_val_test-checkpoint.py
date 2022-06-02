@@ -350,6 +350,7 @@ def make_predictions(model,
         y_true_stack = torch.stack(y_true_test)
         y_score_stack = torch.stack(y_score_test)
         
+        print(y_hat_stack)
         return y_hat_stack.view(-1), y_true_stack.view(-1), y_score_stack.view(-1)
             
 def reset_weights(m):

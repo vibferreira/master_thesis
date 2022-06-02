@@ -44,7 +44,7 @@ def kfold_cross_validation(n_splits,
 
     save_models = {}
 
-    for n_patches in [20 ,370]:#np.arange(20, 400, 35):
+    for n_patches in [370]:#np.arange(20, 400, 35):
 
         # Define X_train, X_val, X_test
         data_portion = 'fine_patches_but_X_test'
@@ -123,12 +123,19 @@ def kfold_cross_validation(n_splits,
 
                 # Save best model
                 if validated["IoU_val"][-1] > best_accuracy and epoch > 10: # maybe add a minimum number of epochs as conditions
-                    # Saving the model
-                    results[fold] = unet
-                    
                     utis.save_model(unet, dir_to_create, fold, validated["IoU_val"][-1],epoch, path_to_save_models)
                     best_accuracy = validated["IoU_val"][-1]
-
+                    
+                    # Saving the model
+                    # results[fold] = [unet.state_dict(), best_accuracy]
+            
+            # save the best models of each fold after the training loop
+            # [utis.save_model(model[0], 
+            #                  dir_to_create, 
+            #                  key, model[1],
+            #                  epoch, 
+            #                  path_to_save_models) for key, model in results.items()] 
+            
             del unet # delete model instance after each fold
             del opt # delete the optmizer instance after each fold
             torch.cuda.empty_cache() # clean cuda cache

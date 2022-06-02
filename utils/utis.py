@@ -543,7 +543,8 @@ def get_DF_with_the_means(my_file,
     return df 
 
 def bar_chat_datasets(masks:list, 
-                      names:list) -> px.bar:
+                      names:list, 
+                      x_axis:str) -> px.bar:
     
     ''' 
     Plot bar chart comparing the percentage of non-trees (0) and trees (1) in each dataset (train, val, test)
@@ -561,19 +562,21 @@ def bar_chat_datasets(masks:list,
     df = df.melt() # invert axis 
     df['label'] = ['non-trees','trees', 'non-trees','trees', 'non-trees','trees'] # name accordingly 
     df['rate'] = df.groupby('variable').transform(lambda x: (x/x.sum())*100) # calculate the percentage
+    df['rate'] = df['rate'].apply(lambda x: round(x,3)) # calculate the percentage
     
     # Plotting it 
     fig = px.bar(df, x="variable", y="rate",
              color='label', barmode='group',
              height=400,
              template="plotly_white",
+             text_auto=True,
              color_discrete_map={
                 "non-trees": "#99d8c9",
                 "trees": "#2ca25f"})
 
     fig.update_layout(
         title = 'Percentage of non-trees and trees in each dataset',
-        xaxis_title="Dataset",
+        xaxis_title=f"{x_axis} Dataset",
         yaxis_title="Rate",
         legend_title="",
         font=dict(size=13))
