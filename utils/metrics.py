@@ -124,65 +124,13 @@ def metrics(pred: torch.Tensor,
             'iou':iou.cpu().numpy(), 
             'dice_coeff': dice.cpu().numpy(), 
             'f1score': f1score.cpu().numpy()}
-
-# Confusion metrics 
-# # assert the dimensions first
-# assert pred.shape == y.shape, f'Shape of pred is {pred.shape} and shape of y is {y.shape}'
-
-def cm_and_class_report(pred: torch.Tensor, y:torch.Tensor) -> None:
-    ''' Return confusion matix and classification report for the predictions'''
-    
-    # F1 score per class 
-    pred = pred.flatten()
-    y = y.flatten()
-    labels=[0, 1]
-    f1_scores = f1_score(y, pred, average=None, labels=labels)
-    f1_scores_with_labels = {label:score for label, score in zip(labels, f1_scores)}
-
-    # Confusion Matrix 
-    target_names = ['Non-veg', 'Veg']
-
-    ax= plt.subplot()
-    cf_matrix = confusion_matrix(y, pred)
-    sns.heatmap(cf_matrix/np.sum(cf_matrix), fmt='.4%', annot=True, ax=ax); 
-
-    # labels, title and ticks
-    ax.set_xlabel('Predicted labels')
-    ax.set_ylabel('True labels')
-    ax.set_title('Confusion Matrix')
-    ax.xaxis.set_ticklabels(target_names)
-    ax.yaxis.set_ticklabels(target_names)
-
-    plt.show()
-
-    # classification report
-    print(classification_report(y, pred, target_names=target_names))
-    
-    # IOU or DICE 
-    eps = 1e-5 # avoid division by 0
-    tp = torch.sum(torch.abs(pred * y))  # TP
-    fp = torch.sum(torch.abs(pred * (1 - y)))  # FP
-    fn = torch.sum(torch.abs((1 - pred) * y))  # FN
-    
-    iou = (tp + eps) / (tp + fp + fn + eps)
-    dice = (2 * tp + eps) / (2 * tp + fp + fn + eps)
-    
-    precision = (tp + eps) / (tp + fp + eps)
-    recall = (tp + eps) / (tp + fn + eps)
-    specificity = (tn + eps) / (tn + fp + eps)
-    f1score = 2 * precision * recall / (precision + recall)
-    
-    print('IoU', iou)
-    print('F1 score', f1score)
-    print('Dice score', dice)
-    
-    
-    # ROC Curve
     
 
 def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
     """
+    !!!!!!!!!!!!!!!
     Adapted from Mesquita : https://gist.github.com/mesquita/f6beffcc2579c6f3a97c9d93e278a9f1
+    !!!!!!!!!!!!!!!!!
     
     Generate matrix plot of confusion matrix with pretty annotations.
     The plot image is saved to disk.
@@ -234,6 +182,10 @@ def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
     
     # classification report
     print(classification_report(y_true, y_pred, target_names=classes))
+    
+    # testing approach
+    recall = np.diag(cm) / np.sum(cm, axis = 1)
+    precision = np.diag(cm) / np.sum(cm, axis = 0)
     
     # IOU or DICE 
     all_metrics = metrics(y_pred, y_true)

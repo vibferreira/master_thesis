@@ -612,7 +612,7 @@ def line(error_y_mode=None, **kwargs):
                         color = 'rgba(255,255,255,0)'
                     ),
                     hoverinfo = "skip",
-                    showlegend = False,
+                    showlegend = True,
                     legendgroup = data['legendgroup'],
                     xaxis = data['xaxis'],
                     yaxis = data['yaxis'],
@@ -624,4 +624,8 @@ def line(error_y_mode=None, **kwargs):
             reordered_data.append(fig.data[i+int(len(fig.data)/2)])
             reordered_data.append(fig.data[i])
         fig.data = tuple(reordered_data)
+        # fig.update_traces(name=f'Std_Deviation',showlegend = True)
+        fig.data[0].name = f'STD DEV Fine Model'
+        fig.data[2].name = f'STD DEV Coarse Model'
+        fig.update_layout(legend_traceorder="reversed+grouped")
     return fig
