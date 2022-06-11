@@ -1,0 +1,9 @@
+,test_dataset_category,label,precision,recall,f1-score,mean_iou
+0,pure_patches,trees,99.68,99.91,99.8,99.59
+1,pure_patches,non-trees,99.91,99.69,99.8,99.59
+2,mixed,trees,93.83,98.66,96.17999999999999,92.65
+3,mixed,non-trees,91.86,69.91000000000001,79.4,92.65
+4,single_trees_idx,trees,44.07,76.31,55.879999999999995,38.769999999999996
+5,single_trees_idx,non-trees,97.98,92.24,95.03,38.769999999999996
+6,hedgerows,trees,50.24999999999999,71.72,59.089999999999996,41.94
+7,hedgerows,non-trees,98.02,95.16,96.57,41.94

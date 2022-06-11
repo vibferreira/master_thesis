@@ -626,6 +626,6 @@ def line(error_y_mode=None, **kwargs):
         fig.data = tuple(reordered_data)
         # fig.update_traces(name=f'Std_Deviation',showlegend = True)
         fig.data[0].name = f'STD DEV Fine Model'
-        fig.data[2].name = f'STD DEV Coarse Model'
+        fig.data[1].name = f'STD DEV Coarse Model'
         fig.update_layout(legend_traceorder="reversed+grouped")
     return fig
