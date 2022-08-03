@@ -48,4 +48,4 @@ BATCH_SIZE = 16
 # =========================================================== #
 # Attention
 # =========================================================== #
-ATT = 'scse' # None or'scse' Attention module used in decoder of the model. Available options are **None** and **scse** (https://arxiv.org/abs/1808.08127)
+ATT = 'scse' #or'scse' Attention module used in decoder of the model. Available options are **None** and **scse** (https://arxiv.org/abs/1808.08127)

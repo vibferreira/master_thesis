@@ -127,7 +127,11 @@ def get_file_index(file:str) -> str:
 
 def filtered_paths(current_paths:list, 
                    filter_paths:list)-> list:
-    ''' Returns only the paths that match the filter index and does not conain more than one label'''
+    ''' Returns only the paths that match the filter index and does not conain more than one label
+    Args:
+    current_paths(list): list of all the paths to filter FROM
+    filter_paths(list): list of IDXs to meet from current paths
+    '''
     filtered_paths = []
     
     for i in current_paths:
@@ -277,7 +281,7 @@ def custom_split(filters:dict, image_paths:list,
         X_train = train_images_paths(image_paths, X_test)
         y_train = train_images_paths(mask_paths, y_test)
         
-        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.3, random_state=42, shuffle=True)   
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.3, random_state=0, shuffle=True)   
         
         return X_train, y_train, X_val, y_val, X_test, y_test
         
@@ -303,7 +307,7 @@ def custom_split(filters:dict, image_paths:list,
                            fine_X_idx, 
                            number_training_patchs)
 
-        X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=val_samples, random_state=29, shuffle=True) 
+        X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=val_samples, random_state=42, shuffle=True) 
 
         return X_train, y_train, X_val, y_val, X_test, y_test
 
@@ -374,7 +378,8 @@ def plot_pizza(y_test: list, title:str) -> None:
     fig = px.pie(df_avg_veg, names='label', 
                  values='average vegetation count', 
                  color='label',
-                 color_discrete_map={'non-trees':'#B9948C','trees':'#2E8B57'}, 
+                 color_discrete_map={"non-trees": "#99d8c9",
+                  "trees": "#2ca25f"}, 
                  title=f'Percentage of trees and non-trees in the {title}')
 
     fig.update_layout(legend=dict(
@@ -382,7 +387,7 @@ def plot_pizza(y_test: list, title:str) -> None:
         y= 0.8,
         xanchor="right",
         x = 1.1, 
-        font=dict(size=15),    
+        font=dict(size=18),    
         ))
     fig.show(renderer="svg")
     
