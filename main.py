@@ -1,5 +1,4 @@
 ''' Run and save the Semantic Segmetation DL models '''
-
 import glob
 import os
 
