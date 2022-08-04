@@ -7,7 +7,7 @@
 *.pth
 *.png
 *.html
-.*/ # ignore . folder
+.*/ 
 /utils/wandb
 
 
