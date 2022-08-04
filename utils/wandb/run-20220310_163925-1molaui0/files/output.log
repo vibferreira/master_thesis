@@ -1,6 +1,0 @@
-
-Training the network for 2 epochs, with a batch size of 5 and 2 iterations per epoch 🤗
-  0%|          | 0/2 [00:00<?, ?it/s]
-
-
- 50%|█████     | 1/2 [00:13<00:13, 13.18s/it, acc=22.2, iou=0.212, loss=0.199]

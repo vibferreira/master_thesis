@@ -1,9 +1,0 @@
-[34m[1mwandb[39m[22m: Currently logged in as: [33mvibferreira[39m (use `wandb login --relogin` to force relogin)
-Number of image patches: 20
-Number of mask patches: 20
-shape image torch.Size([1, 512, 512]) shape mask torch.Size([1, 512, 512])
-Splitting data into TRAIN, VAL and TEST
-Training set size:  10
-Validation set size:  5
-Testing set size:  5
-cpu is available

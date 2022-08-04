@@ -1,5 +1,0 @@
-              precision    recall  f1-score   support
-     Non-veg       0.58      0.56      0.57   1521720
-         Veg       0.41      0.43      0.42   1099720
-    accuracy                           0.51   2621440
-   macro avg       0.50      0.50      0.50   2621440

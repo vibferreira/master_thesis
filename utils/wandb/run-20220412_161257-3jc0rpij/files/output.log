@@ -1,4 +1,0 @@
-shape train image torch.Size([1, 256, 256]) shape train mask torch.Size([256, 256])
-Training set size:  335
-Validation set size:  40
-Testing set size:  40

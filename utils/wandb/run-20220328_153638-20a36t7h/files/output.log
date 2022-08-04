@@ -1,7 +1,0 @@
-
-  0%|                                                                              | 0/7 [00:00<?, ?it/s]
-Training the network for 1 epochs, with a batch size of 8
-torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
-torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
-torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256])
-

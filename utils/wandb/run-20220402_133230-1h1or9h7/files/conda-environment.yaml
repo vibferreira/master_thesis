@@ -1,4 +1,0 @@
-name: torch_env
-channels:
-  - defaults
-prefix: /share/etud/e2008984/.conda/envs/torch_env

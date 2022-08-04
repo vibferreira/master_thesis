@@ -1,8 +1,0 @@
-torch.Size([8, 1, 256, 256])
-torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 256, 256])
-torch.Size([8, 1, 256, 256])
-torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 256, 256])
-torch.Size([8, 1, 256, 256])
-torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 256, 256])
-torch.Size([8, 1, 256, 256])
-torch.Size([8, 1, 256, 256]) torch.Size([8, 1, 256, 256]) torch.Size([8, 256, 256])
