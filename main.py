@@ -1,20 +1,22 @@
 ''' Should include all the necessary info to run the model'''
 
+import glob
+import os
+
 from scripts import get_patches
 from scripts import get_GT
+from utils import config
 
-# get ground truth
+# Get binary mask from geopackage (only necessary if the image is not in the folder already)
+gt = get_GT.Get_Ground_Truth(config.GRID_PATH, config.MASKS_GPKG_PATH, config.DEST_PATH)
+print(gt.get_items())
 
-# Define the paths of the images, mask layers and grid
-# MASKS_PATH = 'data/geopackages/UPDATED_6_mask_per_year.gpkg'
-# GRID_PATH = 'data/geopackages/grid.gpkg'
-# DEST_PATH = 'data/masks'
+# Delete the temp files 
+[os.remove(f) for f in glob.glob(config.DEST_PATH + '/*.tif') if f.endswith('_temp.tif')]
 
-# gt = get_GT.Get_Ground_Truth(GRID_PATH, MASKS_PATH, DEST_PATH)
-# print(gt.get_items())
+# Get Patches 
 
-# # Delete the temp files 
-# [os.remove(f) for f in glob.glob(DEST_PATH + '/*.tif') if f.endswith('_temp.tif') ]
 
-# get patches 
+
+
 

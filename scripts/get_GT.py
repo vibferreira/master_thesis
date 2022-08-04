@@ -62,7 +62,7 @@ class Get_Ground_Truth:
         years = fiona.listlayers(self.MASKS_PATH) # list of years 
 
         # read the masks 
-        mask_per_year = {key: gpd.read_file(MASKS_PATH, layer=key) for key in years}
+        mask_per_year = {key: gpd.read_file(self.MASKS_PATH, layer=key) for key in years}
 
         # add a 1 column later binary rasterization
         for value in mask_per_year.values():
@@ -107,15 +107,15 @@ class Get_Ground_Truth:
             dst.close()
 
 # Testing if it works 
-if __name__ == '__main__':
-    # Define the paths of the images, mask layers and grid
-    MASKS_PATH = 'data/geopackages/UPDATED_6_mask_per_year.gpkg'
-    GRID_PATH = 'data/geopackages/grid.gpkg'
-    DEST_PATH = 'data/masks'
+# if __name__ == '__main__':
+#     # Define the paths of the images, mask layers and grid
+#     MASKS_PATH = 'data/geopackages/UPDATED_6_mask_per_year.gpkg'
+#     GRID_PATH = 'data/geopackages/grid.gpkg'
+#     DEST_PATH = 'data/masks'
 
-    gt = Get_Ground_Truth(GRID_PATH, MASKS_PATH, DEST_PATH)
-    print(gt.get_items())
+#     gt = Get_Ground_Truth(GRID_PATH, MASKS_PATH, DEST_PATH)
+#     print(gt.get_items())
     
-    # Delete the temp files 
-    [os.remove(f) for f in glob.glob(DEST_PATH + '/*.tif') if f.endswith('_temp.tif') ] 
+#     # Delete the temp files 
+#     [os.remove(f) for f in glob.glob(DEST_PATH + '/*.tif') if f.endswith('_temp.tif') ] 
 
