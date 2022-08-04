@@ -10,10 +10,20 @@ import torch
 # PATHS (IMAGES, MASKS, DESTINATION FOLDER)
 # =========================================================== #
 
+# Geting Ground truth 
 MASKS_GPKG_PATH = 'data/geopackages/UPDATED_6_mask_per_year.gpkg'
 GRID_PATH = 'data/geopackages/grid.gpkg'
 DEST_PATH = 'data/masks'
 
+# Getting patches
+MASKS = 'data/masks'
+IMAGES = 'data/images'
+PATCHES_IMAGES_PATH = 'data/patches/images'
+PATCHES_MASK_PATH = 'data/patches/masks'
+img_paths = glob.glob(IMAGES +'/*.tif')
+mask_paths = glob.glob(MASKS +'/*.tif')
+
+# Everything else
 IMAGES_PATH = 'data/patches/images/1942'
 MASK_PATH = 'data/patches/masks/1942'
 BEST_MODEL = 'best_model'
@@ -24,6 +34,10 @@ TEST_DATASET_PATH = '../data/test_dataset'
 image_paths = glob.glob(IMAGES_PATH +'/*.tif')
 mask_paths = glob.glob(MASK_PATH +'/*.tif')
 
+# =========================================================== #
+# PATCHFY?
+# =========================================================== #
+patchfying = True
 # =========================================================== #
 # SET WHICH DEVICE TO USE
 # =========================================================== #

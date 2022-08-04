@@ -1,6 +1,7 @@
 ''' 
 This script performs 
 1) Clipping the Historical Aerial Images into the grid extent (based on the extent of ground truth from 2020);
+Code equivalent to clip raster by extent on QGIS, but scalable to clip several rasters;
 '''
 import re
 import glob

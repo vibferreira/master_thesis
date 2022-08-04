@@ -53,7 +53,7 @@ class Get_Ground_Truth:
             out_grid_2 = dataset.to_array()
             print('Bounds', out_grid_2.rio.bounds())
             out_grid_2.rio.to_raster(f'{self.DEST_PATH}/{year}_temp.tif') # create a temp file (FIND A WAY TO SAVE THE TRANSFORM DIRECTLY WITH XARRAY)
-            print(f' Image is rasterized in the folder {self.DEST_PATH}')
+            print(f'Image is rasterized in the folder {self.DEST_PATH}')
             # else:
             #     print(f'{year} is already rasterized!')
                 
@@ -105,6 +105,9 @@ class Get_Ground_Truth:
                             dst_crs=src.crs,
                             resampling=Resampling.nearest)
             dst.close()
+                
+        [os.remove(f) for f in glob.glob(self.DEST_PATH + '/*.tif') if f.endswith('_temp.tif') ] 
+
 
 # Testing if it works 
 # if __name__ == '__main__':
