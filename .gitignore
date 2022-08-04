@@ -2,7 +2,7 @@
 *.o
 
 # Ada Library Information
- __pycache__/
+__pycache__/
 *.ali
 *.tif
 *.pth
