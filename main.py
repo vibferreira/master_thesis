@@ -6,14 +6,14 @@ from scripts import get_patches
 from scripts import get_GT
 
 from utils import config
-from utils import split
+from utils import dataloader
 
 ##### Pre-Processing ##### 
 # Decide if images need to be patched (e.g if case changes have been made to the .gpkg annotation file) 
 if config.patchfying: # define in the config file if you want to patchfy the image or not
     # Get binary mask from geopackage (only necessary if the image is not in the folder already)
     gt = get_GT.Get_Ground_Truth(config.GRID_PATH, config.MASKS_GPKG_PATH, config.DEST_PATH)
-    print(gt.get_items())
+    gt.get_items()
 
     # Get Patches from binary mask and from the image (only necessary if the image is not in the folder already)
     images = get_patches.GetPatches(config.img_paths[0], config.PATCHES_IMAGES_PATH, (256, 256))
@@ -21,10 +21,11 @@ if config.patchfying: # define in the config file if you want to patchfy the ima
     images.get_items()
     masks.get_items()
 
-##### Data Split and Data Loader ##### 
+##### Data Split and Dataloader ##### # could have create a class here for this, improve it later
 
-# separate file 
-
+train_dataloader = dataloader.train_dataloader
+val_dataloader = dataloader.val_dataloader
+test_dataloader = dataloader.test_dataloader
 
 ##### DL model ##### 
 

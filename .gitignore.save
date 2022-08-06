@@ -1,0 +1,12 @@
+# Object file
+*.o
+
+# Ada Library Information
+*.ali
+*.tif
+*.pth
+*.png
+*.html
+
+.*
+
