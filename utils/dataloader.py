@@ -44,7 +44,6 @@ X_train, y_train, X_val, y_val, X_test, y_test = utis.custom_split(filters, test
                                                                    number_training_patchs=n_patches)
 
 ##### Dataloader ##### 
-
 # Define transformations
 val_transform = A.Compose(
     [A.Normalize(mean=(0.512), std=(0.167)),

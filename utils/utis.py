@@ -3,6 +3,7 @@
 
 import glob
 import os
+import contextlib
 import re
 import random
 import numpy as np
@@ -12,6 +13,7 @@ import segmentation_models_pytorch
 from sklearn.model_selection import train_test_split
 from pathlib import Path
 import pandas as pd
+
 
 import rasterio as rio
 from rasterio.transform import from_origin
@@ -74,6 +76,8 @@ def save_best_model(model,
                     data_portion: str,
                     rate_of_coarse_labels:float = None) -> None:
     
+    # think in a more universal way of saving the models wherever they are
+    
     ''' Saves the best model
     Args: 
     model (class): instance of the the model class
@@ -84,35 +88,32 @@ def save_best_model(model,
     
     iou = float(val_dic['IoU_val'][-1])
     acc = float(val_dic['val_accuracy'][-1])
-    # [os.remove(f) for f in glob.glob(dest_path + '/*') if f.startswith(data_portion, 14)] # remove previous saved files 
     
-    if data_portion == 'coarse_labels':
-        # remove previous saved files 
-        [os.remove(f) for f in glob.glob(dest_path + '/coarse_sizes' + '/*') if f.startswith(f'/rate_{rate_of_coarse_labels}_{data_portion}', 26)] 
-        return torch.save(model.state_dict(), dest_path + '/coarse_sizes' + f'/rate_{rate_of_coarse_labels}_{data_portion}_best_model_epoch_{e+1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
+    # path name
+    path_name = f'{dest_path}/{data_portion}_epoch_{e+1}_iou_{iou:.3f}_acc_{acc:.3f}.pth'
     
-    elif data_portion == 'fine_labels':
-        [os.remove(f) for f in glob.glob(dest_path + '/fine_sizes' + '/*') if f.startswith(f'/rate_{rate_of_coarse_labels}_{data_portion}', 24)] 
-        return torch.save(model.state_dict(), dest_path + '/fine_sizes' + f'/rate_{rate_of_coarse_labels}_{data_portion}_best_model_epoch_{e+1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
+    # remove previous files saved with the same fold name     
+    with contextlib.suppress(FileNotFoundError):
+        [os.remove(f'{dest_path}/{f}') for f in os.listdir(dest_path) if f'{data_portion}' in f]
     
-    else:
-        # remove previous saved files
-        [os.remove(f) for f in glob.glob(dest_path + '/*') if f.startswith(data_portion, 14)] 
-        return torch.save(model.state_dict(), dest_path + f'/{data_portion}_best_model_epoch_{e+1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
-
+    # save the model
+    torch.save(model.state_dict(), path_name)
     
-# def remove_paths_with_more_than_one_class(mask_paths:list, image_paths:list) -> list:
-#     '''Returns only images that does not contain more than one label'''
-#     i = 0
-#     for mask, img in zip(mask_paths, image_paths):
-#         data = cv2.imread(mask, cv2.IMREAD_GRAYSCALE)
-#         if len(np.unique(data)) > 1:
-#             image_paths.remove(img)
-#             mask_paths.remove(mask)
-#             i+=1
-#     print(f'{i} paths removed')
-#     return mask_paths, image_paths
-
+#     if data_portion == 'coarse_labels':
+#         # remove previous saved files 
+#         [os.remove(f) for f in glob.glob(dest_path + '/coarse_sizes' + '/*') if f.startswith(f'/rate_{rate_of_coarse_labels}_{data_portion}', 26)] 
+#         return torch.save(model.state_dict(), dest_path + '/coarse_sizes' + f'/rate_{rate_of_coarse_labels}_{data_portion}_best_model_epoch_{e+1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
+    
+#     elif data_portion == 'fine_labels':
+#         [os.remove(f) for f in glob.glob(dest_path + '/fine_sizes' + '/*') if f.startswith(f'/rate_{rate_of_coarse_labels}_{data_portion}', 24)] 
+#         return torch.save(model.state_dict(), dest_path + '/fine_sizes' + f'/rate_{rate_of_coarse_labels}_{data_portion}_best_model_epoch_{e+1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
+    
+#     else:
+#         # remove previous saved files
+#         [os.remove(f) for f in glob.glob(dest_path + '/*') if f.startswith(data_portion, 14)] 
+#         return torch.save(model.state_dict(), dest_path + f'/{data_portion}_best_model_epoch_{e+1}_iou_{round(iou,3)}_acc_{round(acc,3)}.pth')
+    
+    
 def train_images_paths(paths:list, test:list) -> list:
     ''' Returns list of images paths that DOES NOT exist on the test list'''
     train_paths = []
