@@ -386,13 +386,24 @@ dependencies:
   - zlib=1.2.11=h36c2ea0_1013
   - zstd=1.5.2=ha95c52a_0
   - pip:
+    - cftime==1.6.1
+    - datacube==1.8.7
     - fiona==1.8.21
     - fyeldgenerator==0.1.6
+    - geocube==0.1.2
     - geopandas==0.10.2
+    - greenlet==1.1.2
     - kaleido==0.2.1
+    - lark-parser==0.12.0
+    - netcdf4==1.6.0
+    - odc-geo==0.2.1
+    - patchify==0.2.3
     - pathtools==0.1.2
+    - psycopg2==2.9.3
     - pytorch-model-summary==0.1.2
     - pytorchtools==0.0.2
+    - rioxarray==0.11.1
     - smmap==5.0.0
+    - sqlalchemy==1.4.39
     - termcolor==1.1.0
 prefix: /share/etud/e2008984/miniconda3/envs/torch_env
