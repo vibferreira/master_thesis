@@ -9,7 +9,6 @@ import torch
 # =========================================================== #
 # PATHS (IMAGES, MASKS, DESTINATION FOLDER)
 # =========================================================== #
-
 # Geting Ground truth 
 MASKS_GPKG_PATH = 'data/geopackages/UPDATED_6_mask_per_year.gpkg'
 GRID_PATH = 'data/geopackages/grid.gpkg'
@@ -29,13 +28,14 @@ MASK_PATH = 'data/patches/masks/1942'
 BEST_MODEL = 'best_model'
 
 FILTER_PATH = 'data/geopackages/patch_keys.gpkg'
+TILE_PATH = 'data/geopackages/tiles.gpkg'
 TEST_DATASET_PATH = '../data/test_dataset'
 
 image_paths = glob.glob(IMAGES_PATH +'/*.tif')
 mask_paths = glob.glob(MASK_PATH +'/*.tif')
 
 # =========================================================== #
-# PATCHFY?
+# PATCHFY - Decide if the images need to be patchyfied or not 
 # =========================================================== #
 patchfying = False
 # =========================================================== #
@@ -45,10 +45,13 @@ DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 # DEVICE = 'cpu'
 
 # =========================================================== #
+# DATA SPLIT - decide if its a geographycal split (tile) or based on the quality of the dataset (filter)
+# =========================================================== #
+split = 'tile' # 'filter'
+# =========================================================== #
 # DATASET AND DATALOADER
 # =========================================================== #
 PATCH_SIZE = 256
-
 # =========================================================== #
 # MODEL
 # =========================================================== #
@@ -62,7 +65,6 @@ N_CLASSES = 1
 LR = 0.001 # learning rate
 NUM_EPOCHS = 10
 BATCH_SIZE = 16
-
 # =========================================================== #
 # Attention
 # =========================================================== #

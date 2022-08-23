@@ -13,6 +13,7 @@ import segmentation_models_pytorch
 from sklearn.model_selection import train_test_split
 from pathlib import Path
 import pandas as pd
+import geopandas as gpd
 
 
 import rasterio as rio
@@ -313,6 +314,50 @@ def custom_split(filters:dict, image_paths:list,
         X_train, X_val, y_train, y_val = train_test_split(fine_X_idx, fine_y_idx, test_size=val_samples, random_state=42, shuffle=True) 
 
         return X_train, y_train, X_val, y_val, X_test, y_test
+    
+    
+def split_by_tile(FILTER_PATH, TILE_PATH, IMG_PATH, MASK_PATH):
+    
+    # read gpkgs 
+    geo_df = gpd.read_file(FILTER_PATH) # contains the idxs with a selection of non-noisy and noisy data
+    tile_df = gpd.read_file(TILE_PATH) # split tile 
+    
+    tile_df['split'] = None
+    random.seed(42)
+    # create a split column dividing each polygon tile intro train test and split  
+    tile_df['split'] = tile_df['split'].apply(lambda x: random.choices(['train', 'val', 'test'], weights=[6, 2, 1])[0])
+
+    # # keep only the patches that intersect the tiles 
+    # # source https://gis.stackexchange.com/questions/375407/geopandas-intersects-doesnt-find-any-intersection
+    inp, res = tile_df.sindex.query_bulk(geo_df.geometry, predicate='intersects') # inp are the idxs from the patches that intersects the tile and res the idxs of the tiles
+    geo_df['intersects'] = np.isin(np.arange(0, len(geo_df)), inp)
+
+    # # filter only patches that intersect the tiles
+    inter_patches = geo_df.query('intersects == True')
+
+    # # set the tile idx 
+    inter_patches['tile_idx'] = res
+
+    # # join patches and tile to keep the split 
+    joined_df = inter_patches.merge(tile_df.reset_index(), left_on='tile_idx', right_on='index')
+
+    # select patches paths based on train, val test values from the DF
+    splits = np.unique(joined_df.split)
+    dic_to_save = {'msk': {i: None for i in splits}, 
+                  'img': {i: None for i in splits}}
+    for i in splits:
+        # select rows based on the split condition
+        rows = joined_df.loc[joined_df['split'] == str(i)]['index_x']
+
+        # filter patches 
+        patchs = utis.filtered_paths(IMG_PATH, list(rows))
+        masks = utis.filtered_paths(MASK_PATH, list(rows))
+
+        # save in dictionary
+        dic_to_save['img'].update({i: patchs})
+        dic_to_save['msk'].update({i: masks})
+
+    return dic_to_save
 
 def custom_save_patches(patch: torch.Tensor,
                         coords: dict, 
@@ -347,7 +392,7 @@ def custom_save_patches(patch: torch.Tensor,
                 height=patch.shape[0],
                 width=patch.shape[1],
                 dtype=patch.dtype,
-                count=1, # number of bands, CAREFUL if the image has RGB
+                count=1, # number of bands, CAREFUL if the image is RGB
                 crs = crs, 
                 transform=transform) as dst:
                 dst.write(patch[np.newaxis,:,:]) # add a new axis, required by rasterio 
