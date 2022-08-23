@@ -115,7 +115,9 @@ def save_best_model(model,
     
     
 def train_images_paths(paths:list, test:list) -> list:
-    ''' Returns list of images paths that DOES NOT exist on the test list'''
+    ''' Returns list of images paths that DOES NOT exist on the test list
+    Args:
+    '''
     train_paths = []
     for i in paths:
         if not np.isin(i, test):
@@ -128,7 +130,7 @@ def get_file_index(file:str) -> str:
 
 def filtered_paths(current_paths:list, 
                    filter_paths:list)-> list:
-    ''' Returns only the paths that match the filter index and does not conain more than one label
+    ''' Returns only the paths that match the filter index
     Args:
     current_paths(list): list of all the paths to filter FROM
     filter_paths(list): list of IDXs to meet from current paths
