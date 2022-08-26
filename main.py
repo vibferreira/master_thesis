@@ -1,4 +1,6 @@
 ''' Run and save the Semantic Segmetation DL models '''
+''' Modify the config file for PATHS, DL model parameters etc. '''' 
+
 import glob
 import os
 
@@ -80,7 +82,7 @@ for e in range(config.NUM_EPOCHS):
     scheduler.step()
     
     # Save best model
-    if validated['IoU_val'][-1] > best_accuracy: #and e > 10: # maybe add a minimum number of epochs as conditions
+    if validated['IoU_val'][-1] > best_accuracy and e > 10: # maybe add a minimum number of epochs as conditions
         utis.save_best_model(unet, config.BEST_MODEL, validated, e, data_portion, rate_of_coarse_labels=n_patches) 
         best_accuracy = validation_history['IoU_val'][-1]
 
