@@ -1,5 +1,5 @@
 ''' Run and save the Semantic Segmetation DL models '''
-''' Modify the config file for PATHS, DL model parameters etc. '''' 
+''' Modify the config file for PATHS, DL model parameters etc. '''
 
 import glob
 import os
@@ -21,6 +21,8 @@ from utils import metrics
 from utils import config
 from utils import utis
 from utils import train_val_test
+import wandb
+
 
 ##### Pre-Processing ##### 
 # Decide if images need to be patched (e.g if case changes have been made to the .gpkg annotation file) 
@@ -63,7 +65,9 @@ training_history = {"avg_train_loss": [], "train_accuracy": [], "IoU":[],"f1scor
 validation_history = {"avg_val_loss": [], "val_accuracy": [], "IoU_val":[], "f1score_val":[]}
 
 # Using log="all" log histograms of parameter values in addition to gradients
-# wandb.watch(unet, log="all")
+wandb.login()
+wandb.init(project="my-awesome-project")
+wandb.watch(unet, log="all")
 
 # Autocasting 
 scaler = GradScaler()
