@@ -1,0 +1,14 @@
+# Object file
+*.o
+
+# Ada Library Information
+__pycache__/
+*.ali
+*.tif
+*.pth
+*.png
+*.html
+.*/ 
+/utils/wandb
+/wandb
+

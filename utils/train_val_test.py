@@ -227,11 +227,11 @@ def train(model, dataloader, opt, lossFunc, epoch, scaler, training_history):
     training_history["IoU"].append(avgIOU) # save the acc 
     
     # WANDB
-    # wandb.log({
-    # # "Examples": example_images,
-    # "Train Loss": avgTrainLoss,
-    # "Train Accuracy": avgAccLoss,
-    # "IoU_train":avgIOU})
+    wandb.log({
+    # "Examples": example_images,
+    "Train Loss": avgTrainLoss,
+    "Train Accuracy": avgAccLoss,
+    "Train IOU":avgIOU})
     
     return training_history
 
@@ -289,12 +289,12 @@ def validation(model, dataloader, lossFunc, epoch, validation_history):
     validation_history["IoU_val"].append(avgIOU) # save the acc
     
     # WANDB
-    # wandb.log({
+    wandb.log({
     # "Predictions": example_pred,
     # "GT": example_gt,
-    # "Val Accuracy": avgAccLoss,
-    # "Val Loss": avgValLoss,
-    # "IoU_val": avgIOU})
+    "Val Accuracy": avgAccLoss,
+    "Val Loss": avgValLoss,
+    "Val IOU": avgIOU})
     
     return validation_history
     

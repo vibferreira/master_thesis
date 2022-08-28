@@ -25,7 +25,7 @@ mask_paths = glob.glob(MASKS +'/*.tif')
 # Everything else
 IMAGES_PATH = 'data/patches/images/1942'
 MASK_PATH = 'data/patches/masks/1942'
-BEST_MODEL = 'best_model'
+BEST_MODEL = 'best_model/unet'
 
 FILTER_PATH = 'data/geopackages/patch_keys.gpkg'
 TILE_PATH = 'data/geopackages/tiles.gpkg'
@@ -38,6 +38,7 @@ mask_paths = glob.glob(MASK_PATH +'/*.tif')
 # PATCHFY - Decide if the images need to be patchyfied or not 
 # =========================================================== #
 patchfying = False
+
 # =========================================================== #
 # SET WHICH DEVICE TO USE
 # =========================================================== #
@@ -48,10 +49,12 @@ DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 # DATA SPLIT - decide if its a geographycal split (tile) or based on the quality of the dataset (filter)
 # =========================================================== #
 split = 'tile' # 'filter'
+
 # =========================================================== #
 # DATASET AND DATALOADER
 # =========================================================== #
 PATCH_SIZE = 256
+
 # =========================================================== #
 # MODEL
 # =========================================================== #
@@ -65,6 +68,7 @@ N_CLASSES = 1
 LR = 0.001 # learning rate
 NUM_EPOCHS = 10
 BATCH_SIZE = 16
+
 # =========================================================== #
 # Attention
 # =========================================================== #

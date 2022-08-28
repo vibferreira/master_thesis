@@ -90,6 +90,11 @@ def save_best_model(model,
     iou = float(val_dic['IoU_val'][-1])
     acc = float(val_dic['val_accuracy'][-1])
     
+    # create folder if does not exist
+    if not os.path.isdir(dest_path):
+        os.mkdir(dest_path)
+        print('creating the path', dest_path)
+    
     # path name
     path_name = f'{dest_path}/{data_portion}_epoch_{e+1}_iou_{iou:.3f}_acc_{acc:.3f}.pth'
     
