@@ -19,6 +19,8 @@ import geopandas as gpd
 import rasterio as rio
 from rasterio.transform import from_origin
 from rasterio.crs import CRS
+from rasterio.merge import merge
+from rasterio.plot import show
 
 from tqdm import tqdm
 import cv2
@@ -321,10 +323,23 @@ def custom_split(filters:dict, image_paths:list,
         return X_train, y_train, X_val, y_val, X_test, y_test
     
     
-def split_by_tile(FILTER_PATH, TILE_PATH, IMG_PATH, MASK_PATH):
+def split_by_tile(FILTER_PATH:str, 
+                  TILE_PATH:str, 
+                  IMG_PATH:str, 
+                  MASK_PATH:str, 
+                  keep_df:bool = False):
+    
+    ''' Split data by geographical tile.
+    Args:
+    FILTER_PATH (str): path to the patch keys in gpkg
+    TILE_PATH (str) : path to the tiles in gpkg
+    IMG_PATH (str) : path to the image
+    MASK_PATH (str) : path to the mask
+    keep_df (bool) : choose if df should be returned
+    ''' 
     
     # read gpkgs 
-    geo_df = gpd.read_file(FILTER_PATH) # contains the idxs with a selection of non-noisy and noisy data
+    geo_df = gpd.read_file(FILTER_PATH) # contains the patch keys
     tile_df = gpd.read_file(TILE_PATH) # split tile 
     
     tile_df['split'] = None
@@ -361,8 +376,11 @@ def split_by_tile(FILTER_PATH, TILE_PATH, IMG_PATH, MASK_PATH):
         # save in dictionary
         dic_to_save['img'].update({i: patchs})
         dic_to_save['msk'].update({i: masks})
-
-    return dic_to_save
+        
+    if keep_df:
+        return dic_to_save, joined_df
+    else:
+        return dic_to_save
 
 def custom_save_patches(patch: torch.Tensor,
                         coords: dict, 
@@ -643,7 +661,7 @@ def bar_chat_datasets(masks:list,
     
 def line(error_y_mode=None, **kwargs):
     """Extension of `plotly.express.line` to use error bands.
-    !!!!!!!!!! CODE FROM STACKOVERFLOW'S user171780: https://stackoverflow.com/questions/61494278/plotly-how-to-make-a-figure-with-multiple-lines-and-shaded-area-for-standard-de !!!!!!!!!
+    source: https://stackoverflow.com/questions/61494278/plotly-how-to-make-a-figure-with-multiple-lines-and-shaded-area-for-standard-de
     """
     ERROR_MODES = {'bar','band','bars','bands',None}
     if error_y_mode not in ERROR_MODES:
@@ -687,3 +705,21 @@ def line(error_y_mode=None, **kwargs):
         fig.data[1].name = f'STD DEV Coarse Model'
         fig.update_layout(legend_traceorder="reversed+grouped")
     return fig
+
+def raster_mosaic(files:list) -> np.array:
+    ''' 
+    Merges the individual patchs into a mosaic
+    Arg:
+    files (list) : list of patchs to mosaic
+    Return:
+    np.array : mosaicked image
+    source: https://automating-gis-processes.github.io/CSC18/lessons/L6/raster-mosaic.html
+    '''
+    src_files_to_mosaic = []
+    for fp in files:
+            src = rio.open(fp)
+            src_files_to_mosaic.append(src)
+
+    mosaic, out_trans = merge(src_files_to_mosaic)
+    
+    return mosaic, out_trans
