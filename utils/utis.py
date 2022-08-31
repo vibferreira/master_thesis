@@ -343,9 +343,9 @@ def split_by_tile(FILTER_PATH:str,
     tile_df = gpd.read_file(TILE_PATH) # split tile 
     
     tile_df['split'] = None
-    random.seed(42)
+    random.seed(25)
     # create a split column dividing each polygon tile intro train test and split  
-    tile_df['split'] = tile_df['split'].apply(lambda x: random.choices(['train', 'val', 'test'], weights=[6, 2, 1])[0])
+    tile_df['split'] = tile_df['split'].apply(lambda x: random.choices(['train', 'val', 'test'], weights=[65, 15, 5])[0])
 
     # # keep only the patches that intersect the tiles 
     # # source https://gis.stackexchange.com/questions/375407/geopandas-intersects-doesnt-find-any-intersection
@@ -402,6 +402,7 @@ def custom_save_patches(patch: torch.Tensor,
     Returns:
     None
     '''
+
     # torch to numpy
     patch = np.squeeze(patch.detach().cpu().numpy())
     
@@ -716,10 +717,13 @@ def raster_mosaic(files:list) -> np.array:
     source: https://automating-gis-processes.github.io/CSC18/lessons/L6/raster-mosaic.html
     '''
     src_files_to_mosaic = []
+    # read/open files
     for fp in files:
             src = rio.open(fp)
             src_files_to_mosaic.append(src)
-
+    # merge
     mosaic, out_trans = merge(src_files_to_mosaic)
     
+    # save to disk
+
     return mosaic, out_trans

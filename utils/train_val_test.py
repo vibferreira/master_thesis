@@ -2,6 +2,8 @@
 
 from tqdm import tqdm
 import numpy as np
+import glob
+import os
 
 import torch
 import torch.nn as nn
@@ -316,7 +318,15 @@ def make_predictions(model,
 
     # get the image coords
     coords = utis.get_coords(X_test)
-
+    
+    # delete files in the folder
+    filelist = glob.glob(f"{folder}/{'masks'}" +'/*.tif')
+    filelist_2 = glob.glob(f"{folder}/{'predictions'}" +'/*.tif')
+    [os.remove(f) for f in filelist]
+    [os.remove(f) for f in filelist_2]
+    
+    print(filelist)
+    
     # switch off autograd
     with torch.no_grad():
         # loop over the validation set
@@ -341,7 +351,6 @@ def make_predictions(model,
 
             # Save patches 
             if save_patches:
-                print('hey')
                 print(f'Saving patch_{batch_idx}_id_{file_id}.tif')
                 utis.custom_save_patches(y_test[file_id], coords, file_id, batch_idx, folder, subfolder='masks') 
                 utis.custom_save_patches(pred_test_class, coords, file_id, batch_idx, folder, subfolder='predictions') 

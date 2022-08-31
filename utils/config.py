@@ -10,7 +10,7 @@ import torch
 # PATHS (IMAGES, MASKS, DESTINATION FOLDER)
 # =========================================================== #
 # Geting Ground truth 
-MASKS_GPKG_PATH = 'data/geopackages/UPDATED_6_mask_per_year.gpkg'
+MASKS_GPKG_PATH = 'data/geopackages/UPDATED_7_mask_per_year.gpkg'
 GRID_PATH = 'data/geopackages/grid.gpkg'
 DEST_PATH = 'data/masks'
 
@@ -61,6 +61,8 @@ PATCH_SIZE = 256
 BACKBONE = "mobilenet_v2"
 N_CHANNELS = 1
 N_CLASSES = 1
+
+loss = 'dice' # 'focal loss'
 
 # =========================================================== #
 # TRAINING AND VALIDATION LOOPS
