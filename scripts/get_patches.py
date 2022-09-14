@@ -176,32 +176,32 @@ class GetPatches:
         # save patches
         self.save_patches_with_crs(patches, n_patches, path_patches, ras_meta ,ras_data, number_bands=1)
 
-# Testing if it works 
-if __name__ == '__main__':
+# # Testing if it works 
+# if __name__ == '__main__':
     
-    # All this data paths may be given in a main python file later? 
-    MASKS_PATH = 'data/masks'
-    IMAGES_PATH = 'data/images'
-    PATCHES_IMAGES_PATH = 'data/patches/images'
-    PATCHES_MASK_PATH = 'data/patches/masks'
+#     # All this data paths may be given in a main python file later? 
+#     MASKS_PATH = 'data/masks'
+#     IMAGES_PATH = 'data/images'
+#     PATCHES_IMAGES_PATH = 'data/patches/images'
+#     PATCHES_MASK_PATH = 'data/patches/masks'
 
-    img_paths = glob.glob(IMAGES_PATH +'/*.tif')
-    mask_paths = glob.glob(MASKS_PATH +'/*.tif')
+#     img_paths = glob.glob(IMAGES_PATH +'/*.tif')
+#     mask_paths = glob.glob(MASKS_PATH +'/*.tif')
     
-    # [os.remove(f) for f in glob.glob('data/patches/images/1942' + '/*.tif')] 
+#     # [os.remove(f) for f in glob.glob('data/patches/images/1942' + '/*.tif')] 
     
-    # Example saving image from 1942
-    images = GetPatches(img_paths[0], PATCHES_IMAGES_PATH, (256, 256))
-    masks = GetPatches(mask_paths[0], PATCHES_MASK_PATH, (256, 256))
+#     # Example saving image from 1942
+#     images = GetPatches(img_paths[0], PATCHES_IMAGES_PATH, (256, 256))
+#     masks = GetPatches(mask_paths[0], PATCHES_MASK_PATH, (256, 256))
 
-    images.get_items()
-    masks.get_items()
+#     images.get_items()
+#     masks.get_items()
     
-    # check size
-    for i in glob.glob('data/patches/images/1942' + '/*.tif'):
-        i = cv2.imread(i)
-        assert i[:,:,0].shape == (256, 256), ' CAREFUL, Not all images have the same shape'
+#     # check size
+#     for i in glob.glob('data/patches/images/1942' + '/*.tif'):
+#         i = cv2.imread(i)
+#         assert i[:,:,0].shape == (256, 256), ' CAREFUL, Not all images have the same shape'
         
-    for i in glob.glob('data/patches/masks/1942' + '/*.tif'):
-        i = cv2.imread(i)
-        assert i[:,:,0].shape == (256, 256), ' CAREFUL, Not all images have the same shape'
+#     for i in glob.glob('data/patches/masks/1942' + '/*.tif'):
+#         i = cv2.imread(i)
+#         assert i[:,:,0].shape == (256, 256), ' CAREFUL, Not all images have the same shape'

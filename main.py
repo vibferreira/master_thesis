@@ -33,17 +33,17 @@ if config.patchfying: # define in the config file if you want to patchfy the ima
 
     # Get Patches from binary mask and from the image (only necessary if the image is not in the folder already)
     images = get_patches.GetPatches(config.img_paths[0], config.PATCHES_IMAGES_PATH, (256, 256))
-    masks = get_patches.GetPatches(config.mask_paths[0], config.PATCHES_MASK_PATH, (256, 256))
+    masks = get_patches.GetPatches(config.msk_paths[0], config.PATCHES_MASK_PATH, (256, 256))
     images.get_items()
     masks.get_items()
-
+    
 ##### Data Split and Dataloader ##### 
 # I could have create a class here for this, improve it later!!!!
 train_dataloader = dataloader.train_dataloader
 val_dataloader = dataloader.val_dataloader
 test_dataloader = dataloader.test_dataloader
 
-##### DL model (training and validation loop) ##### 
+# ##### DL model (training and validation loop) ##### 
 # classes
 classes = ('no_vegetation', 'vegetation')
 
@@ -51,6 +51,7 @@ classes = ('no_vegetation', 'vegetation')
 unet = model.unet_model.to(config.DEVICE)
 
 # initialize loss function and optimizer
+# lossFunc = smp.losses.FocalLoss(smp.losses.BINARY_MODE)
 lossFunc = smp.losses.DiceLoss(smp.losses.BINARY_MODE, from_logits=True)
 
 opt = optim.Adam(unet.parameters(), lr=config.LR)
@@ -76,6 +77,21 @@ scaler = GradScaler()
 best_accuracy = 0.0
 print(f'''Training the network for {config.NUM_EPOCHS} epochs, with a batch size of {config.BATCH_SIZE}''') # try with logger
 
+
+class EarlyStopping():
+    def __init__(self, tolerance=5, min_delta=0):
+
+        self.tolerance = tolerance
+        self.min_delta = min_delta
+        self.counter = 0
+        self.early_stop = False
+
+    def __call__(self, train_loss, validation_loss):
+        if (validation_loss - train_loss) > self.min_delta:
+            self.counter +=1
+            if self.counter >= self.tolerance:  
+                self.early_stop = True
+
 # loop = tqdm(range(config.NUM_EPOCHS))
 iter_ = 0
 data_portion = 'all_coarse_labels' # ['all_coarse_labels','coarse_plus_fine_labels', 'fine_labels', 'coarse_labels']
@@ -86,9 +102,16 @@ for e in range(config.NUM_EPOCHS):
     scheduler.step()
     
     # Save best model
-    if validated['IoU_val'][-1] > best_accuracy: #and e > 10: # maybe add a minimum number of epochs as conditions
+    if validated['IoU_val'][-1] > best_accuracy and e > 10: # maybe add a minimum number of epochs as conditions
         utis.save_best_model(unet, config.BEST_MODEL, validated, e, data_portion, rate_of_coarse_labels=n_patches) 
         best_accuracy = validation_history['IoU_val'][-1]
+    
+    # early stopping
+    early_stopping = EarlyStopping(trained["avg_train_loss"][-1], validated["avg_val_loss"][-1])
+    if early_stopping.early_stop:
+        print("We are at epoch:", i)
+        break
+    
 
 
 

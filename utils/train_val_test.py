@@ -38,133 +38,6 @@ def force_cudnn_initialization():
     dev = torch.device('cuda')
     torch.nn.functional.conv2d(torch.zeros(s, s, s, s, device=dev), torch.zeros(s, s, s, s, device=dev))
 
-# def training(network, 
-#           trainloader, 
-#           optimizer, 
-#           loss_function, 
-#           save_path, 
-#           epoch,
-#           training_history, 
-#           scaler):
-    
-#     # set the model in training mode
-#     network.train()
-    
-#     current_loss = 0.0 # Set current loss value
-#     iou_train, acc = 0.0, 0.0  # metrics
-#     loop = tqdm(trainloader, leave=False) # training tracker
-    
-#     # Iterate over the DataLoader for training data
-#     for i, (x, y) in enumerate(loop, 0):
-
-#         # Get inputs
-#         inputs, targets = (x.to(config.DEVICE), y.to(config.DEVICE))
-
-#         # training loop
-#         # optimizer.zero_grad() # Zero the gradients
-#         # outputs = network(inputs) # Perform forward pass
-#         # loss = loss_function(outputs, targets) # Compute loss
-#         # loss.backward()# Perform backward pass
-#         # optimizer.step() # Perform optimization
-        
-#         # forward with autocast        
-#         with autocast():
-#             outputs = network(inputs)
-#             loss = loss_function(outputs, targets)
-            
-#         optimizer.zero_grad()  # zero out any previously accumulated gradients    
-#         scaler.scale(loss).backward() # study this 
-#         scaler.step(optimizer)
-#         scaler.update()
-        
-#         # total loss
-#         current_loss += loss.item()
-        
-#         # metrics      
-#         all_metrics = metrics.metrics(outputs, targets)
-#         iou_train += all_metrics['iou']
-#         acc += all_metrics['acc']
-        
-#         print('iou',iou_train)
-        
-#         # update tqdm
-#         loop.set_description(f'Training Epoch [{epoch}/{config.NUM_EPOCHS}]')
-#         loop.set_postfix(loss_train=loss.item(), iou_train = iou_train, acc=acc)
-    
-#     # averages per epoch
-#     avg_loss = current_loss / len(trainloader)
-#     avg_iou = (iou_train / len(trainloader))*100
-#     avg_acc = (acc / len(trainloader))*100
-    
-#     # save
-#     training_history["avg_loss"].append(avg_loss) # save the avg loss
-#     training_history["accuracy"].append(avg_acc) # save the acc
-#     training_history["iou"].append(avg_iou) # save the acc
-    
-#     # WANDB
-#     # wandb.log({
-#     # # "Examples": example_images,
-#     # "Train Loss": avg_loss,
-#     # "Train Accuracy": avg_acc,
-#     # "IoU_train":avg_iou})
-    
-#     return training_history
-
-# def val(network, 
-#         testloader, 
-#         epoch,
-#         loss_function,
-#         validation_history,
-#         fold):
-    
-#     # set the model in evaluation mode
-#     network.eval()
-    
-#     current_loss = 0.0
-#     iou_val, acc = 0.0,0.0
-
-#     with torch.no_grad():
-#         loop = tqdm(testloader, leave=False)
-        
-#         # Iterate over the test data and generate predictions
-#         for i, (x, y) in enumerate(loop, 0):
-
-#             # Get inputs
-#             inputs, targets = (x.to(config.DEVICE), y.to(config.DEVICE))
-
-#             # Generate outputs
-#             outputs = network(inputs)
-            
-#             #loss
-#             loss = loss_function(outputs, targets) 
-#             current_loss += loss
-
-#             # metrics      
-#             all_metrics = metrics.metrics(outputs, targets)
-#             iou_val += all_metrics['iou']
-#             acc += all_metrics['acc']
-            
-#             print(iou_val)
-#             # update tqdm
-#             loop.set_description(f'Validation Epoch [{epoch}/{config.NUM_EPOCHS}]')
-#             loop.set_postfix(iou_val = iou_val, acc = acc)
-        
-#     avgIOU = iou_val / len(testloader) * 100
-#     avgLoss = current_loss / len(testloader)
-#     avgACC = acc / len(testloader) * 100
-
-#     # Print accuracy
-#     # print('IoU for fold %d: %d %%' % (fold, 100.0 * avgIOU))
-#     # print('--------------------------------')
-#     results = 100.0 * (avgIOU)
-    
-#     # store results
-#     validation_history["avg_val_loss"].append(avgLoss.cpu().detach().numpy()) # save the avg loss
-#     validation_history["val_accuracy"].append(avgACC) # save the acc
-#     validation_history["IoU_val"].append(avgIOU) # save the acc
-    
-#     return results, validation_history
-
 
 def train(model, dataloader, opt, lossFunc, epoch, scaler, training_history):
     # set the model in training mode
@@ -324,9 +197,7 @@ def make_predictions(model,
     filelist_2 = glob.glob(f"{folder}/{'predictions'}" +'/*.tif')
     [os.remove(f) for f in filelist]
     [os.remove(f) for f in filelist_2]
-    
-    print(filelist)
-    
+        
     # switch off autograd
     with torch.no_grad():
         # loop over the validation set

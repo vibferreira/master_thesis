@@ -20,12 +20,12 @@ IMAGES = 'data/images'
 PATCHES_IMAGES_PATH = 'data/patches/images'
 PATCHES_MASK_PATH = 'data/patches/masks'
 img_paths = glob.glob(IMAGES +'/*.tif')
-mask_paths = glob.glob(MASKS +'/*.tif')
+msk_paths = glob.glob(MASKS +'/*.tif')
 
 # Everything else
 IMAGES_PATH = 'data/patches/images/1942'
 MASK_PATH = 'data/patches/masks/1942'
-BEST_MODEL = 'best_model/unet'
+BEST_MODEL = 'best_model/unet_plusplus_dice'
 
 FILTER_PATH = 'data/geopackages/patch_keys.gpkg'
 TILE_PATH = 'data/geopackages/tiles.gpkg'

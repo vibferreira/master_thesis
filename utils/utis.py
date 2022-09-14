@@ -345,7 +345,12 @@ def split_by_tile(FILTER_PATH:str,
     tile_df['split'] = None
     random.seed(25)
     # create a split column dividing each polygon tile intro train test and split  
-    tile_df['split'] = tile_df['split'].apply(lambda x: random.choices(['train', 'val', 'test'], weights=[65, 15, 5])[0])
+    tile_df['split'] = tile_df['split'].apply(lambda x: random.choices(['train', 'val', 'test'], weights=[65, 15, 5])[0]) # more elegant
+    
+    # random.seed(48)
+    # split = ['train'] * 9 + ['val'] * 2 + ['test'] # generate a list with the plit 75% train 
+    # random.shuffle(split)
+    # tile_df['split'] = split
 
     # # keep only the patches that intersect the tiles 
     # # source https://gis.stackexchange.com/questions/375407/geopandas-intersects-doesnt-find-any-intersection
@@ -402,7 +407,6 @@ def custom_save_patches(patch: torch.Tensor,
     Returns:
     None
     '''
-
     # torch to numpy
     patch = np.squeeze(patch.detach().cpu().numpy())
     
@@ -707,11 +711,13 @@ def line(error_y_mode=None, **kwargs):
         fig.update_layout(legend_traceorder="reversed+grouped")
     return fig
 
-def raster_mosaic(files:list) -> np.array:
+def raster_mosaic(files:list,
+                  dest:str) -> np.array:
     ''' 
     Merges the individual patchs into a mosaic
     Arg:
     files (list) : list of patchs to mosaic
+    dest (str) : destination path 
     Return:
     np.array : mosaicked image
     source: https://automating-gis-processes.github.io/CSC18/lessons/L6/raster-mosaic.html
@@ -725,5 +731,19 @@ def raster_mosaic(files:list) -> np.array:
     mosaic, out_trans = merge(src_files_to_mosaic)
     
     # save to disk
+    # Copy the metadata
+    out_meta = src.meta.copy()
+    crs = CRS.from_epsg('2154')
+    
+    # Update the metadata
+    out_meta.update({"driver": "GTiff",
+             "height": mosaic.shape[1],
+             "width": mosaic.shape[2],
+             "transform": out_trans,
+             "crs": crs})
+    
+    # Write the mosaic raster to disk
+    with rio.open(dest, "w", **out_meta) as out_fp:
+        out_fp.write(mosaic)
 
     return mosaic, out_trans
