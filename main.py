@@ -3,6 +3,7 @@
 
 import glob
 import os
+import numpy as np
 
 from scripts import get_patches
 from scripts import get_GT
@@ -25,6 +26,7 @@ import wandb
 
 
 ##### Pre-Processing ##### 
+
 # Decide if images need to be patched (e.g if case changes have been made to the .gpkg annotation file) 
 if config.patchfying: # define in the config file if you want to patchfy the image or not
     # Get binary mask from geopackage (only necessary if the image is not in the folder already)
@@ -38,79 +40,93 @@ if config.patchfying: # define in the config file if you want to patchfy the ima
     masks.get_items()
     
 ##### Data Split and Dataloader ##### 
-# I could have create a class here for this, improve it later!!!!
-train_dataloader = dataloader.train_dataloader
-val_dataloader = dataloader.val_dataloader
-test_dataloader = dataloader.test_dataloader
-
-# ##### DL model (training and validation loop) ##### 
-# classes
-classes = ('no_vegetation', 'vegetation')
-
-# Initialize model
-unet = model.unet_model.to(config.DEVICE)
-
-# initialize loss function and optimizer
-# lossFunc = smp.losses.FocalLoss(smp.losses.BINARY_MODE)
-lossFunc = smp.losses.DiceLoss(smp.losses.BINARY_MODE, from_logits=True)
-
-opt = optim.Adam(unet.parameters(), lr=config.LR)
-# opt = optim.SGD(unet.parameters(), lr=config.LR, momentum=0.95, weight_decay=0.01)
-# scheduler = ReduceLROnPlateau(opt, mode='max', factor=0.1, patience=10, verbose=True)
-scheduler = StepLR(opt, step_size=20, gamma=0.1)
-
-# initialize a dictionary to store TRAINING history (keep track on training)
-training_history = {"avg_train_loss": [], "train_accuracy": [], "IoU":[],"f1score":[], "avgDice":[]}
-
-# # initialize a dictionary to store VALIDATION history (keep track on VALIDATION)
-validation_history = {"avg_val_loss": [], "val_accuracy": [], "IoU_val":[], "f1score_val":[]}
-
-# Using log="all" log histograms of parameter values in addition to gradients
 wandb.login()
-wandb.init(project="my-awesome-project")
-wandb.watch(unet, log="all")
-
-# Autocasting 
-scaler = GradScaler()
-
-# initialize best accuracy
-best_accuracy = 0.0
-print(f'''Training the network for {config.NUM_EPOCHS} epochs, with a batch size of {config.BATCH_SIZE}''') # try with logger
-
-
-class EarlyStopping():
-    def __init__(self, tolerance=5, min_delta=0):
-
-        self.tolerance = tolerance
-        self.min_delta = min_delta
-        self.counter = 0
-        self.early_stop = False
-
-    def __call__(self, train_loss, validation_loss):
-        if (validation_loss - train_loss) > self.min_delta:
-            self.counter +=1
-            if self.counter >= self.tolerance:  
-                self.early_stop = True
-
-# loop = tqdm(range(config.NUM_EPOCHS))
-iter_ = 0
-data_portion = 'all_coarse_labels' # ['all_coarse_labels','coarse_plus_fine_labels', 'fine_labels', 'coarse_labels']
-n_patches = 283
-for e in range(config.NUM_EPOCHS):
-    trained = train_val_test.train(unet, train_dataloader, opt, lossFunc, epoch=e, scaler=scaler, training_history=training_history)
-    validated = train_val_test.validation(unet, val_dataloader, lossFunc, epoch=e, validation_history=validation_history)
-    scheduler.step()
+for n_patches in np.arange(750, 3259, 100):  # loop fetching different dataset sizes 
     
-    # Save best model
-    if validated['IoU_val'][-1] > best_accuracy and e > 10: # maybe add a minimum number of epochs as conditions
-        utis.save_best_model(unet, config.BEST_MODEL, validated, e, data_portion, rate_of_coarse_labels=n_patches) 
-        best_accuracy = validation_history['IoU_val'][-1]
+    train_dataloader, val_dataloader = dataloader.dataloading(n_patches)
     
-    # early stopping
-    early_stopping = EarlyStopping(trained["avg_train_loss"][-1], validated["avg_val_loss"][-1])
-    if early_stopping.early_stop:
-        print("We are at epoch:", i)
-        break
+    # # I could have create a class here for this, improve it later!!!!
+    # train_dataloader = dataloader.train_dataloader 
+    # val_dataloader = dataloader.val_dataloader
+    # test_dataloader = dataloader.test_dataloader
+
+    # ##### DL model (training and validation loop) ##### 
+    # classes
+    classes = ('no_vegetation', 'vegetation')
+
+    # Initialize model
+    unet = model.unet_model.to(config.DEVICE)
+
+    # initialize loss function and optimizer
+    # lossFunc = smp.losses.FocalLoss(smp.losses.BINARY_MODE)
+    lossFunc = smp.losses.DiceLoss(smp.losses.BINARY_MODE, from_logits=True)
+
+    opt = optim.Adam(unet.parameters(), lr=config.LR)
+    # opt = optim.SGD(unet.parameters(), lr=config.LR, momentum=0.95, weight_decay=0.01)
+    # scheduler = ReduceLROnPlateau(opt, mode='max', factor=0.1, patience=10, verbose=True)
+    scheduler = StepLR(opt, step_size=20, gamma=0.1)
+
+    # initialize a dictionary to store TRAINING history (keep track on training)
+    training_history = {"avg_train_loss": [], "train_accuracy": [], "IoU":[],"f1score":[], "avgDice":[]}
+
+    # # initialize a dictionary to store VALIDATION history (keep track on VALIDATION)
+    validation_history = {"avg_val_loss": [], "val_accuracy": [], "IoU_val":[], "f1score_val":[]}
+
+    # Using log="all" log histograms of parameter values in addition to gradients
+    wandb.login()
+    wandb.init(project=f"my-awesome-project-{n_patches}")
+    wandb.watch(unet, log="all")
+
+    # Autocasting 
+    scaler = GradScaler()
+
+    # initialize best accuracy
+    best_accuracy = 0.0
+    print(f'''Training the network for {config.NUM_EPOCHS} epochs, with a batch size of {config.BATCH_SIZE}''') # try with logger
+
+    class EarlyStopping():
+        def __init__(self, tolerance=5, min_delta=0):
+
+            self.tolerance = tolerance
+            self.min_delta = min_delta
+            self.counter = 0
+            self.early_stop = False
+
+        def __call__(self, train_loss, validation_loss):
+            if (validation_loss - train_loss) > self.min_delta:
+                self.counter +=1
+                if self.counter >= self.tolerance:  
+                    self.early_stop = True
+
+    # loop = tqdm(range(config.NUM_EPOCHS))
+    # iter_ = 0
+    data_portion = f'fine_{n_patches}' # ['all_coarse_labels','coarse_plus_fine_labels', 'fine_labels', 'coarse_labels']
+    
+    # create a folder named with the number of patches used o train
+    print('NUMBER OF PATCHES', n_patches)
+    dir_to_create = os.path.join(config.BEST_MODEL, str(n_patches))
+    if not os.path.exists(dir_to_create):
+        utis.create_new_dir(dir_to_create)
+
+    for e in range(config.NUM_EPOCHS):
+        trained = train_val_test.train(unet, train_dataloader, opt, lossFunc, epoch=e, scaler=scaler, training_history=training_history)
+        validated = train_val_test.validation(unet, val_dataloader, lossFunc, epoch=e, validation_history=validation_history)
+        scheduler.step()
+
+        # Save best model
+        if validated['IoU_val'][-1] > best_accuracy and e > 10: # maybe add a minimum number of epochs as conditions
+            utis.save_best_model(unet, dir_to_create, validated, e, data_portion, rate_of_coarse_labels=n_patches) 
+            best_accuracy = validation_history['IoU_val'][-1]
+
+        # early stopping
+        early_stopping = EarlyStopping(trained["avg_train_loss"][-1], validated["avg_val_loss"][-1])
+        if early_stopping.early_stop:
+            print("We are at epoch:", i)
+            break
+
+    del unet # delete model instance 
+    del opt # delete the optmizer 
+    torch.cuda.empty_cache() # clean cuda cache
     
 
 

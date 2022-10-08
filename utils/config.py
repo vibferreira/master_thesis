@@ -10,7 +10,7 @@ import torch
 # PATHS (IMAGES, MASKS, DESTINATION FOLDER)
 # =========================================================== #
 # Geting Ground truth 
-MASKS_GPKG_PATH = 'data/geopackages/UPDATED_7_mask_per_year.gpkg'
+MASKS_GPKG_PATH = 'data/geopackages/UPDATED_8_mask_per_year.gpkg' #'data/geopackages/UPDATED_8_mask_per_year.gpkg'
 GRID_PATH = 'data/geopackages/grid.gpkg'
 DEST_PATH = 'data/masks'
 
@@ -25,7 +25,7 @@ msk_paths = glob.glob(MASKS +'/*.tif')
 # Everything else
 IMAGES_PATH = 'data/patches/images/1942'
 MASK_PATH = 'data/patches/masks/1942'
-BEST_MODEL = 'best_model/unet_plusplus_dice'
+BEST_MODEL = 'best_model/paper_models/fine'
 
 FILTER_PATH = 'data/geopackages/patch_keys.gpkg'
 TILE_PATH = 'data/geopackages/tiles.gpkg'
@@ -37,7 +37,7 @@ mask_paths = glob.glob(MASK_PATH +'/*.tif')
 # =========================================================== #
 # PATCHFY - Decide if the images need to be patchyfied or not 
 # =========================================================== #
-patchfying = False
+patchfying = True
 
 # =========================================================== #
 # SET WHICH DEVICE TO USE
@@ -48,7 +48,7 @@ DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 # =========================================================== #
 # DATA SPLIT - decide if its a geographycal split (tile) or based on the quality of the dataset (filter)
 # =========================================================== #
-split = 'tile' # 'filter'
+split = 'number_of_patches' # 'filter' 'number_of_patches' 'tile'
 
 # =========================================================== #
 # DATASET AND DATALOADER
