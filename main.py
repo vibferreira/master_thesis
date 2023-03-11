@@ -1,6 +1,6 @@
 ''' Run and save the Semantic Segmetation DL models '''
 ''' Modify the config file for PATHS, DL model parameters etc. '''
-
+#!/usr/bin/env python
 import glob
 import os
 import numpy as np
@@ -26,12 +26,11 @@ import wandb
 
 
 ##### Pre-Processing ##### 
-
 # Decide if images need to be patched (e.g if case changes have been made to the .gpkg annotation file) 
 if config.patchfying: # define in the config file if you want to patchfy the image or not
     # Get binary mask from geopackage (only necessary if the image is not in the folder already)
     gt = get_GT.Get_Ground_Truth(config.GRID_PATH, config.MASKS_GPKG_PATH, config.DEST_PATH)
-    gt.get_items()
+    print('done with getting ground truth', gt.get_items())
 
     # Get Patches from binary mask and from the image (only necessary if the image is not in the folder already)
     images = get_patches.GetPatches(config.img_paths[0], config.PATCHES_IMAGES_PATH, (256, 256))
@@ -41,7 +40,7 @@ if config.patchfying: # define in the config file if you want to patchfy the ima
     
 ##### Data Split and Dataloader ##### 
 wandb.login()
-for n_patches in np.arange(750, 3259, 100):  # loop fetching different dataset sizes 
+for n_patches in np.arange(750, 3259, 50):  # loop fetching different dataset sizes 
     
     train_dataloader, val_dataloader = dataloader.dataloading(n_patches)
     

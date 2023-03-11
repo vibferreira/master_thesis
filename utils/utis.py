@@ -201,7 +201,9 @@ def save_test_dataset(DEST_PATH:str,
     
     coords = get_coords(list_of_imgs)
     
+    print(DEST_PATH)
     if not glob.glob(DEST_PATH +'/*.tif'):
+        # os.mkdir(DEST_PATH) 
         #save test dataset on the dest folder WITH CRS
         for img in list_of_imgs:
             idx = utis.get_file_index(img)

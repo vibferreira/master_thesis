@@ -2,15 +2,13 @@
 Implementation based on https://pyimagesearch.com/2021/11/08/u-net-training-image-segmentation-models-in-pytorch/'''
 
 # other options --> yaml, json, create a class in which the variables would be attributes
-
 import glob
 import torch
-
 # =========================================================== #
 # PATHS (IMAGES, MASKS, DESTINATION FOLDER)
 # =========================================================== #
 # Geting Ground truth 
-MASKS_GPKG_PATH = 'data/geopackages/UPDATED_8_mask_per_year.gpkg' #'data/geopackages/UPDATED_8_mask_per_year.gpkg'
+MASKS_GPKG_PATH = 'data/geopackages/mask_per_year.gpkg' #'data/geopackages/UPDATED_8_mask_per_year.gpkg'
 GRID_PATH = 'data/geopackages/grid.gpkg'
 DEST_PATH = 'data/masks'
 
@@ -25,11 +23,13 @@ msk_paths = glob.glob(MASKS +'/*.tif')
 # Everything else
 IMAGES_PATH = 'data/patches/images/1942'
 MASK_PATH = 'data/patches/masks/1942'
-BEST_MODEL = 'best_model/paper_models/fine'
+BEST_MODEL = 'best_model/paper_models/coarse'
 
 FILTER_PATH = 'data/geopackages/patch_keys.gpkg'
 TILE_PATH = 'data/geopackages/tiles.gpkg'
 TEST_DATASET_PATH = '../data/test_dataset'
+
+# gpkg_paths = glob.glob(FILTER_PATH +'/*.gpkg')
 
 image_paths = glob.glob(IMAGES_PATH +'/*.tif')
 mask_paths = glob.glob(MASK_PATH +'/*.tif')
@@ -37,7 +37,7 @@ mask_paths = glob.glob(MASK_PATH +'/*.tif')
 # =========================================================== #
 # PATCHFY - Decide if the images need to be patchyfied or not 
 # =========================================================== #
-patchfying = True
+patchfying = False
 
 # =========================================================== #
 # SET WHICH DEVICE TO USE

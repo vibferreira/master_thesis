@@ -1,5 +1,5 @@
 import torch.nn as nn
-import config
+from utils import config
 
 ''' STUDY PURPOSES, IMPLEMENTING LOSS FUNCTIONS'''
 
