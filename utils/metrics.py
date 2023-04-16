@@ -145,6 +145,19 @@ def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
       figsize:   the size of the figure plotted.
     """
     sns.set(font_scale=1)
+#     plt.rc('font', size=20)
+#     plt.rc('axes', titlesize=20)
+#     font sizes
+    size=15
+    params = {'font.size':size,
+              'legend.fontsize': 'large',
+              'figure.figsize': (25,10),
+              'axes.labelsize': size,
+              'axes.titlesize': size,
+              'xtick.labelsize': size*0.75,
+              'ytick.labelsize': size*0.75,
+              'axes.titlepad': 25}
+    plt.rcParams.update(params)
     
     # reshape tensor
     y_true = y_true.squeeze(0).view(-1)
@@ -175,10 +188,14 @@ def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
     fig, ax = plt.subplots(figsize=figsize)
     plt.yticks(va='center')
 
-    sns.heatmap(cm, annot=annot, fmt='', ax=ax, xticklabels=classes, cbar=True, cbar_kws={'format':PercentFormatter()}, yticklabels=classes, cmap="Blues")
+    # sns.heatmap(cm, annot=annot, fmt='', ax=ax, xticklabels=classes, cbar=True, cbar_kws={'format':PercentFormatter()}, yticklabels=classes, cmap="Blues")
+    sns_plot=sns.heatmap(cm, annot=annot, fmt='', ax=ax, xticklabels=classes, cbar=True, cbar_kws={'format':PercentFormatter()}, yticklabels=classes, cmap="Blues")
     # plt.savefig(filename,  bbox_inches='tight')
     ax.set_title('Confusion Matrix')
     plt.show()
+    
+    # save
+    sns_plot.figure.savefig("output.png")
     
     # classification report
     print(classification_report(y_true, y_pred, target_names=classes))
@@ -194,5 +211,8 @@ def cm_analysis(y_true, y_pred, labels, classes, figsize=(6,4)):
     
     print('IoU', iou)
     print('F1 score', f1score)
+    
+
+
 
     
